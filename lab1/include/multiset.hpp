@@ -17,6 +17,11 @@ public:
 
     Multiset(const std::vector<Element> &elems);
 
+    Multiset(const Multiset& other) = default;
+
+    Multiset& operator=(const Multiset& other) = default;
+
+    ~Multiset() = default;
     bool empty() const;
     int  size() const;                              // общее число (с повторами)
     int  multiplicity(const Element &elem) const;          // число вхождений

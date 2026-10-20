@@ -314,12 +314,14 @@ Set::Element Set::parse_Element(const std::string &str) {
 
 std::istream &operator>>(std::istream &in, Set &s){
     std::string str;
-    in >> str;
-    s = Set::parse(str);
+    std::getline(in, str);
+    if (!str.empty()) {
+        s = Set::parse(str);
+    }
     return in;
 }
 
-std::ostream &operator<<(std::ostream &out, Set &s){
+std::ostream &operator<<(std::ostream &out, const Set &s){
     out << s.to_string();
     return out;
 }

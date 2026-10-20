@@ -46,6 +46,12 @@ private:
     static Element parse_Element_recursive(const std::string &str, size_t &pos);
 
 public:
+    Set(const Set& other) = default;
+
+    Set& operator=(const Set& other) = default;
+    
+    ~Set() = default;
+
     Set();
 
     Set(const std::vector<Element> &elem);
