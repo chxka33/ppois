@@ -19,7 +19,7 @@ public:
 
     bool empty() const;
     int  size() const;                              // общее число (с повторами)
-    int  count(const Element &elem) const;          // число вхождений
+    int  multiplicity(const Element &elem) const;          // число вхождений
     void clear();
     bool contains(const Element &elem) const;
 
