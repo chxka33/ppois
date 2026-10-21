@@ -192,11 +192,11 @@ std::ostream &operator<<(std::ostream &out, const Multiset &s) {
     return out;
 }
 
-std::istream &operator>>(std::istream &in, Set &s){
+std::istream &operator>>(std::istream &in, Multiset &s){
     std::string str;
     std::getline(in, str);
     if (!str.empty()) {
-        s = Set::parse(str);
+        s = Multiset::parse(str);
     }
     return in;
 }
