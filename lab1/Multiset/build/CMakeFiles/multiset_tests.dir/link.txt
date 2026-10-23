@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names --coverage CMakeFiles/multiset_tests.dir/tests/test_multiset.cpp.o CMakeFiles/multiset_tests.dir/src/multiset.cpp.o CMakeFiles/multiset_tests.dir/Users/chxkq/Desktop/pois/ppois/lab1/Set/src/set.cpp.o -o multiset_tests  _deps/catch2-build/src/libCatch2Main.a _deps/catch2-build/src/libCatch2.a

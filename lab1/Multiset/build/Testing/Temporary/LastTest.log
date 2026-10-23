@@ -1,0 +1,162 @@
+Start testing: Oct 23 22:54 +03
+----------------------------------------------------------
+1/8 Testing: Multiset: создание
+1/8 Test: Multiset: создание
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests" "Multiset: создание"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build
+"Multiset: создание" start time: Oct 23 22:54 +03
+Output:
+----------------------------------------------------------
+Filters: "Multiset: создание"
+Randomness seeded to: 2506316607
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiset: создание" end time: Oct 23 22:54 +03
+"Multiset: создание" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/8 Testing: Multiset: кратность, add, remove
+2/8 Test: Multiset: кратность, add, remove
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests" "Multiset: кратность\, add\, remove"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build
+"Multiset: кратность, add, remove" start time: Oct 23 22:54 +03
+Output:
+----------------------------------------------------------
+Filters: "Multiset: кратность\, add\, remove"
+Randomness seeded to: 4100132931
+===============================================================================
+All tests passed (50 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiset: кратность, add, remove" end time: Oct 23 22:54 +03
+"Multiset: кратность, add, remove" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/8 Testing: Multiset: операторы с элементами
+3/8 Test: Multiset: операторы с элементами
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests" "Multiset: операторы с элементами"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build
+"Multiset: операторы с элементами" start time: Oct 23 22:54 +03
+Output:
+----------------------------------------------------------
+Filters: "Multiset: операторы с элементами"
+Randomness seeded to: 2500489715
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiset: операторы с элементами" end time: Oct 23 22:54 +03
+"Multiset: операторы с элементами" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/8 Testing: Multiset: операции над мультимножествами
+4/8 Test: Multiset: операции над мультимножествами
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests" "Multiset: операции над мультимножествами"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build
+"Multiset: операции над мультимножествами" start time: Oct 23 22:54 +03
+Output:
+----------------------------------------------------------
+Filters: "Multiset: операции над мультимножествами"
+Randomness seeded to: 4122883103
+===============================================================================
+All tests passed (14 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiset: операции над мультимножествами" end time: Oct 23 22:54 +03
+"Multiset: операции над мультимножествами" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/8 Testing: Multiset: булеан
+5/8 Test: Multiset: булеан
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests" "Multiset: булеан"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build
+"Multiset: булеан" start time: Oct 23 22:54 +03
+Output:
+----------------------------------------------------------
+Filters: "Multiset: булеан"
+Randomness seeded to: 3132583502
+===============================================================================
+All tests passed (5 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiset: булеан" end time: Oct 23 22:54 +03
+"Multiset: булеан" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/8 Testing: Multiset: разбор строки
+6/8 Test: Multiset: разбор строки
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests" "Multiset: разбор строки"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build
+"Multiset: разбор строки" start time: Oct 23 22:54 +03
+Output:
+----------------------------------------------------------
+Filters: "Multiset: разбор строки"
+Randomness seeded to: 2858365488
+===============================================================================
+All tests passed (5 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiset: разбор строки" end time: Oct 23 22:54 +03
+"Multiset: разбор строки" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/8 Testing: Multiset: потоковый ввод-вывод
+7/8 Test: Multiset: потоковый ввод-вывод
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests" "Multiset: потоковый ввод-вывод"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build
+"Multiset: потоковый ввод-вывод" start time: Oct 23 22:54 +03
+Output:
+----------------------------------------------------------
+Filters: "Multiset: потоковый ввод-вывод"
+Randomness seeded to: 720035129
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiset: потоковый ввод-вывод" end time: Oct 23 22:54 +03
+"Multiset: потоковый ввод-вывод" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/8 Testing: multiset_unit_tests
+8/8 Test: multiset_unit_tests
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build
+"multiset_unit_tests" start time: Oct 23 22:54 +03
+Output:
+----------------------------------------------------------
+Randomness seeded to: 2823307382
+===============================================================================
+All tests passed (86 assertions in 7 test cases)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"multiset_unit_tests" end time: Oct 23 22:54 +03
+"multiset_unit_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 23 22:54 +03

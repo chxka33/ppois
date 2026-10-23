@@ -1,0 +1,13 @@
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/CMakeFiles/set_app.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/CMakeFiles/set_tests.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/CMakeFiles/test.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/CMakeFiles/edit_cache.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/CMakeFiles/rebuild_cache.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-build/CMakeFiles/test.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-build/CMakeFiles/edit_cache.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-build/CMakeFiles/rebuild_cache.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-build/src/CMakeFiles/Catch2.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-build/src/CMakeFiles/test.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-build/src/CMakeFiles/edit_cache.dir
+/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-build/src/CMakeFiles/rebuild_cache.dir

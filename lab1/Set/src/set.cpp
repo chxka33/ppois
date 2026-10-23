@@ -41,7 +41,7 @@ bool Set::Element::operator<(const Element &other) const
 {
     // атомы стоят перед вложенными множествами
     if (is_set != other.is_set)
-        return is_set > other.is_set;
+        return is_set < other.is_set;
     if (is_set)
         return children < other.children;
     return atom < other.atom;
@@ -212,7 +212,7 @@ Set Set::power_set() const
     for (const auto &item : Elements)
     {
         size_t current_size = res.Elements.size();
-        for (int i = 0; i < current_size; ++i)
+        for (size_t i = 0; i < current_size; ++i)
         {
             Element new_subset = res.Elements[i];
             new_subset.children.push_back(item);
@@ -233,7 +233,7 @@ bool Set::operator!=(const Set &other) const {
 
 std::string Set::to_string() const {
     std::string result = "{";
-    for(int i = 0; i < Elements.size(); ++i){
+    for(size_t i = 0; i < Elements.size(); ++i){
         if(i > 0) result += ", ";
         result += Elements[i].to_string();
     }

@@ -1,0 +1,5 @@
+if(EXISTS "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests-b12d07c_tests.cmake")
+  include("/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests-b12d07c_tests.cmake")
+else()
+  add_test(set_tests_NOT_BUILT-b12d07c set_tests_NOT_BUILT-b12d07c)
+endif()

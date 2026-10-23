@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names --coverage CMakeFiles/multiset_app.dir/main.cpp.o CMakeFiles/multiset_app.dir/src/multiset.cpp.o CMakeFiles/multiset_app.dir/Users/chxkq/Desktop/pois/ppois/lab1/Set/src/set.cpp.o -o multiset_app

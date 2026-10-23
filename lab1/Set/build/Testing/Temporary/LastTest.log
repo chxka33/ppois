@@ -1,0 +1,202 @@
+Start testing: Oct 23 22:53 +03
+----------------------------------------------------------
+1/10 Testing: Element: конструкторы и доступ к данным
+1/10 Test: Element: конструкторы и доступ к данным
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Element: конструкторы и доступ к данным"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Element: конструкторы и доступ к данным" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Element: конструкторы и доступ к данным"
+Randomness seeded to: 3526540054
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Element: конструкторы и доступ к данным" end time: Oct 23 22:53 +03
+"Element: конструкторы и доступ к данным" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/10 Testing: Element: сравнение и строковое представление
+2/10 Test: Element: сравнение и строковое представление
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Element: сравнение и строковое представление"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Element: сравнение и строковое представление" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Element: сравнение и строковое представление"
+Randomness seeded to: 463196690
+===============================================================================
+All tests passed (12 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Element: сравнение и строковое представление" end time: Oct 23 22:53 +03
+"Element: сравнение и строковое представление" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/10 Testing: Set: создание и нормализация
+3/10 Test: Set: создание и нормализация
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Set: создание и нормализация"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Set: создание и нормализация" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Set: создание и нормализация"
+Randomness seeded to: 1410912513
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Set: создание и нормализация" end time: Oct 23 22:53 +03
+"Set: создание и нормализация" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/10 Testing: Set: add, remove, contains, clear
+4/10 Test: Set: add, remove, contains, clear
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Set: add\, remove\, contains\, clear"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Set: add, remove, contains, clear" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Set: add\, remove\, contains\, clear"
+Randomness seeded to: 3220545190
+===============================================================================
+All tests passed (10 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Set: add, remove, contains, clear" end time: Oct 23 22:53 +03
+"Set: add, remove, contains, clear" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/10 Testing: Set: операторы с элементами
+5/10 Test: Set: операторы с элементами
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Set: операторы с элементами"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Set: операторы с элементами" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Set: операторы с элементами"
+Randomness seeded to: 1209400740
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Set: операторы с элементами" end time: Oct 23 22:53 +03
+"Set: операторы с элементами" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/10 Testing: Set: теоретико-множественные операции
+6/10 Test: Set: теоретико-множественные операции
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Set: теоретико-множественные операции"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Set: теоретико-множественные операции" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Set: теоретико-множественные операции"
+Randomness seeded to: 3201837138
+===============================================================================
+All tests passed (11 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Set: теоретико-множественные операции" end time: Oct 23 22:53 +03
+"Set: теоретико-множественные операции" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/10 Testing: Set: булеан
+7/10 Test: Set: булеан
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Set: булеан"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Set: булеан" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Set: булеан"
+Randomness seeded to: 1540010311
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Set: булеан" end time: Oct 23 22:53 +03
+"Set: булеан" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/10 Testing: Set: разбор строки
+8/10 Test: Set: разбор строки
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Set: разбор строки"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Set: разбор строки" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Set: разбор строки"
+Randomness seeded to: 3577811177
+===============================================================================
+All tests passed (12 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Set: разбор строки" end time: Oct 23 22:53 +03
+"Set: разбор строки" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/10 Testing: Set: потоковый ввод-вывод
+9/10 Test: Set: потоковый ввод-вывод
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests" "Set: потоковый ввод-вывод"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"Set: потоковый ввод-вывод" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Filters: "Set: потоковый ввод-вывод"
+Randomness seeded to: 2239919075
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Set: потоковый ввод-вывод" end time: Oct 23 22:53 +03
+"Set: потоковый ввод-вывод" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/10 Testing: set_unit_tests
+10/10 Test: set_unit_tests
+Command: "/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/set_tests"
+Directory: /Users/chxkq/Desktop/pois/ppois/lab1/Set/build
+"set_unit_tests" start time: Oct 23 22:53 +03
+Output:
+----------------------------------------------------------
+Randomness seeded to: 868792147
+===============================================================================
+All tests passed (70 assertions in 9 test cases)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"set_unit_tests" end time: Oct 23 22:53 +03
+"set_unit_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 23 22:53 +03
