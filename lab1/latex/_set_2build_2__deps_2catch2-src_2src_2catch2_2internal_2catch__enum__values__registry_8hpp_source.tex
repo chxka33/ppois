@@ -1,0 +1,42 @@
+\doxysection{catch\+\_\+enum\+\_\+values\+\_\+registry.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__enum__values__registry_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__enum__values__registry_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_enum\_values\_registry.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_enum\_values\_registry.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__enum__values__registry_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_ENUM\_VALUES\_REGISTRY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_ENUM\_VALUES\_REGISTRY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/interfaces/catch\_interfaces\_enum\_values\_registry.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_unique\_ptr.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_stringref.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Catch::Detail::unique\_ptr<EnumInfo>\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a4f0c01d00fa6af891eb82fcf9baaf95c}{makeEnumInfo}}(\ StringRef\ enumName,\ StringRef\ allValueNames,\ std::vector<int>\ \textcolor{keyword}{const}\&\ values\ );}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_detail_1_1_enum_values_registry}{EnumValuesRegistry}}\ :\ \textcolor{keyword}{public}\ IMutableEnumValuesRegistry\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Catch::Detail::unique\_ptr<EnumInfo>>\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1_enum_values_registry_ab418a748231e5964d31659166eba9dd3}{m\_enumInfos}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_detail_1_1_enum_info}{EnumInfo}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1_enum_values_registry_acfdab4f7f17ef636272093b0be924056}{registerEnum}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ enumName,\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ allEnums,\ std::vector<int>\ \textcolor{keyword}{const}\&\ values)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::vector<StringRef>\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a4e0e09e87f561af2d3a881b209a9a481}{parseEnums}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ enums\ );}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \}\ \textcolor{comment}{//\ Detail}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \}\ \textcolor{comment}{//\ Catch}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_ENUM\_VALUES\_REGISTRY\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

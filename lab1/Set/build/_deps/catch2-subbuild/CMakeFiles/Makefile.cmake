@@ -10,8 +10,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.4.4/CMakeSystem.cmake"
   "CMakeLists.txt"
   "catch2-populate-prefix/tmp/catch2-populate-mkdirs.cmake"
+  "/Users/chxkq/Library/Application Support/pipx/venvs/cmake/lib/python3.14/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake"
   "/Users/chxkq/Library/Application Support/pipx/venvs/cmake/lib/python3.14/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeGenericSystem.cmake"
   "/Users/chxkq/Library/Application Support/pipx/venvs/cmake/lib/python3.14/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake"
+  "/Users/chxkq/Library/Application Support/pipx/venvs/cmake/lib/python3.14/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystem.cmake.in"
   "/Users/chxkq/Library/Application Support/pipx/venvs/cmake/lib/python3.14/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake"
   "/Users/chxkq/Library/Application Support/pipx/venvs/cmake/lib/python3.14/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake"
   "/Users/chxkq/Library/Application Support/pipx/venvs/cmake/lib/python3.14/site-packages/cmake/data/share/cmake-4.4/Modules/ExternalProject.cmake"
@@ -36,6 +38,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/4.4.4/CMakeSystem.cmake"
   "catch2-populate-prefix/tmp/catch2-populate-mkdirs.cmake"
   "catch2-populate-prefix/tmp/catch2-populate-gitclone.cmake"
   "catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-gitinfo.txt"

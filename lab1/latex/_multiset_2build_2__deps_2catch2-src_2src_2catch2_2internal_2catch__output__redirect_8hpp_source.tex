@@ -1,0 +1,124 @@
+\doxysection{catch\+\_\+output\+\_\+redirect.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__output__redirect_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__output__redirect_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_output\_redirect.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_output\_redirect.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__output__redirect_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_OUTPUT\_REDIRECT\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_OUTPUT\_REDIRECT\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_platform.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_reusable\_string\_stream.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_compiler\_capabilities.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <iosfwd>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_redirected_stream}{RedirectedStream}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::ostream\&\ \doxymbox{\hyperlink{class_catch_1_1_redirected_stream_a96c8dfc51f50d7a27600766dd6687935}{m\_originalStream}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::ostream\&\ \doxymbox{\hyperlink{class_catch_1_1_redirected_stream_aa7ea47c981c3f1a412a2244d27904749}{m\_redirectionStream}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::streambuf*\ \doxymbox{\hyperlink{class_catch_1_1_redirected_stream_a812e3fc3f274c5798f8802d38a5578d9}{m\_prevBuf}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_stream_af71b305daa0eae351db5c26bca67b11e}{RedirectedStream}}(\ std::ostream\&\ originalStream,\ std::ostream\&\ redirectionStream\ );}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_stream_a48ccdbd48da7edc540d4a4b672430ab8}{\string~RedirectedStream}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_redirected_std_out}{RedirectedStdOut}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_reusable_string_stream}{ReusableStringStream}}\ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_out_a040ba18bf31ed15f828eda291240f4d9}{m\_rss}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_stream}{RedirectedStream}}\ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_out_ae60696ba6eec2011e4572b4711267d7d}{m\_cout}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_out_a5c9651c5bbc920c3da670069cb6201b4}{RedirectedStdOut}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_out_afd46da9836223d033c031fb08a9efb1c}{str}}()\ const\ -\/>\ std::\textcolor{keywordtype}{string};}
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ StdErr\ has\ two\ constituent\ streams\ in\ C++,\ std::cerr\ and\ std::clog}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ This\ means\ that\ we\ need\ to\ redirect\ 2\ streams\ into\ 1\ to\ keep\ proper}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ order\ of\ writes}}
+\DoxyCodeLine{00042\ \ \ \ \ class\ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_err}{RedirectedStdErr}}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_reusable_string_stream}{ReusableStringStream}}\ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_out_a040ba18bf31ed15f828eda291240f4d9}{m\_rss}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_stream}{RedirectedStream}}\ m\_cerr;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_stream}{RedirectedStream}}\ m\_clog;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_err_aaa28441aca551e10686708db7c3bfa52}{RedirectedStdErr}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_err_a35176680e723b9b4cb0f5e1290bd75e2}{str}}()\ const\ -\/>\ std::\textcolor{keywordtype}{string};}
+\DoxyCodeLine{00049\ \ \ \ \ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ class\ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams}{RedirectedStreams}}\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5db6af3c2a9607da2fd6cdd9bb5ff0eb}{RedirectedStreams}}(\doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5db6af3c2a9607da2fd6cdd9bb5ff0eb}{RedirectedStreams}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5db6af3c2a9607da2fd6cdd9bb5ff0eb}{RedirectedStreams}}\&\ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a670b98b3a3d5cd0f0c97e463c9bd008f}{operator=}}(\doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5db6af3c2a9607da2fd6cdd9bb5ff0eb}{RedirectedStreams}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a24d2887fa49740529c8d55719853aa41}{RedirectedStreams}}(\doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5db6af3c2a9607da2fd6cdd9bb5ff0eb}{RedirectedStreams}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5db6af3c2a9607da2fd6cdd9bb5ff0eb}{RedirectedStreams}}\&\ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5ae21e1d3924a2a8806149d44af38cab}{operator=}}(\doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5db6af3c2a9607da2fd6cdd9bb5ff0eb}{RedirectedStreams}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a5fca51e2717d9533b97c973da9f2bed2}{RedirectedStreams}}(std::string\&\ redirectedCout,\ std::string\&\ redirectedCerr);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a6dd8e93490a905cedfa9c1556baf3743}{\string~RedirectedStreams}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::string\&\ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a1292613461eeb28fbcd0bcfa1a4fde49}{m\_redirectedCout}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::string\&\ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_ae2f4b38f74fd7ed8f4ab1f13c5c1cd00}{m\_redirectedCerr}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_out}{RedirectedStdOut}}\ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_ad1df9a96a61531d4c45df96c723272ca}{m\_redirectedStdOut}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_redirected_std_err}{RedirectedStdErr}}\ \doxymbox{\hyperlink{class_catch_1_1_redirected_streams_a4a83659ebeb42ef43e6ba2d2f85609d0}{m\_redirectedStdErr}};}
+\DoxyCodeLine{00065\ \ \ \ \ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#if\ defined(CATCH\_CONFIG\_NEW\_CAPTURE)}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Windows's\ implementation\ of\ std::tmpfile\ is\ terrible\ (it\ tries}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ to\ create\ a\ file\ inside\ system\ folder,\ thus\ requiring\ elevated}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ privileges\ for\ the\ binary),\ so\ we\ have\ to\ use\ tmpnam(\_s)\ and}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ create\ the\ file\ ourselves\ there.}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{class\ }TempFile\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ TempFile(TempFile\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ TempFile\&\ operator=(TempFile\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ TempFile(TempFile\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ TempFile\&\ operator=(TempFile\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ TempFile();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \string~TempFile();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ std::FILE*\ getFile();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ std::string\ getContents();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::FILE*\ m\_file\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\ \ \ \ \#if\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ m\_buffer[L\_tmpnam]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00091\ \ \ \ \ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{class\ }OutputRedirect\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ OutputRedirect(OutputRedirect\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ OutputRedirect\&\ operator=(OutputRedirect\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ OutputRedirect(OutputRedirect\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ OutputRedirect\&\ operator=(OutputRedirect\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ OutputRedirect(std::string\&\ stdout\_dest,\ std::string\&\ stderr\_dest);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \string~OutputRedirect();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_originalStdout\ =\ -\/1;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_originalStderr\ =\ -\/1;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ TempFile\ m\_stdoutFile;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ TempFile\ m\_stderrFile;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ std::string\&\ m\_stdoutDest;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::string\&\ m\_stderrDest;}
+\DoxyCodeLine{00112\ \ \ \ \ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_OUTPUT\_REDIRECT\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

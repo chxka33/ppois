@@ -1,0 +1,124 @@
+\doxysection{Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+benchmark/\+catch\+\_\+benchmark.hpp File Reference}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp}\index{Set/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_benchmark.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_benchmark.hpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+user\+\_\+config.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+compiler\+\_\+capabilities.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+context.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+move\+\_\+and\+\_\+forward.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+test\+\_\+failure\+\_\+exception.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+unique\+\_\+name.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+interfaces/\+catch\+\_\+interfaces\+\_\+capture.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+interfaces/\+catch\+\_\+interfaces\+\_\+config.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+interfaces/\+catch\+\_\+interfaces\+\_\+registry\+\_\+hub.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+detail/\+catch\+\_\+benchmark\+\_\+stats.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+catch\+\_\+clock.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+catch\+\_\+environment.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+catch\+\_\+execution\+\_\+plan.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+detail/\+catch\+\_\+estimate\+\_\+clock.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+detail/\+catch\+\_\+analyse.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+detail/\+catch\+\_\+benchmark\+\_\+function.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+detail/\+catch\+\_\+run\+\_\+for\+\_\+at\+\_\+least.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$exception$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_benchmark}{Catch::\+\+Benchmark::\+\+Benchmark}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_benchmark}{Catch::\+\+Benchmark}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_afb251464dc8eda2a2b9e0dbf2239819a}{INTERNAL\+\_\+\+CATCH\+\_\+\+GET\+\_\+1\+\_\+\+ARG}}(arg1,  arg2, ...)
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_ac2c7d6057422745c874a5857ffb2b9f3}{INTERNAL\+\_\+\+CATCH\+\_\+\+GET\+\_\+2\+\_\+\+ARG}}(arg1,  arg2, ...)
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a6a071f9b8f08adf077e260183ea016ca}{INTERNAL\+\_\+\+CATCH\+\_\+\+BENCHMARK}}(Benchmark\+Name,  name,  benchmark\+Index)
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_aa951079bc730553e638e7c73d5dd6808}{INTERNAL\+\_\+\+CATCH\+\_\+\+BENCHMARK\+\_\+\+ADVANCED}}(Benchmark\+Name,  name)
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a8155a21ede70a871be3fe8c3ec0390ac}{BENCHMARK}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a17c97b123bc9415593a7d6831dd24ec1}{BENCHMARK\+\_\+\+ADVANCED}}(name)
+\end{DoxyCompactItemize}
+
+
+\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_doc-define-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a8155a21ede70a871be3fe8c3ec0390ac}\index{catch\_benchmark.hpp@{catch\_benchmark.hpp}!BENCHMARK@{BENCHMARK}}
+\index{BENCHMARK@{BENCHMARK}!catch\_benchmark.hpp@{catch\_benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{BENCHMARK}{BENCHMARK}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a8155a21ede70a871be3fe8c3ec0390ac} 
+\+\#define BENCHMARK(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a6a071f9b8f08adf077e260183ea016ca}{INTERNAL\_CATCH\_BENCHMARK}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}}(CATCH2\_INTERNAL\_BENCHMARK\_),\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_afb251464dc8eda2a2b9e0dbf2239819a}{INTERNAL\_CATCH\_GET\_1\_ARG}}(\_\_VA\_ARGS\_\_,,),\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ac2c7d6057422745c874a5857ffb2b9f3}{INTERNAL\_CATCH\_GET\_2\_ARG}}(\_\_VA\_ARGS\_\_,,))}
+
+\end{DoxyCode}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a17c97b123bc9415593a7d6831dd24ec1}\index{catch\_benchmark.hpp@{catch\_benchmark.hpp}!BENCHMARK\_ADVANCED@{BENCHMARK\_ADVANCED}}
+\index{BENCHMARK\_ADVANCED@{BENCHMARK\_ADVANCED}!catch\_benchmark.hpp@{catch\_benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{BENCHMARK\_ADVANCED}{BENCHMARK\_ADVANCED}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a17c97b123bc9415593a7d6831dd24ec1} 
+\+\#define BENCHMARK\+\_\+\+ADVANCED(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aa951079bc730553e638e7c73d5dd6808}{INTERNAL\_CATCH\_BENCHMARK\_ADVANCED}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}}(CATCH2\_INTERNAL\_BENCHMARK\_),\ name)}
+
+\end{DoxyCode}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a6a071f9b8f08adf077e260183ea016ca}\index{catch\_benchmark.hpp@{catch\_benchmark.hpp}!INTERNAL\_CATCH\_BENCHMARK@{INTERNAL\_CATCH\_BENCHMARK}}
+\index{INTERNAL\_CATCH\_BENCHMARK@{INTERNAL\_CATCH\_BENCHMARK}!catch\_benchmark.hpp@{catch\_benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{INTERNAL\_CATCH\_BENCHMARK}{INTERNAL\_CATCH\_BENCHMARK}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_a6a071f9b8f08adf077e260183ea016ca} 
+\+\#define INTERNAL\+\_\+\+CATCH\+\_\+\+BENCHMARK(\begin{DoxyParamCaption}\item[{}]{Benchmark\+Name}{, }\item[{}]{name}{, }\item[{}]{benchmark\+Index}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_benchmark}{Catch::Benchmark::Benchmark}}\ BenchmarkName\{name\}\ )\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ BenchmarkName\ =\ [\&](\textcolor{keywordtype}{int}\ benchmarkIndex)}
+
+\end{DoxyCode}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_aa951079bc730553e638e7c73d5dd6808}\index{catch\_benchmark.hpp@{catch\_benchmark.hpp}!INTERNAL\_CATCH\_BENCHMARK\_ADVANCED@{INTERNAL\_CATCH\_BENCHMARK\_ADVANCED}}
+\index{INTERNAL\_CATCH\_BENCHMARK\_ADVANCED@{INTERNAL\_CATCH\_BENCHMARK\_ADVANCED}!catch\_benchmark.hpp@{catch\_benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{INTERNAL\_CATCH\_BENCHMARK\_ADVANCED}{INTERNAL\_CATCH\_BENCHMARK\_ADVANCED}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_aa951079bc730553e638e7c73d5dd6808} 
+\+\#define INTERNAL\+\_\+\+CATCH\+\_\+\+BENCHMARK\+\_\+\+ADVANCED(\begin{DoxyParamCaption}\item[{}]{Benchmark\+Name}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_benchmark}{Catch::Benchmark::Benchmark}}\ BenchmarkName\{name\}\ )\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ BenchmarkName\ =\ [\&]}
+
+\end{DoxyCode}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_afb251464dc8eda2a2b9e0dbf2239819a}\index{catch\_benchmark.hpp@{catch\_benchmark.hpp}!INTERNAL\_CATCH\_GET\_1\_ARG@{INTERNAL\_CATCH\_GET\_1\_ARG}}
+\index{INTERNAL\_CATCH\_GET\_1\_ARG@{INTERNAL\_CATCH\_GET\_1\_ARG}!catch\_benchmark.hpp@{catch\_benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{INTERNAL\_CATCH\_GET\_1\_ARG}{INTERNAL\_CATCH\_GET\_1\_ARG}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_afb251464dc8eda2a2b9e0dbf2239819a} 
+\+\#define INTERNAL\+\_\+\+CATCH\+\_\+\+GET\+\_\+1\+\_\+\+ARG(\begin{DoxyParamCaption}\item[{}]{arg1}{, }\item[{}]{arg2}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arg1}
+
+\end{DoxyCode}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_ac2c7d6057422745c874a5857ffb2b9f3}\index{catch\_benchmark.hpp@{catch\_benchmark.hpp}!INTERNAL\_CATCH\_GET\_2\_ARG@{INTERNAL\_CATCH\_GET\_2\_ARG}}
+\index{INTERNAL\_CATCH\_GET\_2\_ARG@{INTERNAL\_CATCH\_GET\_2\_ARG}!catch\_benchmark.hpp@{catch\_benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{INTERNAL\_CATCH\_GET\_2\_ARG}{INTERNAL\_CATCH\_GET\_2\_ARG}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__benchmark_8hpp_ac2c7d6057422745c874a5857ffb2b9f3} 
+\+\#define INTERNAL\+\_\+\+CATCH\+\_\+\+GET\+\_\+2\+\_\+\+ARG(\begin{DoxyParamCaption}\item[{}]{arg1}{, }\item[{}]{arg2}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arg2}
+
+\end{DoxyCode}

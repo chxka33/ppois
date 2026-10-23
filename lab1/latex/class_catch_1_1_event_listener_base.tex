@@ -1,0 +1,1624 @@
+\doxysection{Catch::Event\+Listener\+Base Class Reference}
+\hypertarget{class_catch_1_1_event_listener_base}{}\label{class_catch_1_1_event_listener_base}\index{Catch::EventListenerBase@{Catch::EventListenerBase}}
+
+
+{\ttfamily \+\#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+Inheritance diagram for Catch::Event\+Listener\+Base:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.560976cm]{class_catch_1_1_event_listener_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc}{report\+Invalid\+Test\+Spec}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called for all invalid test specs from the cli. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025}{fatal\+Error\+Encountered}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} error) override
+\begin{DoxyCompactList}\small\item\em Called if a fatal error (signal/\+structured exception) occurred. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a}{benchmark\+Preparing}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} name) override
+\begin{DoxyCompactList}\small\item\em Called when user-\/code is being probed before the actual benchmark runs. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df}{benchmark\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&benchmark\+Info) override
+\begin{DoxyCompactList}\small\item\em Called after probe but before the user-\/code is being benchmarked. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e}{benchmark\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&benchmark\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called with the benchmark results if benchmark successfully finishes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2}{benchmark\+Failed}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} error) override
+\begin{DoxyCompactList}\small\item\em Called if running the benchmarks fails for any reason. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936}{assertion\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&assertion\+Info) override
+\begin{DoxyCompactList}\small\item\em Called before assertion success/\+failure is evaluated. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480}{assertion\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&assertion\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after assertion was fully evaluated. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53}{list\+Reporters}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&descriptions) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided reporters using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48}{list\+Listeners}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&descriptions) override
+\begin{DoxyCompactList}\small\item\em Writes out the provided listeners descriptions using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8}{list\+Tests}} (std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&tests) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided tests using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7}{list\+Tags}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&tag\+Infos) override
+\begin{DoxyCompactList}\small\item\em Writes out information about the provided tags using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527}{no\+Matching\+Test\+Cases}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called when no test cases match provided test spec. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0}{test\+Run\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&test\+Run\+Info) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4}{test\+Case\+Starting}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e}{test\+Case\+Partial\+Starting}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info, uint64\+\_\+t part\+Number) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747}{section\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&section\+Info) override
+\begin{DoxyCompactList}\small\item\em Called when a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} is being entered. Not called for skipped sections. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b}{section\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&section\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} has finished running. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24}{test\+Case\+Partial\+Ended}} (\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats, uint64\+\_\+t part\+Number) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1}{test\+Case\+Ended}} (\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939}{test\+Run\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&test\+Run\+Stats) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e}{skip\+Test}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc}{report\+Invalid\+Test\+Spec}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called for all invalid test specs from the cli. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025}{fatal\+Error\+Encountered}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} error) override
+\begin{DoxyCompactList}\small\item\em Called if a fatal error (signal/\+structured exception) occurred. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a}{benchmark\+Preparing}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} name) override
+\begin{DoxyCompactList}\small\item\em Called when user-\/code is being probed before the actual benchmark runs. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df}{benchmark\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&benchmark\+Info) override
+\begin{DoxyCompactList}\small\item\em Called after probe but before the user-\/code is being benchmarked. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e}{benchmark\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&benchmark\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called with the benchmark results if benchmark successfully finishes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2}{benchmark\+Failed}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} error) override
+\begin{DoxyCompactList}\small\item\em Called if running the benchmarks fails for any reason. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936}{assertion\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&assertion\+Info) override
+\begin{DoxyCompactList}\small\item\em Called before assertion success/\+failure is evaluated. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480}{assertion\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&assertion\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after assertion was fully evaluated. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53}{list\+Reporters}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&descriptions) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided reporters using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48}{list\+Listeners}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&descriptions) override
+\begin{DoxyCompactList}\small\item\em Writes out the provided listeners descriptions using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8}{list\+Tests}} (std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&tests) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided tests using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7}{list\+Tags}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&tag\+Infos) override
+\begin{DoxyCompactList}\small\item\em Writes out information about the provided tags using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527}{no\+Matching\+Test\+Cases}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called when no test cases match provided test spec. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0}{test\+Run\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&test\+Run\+Info) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4}{test\+Case\+Starting}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e}{test\+Case\+Partial\+Starting}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info, uint64\+\_\+t part\+Number) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747}{section\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&section\+Info) override
+\begin{DoxyCompactList}\small\item\em Called when a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} is being entered. Not called for skipped sections. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b}{section\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&section\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} has finished running. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24}{test\+Case\+Partial\+Ended}} (\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats, uint64\+\_\+t part\+Number) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1}{test\+Case\+Ended}} (\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939}{test\+Run\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&test\+Run\+Stats) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e}{skip\+Test}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc}{report\+Invalid\+Test\+Spec}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called for all invalid test specs from the cli. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025}{fatal\+Error\+Encountered}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} error) override
+\begin{DoxyCompactList}\small\item\em Called if a fatal error (signal/\+structured exception) occurred. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a}{benchmark\+Preparing}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} name) override
+\begin{DoxyCompactList}\small\item\em Called when user-\/code is being probed before the actual benchmark runs. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df}{benchmark\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&benchmark\+Info) override
+\begin{DoxyCompactList}\small\item\em Called after probe but before the user-\/code is being benchmarked. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e}{benchmark\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&benchmark\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called with the benchmark results if benchmark successfully finishes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2}{benchmark\+Failed}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} error) override
+\begin{DoxyCompactList}\small\item\em Called if running the benchmarks fails for any reason. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936}{assertion\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&assertion\+Info) override
+\begin{DoxyCompactList}\small\item\em Called before assertion success/\+failure is evaluated. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480}{assertion\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&assertion\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after assertion was fully evaluated. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53}{list\+Reporters}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&descriptions) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided reporters using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48}{list\+Listeners}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&descriptions) override
+\begin{DoxyCompactList}\small\item\em Writes out the provided listeners descriptions using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8}{list\+Tests}} (std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&tests) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided tests using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7}{list\+Tags}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&tag\+Infos) override
+\begin{DoxyCompactList}\small\item\em Writes out information about the provided tags using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527}{no\+Matching\+Test\+Cases}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called when no test cases match provided test spec. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0}{test\+Run\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&test\+Run\+Info) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4}{test\+Case\+Starting}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e}{test\+Case\+Partial\+Starting}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info, uint64\+\_\+t part\+Number) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747}{section\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&section\+Info) override
+\begin{DoxyCompactList}\small\item\em Called when a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} is being entered. Not called for skipped sections. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b}{section\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&section\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} has finished running. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24}{test\+Case\+Partial\+Ended}} (\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats, uint64\+\_\+t part\+Number) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1}{test\+Case\+Ended}} (\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939}{test\+Run\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&test\+Run\+Stats) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e}{skip\+Test}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc}{report\+Invalid\+Test\+Spec}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called for all invalid test specs from the cli. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025}{fatal\+Error\+Encountered}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} error) override
+\begin{DoxyCompactList}\small\item\em Called if a fatal error (signal/\+structured exception) occurred. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a}{benchmark\+Preparing}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} name) override
+\begin{DoxyCompactList}\small\item\em Called when user-\/code is being probed before the actual benchmark runs. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df}{benchmark\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&benchmark\+Info) override
+\begin{DoxyCompactList}\small\item\em Called after probe but before the user-\/code is being benchmarked. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e}{benchmark\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&benchmark\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called with the benchmark results if benchmark successfully finishes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2}{benchmark\+Failed}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} error) override
+\begin{DoxyCompactList}\small\item\em Called if running the benchmarks fails for any reason. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936}{assertion\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&assertion\+Info) override
+\begin{DoxyCompactList}\small\item\em Called before assertion success/\+failure is evaluated. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480}{assertion\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&assertion\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after assertion was fully evaluated. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53}{list\+Reporters}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&descriptions) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided reporters using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48}{list\+Listeners}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&descriptions) override
+\begin{DoxyCompactList}\small\item\em Writes out the provided listeners descriptions using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8}{list\+Tests}} (std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&tests) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided tests using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7}{list\+Tags}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&tag\+Infos) override
+\begin{DoxyCompactList}\small\item\em Writes out information about the provided tags using reporter-\/specific format. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527}{no\+Matching\+Test\+Cases}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} unmatched\+Spec) override
+\begin{DoxyCompactList}\small\item\em Called when no test cases match provided test spec. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0}{test\+Run\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&test\+Run\+Info) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4}{test\+Case\+Starting}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e}{test\+Case\+Partial\+Starting}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info, uint64\+\_\+t part\+Number) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747}{section\+Starting}} (\doxymbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&section\+Info) override
+\begin{DoxyCompactList}\small\item\em Called when a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} is being entered. Not called for skipped sections. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b}{section\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&section\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called after a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} has finished running. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24}{test\+Case\+Partial\+Ended}} (\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats, uint64\+\_\+t part\+Number) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1}{test\+Case\+Ended}} (\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats) override
+\begin{DoxyCompactList}\small\item\em Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939}{test\+Run\+Ended}} (\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&test\+Run\+Stats) override
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e}{skip\+Test}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_event_listener_base_aaaa931eff91dcc54dbcbe3fc7e0d4ab8}{IEvent\+Listener}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \texorpdfstring{$\ast$}{*}config)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_catch_1_1_i_event_listener}{Catch::\+\+IEvent\+Listener}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaaa931eff91dcc54dbcbe3fc7e0d4ab8}{IEvent\+Listener}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \texorpdfstring{$\ast$}{*}config)
+\item 
+virtual \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acfa267bbb655d4530752d5ec2507b95c}{\texorpdfstring{$\sim$}{\string~}\+IEvent\+Listener}} ()
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_reporter_preferences}{Reporter\+Preferences}} const \& \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a613b60656347b078f9a8d0385892f2d4}{get\+Preferences}} () const
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaaa931eff91dcc54dbcbe3fc7e0d4ab8}{IEvent\+Listener}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \texorpdfstring{$\ast$}{*}config)
+\item 
+virtual \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a32b412d1d9c101bb1755ea9175eb6587}{\texorpdfstring{$\sim$}{\string~}\+IEvent\+Listener}} ()
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_reporter_preferences}{Reporter\+Preferences}} const \& \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a613b60656347b078f9a8d0385892f2d4}{get\+Preferences}} () const
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaaa931eff91dcc54dbcbe3fc7e0d4ab8}{IEvent\+Listener}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \texorpdfstring{$\ast$}{*}config)
+\item 
+virtual \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a32b412d1d9c101bb1755ea9175eb6587}{\texorpdfstring{$\sim$}{\string~}\+IEvent\+Listener}} ()
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_reporter_preferences}{Reporter\+Preferences}} const \& \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a613b60656347b078f9a8d0385892f2d4}{get\+Preferences}} () const
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaaa931eff91dcc54dbcbe3fc7e0d4ab8}{IEvent\+Listener}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \texorpdfstring{$\ast$}{*}config)
+\item 
+virtual \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a32b412d1d9c101bb1755ea9175eb6587}{\texorpdfstring{$\sim$}{\string~}\+IEvent\+Listener}} ()
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_reporter_preferences}{Reporter\+Preferences}} const \& \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a613b60656347b078f9a8d0385892f2d4}{get\+Preferences}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_catch_1_1_i_event_listener}{Catch::\+\+IEvent\+Listener}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_reporter_preferences}{Reporter\+Preferences}} \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_ae0571282fa76ecc35b061c9f1c718c72}{m\+\_\+preferences}}
+\begin{DoxyCompactList}\small\item\em Derived classes can set up their preferences here. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const  \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a28c06b14511a831bffc3ee8ef9d7349f}{m\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em The test run\textquotesingle{}s config as filled in from CLI and defaults. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class to simplify implementing listeners.
+
+Provides empty default implementation for all \doxylink{class_catch_1_1_i_event_listener}{IEvent\+Listener} member functions, so that a listener implementation can pick which member functions it actually cares about. 
+
+\label{class_catch_1_1_event_listener_base_doc-func-members}
+\Hypertarget{class_catch_1_1_event_listener_base_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!assertionEnded@{assertionEnded}}
+\index{assertionEnded@{assertionEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{assertionEnded()}{assertionEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480} 
+void Catch::\+\+Event\+Listener\+Base::\+assertion\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&}]{assertion\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after assertion was fully evaluated. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a43aec5f970694bd25a736e3d9871b5c4}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a2f6e6c4eb8aae7f0e89302b34b58c038}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a2f6e6c4eb8aae7f0e89302b34b58c038}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!assertionEnded@{assertionEnded}}
+\index{assertionEnded@{assertionEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{assertionEnded()}{assertionEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480} 
+void Catch::\+\+Event\+Listener\+Base::\+assertion\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&}]{assertion\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after assertion was fully evaluated. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a43aec5f970694bd25a736e3d9871b5c4}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a2f6e6c4eb8aae7f0e89302b34b58c038}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a2f6e6c4eb8aae7f0e89302b34b58c038}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!assertionEnded@{assertionEnded}}
+\index{assertionEnded@{assertionEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{assertionEnded()}{assertionEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480} 
+void Catch::\+\+Event\+Listener\+Base::\+assertion\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&}]{assertion\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after assertion was fully evaluated. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a43aec5f970694bd25a736e3d9871b5c4}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a2f6e6c4eb8aae7f0e89302b34b58c038}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a2f6e6c4eb8aae7f0e89302b34b58c038}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!assertionEnded@{assertionEnded}}
+\index{assertionEnded@{assertionEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{assertionEnded()}{assertionEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a9fee1046bb51b5545ddf1444d1e01480} 
+void Catch::\+\+Event\+Listener\+Base::\+assertion\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&}]{assertion\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after assertion was fully evaluated. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a43aec5f970694bd25a736e3d9871b5c4}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a2f6e6c4eb8aae7f0e89302b34b58c038}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a2f6e6c4eb8aae7f0e89302b34b58c038}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!assertionStarting@{assertionStarting}}
+\index{assertionStarting@{assertionStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{assertionStarting()}{assertionStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936} 
+void Catch::\+\+Event\+Listener\+Base::\+assertion\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&}]{assertion\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called before assertion success/\+failure is evaluated. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a739285f21094b48e665fe32610d12b4d}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a49c64daf90f9d9bd6c3d52494272fa21}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a49c64daf90f9d9bd6c3d52494272fa21}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!assertionStarting@{assertionStarting}}
+\index{assertionStarting@{assertionStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{assertionStarting()}{assertionStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936} 
+void Catch::\+\+Event\+Listener\+Base::\+assertion\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&}]{assertion\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called before assertion success/\+failure is evaluated. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a739285f21094b48e665fe32610d12b4d}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a49c64daf90f9d9bd6c3d52494272fa21}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a49c64daf90f9d9bd6c3d52494272fa21}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!assertionStarting@{assertionStarting}}
+\index{assertionStarting@{assertionStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{assertionStarting()}{assertionStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936} 
+void Catch::\+\+Event\+Listener\+Base::\+assertion\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&}]{assertion\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called before assertion success/\+failure is evaluated. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a739285f21094b48e665fe32610d12b4d}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a49c64daf90f9d9bd6c3d52494272fa21}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a49c64daf90f9d9bd6c3d52494272fa21}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!assertionStarting@{assertionStarting}}
+\index{assertionStarting@{assertionStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{assertionStarting()}{assertionStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_adeab36ce43a79f658b817fb73c345936} 
+void Catch::\+\+Event\+Listener\+Base::\+assertion\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&}]{assertion\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called before assertion success/\+failure is evaluated. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a739285f21094b48e665fe32610d12b4d}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a49c64daf90f9d9bd6c3d52494272fa21}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a49c64daf90f9d9bd6c3d52494272fa21}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkEnded@{benchmarkEnded}}
+\index{benchmarkEnded@{benchmarkEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkEnded()}{benchmarkEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&}]{benchmark\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called with the benchmark results if benchmark successfully finishes. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a69d16f703f6fa505cee57d4420f56d4c}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkEnded@{benchmarkEnded}}
+\index{benchmarkEnded@{benchmarkEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkEnded()}{benchmarkEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&}]{benchmark\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called with the benchmark results if benchmark successfully finishes. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a69d16f703f6fa505cee57d4420f56d4c}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkEnded@{benchmarkEnded}}
+\index{benchmarkEnded@{benchmarkEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkEnded()}{benchmarkEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&}]{benchmark\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called with the benchmark results if benchmark successfully finishes. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a69d16f703f6fa505cee57d4420f56d4c}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkEnded@{benchmarkEnded}}
+\index{benchmarkEnded@{benchmarkEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkEnded()}{benchmarkEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_af5987993f16cf365f7d3e66d88b3877e} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&}]{benchmark\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called with the benchmark results if benchmark successfully finishes. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a69d16f703f6fa505cee57d4420f56d4c}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkFailed@{benchmarkFailed}}
+\index{benchmarkFailed@{benchmarkFailed}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkFailed()}{benchmarkFailed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Failed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{benchmark\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called if running the benchmarks fails for any reason. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a8698348805f39879bccdfacb4afd5095}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkFailed@{benchmarkFailed}}
+\index{benchmarkFailed@{benchmarkFailed}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkFailed()}{benchmarkFailed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Failed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{benchmark\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called if running the benchmarks fails for any reason. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a8698348805f39879bccdfacb4afd5095}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkFailed@{benchmarkFailed}}
+\index{benchmarkFailed@{benchmarkFailed}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkFailed()}{benchmarkFailed()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Failed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{benchmark\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called if running the benchmarks fails for any reason. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a8698348805f39879bccdfacb4afd5095}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkFailed@{benchmarkFailed}}
+\index{benchmarkFailed@{benchmarkFailed}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkFailed()}{benchmarkFailed()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a63ec40e4f18b045be4a41e766cacbfd2} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Failed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{benchmark\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called if running the benchmarks fails for any reason. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a8698348805f39879bccdfacb4afd5095}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkPreparing@{benchmarkPreparing}}
+\index{benchmarkPreparing@{benchmarkPreparing}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkPreparing()}{benchmarkPreparing()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Preparing (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{benchmark\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when user-\/code is being probed before the actual benchmark runs. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_ac16d3fb730b139bbc1810b7e42cde5ac}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkPreparing@{benchmarkPreparing}}
+\index{benchmarkPreparing@{benchmarkPreparing}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkPreparing()}{benchmarkPreparing()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Preparing (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{benchmark\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when user-\/code is being probed before the actual benchmark runs. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_ac16d3fb730b139bbc1810b7e42cde5ac}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkPreparing@{benchmarkPreparing}}
+\index{benchmarkPreparing@{benchmarkPreparing}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkPreparing()}{benchmarkPreparing()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Preparing (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{benchmark\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when user-\/code is being probed before the actual benchmark runs. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_ac16d3fb730b139bbc1810b7e42cde5ac}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkPreparing@{benchmarkPreparing}}
+\index{benchmarkPreparing@{benchmarkPreparing}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkPreparing()}{benchmarkPreparing()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_ad516f1acfa0313022a5b50c0278ebf7a} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Preparing (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{benchmark\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when user-\/code is being probed before the actual benchmark runs. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_ac16d3fb730b139bbc1810b7e42cde5ac}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkStarting@{benchmarkStarting}}
+\index{benchmarkStarting@{benchmarkStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkStarting()}{benchmarkStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&}]{benchmark\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after probe but before the user-\/code is being benchmarked. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a96e744c9c4bdbea26f16ec2f1d0090fe}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkStarting@{benchmarkStarting}}
+\index{benchmarkStarting@{benchmarkStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkStarting()}{benchmarkStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&}]{benchmark\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after probe but before the user-\/code is being benchmarked. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a96e744c9c4bdbea26f16ec2f1d0090fe}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkStarting@{benchmarkStarting}}
+\index{benchmarkStarting@{benchmarkStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkStarting()}{benchmarkStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&}]{benchmark\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after probe but before the user-\/code is being benchmarked. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a96e744c9c4bdbea26f16ec2f1d0090fe}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!benchmarkStarting@{benchmarkStarting}}
+\index{benchmarkStarting@{benchmarkStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{benchmarkStarting()}{benchmarkStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aac0691661bce3b68ef876801741415df} 
+void Catch::\+\+Event\+Listener\+Base::\+benchmark\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&}]{benchmark\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after probe but before the user-\/code is being benchmarked. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a96e744c9c4bdbea26f16ec2f1d0090fe}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!fatalErrorEncountered@{fatalErrorEncountered}}
+\index{fatalErrorEncountered@{fatalErrorEncountered}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{fatalErrorEncountered()}{fatalErrorEncountered()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025} 
+void Catch::\+\+Event\+Listener\+Base::\+fatal\+Error\+Encountered (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called if a fatal error (signal/\+structured exception) occurred. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aefa99bd01a2b15d36f223e3a60fbd536}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!fatalErrorEncountered@{fatalErrorEncountered}}
+\index{fatalErrorEncountered@{fatalErrorEncountered}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{fatalErrorEncountered()}{fatalErrorEncountered()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025} 
+void Catch::\+\+Event\+Listener\+Base::\+fatal\+Error\+Encountered (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called if a fatal error (signal/\+structured exception) occurred. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aefa99bd01a2b15d36f223e3a60fbd536}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!fatalErrorEncountered@{fatalErrorEncountered}}
+\index{fatalErrorEncountered@{fatalErrorEncountered}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{fatalErrorEncountered()}{fatalErrorEncountered()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025} 
+void Catch::\+\+Event\+Listener\+Base::\+fatal\+Error\+Encountered (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called if a fatal error (signal/\+structured exception) occurred. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aefa99bd01a2b15d36f223e3a60fbd536}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!fatalErrorEncountered@{fatalErrorEncountered}}
+\index{fatalErrorEncountered@{fatalErrorEncountered}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{fatalErrorEncountered()}{fatalErrorEncountered()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a0cac63a4695456132d34727c698c6025} 
+void Catch::\+\+Event\+Listener\+Base::\+fatal\+Error\+Encountered (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called if a fatal error (signal/\+structured exception) occurred. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aefa99bd01a2b15d36f223e3a60fbd536}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aaaa931eff91dcc54dbcbe3fc7e0d4ab8}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!IEventListener@{IEventListener}}
+\index{IEventListener@{IEventListener}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{IEventListener()}{IEventListener()}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aaaa931eff91dcc54dbcbe3fc7e0d4ab8} 
+\doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaaa931eff91dcc54dbcbe3fc7e0d4ab8}{Catch::\+\+IEvent\+Listener::\+\+IEvent\+Listener}} (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \texorpdfstring{$\ast$}{*}}]{config}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listListeners@{listListeners}}
+\index{listListeners@{listListeners}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listListeners()}{listListeners()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Listeners (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&}]{descriptions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out the provided listeners descriptions using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acb1f0a5480b35730183105e9f77796f6}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listListeners@{listListeners}}
+\index{listListeners@{listListeners}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listListeners()}{listListeners()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Listeners (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&}]{descriptions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out the provided listeners descriptions using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acb1f0a5480b35730183105e9f77796f6}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listListeners@{listListeners}}
+\index{listListeners@{listListeners}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listListeners()}{listListeners()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Listeners (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&}]{descriptions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out the provided listeners descriptions using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acb1f0a5480b35730183105e9f77796f6}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listListeners@{listListeners}}
+\index{listListeners@{listListeners}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listListeners()}{listListeners()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a4757ec53087d819d3dbe1d85f8ee0d48} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Listeners (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&}]{descriptions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out the provided listeners descriptions using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acb1f0a5480b35730183105e9f77796f6}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listReporters@{listReporters}}
+\index{listReporters@{listReporters}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listReporters()}{listReporters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Reporters (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&}]{descriptions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about provided reporters using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a7da9f6743a14db5f7e3e1c92f00c1b6b}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listReporters@{listReporters}}
+\index{listReporters@{listReporters}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listReporters()}{listReporters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Reporters (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&}]{descriptions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about provided reporters using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a7da9f6743a14db5f7e3e1c92f00c1b6b}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listReporters@{listReporters}}
+\index{listReporters@{listReporters}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listReporters()}{listReporters()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Reporters (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&}]{descriptions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about provided reporters using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a7da9f6743a14db5f7e3e1c92f00c1b6b}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listReporters@{listReporters}}
+\index{listReporters@{listReporters}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listReporters()}{listReporters()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a00c37594a72158bb534bae980392ab53} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Reporters (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&}]{descriptions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about provided reporters using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a7da9f6743a14db5f7e3e1c92f00c1b6b}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listTags@{listTags}}
+\index{listTags@{listTags}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listTags()}{listTags()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Tags (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&}]{tags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about the provided tags using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a52536b083c74898292be38f7fb5591e1}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listTags@{listTags}}
+\index{listTags@{listTags}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listTags()}{listTags()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Tags (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&}]{tags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about the provided tags using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a52536b083c74898292be38f7fb5591e1}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listTags@{listTags}}
+\index{listTags@{listTags}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listTags()}{listTags()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Tags (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&}]{tags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about the provided tags using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a52536b083c74898292be38f7fb5591e1}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listTags@{listTags}}
+\index{listTags@{listTags}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listTags()}{listTags()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a85f16bf8076947b32acae376f5f84ea7} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Tags (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&}]{tags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about the provided tags using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a52536b083c74898292be38f7fb5591e1}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listTests@{listTests}}
+\index{listTests@{listTests}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listTests()}{listTests()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Tests (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&}]{tests}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about provided tests using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a52d9cd25aaaff57d7ba044d1108b2e9e}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listTests@{listTests}}
+\index{listTests@{listTests}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listTests()}{listTests()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Tests (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&}]{tests}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about provided tests using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a52d9cd25aaaff57d7ba044d1108b2e9e}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listTests@{listTests}}
+\index{listTests@{listTests}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listTests()}{listTests()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Tests (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&}]{tests}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about provided tests using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a52d9cd25aaaff57d7ba044d1108b2e9e}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!listTests@{listTests}}
+\index{listTests@{listTests}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{listTests()}{listTests()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aca87099a86bea8d6007dc69467efeff8} 
+void Catch::\+\+Event\+Listener\+Base::\+list\+Tests (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&}]{tests}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out information about provided tests using reporter-\/specific format. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a52d9cd25aaaff57d7ba044d1108b2e9e}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!noMatchingTestCases@{noMatchingTestCases}}
+\index{noMatchingTestCases@{noMatchingTestCases}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{noMatchingTestCases()}{noMatchingTestCases()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527} 
+void Catch::\+\+Event\+Listener\+Base::\+no\+Matching\+Test\+Cases (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{unmatched\+Spec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when no test cases match provided test spec. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acf4a6648c7fe3449634491d54a7be0ce}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!noMatchingTestCases@{noMatchingTestCases}}
+\index{noMatchingTestCases@{noMatchingTestCases}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{noMatchingTestCases()}{noMatchingTestCases()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527} 
+void Catch::\+\+Event\+Listener\+Base::\+no\+Matching\+Test\+Cases (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{unmatched\+Spec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when no test cases match provided test spec. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acf4a6648c7fe3449634491d54a7be0ce}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!noMatchingTestCases@{noMatchingTestCases}}
+\index{noMatchingTestCases@{noMatchingTestCases}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{noMatchingTestCases()}{noMatchingTestCases()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527} 
+void Catch::\+\+Event\+Listener\+Base::\+no\+Matching\+Test\+Cases (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{unmatched\+Spec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when no test cases match provided test spec. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acf4a6648c7fe3449634491d54a7be0ce}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!noMatchingTestCases@{noMatchingTestCases}}
+\index{noMatchingTestCases@{noMatchingTestCases}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{noMatchingTestCases()}{noMatchingTestCases()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a93b020650d8860243bef0c02d5fd7527} 
+void Catch::\+\+Event\+Listener\+Base::\+no\+Matching\+Test\+Cases (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{unmatched\+Spec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when no test cases match provided test spec. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acf4a6648c7fe3449634491d54a7be0ce}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!reportInvalidTestSpec@{reportInvalidTestSpec}}
+\index{reportInvalidTestSpec@{reportInvalidTestSpec}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{reportInvalidTestSpec()}{reportInvalidTestSpec()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc} 
+void Catch::\+\+Event\+Listener\+Base::\+report\+Invalid\+Test\+Spec (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{invalid\+Argument}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called for all invalid test specs from the cli. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acde7b07d7c37fb6d2d21cf97c68065ec}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!reportInvalidTestSpec@{reportInvalidTestSpec}}
+\index{reportInvalidTestSpec@{reportInvalidTestSpec}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{reportInvalidTestSpec()}{reportInvalidTestSpec()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc} 
+void Catch::\+\+Event\+Listener\+Base::\+report\+Invalid\+Test\+Spec (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{invalid\+Argument}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called for all invalid test specs from the cli. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acde7b07d7c37fb6d2d21cf97c68065ec}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!reportInvalidTestSpec@{reportInvalidTestSpec}}
+\index{reportInvalidTestSpec@{reportInvalidTestSpec}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{reportInvalidTestSpec()}{reportInvalidTestSpec()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc} 
+void Catch::\+\+Event\+Listener\+Base::\+report\+Invalid\+Test\+Spec (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{invalid\+Argument}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called for all invalid test specs from the cli. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acde7b07d7c37fb6d2d21cf97c68065ec}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!reportInvalidTestSpec@{reportInvalidTestSpec}}
+\index{reportInvalidTestSpec@{reportInvalidTestSpec}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{reportInvalidTestSpec()}{reportInvalidTestSpec()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a0ee72a1f310d16e0c131b2420e91e0dc} 
+void Catch::\+\+Event\+Listener\+Base::\+report\+Invalid\+Test\+Spec (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}}}]{invalid\+Argument}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called for all invalid test specs from the cli. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_acde7b07d7c37fb6d2d21cf97c68065ec}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!sectionEnded@{sectionEnded}}
+\index{sectionEnded@{sectionEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{sectionEnded()}{sectionEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b} 
+void Catch::\+\+Event\+Listener\+Base::\+section\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&}]{section\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} has finished running. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a077b6305d49853779d715777e90138bd}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ad138ae0b4b304b46bd2fef9a20c76ca8}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ad138ae0b4b304b46bd2fef9a20c76ca8}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!sectionEnded@{sectionEnded}}
+\index{sectionEnded@{sectionEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{sectionEnded()}{sectionEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b} 
+void Catch::\+\+Event\+Listener\+Base::\+section\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&}]{section\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} has finished running. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a077b6305d49853779d715777e90138bd}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ad138ae0b4b304b46bd2fef9a20c76ca8}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ad138ae0b4b304b46bd2fef9a20c76ca8}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!sectionEnded@{sectionEnded}}
+\index{sectionEnded@{sectionEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{sectionEnded()}{sectionEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b} 
+void Catch::\+\+Event\+Listener\+Base::\+section\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&}]{section\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} has finished running. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a077b6305d49853779d715777e90138bd}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ad138ae0b4b304b46bd2fef9a20c76ca8}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ad138ae0b4b304b46bd2fef9a20c76ca8}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!sectionEnded@{sectionEnded}}
+\index{sectionEnded@{sectionEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{sectionEnded()}{sectionEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a3292f6b208442c43ad706b1fe6cce08b} 
+void Catch::\+\+Event\+Listener\+Base::\+section\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&}]{section\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} has finished running. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a077b6305d49853779d715777e90138bd}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ad138ae0b4b304b46bd2fef9a20c76ca8}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ad138ae0b4b304b46bd2fef9a20c76ca8}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!sectionStarting@{sectionStarting}}
+\index{sectionStarting@{sectionStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{sectionStarting()}{sectionStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747} 
+void Catch::\+\+Event\+Listener\+Base::\+section\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&}]{section\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} is being entered. Not called for skipped sections. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaca0feeb367dea20806972112e4846d0}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ae9245e5c3aa6c3e214ad5fb55e5d0ced}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ae9245e5c3aa6c3e214ad5fb55e5d0ced}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!sectionStarting@{sectionStarting}}
+\index{sectionStarting@{sectionStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{sectionStarting()}{sectionStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747} 
+void Catch::\+\+Event\+Listener\+Base::\+section\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&}]{section\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} is being entered. Not called for skipped sections. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaca0feeb367dea20806972112e4846d0}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ae9245e5c3aa6c3e214ad5fb55e5d0ced}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ae9245e5c3aa6c3e214ad5fb55e5d0ced}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!sectionStarting@{sectionStarting}}
+\index{sectionStarting@{sectionStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{sectionStarting()}{sectionStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747} 
+void Catch::\+\+Event\+Listener\+Base::\+section\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&}]{section\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} is being entered. Not called for skipped sections. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaca0feeb367dea20806972112e4846d0}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ae9245e5c3aa6c3e214ad5fb55e5d0ced}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ae9245e5c3aa6c3e214ad5fb55e5d0ced}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!sectionStarting@{sectionStarting}}
+\index{sectionStarting@{sectionStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{sectionStarting()}{sectionStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a5bfe040888b2e287cab8dd2e57ecc747} 
+void Catch::\+\+Event\+Listener\+Base::\+section\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&}]{section\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when a {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} is being entered. Not called for skipped sections. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aaca0feeb367dea20806972112e4846d0}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ae9245e5c3aa6c3e214ad5fb55e5d0ced}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ae9245e5c3aa6c3e214ad5fb55e5d0ced}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!skipTest@{skipTest}}
+\index{skipTest@{skipTest}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{skipTest()}{skipTest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e} 
+void Catch::\+\+Event\+Listener\+Base::\+skip\+Test (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called with test cases that are skipped due to the test run aborting. NOT called for test cases that are explicitly skipped using the {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aeb37959bf8e5094ee4547d57094cc2b4}{SKIP}} macro.
+
+Deprecated -\/ will be removed in the next major release. 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a350c8872b5826a6b62635cfa4eafac93}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!skipTest@{skipTest}}
+\index{skipTest@{skipTest}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{skipTest()}{skipTest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e} 
+void Catch::\+\+Event\+Listener\+Base::\+skip\+Test (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called with test cases that are skipped due to the test run aborting. NOT called for test cases that are explicitly skipped using the {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aeb37959bf8e5094ee4547d57094cc2b4}{SKIP}} macro.
+
+Deprecated -\/ will be removed in the next major release. 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a350c8872b5826a6b62635cfa4eafac93}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!skipTest@{skipTest}}
+\index{skipTest@{skipTest}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{skipTest()}{skipTest()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e} 
+void Catch::\+\+Event\+Listener\+Base::\+skip\+Test (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called with test cases that are skipped due to the test run aborting. NOT called for test cases that are explicitly skipped using the {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aeb37959bf8e5094ee4547d57094cc2b4}{SKIP}} macro.
+
+Deprecated -\/ will be removed in the next major release. 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a350c8872b5826a6b62635cfa4eafac93}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!skipTest@{skipTest}}
+\index{skipTest@{skipTest}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{skipTest()}{skipTest()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a976f5bf4c1ce2bab8c072ed4004ca52e} 
+void Catch::\+\+Event\+Listener\+Base::\+skip\+Test (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called with test cases that are skipped due to the test run aborting. NOT called for test cases that are explicitly skipped using the {\ttfamily \doxylink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aeb37959bf8e5094ee4547d57094cc2b4}{SKIP}} macro.
+
+Deprecated -\/ will be removed in the next major release. 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a350c8872b5826a6b62635cfa4eafac93}{Catch::\+\+IEvent\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCaseEnded@{testCaseEnded}}
+\index{testCaseEnded@{testCaseEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCaseEnded()}{testCaseEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_abe5cb0aaed8d0d5d8a42d23a7e36b667}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a2eeb40bab99a2c5f7d2c4b20d3518be2}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a2eeb40bab99a2c5f7d2c4b20d3518be2}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCaseEnded@{testCaseEnded}}
+\index{testCaseEnded@{testCaseEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCaseEnded()}{testCaseEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_abe5cb0aaed8d0d5d8a42d23a7e36b667}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a2eeb40bab99a2c5f7d2c4b20d3518be2}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a2eeb40bab99a2c5f7d2c4b20d3518be2}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCaseEnded@{testCaseEnded}}
+\index{testCaseEnded@{testCaseEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCaseEnded()}{testCaseEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_abe5cb0aaed8d0d5d8a42d23a7e36b667}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a2eeb40bab99a2c5f7d2c4b20d3518be2}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a2eeb40bab99a2c5f7d2c4b20d3518be2}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCaseEnded@{testCaseEnded}}
+\index{testCaseEnded@{testCaseEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCaseEnded()}{testCaseEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a3825591ad6b26ebb3760eb54a16376d1} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_abe5cb0aaed8d0d5d8a42d23a7e36b667}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a2eeb40bab99a2c5f7d2c4b20d3518be2}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a2eeb40bab99a2c5f7d2c4b20d3518be2}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCasePartialEnded@{testCasePartialEnded}}
+\index{testCasePartialEnded@{testCasePartialEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCasePartialEnded()}{testCasePartialEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Partial\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats}{, }\item[{uint64\+\_\+t}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a1ca022b9d648e34eaee8f772c5f4969c}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a400a2de272ded5ea14a016baa4c310e5}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a400a2de272ded5ea14a016baa4c310e5}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCasePartialEnded@{testCasePartialEnded}}
+\index{testCasePartialEnded@{testCasePartialEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCasePartialEnded()}{testCasePartialEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Partial\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats}{, }\item[{uint64\+\_\+t}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a1ca022b9d648e34eaee8f772c5f4969c}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a400a2de272ded5ea14a016baa4c310e5}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a400a2de272ded5ea14a016baa4c310e5}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCasePartialEnded@{testCasePartialEnded}}
+\index{testCasePartialEnded@{testCasePartialEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCasePartialEnded()}{testCasePartialEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Partial\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats}{, }\item[{uint64\+\_\+t}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a1ca022b9d648e34eaee8f772c5f4969c}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a400a2de272ded5ea14a016baa4c310e5}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a400a2de272ded5ea14a016baa4c310e5}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCasePartialEnded@{testCasePartialEnded}}
+\index{testCasePartialEnded@{testCasePartialEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCasePartialEnded()}{testCasePartialEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_ad58066fa69b5af081128a92b78c99f24} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Partial\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_stats}{Test\+Case\+Stats}} const \&}]{test\+Case\+Stats}{, }\item[{uint64\+\_\+t}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a1ca022b9d648e34eaee8f772c5f4969c}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a400a2de272ded5ea14a016baa4c310e5}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a400a2de272ded5ea14a016baa4c310e5}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCasePartialStarting@{testCasePartialStarting}}
+\index{testCasePartialStarting@{testCasePartialStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCasePartialStarting()}{testCasePartialStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Partial\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{, }\item[{uint64\+\_\+t}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aa50659430e5ba60c662ef5218e5c1e53}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a3313a97e7eea600c7497064fcf8684db}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a3313a97e7eea600c7497064fcf8684db}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCasePartialStarting@{testCasePartialStarting}}
+\index{testCasePartialStarting@{testCasePartialStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCasePartialStarting()}{testCasePartialStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Partial\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{, }\item[{uint64\+\_\+t}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aa50659430e5ba60c662ef5218e5c1e53}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a3313a97e7eea600c7497064fcf8684db}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a3313a97e7eea600c7497064fcf8684db}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCasePartialStarting@{testCasePartialStarting}}
+\index{testCasePartialStarting@{testCasePartialStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCasePartialStarting()}{testCasePartialStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Partial\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{, }\item[{uint64\+\_\+t}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aa50659430e5ba60c662ef5218e5c1e53}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a3313a97e7eea600c7497064fcf8684db}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a3313a97e7eea600c7497064fcf8684db}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCasePartialStarting@{testCasePartialStarting}}
+\index{testCasePartialStarting@{testCasePartialStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCasePartialStarting()}{testCasePartialStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_aad717d5878240ceb84ab078146ba5e1e} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Partial\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{, }\item[{uint64\+\_\+t}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape every time} a TEST\+\_\+\+CASE is entered, including repeats (due to sections). 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_aa50659430e5ba60c662ef5218e5c1e53}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a3313a97e7eea600c7497064fcf8684db}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a3313a97e7eea600c7497064fcf8684db}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCaseStarting@{testCaseStarting}}
+\index{testCaseStarting@{testCaseStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCaseStarting()}{testCaseStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a20bdd5b474e496a1a2a0b9e6a806ca4b}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a81f41be400e9c2637ea2083f4e014f2b}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a81f41be400e9c2637ea2083f4e014f2b}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCaseStarting@{testCaseStarting}}
+\index{testCaseStarting@{testCaseStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCaseStarting()}{testCaseStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a20bdd5b474e496a1a2a0b9e6a806ca4b}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a81f41be400e9c2637ea2083f4e014f2b}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a81f41be400e9c2637ea2083f4e014f2b}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCaseStarting@{testCaseStarting}}
+\index{testCaseStarting@{testCaseStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCaseStarting()}{testCaseStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a20bdd5b474e496a1a2a0b9e6a806ca4b}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a81f41be400e9c2637ea2083f4e014f2b}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a81f41be400e9c2637ea2083f4e014f2b}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testCaseStarting@{testCaseStarting}}
+\index{testCaseStarting@{testCaseStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testCaseStarting()}{testCaseStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_af2b261973f4bcf130c615bf49e1807b4} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Case\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&}]{test\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called {\itshape once} for each TEST\+\_\+\+CASE, no matter how many times it is entered. 
+
+
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a20bdd5b474e496a1a2a0b9e6a806ca4b}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a81f41be400e9c2637ea2083f4e014f2b}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a81f41be400e9c2637ea2083f4e014f2b}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testRunEnded@{testRunEnded}}
+\index{testRunEnded@{testRunEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testRunEnded()}{testRunEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Run\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&}]{test\+Run\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once after all tests in a testing run are finished
+
+Not called if tests weren\textquotesingle{}t run (e.\+g. only listings happened) 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a97a17235b82da761043654491db0b17c}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a206882ada39159633b103ac6cce1d663}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a206882ada39159633b103ac6cce1d663}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testRunEnded@{testRunEnded}}
+\index{testRunEnded@{testRunEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testRunEnded()}{testRunEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Run\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&}]{test\+Run\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once after all tests in a testing run are finished
+
+Not called if tests weren\textquotesingle{}t run (e.\+g. only listings happened) 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a97a17235b82da761043654491db0b17c}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a206882ada39159633b103ac6cce1d663}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a206882ada39159633b103ac6cce1d663}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testRunEnded@{testRunEnded}}
+\index{testRunEnded@{testRunEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testRunEnded()}{testRunEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Run\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&}]{test\+Run\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once after all tests in a testing run are finished
+
+Not called if tests weren\textquotesingle{}t run (e.\+g. only listings happened) 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a97a17235b82da761043654491db0b17c}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a206882ada39159633b103ac6cce1d663}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a206882ada39159633b103ac6cce1d663}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testRunEnded@{testRunEnded}}
+\index{testRunEnded@{testRunEnded}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testRunEnded()}{testRunEnded()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a058debcc3927de59d9ce5492e8d8a939} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Run\+Ended (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&}]{test\+Run\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once after all tests in a testing run are finished
+
+Not called if tests weren\textquotesingle{}t run (e.\+g. only listings happened) 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a97a17235b82da761043654491db0b17c}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_a206882ada39159633b103ac6cce1d663}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_a206882ada39159633b103ac6cce1d663}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testRunStarting@{testRunStarting}}
+\index{testRunStarting@{testRunStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testRunStarting()}{testRunStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Run\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&}]{test\+Run\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once in a testing run before tests are started
+
+Not called if tests won\textquotesingle{}t be run (e.\+g. only listing will happen) 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a3b7a9118f5b47011216aa31424ec4982}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ad238f5aab2dda29a73d990050e6a9870}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ad238f5aab2dda29a73d990050e6a9870}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testRunStarting@{testRunStarting}}
+\index{testRunStarting@{testRunStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testRunStarting()}{testRunStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Run\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&}]{test\+Run\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once in a testing run before tests are started
+
+Not called if tests won\textquotesingle{}t be run (e.\+g. only listing will happen) 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a3b7a9118f5b47011216aa31424ec4982}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ad238f5aab2dda29a73d990050e6a9870}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ad238f5aab2dda29a73d990050e6a9870}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testRunStarting@{testRunStarting}}
+\index{testRunStarting@{testRunStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testRunStarting()}{testRunStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Run\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&}]{test\+Run\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once in a testing run before tests are started
+
+Not called if tests won\textquotesingle{}t be run (e.\+g. only listing will happen) 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a3b7a9118f5b47011216aa31424ec4982}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ad238f5aab2dda29a73d990050e6a9870}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ad238f5aab2dda29a73d990050e6a9870}{Validating\+Test\+Listener}}.
+
+\Hypertarget{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0}\index{Catch::EventListenerBase@{Catch::EventListenerBase}!testRunStarting@{testRunStarting}}
+\index{testRunStarting@{testRunStarting}!Catch::EventListenerBase@{Catch::EventListenerBase}}
+\doxysubsubsection{\texorpdfstring{testRunStarting()}{testRunStarting()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_event_listener_base_a49b422668f34cc02d5f5ebeed3e275e0} 
+void Catch::\+\+Event\+Listener\+Base::\+test\+Run\+Starting (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&}]{test\+Run\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called once in a testing run before tests are started
+
+Not called if tests won\textquotesingle{}t be run (e.\+g. only listing will happen) 
+
+Implements \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_a3b7a9118f5b47011216aa31424ec4982}{Catch::\+\+IEvent\+Listener}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_validating_test_listener_ad238f5aab2dda29a73d990050e6a9870}{Validating\+Test\+Listener}}, and \doxymbox{\hyperlink{class_validating_test_listener_ad238f5aab2dda29a73d990050e6a9870}{Validating\+Test\+Listener}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+reporters/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__event__listener_8hpp}{catch\+\_\+reporter\+\_\+event\+\_\+listener.\+hpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+reporters/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__event__listener_8hpp}{catch\+\_\+reporter\+\_\+event\+\_\+listener.\+hpp}}\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+reporters/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__event__listener_8cpp}{catch\+\_\+reporter\+\_\+event\+\_\+listener.\+cpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+reporters/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__event__listener_8cpp}{catch\+\_\+reporter\+\_\+event\+\_\+listener.\+cpp}}\end{DoxyCompactItemize}

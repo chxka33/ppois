@@ -1,0 +1,45 @@
+\doxysection{catch\+\_\+version.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2catch__version_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2catch__version_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/catch\_version.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/catch\_version.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2catch__version_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_VERSION\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_VERSION\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iosfwd>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Versioning\ information}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_version}{Version}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_version_af5b9719c18f99ed86d9250ad83673dee}{Version}}(\ \doxymbox{\hyperlink{struct_catch_1_1_version_af5b9719c18f99ed86d9250ad83673dee}{Version}}\ \textcolor{keyword}{const}\&\ )\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_version_af5b9719c18f99ed86d9250ad83673dee}{Version}}\&\ \doxymbox{\hyperlink{struct_catch_1_1_version_a4379119bb74879da3b92c71d980c6c87}{operator=}}(\ \doxymbox{\hyperlink{struct_catch_1_1_version_af5b9719c18f99ed86d9250ad83673dee}{Version}}\ \textcolor{keyword}{const}\&\ )\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_version_a1c80c2102662b49dce9b930662f2a95c}{Version}}(\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_majorVersion,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_minorVersion,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_patchNumber,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ \_branchName,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_buildNumber\ );}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_catch_1_1_version_a67d30e6cb9fdde34a3fc235043cd9c63}{majorVersion}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_catch_1_1_version_a4993a9a98abd56991b9dad629b6783f1}{minorVersion}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_catch_1_1_version_a8bf08299323524985da5c1a0722464e0}{patchNumber}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ buildNumber\ is\ only\ used\ if\ branchName\ is\ not\ null}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_catch_1_1_version_aa338616e187abc4d16c4c6b1d9ff6307}{branchName}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_catch_1_1_version_a15facd4f9ac18f5ff2540bc798885c39}{buildNumber}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{struct_catch_1_1_version_a6730b4be4f5fa640b39de13d8ffe1dce}{operator\ <<\ }}(\ std::ostream\&\ os,\ \doxymbox{\hyperlink{struct_catch_1_1_version_af5b9719c18f99ed86d9250ad83673dee}{Version}}\ \textcolor{keyword}{const}\&\ version\ );}
+\DoxyCodeLine{00034\ \ \ \ \ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_version}{Version}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{namespace_catch_a35e54475ed669ef7f7ac00b858e91b2a}{libraryVersion}}();}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_VERSION\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

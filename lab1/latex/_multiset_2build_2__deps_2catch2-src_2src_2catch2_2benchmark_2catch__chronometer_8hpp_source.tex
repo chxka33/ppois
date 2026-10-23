@@ -1,0 +1,83 @@
+\doxysection{catch\+\_\+chronometer.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__chronometer_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__chronometer_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_chronometer.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_chronometer.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__chronometer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Adapted\ from\ donated\ nonius\ code.}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ CATCH\_CHRONOMETER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CATCH\_CHRONOMETER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/benchmark/catch\_clock.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <catch2/benchmark/catch\_optimizer.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_meta.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_move\_and\_forward.hpp>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark}{Benchmark}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept}{ChronometerConcept}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_af3d2250976b47920b4f3f4936fdffbc7}{start}}()\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_a066c884155da1ab1efcde265b2ea80bf}{finish}}()\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_ae3bc6a30c2d126b3fbc905c58243978d}{\string~ChronometerConcept}}();\ \textcolor{comment}{//\ =\ default;}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_ad1935ce0e39ea8b3ee96b7056131e318}{ChronometerConcept}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_ac4cbd1f841d745b9d638c5342e8d9c39}{ChronometerConcept}}(\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_ad1935ce0e39ea8b3ee96b7056131e318}{ChronometerConcept}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_ad1935ce0e39ea8b3ee96b7056131e318}{ChronometerConcept}}\&\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_a93cafc1a451fd4022ee08a9cfa20bea6}{operator=}}(\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_ad1935ce0e39ea8b3ee96b7056131e318}{ChronometerConcept}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Clock>}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model}{ChronometerModel}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept}{ChronometerConcept}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_a73645cbcc831ab32de029006072b70dd}{start}}()\textcolor{keyword}{\ override\ }\{\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_a616d57b7274a1bd7a47894b1ad1909c9}{started}}\ =\ Clock::now();\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_a1c6d75cc74ff8663eea029d1760e0d95}{finish}}()\textcolor{keyword}{\ override\ }\{\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_acfb2686c58c0e9135965caeafb1362ee}{finished}}\ =\ Clock::now();\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a39a7da4c749ecf788244a1a91dc9adb0}{IDuration}}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_a888ac0188449f74cb7c5ffb1a9e918c8}{elapsed}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::chrono::duration\_cast<std::chrono::nanoseconds>(}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_acfb2686c58c0e9135965caeafb1362ee}{finished}}\ -\/\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_a616d57b7274a1bd7a47894b1ad1909c9}{started}}\ );}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a839ab043d92ae34f0c83e6142674ffa5}{TimePoint<Clock>}}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_a616d57b7274a1bd7a47894b1ad1909c9}{started}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a839ab043d92ae34f0c83e6142674ffa5}{TimePoint<Clock>}}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_acfb2686c58c0e9135965caeafb1362ee}{finished}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Detail}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }Chronometer\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fun>}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_a15701264575d283581bfa6ced734c2bb}{measure}}(Fun\&\&\ fun)\ \{\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_a15701264575d283581bfa6ced734c2bb}{measure}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(fun),\ \doxymbox{\hyperlink{struct_catch_1_1is__callable}{is\_callable}}<Fun(\textcolor{keywordtype}{int})>());\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_a0042e09974d3c4e7f445fb0c75a9a51d}{runs}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_acaba4ccfa31ae95d750a91e1d12ad551}{repeats}};\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_a3302c48061da0cc3eeed30fe38caebc9}{Chronometer}}(\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept}{Detail::ChronometerConcept}}\&\ meter,\ \textcolor{keywordtype}{int}\ repeats\_)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_ad6eca1bb7fa9e262a293290a6a9844e4}{impl}}(\&meter)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_acaba4ccfa31ae95d750a91e1d12ad551}{repeats}}(repeats\_)\ \{\}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fun>}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_afbc63bf6896e0d510ed35f0d4fc8127e}{measure}}(Fun\&\&\ fun,\ std::false\_type)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_a15701264575d283581bfa6ced734c2bb}{measure}}([\&fun](\textcolor{keywordtype}{int})\ \{\ \textcolor{keywordflow}{return}\ fun();\ \},\ std::true\_type());}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fun>}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_a48e7c1a08f021f9c1b94f6bf48ecab11}{measure}}(Fun\&\&\ fun,\ std::true\_type)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Detail::optimizer\_barrier();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_ad6eca1bb7fa9e262a293290a6a9844e4}{impl}}-\/>\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_af3d2250976b47920b4f3f4936fdffbc7}{start}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_acaba4ccfa31ae95d750a91e1d12ad551}{repeats}};\ ++i)\ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a9aa891ce6b44df3561292fc1a44b11fb}{invoke\_deoptimized}}(fun,\ i);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_ad6eca1bb7fa9e262a293290a6a9844e4}{impl}}-\/>\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_a066c884155da1ab1efcde265b2ea80bf}{finish}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Detail::optimizer\_barrier();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept}{Detail::ChronometerConcept}}*\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_ad6eca1bb7fa9e262a293290a6a9844e4}{impl}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_chronometer_acaba4ccfa31ae95d750a91e1d12ad551}{repeats}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00074\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Benchmark}}
+\DoxyCodeLine{00075\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_CHRONOMETER\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

@@ -1,0 +1,171 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+tests/\+\+Self\+Test/\+\+Introspective\+Tests/\+\+Internal\+Benchmark.tests.\+cpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp}{}\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp}\index{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/IntrospectiveTests/InternalBenchmark.tests.cpp@{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/IntrospectiveTests/InternalBenchmark.tests.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+approx.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+config.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+catch\+\_\+benchmark.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+catch\+\_\+chronometer.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+detail/\+catch\+\_\+analyse.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+detail/\+catch\+\_\+benchmark\+\_\+function.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+benchmark/\+detail/\+catch\+\_\+estimate\+\_\+clock.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$numeric$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ac6db5b8f0f998397f553c4948d3e3fee}{TEST\+\_\+\+CASE}} ("{}warmup"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a41036fe9756597d90f614800a5f514cb}{TEST\+\_\+\+CASE}} ("{}resolution"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a16d2794b1612a7b4f37cee3dbe050afc}{TEST\+\_\+\+CASE}} ("{}estimate\+\_\+clock\+\_\+resolution"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a008e83e5364b9e203ae035a8ede8b8e6}{TEST\+\_\+\+CASE}} ("{}benchmark function call"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a9e68d615a5fb4d2aa4284d843fdf8bd9}{TEST\+\_\+\+CASE}} ("{}uniform samples"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ade4b729c9e25c48859c0c8209dd464a8}{TEST\+\_\+\+CASE}} ("{}normal\+\_\+cdf"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a3d749795dbe975b182cb52c89ccf5e68}{TEST\+\_\+\+CASE}} ("{}erfc\+\_\+inv"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_acf1d6fe0264ebcc782cec7679a5ef86e}{TEST\+\_\+\+CASE}} ("{}normal\+\_\+quantile"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a21fc0807e77e1cdf8b340b91c39f2574}{TEST\+\_\+\+CASE}} ("{}mean"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a8dc1fedefb1790f014a11d2138a4ceea}{TEST\+\_\+\+CASE}} ("{}weighted\+\_\+average\+\_\+quantile"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a7234b90f9cd4b1be3980a01ade6cd24a}{TEST\+\_\+\+CASE}} ("{}classify\+\_\+outliers"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ab7ede038d94c165aabe131dc04a8e240}{TEST\+\_\+\+CASE}} ("{}analyse"{}, "{}\+[approvals]\+\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ab5c9c94c61ddeb8468a3546452c3c2f8}{TEST\+\_\+\+CASE}} ("{}analyse no analysis"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_aba4fa7f0f2887543564196f365cd7e9b}{TEST\+\_\+\+CASE}} ("{}run\+\_\+for\+\_\+at\+\_\+least, int"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_aae7fbdae51e999e23957d413e08482d6}{TEST\+\_\+\+CASE}} ("{}run\+\_\+for\+\_\+at\+\_\+least, chronometer"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_acb6105bec8316230d5df81f8f1814290}{TEST\+\_\+\+CASE}} ("{}measure"{}, "{}\+[benchmark]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a67e38dcd71294717b4b047b13357e86a}{TEST\+\_\+\+CASE}} ("{}run benchmark"{}, "{}\+[benchmark]\+\+[approvals]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a359647b4932e3a0f39489773ef5c49a3}{TEST\+\_\+\+CASE}} ("{}Failing benchmarks"{}, "{}\+[!benchmark]\+\+[.approvals]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_af7170333cb9eb060b8066c879b18702d}{TEST\+\_\+\+CASE}} ("{}Failing benchmark respects should-\/fail"{}, "{}\+[!shouldfail]\+\+[!benchmark]\+\+[approvals]\+"{})
+\end{DoxyCompactItemize}
+
+
+\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_doc-func-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ab5c9c94c61ddeb8468a3546452c3c2f8}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ab5c9c94c61ddeb8468a3546452c3c2f8} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}analyse no analysis"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ab7ede038d94c165aabe131dc04a8e240}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ab7ede038d94c165aabe131dc04a8e240} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}analyse"{}}]{}{, }\item[{"{}"{}}]{}{\+[approvals]\+\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a008e83e5364b9e203ae035a8ede8b8e6}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a008e83e5364b9e203ae035a8ede8b8e6} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}benchmark function call"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a7234b90f9cd4b1be3980a01ade6cd24a}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a7234b90f9cd4b1be3980a01ade6cd24a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}classify\+\_\+outliers"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a3d749795dbe975b182cb52c89ccf5e68}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a3d749795dbe975b182cb52c89ccf5e68} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}erfc\+\_\+inv"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a16d2794b1612a7b4f37cee3dbe050afc}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a16d2794b1612a7b4f37cee3dbe050afc} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}estimate\+\_\+clock\+\_\+resolution"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_af7170333cb9eb060b8066c879b18702d}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_af7170333cb9eb060b8066c879b18702d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Failing benchmark respects should-\/fail"{}}]{}{, }\item[{"{}"{}}]{}{\+[!shouldfail]\+\+[!benchmark]\+\+[approvals]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a359647b4932e3a0f39489773ef5c49a3}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a359647b4932e3a0f39489773ef5c49a3} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Failing benchmarks"{}}]{}{, }\item[{"{}"{}}]{}{\+[!benchmark]\+\+[.\+approvals]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a21fc0807e77e1cdf8b340b91c39f2574}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a21fc0807e77e1cdf8b340b91c39f2574} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}mean"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_acb6105bec8316230d5df81f8f1814290}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_acb6105bec8316230d5df81f8f1814290} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}measure"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ade4b729c9e25c48859c0c8209dd464a8}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ade4b729c9e25c48859c0c8209dd464a8} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}normal\+\_\+cdf"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_acf1d6fe0264ebcc782cec7679a5ef86e}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_acf1d6fe0264ebcc782cec7679a5ef86e} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}normal\+\_\+quantile"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a41036fe9756597d90f614800a5f514cb}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a41036fe9756597d90f614800a5f514cb} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}resolution"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a67e38dcd71294717b4b047b13357e86a}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a67e38dcd71294717b4b047b13357e86a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}run benchmark"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]\+\+[approvals]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_aae7fbdae51e999e23957d413e08482d6}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_aae7fbdae51e999e23957d413e08482d6} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}}]{run\+\_\+for\+\_\+at\+\_\+least}{, }\item[{chronometer"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_aba4fa7f0f2887543564196f365cd7e9b}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [16/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_aba4fa7f0f2887543564196f365cd7e9b} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}}]{run\+\_\+for\+\_\+at\+\_\+least}{, }\item[{int"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a9e68d615a5fb4d2aa4284d843fdf8bd9}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [17/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a9e68d615a5fb4d2aa4284d843fdf8bd9} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform samples"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ac6db5b8f0f998397f553c4948d3e3fee}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [18/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_ac6db5b8f0f998397f553c4948d3e3fee} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}warmup"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a8dc1fedefb1790f014a11d2138a4ceea}\index{InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!InternalBenchmark.tests.cpp@{InternalBenchmark.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [19/19]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_internal_benchmark_8tests_8cpp_a8dc1fedefb1790f014a11d2138a4ceea} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}weighted\+\_\+average\+\_\+quantile"{}}]{}{, }\item[{"{}"{}}]{}{\+[benchmark]}\end{DoxyParamCaption})}
+

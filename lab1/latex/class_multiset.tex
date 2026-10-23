@@ -1,0 +1,723 @@
+\doxysection{Multiset Class Reference}
+\hypertarget{class_multiset}{}\label{class_multiset}\index{Multiset@{Multiset}}
+
+
+Класс, представляющий мультимножество (multiset).  
+
+
+
+
+{\ttfamily \+\#include $<$multiset.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} = \doxymbox{\hyperlink{class_set_1_1_element}{Set::\+\+Element}}
+\begin{DoxyCompactList}\small\item\em Переиспользование типа \doxylink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element} из класса \doxylink{class_set}{Set}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_multiset_abc66b5a7eb49bfa9eb9480e75eca057f}{Multiset}} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Создает пустое мультимножество. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset_a8d912686a5db108abf1fabc88020dcd8}{Multiset}} (const std::\+vector$<$ \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} $>$ \&elems)
+\begin{DoxyCompactList}\small\item\em Конструктор из вектора элементов. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset_abbb11a52eb2d3ff09f5e194d6cb28999}{Multiset}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Конструктор копирования (по умолчанию). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& \doxymbox{\hyperlink{class_multiset_a47f0d7efa7c3203d911d37ef00a48204}{operator=}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Оператор присваивания копированием (по умолчанию). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset_ad9be149879f4a5451be6081b7e3338eb}{\texorpdfstring{$\sim$}{\string~}\+Multiset}} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор (по умолчанию). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_multiset_a450de0ba1ff59b8590727d4ba93cf069}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, пусто ли мультимножество. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_multiset_a7c4faa804d25cfc4c787ea778bf04919}{size}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает общее количество элементов (с учетом повторов). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_multiset_aa362998e9d49683baf23370f55a6102e}{multiplicity}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem) const
+\begin{DoxyCompactList}\small\item\em Возвращает количество вхождений конкретного элемента. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_multiset_ae6a43b733dd6d8b0d3941b4a5e48012c}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Очищает мультимножество. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_multiset_a8f180f1612f18f7c4466b467a0cc3fc5}{contains}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem) const
+\begin{DoxyCompactList}\small\item\em Проверяет наличие элемента (хотя бы одного). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_multiset_ae737bb0ed0596cfafbdd33ca4691d555}{add}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem)
+\begin{DoxyCompactList}\small\item\em Добавляет один экземпляр элемента. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_multiset_ad05a4fe6198b910d8b1dd4704d74c0ec}{add}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem, int n)
+\begin{DoxyCompactList}\small\item\em Добавляет n экземпляров элемента. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_multiset_a533d8e32efed0521c18f0742c0d0922a}{remove}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem)
+\begin{DoxyCompactList}\small\item\em Удаляет один экземпляр элемента. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_multiset_afdf239c25d9d789f0c8ee2952e8acd56}{remove\+\_\+all}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem)
+\begin{DoxyCompactList}\small\item\em Удаляет все экземпляры элемента. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_multiset_a635b50fac0ee13431064530bb428efaa}{operator\+[$\,$]}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem) const
+\begin{DoxyCompactList}\small\item\em Проверяет наличие элемента (аналог contains). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \doxymbox{\hyperlink{class_multiset_ad88019a2f5b02ed7e150ca165425e745}{operator+}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other) const
+\begin{DoxyCompactList}\small\item\em Объединение мультимножеств (максимум из кратностей). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& \doxymbox{\hyperlink{class_multiset_ad25063d7cc2e5db1d8f5a73077e5beea}{operator+=}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other)
+\begin{DoxyCompactList}\small\item\em Объединение с присваиванием. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& \doxymbox{\hyperlink{class_multiset_a24166359322371521b0ea2ee6fb4935a}{operator+=}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem)
+\begin{DoxyCompactList}\small\item\em Добавление одного элемента с присваиванием. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \doxymbox{\hyperlink{class_multiset_ae73fe9b233e091e83d99a539e1443ece}{operator\texorpdfstring{$\ast$}{*}}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other) const
+\begin{DoxyCompactList}\small\item\em Пересечение мультимножеств (минимум из кратностей). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& \doxymbox{\hyperlink{class_multiset_a0822b2d4ce015d0c3ce03bcc3f210e61}{operator\texorpdfstring{$\ast$}{*}=}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other)
+\begin{DoxyCompactList}\small\item\em Пересечение с присваиванием. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \doxymbox{\hyperlink{class_multiset_a48d55e507a63e03c6702696cbb4cef66}{operator-\/}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other) const
+\begin{DoxyCompactList}\small\item\em Разность мультимножеств (вычитание кратностей). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& \doxymbox{\hyperlink{class_multiset_a6856fa23aa36997b8689b99d6694f4fd}{operator-\/=}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other)
+\begin{DoxyCompactList}\small\item\em Разность с присваиванием. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& \doxymbox{\hyperlink{class_multiset_a3d094d5b2ab9ae71463d420c3fcf9b54}{operator-\/=}} (const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&elem)
+\begin{DoxyCompactList}\small\item\em Удаление одного элемента с присваиванием. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \doxymbox{\hyperlink{class_multiset_a8835ff30377e4113f3349148b8d7b057}{power\+\_\+set}} () const
+\begin{DoxyCompactList}\small\item\em Строит булеан (множество всех подмножеств). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_multiset_aeff69f874e95d155540fd6ad6a10e8b3}{operator==}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other) const
+\begin{DoxyCompactList}\small\item\em Оператор сравнения на равенство. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_multiset_a4dd604f4bf29ce333a7281062e26b6f5}{operator!=}} (const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&other) const
+\begin{DoxyCompactList}\small\item\em Оператор сравнения на неравенство. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_multiset_ab6cf08132d9d24038cb2bd448d3719b0}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Преобразует мультимножество в строку. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_multiset}{Multiset}} \doxymbox{\hyperlink{class_multiset_aa4e970a3a94c69b7b0d7d7176d78825c}{parse}} (const std::\+string \&str)
+\begin{DoxyCompactList}\small\item\em Разбирает строку и создает мультимножество. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \doxymbox{\hyperlink{class_multiset_adb319dcf5e4323586925a5598f6a2148}{parse\+\_\+\+Element}} (const std::\+string \&str)
+\begin{DoxyCompactList}\small\item\em Разбирает строку в один элемент (прокси к \doxylink{class_set_ae3900c5f8e037b5368079a11ec6112e4}{Set::\+parse\+\_\+\+Element}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} $>$ \doxymbox{\hyperlink{class_multiset_a3a1f27eee91f31ea3cfbdb0664af6bd2}{Elements}}
+\begin{DoxyCompactList}\small\item\em Отсортированный вектор элементов (с возможными повторами). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{class_multiset_a4dd75b68f98c273b7566542e869af418}{operator$<$$<$}} (std::\+ostream \&out, const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&s)
+\begin{DoxyCompactList}\small\item\em Вывод в поток. \end{DoxyCompactList}\item 
+std::\+istream \& \doxymbox{\hyperlink{class_multiset_a8c1036d9198cc20c261f692b804b0ac0}{operator$>$$>$}} (std::\+istream \&in, \doxymbox{\hyperlink{class_multiset}{Multiset}} \&s)
+\begin{DoxyCompactList}\small\item\em Ввод из потока. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий мультимножество (multiset). 
+
+В отличие от обычного множества, мультимножество допускает хранение нескольких экземпляров одного и того же элемента. Элементы хранятся в отсортированном виде. 
+
+\label{class_multiset_doc-typedef-members}
+\Hypertarget{class_multiset_doc-typedef-members}
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}\index{Multiset@{Multiset}!Element@{Element}}
+\index{Element@{Element}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{Element}{Element}}
+{\footnotesize\ttfamily \label{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa} 
+using \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Multiset::\+\+Element}} = \doxymbox{\hyperlink{class_set_1_1_element}{Set::\+\+Element}}}
+
+
+
+Переиспользование типа \doxylink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element} из класса \doxylink{class_set}{Set}. 
+
+
+
+\label{class_multiset_doc-constructors}
+\Hypertarget{class_multiset_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_multiset_abc66b5a7eb49bfa9eb9480e75eca057f}\index{Multiset@{Multiset}!Multiset@{Multiset}}
+\index{Multiset@{Multiset}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{Multiset()}{Multiset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_multiset_abc66b5a7eb49bfa9eb9480e75eca057f} 
+Multiset::\+\+Multiset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Конструктор по умолчанию. Создает пустое мультимножество. 
+
+\Hypertarget{class_multiset_a8d912686a5db108abf1fabc88020dcd8}\index{Multiset@{Multiset}!Multiset@{Multiset}}
+\index{Multiset@{Multiset}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{Multiset()}{Multiset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_multiset_a8d912686a5db108abf1fabc88020dcd8} 
+Multiset::\+\+Multiset (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} $>$ \&}]{elems}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор из вектора элементов. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elems} & Вектор элементов для инициализации. Дубликаты сохраняются.\\
+\hline
+\end{DoxyParams}
+Инициализирует мультимножество и сортирует элементы. В отличие от обычного множества, дубликаты сохраняются. 
+\begin{DoxyParams}{Parameters}
+{\em elems} & Вектор элементов для инициализации. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_multiset_abbb11a52eb2d3ff09f5e194d6cb28999}\index{Multiset@{Multiset}!Multiset@{Multiset}}
+\index{Multiset@{Multiset}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{Multiset()}{Multiset()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_multiset_abbb11a52eb2d3ff09f5e194d6cb28999} 
+Multiset::\+\+Multiset (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Конструктор копирования (по умолчанию). 
+
+\Hypertarget{class_multiset_ad9be149879f4a5451be6081b7e3338eb}\index{Multiset@{Multiset}!````~Multiset@{\texorpdfstring{$\sim$}{\string~}Multiset}}
+\index{````~Multiset@{\texorpdfstring{$\sim$}{\string~}Multiset}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Multiset()}{\string~Multiset()}}
+{\footnotesize\ttfamily \label{class_multiset_ad9be149879f4a5451be6081b7e3338eb} 
+Multiset::\+\texorpdfstring{$\sim$}{\string~}\+Multiset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Деструктор (по умолчанию). 
+
+
+
+\label{class_multiset_doc-func-members}
+\Hypertarget{class_multiset_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_multiset_ae737bb0ed0596cfafbdd33ca4691d555}\index{Multiset@{Multiset}!add@{add}}
+\index{add@{add}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_multiset_ae737bb0ed0596cfafbdd33ca4691d555} 
+int Multiset::\+add (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{}\end{DoxyParamCaption})}
+
+
+
+Добавляет один экземпляр элемента. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Добавляемый элемент. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое количество вхождений этого элемента.
+\end{DoxyReturn}
+Вставляет элемент в отсортированный вектор на нужную позицию. 
+\begin{DoxyParams}{Parameters}
+{\em elem} & Добавляемый элемент. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое количество вхождений этого элемента. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_ad05a4fe6198b910d8b1dd4704d74c0ec}\index{Multiset@{Multiset}!add@{add}}
+\index{add@{add}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_multiset_ad05a4fe6198b910d8b1dd4704d74c0ec} 
+int Multiset::\+add (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Добавляет n экземпляров элемента. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Добавляемый элемент. \\
+\hline
+{\em n} & Количество добавляемых копий. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое количество вхождений этого элемента.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Добавляемый элемент. \\
+\hline
+{\em n} & Количество добавляемых копий. Если n \texorpdfstring{$<$}{<}= 0, ничего не происходит. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое количество вхождений этого элемента. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_ae6a43b733dd6d8b0d3941b4a5e48012c}\index{Multiset@{Multiset}!clear@{clear}}
+\index{clear@{clear}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_multiset_ae6a43b733dd6d8b0d3941b4a5e48012c} 
+void Multiset::\+clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Очищает мультимножество. 
+
+\Hypertarget{class_multiset_a8f180f1612f18f7c4466b467a0cc3fc5}\index{Multiset@{Multiset}!contains@{contains}}
+\index{contains@{contains}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily \label{class_multiset_a8f180f1612f18f7c4466b467a0cc3fc5} 
+bool Multiset::\+contains (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверяет наличие элемента (хотя бы одного). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Элемент для проверки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если элемент есть. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a450de0ba1ff59b8590727d4ba93cf069}\index{Multiset@{Multiset}!empty@{empty}}
+\index{empty@{empty}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{class_multiset_a450de0ba1ff59b8590727d4ba93cf069} 
+bool Multiset::\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, пусто ли мультимножество. 
+
+\begin{DoxyReturn}{Returns}
+true, если элементов нет; false в противном случае.
+
+true, если элементов нет. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_aa362998e9d49683baf23370f55a6102e}\index{Multiset@{Multiset}!multiplicity@{multiplicity}}
+\index{multiplicity@{multiplicity}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{multiplicity()}{multiplicity()}}
+{\footnotesize\ttfamily \label{class_multiset_aa362998e9d49683baf23370f55a6102e} 
+int Multiset::\+multiplicity (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает количество вхождений конкретного элемента. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Элемент для поиска. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Число вхождений (0, если элемента нет).
+\end{DoxyReturn}
+Использует бинарный поиск (equal\+\_\+range) для нахождения границ диапазона элемента. 
+\begin{DoxyParams}{Parameters}
+{\em elem} & Элемент для поиска. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Число вхождений (0, если элемента нет). 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a4dd604f4bf29ce333a7281062e26b6f5}\index{Multiset@{Multiset}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{class_multiset_a4dd604f4bf29ce333a7281062e26b6f5} 
+bool Multiset::\+operator!= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Оператор сравнения на неравенство. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Другое мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если мультимножества различаются. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_ae73fe9b233e091e83d99a539e1443ece}\index{Multiset@{Multiset}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{class_multiset_ae73fe9b233e091e83d99a539e1443ece} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} Multiset::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Пересечение мультимножеств (минимум из кратностей). 
+
+Пересечение мультимножеств.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Второе мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое мультимножество.
+\end{DoxyReturn}
+Результат содержит каждый элемент в количестве минимальной кратности из двух множеств. Проходит по двум отсортированным векторам одновременно. 
+\begin{DoxyParams}{Parameters}
+{\em other} & Второе мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a0822b2d4ce015d0c3ce03bcc3f210e61}\index{Multiset@{Multiset}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}}
+{\footnotesize\ttfamily \label{class_multiset_a0822b2d4ce015d0c3ce03bcc3f210e61} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& Multiset::\+operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Пересечение с присваиванием. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Второе мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущее мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_ad88019a2f5b02ed7e150ca165425e745}\index{Multiset@{Multiset}!operator+@{operator+}}
+\index{operator+@{operator+}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{class_multiset_ad88019a2f5b02ed7e150ca165425e745} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} Multiset::\+operator+ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Объединение мультимножеств (максимум из кратностей). 
+
+Объединение мультимножеств.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Второе мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое мультимножество.
+\end{DoxyReturn}
+Результат содержит каждый элемент в количестве максимальной кратности из двух множеств. Использует алгоритм слияния (merge) для эффективного объединения. 
+\begin{DoxyParams}{Parameters}
+{\em other} & Второе мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a24166359322371521b0ea2ee6fb4935a}\index{Multiset@{Multiset}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_multiset_a24166359322371521b0ea2ee6fb4935a} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& Multiset::\+operator+= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{}\end{DoxyParamCaption})}
+
+
+
+Добавление одного элемента с присваиванием. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Элемент. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущее мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_ad25063d7cc2e5db1d8f5a73077e5beea}\index{Multiset@{Multiset}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_multiset_ad25063d7cc2e5db1d8f5a73077e5beea} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& Multiset::\+operator+= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Объединение с присваиванием. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Второе мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на измененное текущее мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a48d55e507a63e03c6702696cbb4cef66}\index{Multiset@{Multiset}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{class_multiset_a48d55e507a63e03c6702696cbb4cef66} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} Multiset::\+operator-\/ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Разность мультимножеств (вычитание кратностей). 
+
+Разность мультимножеств.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Вычитаемое мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое мультимножество.
+\end{DoxyReturn}
+Убирает из текущего множества столько экземпляров каждого элемента, сколько их во втором множестве. Если в вычитаемом множестве больше элементов, результат для этого элемента равен 0. 
+\begin{DoxyParams}{Parameters}
+{\em other} & Вычитаемое мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a3d094d5b2ab9ae71463d420c3fcf9b54}\index{Multiset@{Multiset}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_multiset_a3d094d5b2ab9ae71463d420c3fcf9b54} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& Multiset::\+operator-\/= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{}\end{DoxyParamCaption})}
+
+
+
+Удаление одного элемента с присваиванием. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Удаляемый элемент. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущее мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a6856fa23aa36997b8689b99d6694f4fd}\index{Multiset@{Multiset}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_multiset_a6856fa23aa36997b8689b99d6694f4fd} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& Multiset::\+operator-\/= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Разность с присваиванием. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Вычитаемое мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущее мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a47f0d7efa7c3203d911d37ef00a48204}\index{Multiset@{Multiset}!operator=@{operator=}}
+\index{operator=@{operator=}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_multiset_a47f0d7efa7c3203d911d37ef00a48204} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} \& Multiset::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Оператор присваивания копированием (по умолчанию). 
+
+\Hypertarget{class_multiset_aeff69f874e95d155540fd6ad6a10e8b3}\index{Multiset@{Multiset}!operator==@{operator==}}
+\index{operator==@{operator==}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_multiset_aeff69f874e95d155540fd6ad6a10e8b3} 
+bool Multiset::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Оператор сравнения на равенство. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Другое мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если кратности всех элементов совпадают. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a635b50fac0ee13431064530bb428efaa}\index{Multiset@{Multiset}!operator\+[]@{operator[]}}
+\index{operator\+[]@{operator[]}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_multiset_a635b50fac0ee13431064530bb428efaa} 
+bool Multiset::\+operator\+[$\,$] (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверяет наличие элемента (аналог contains). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Элемент для проверки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если элемент есть. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_aa4e970a3a94c69b7b0d7d7176d78825c}\index{Multiset@{Multiset}!parse@{parse}}
+\index{parse@{parse}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{class_multiset_aa4e970a3a94c69b7b0d7d7176d78825c} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} Multiset::\+parse (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Разбирает строку и создает мультимножество. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Строка (например, "{}\{a, a, b\}"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое мультимножество.
+\end{DoxyReturn}
+Делегирует разбор базовому классу \doxylink{class_set}{Set}, а затем извлекает дочерние элементы, сохраняя дубликаты. 
+\begin{DoxyParams}{Parameters}
+{\em str} & Строка (например, "{}\{a, a, b\}"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новое мультимножество. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_adb319dcf5e4323586925a5598f6a2148}\index{Multiset@{Multiset}!parse\_Element@{parse\_Element}}
+\index{parse\_Element@{parse\_Element}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{parse\_Element()}{parse\_Element()}}
+{\footnotesize\ttfamily \label{class_multiset_adb319dcf5e4323586925a5598f6a2148} 
+\doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Multiset::\+\+Element}} Multiset::\+parse\+\_\+\+Element (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Разбирает строку в один элемент (прокси к \doxylink{class_set_ae3900c5f8e037b5368079a11ec6112e4}{Set::\+parse\+\_\+\+Element}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Строка для разбора. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Разобранный элемент. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a8835ff30377e4113f3349148b8d7b057}\index{Multiset@{Multiset}!power\_set@{power\_set}}
+\index{power\_set@{power\_set}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{power\_set()}{power\_set()}}
+{\footnotesize\ttfamily \label{class_multiset_a8835ff30377e4113f3349148b8d7b057} 
+\doxymbox{\hyperlink{class_multiset}{Multiset}} Multiset::\+power\+\_\+set (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Строит булеан (множество всех подмножеств). 
+
+\begin{DoxyReturn}{Returns}
+Новое мультимножество, содержащее все подмножества.
+\end{DoxyReturn}
+Учитывает кратность элементов: для элемента с кратностью m в подмножества добавляются его копии от 1 до m. \begin{DoxyReturn}{Returns}
+Новое мультимножество, содержащее все подмножества. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a533d8e32efed0521c18f0742c0d0922a}\index{Multiset@{Multiset}!remove@{remove}}
+\index{remove@{remove}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_multiset_a533d8e32efed0521c18f0742c0d0922a} 
+bool Multiset::\+remove (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{}\end{DoxyParamCaption})}
+
+
+
+Удаляет один экземпляр элемента. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Элемент для удаления. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если элемент был удален; false, если его не было. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_afdf239c25d9d789f0c8ee2952e8acd56}\index{Multiset@{Multiset}!remove\_all@{remove\_all}}
+\index{remove\_all@{remove\_all}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{remove\_all()}{remove\_all()}}
+{\footnotesize\ttfamily \label{class_multiset_afdf239c25d9d789f0c8ee2952e8acd56} 
+int Multiset::\+remove\+\_\+all (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}} \&}]{elem}{}\end{DoxyParamCaption})}
+
+
+
+Удаляет все экземпляры элемента. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Элемент для полного удаления. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Количество удаленных экземпляров. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a7c4faa804d25cfc4c787ea778bf04919}\index{Multiset@{Multiset}!size@{size}}
+\index{size@{size}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_multiset_a7c4faa804d25cfc4c787ea778bf04919} 
+int Multiset::\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает общее количество элементов (с учетом повторов). 
+
+\begin{DoxyReturn}{Returns}
+Размер мультимножества. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_ab6cf08132d9d24038cb2bd448d3719b0}\index{Multiset@{Multiset}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily \label{class_multiset_ab6cf08132d9d24038cb2bd448d3719b0} 
+std::\+string Multiset::\+to\+\_\+string (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Преобразует мультимножество в строку. 
+
+\begin{DoxyReturn}{Returns}
+Строковое представление вида "{}\{a, a, b\}"{}. 
+\end{DoxyReturn}
+
+
+\label{class_multiset_doc-related-members}
+\Hypertarget{class_multiset_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_multiset_a4dd75b68f98c273b7566542e869af418}\index{Multiset@{Multiset}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_multiset_a4dd75b68f98c273b7566542e869af418} 
+std::\+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{out}{, }\item[{const \doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Вывод в поток. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+{\em s} & Мультимножество. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на поток. 
+\end{DoxyReturn}
+\Hypertarget{class_multiset_a8c1036d9198cc20c261f692b804b0ac0}\index{Multiset@{Multiset}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \label{class_multiset_a8c1036d9198cc20c261f692b804b0ac0} 
+std::\+istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std::\+istream \&}]{in}{, }\item[{\doxymbox{\hyperlink{class_multiset}{Multiset}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Ввод из потока. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+{\em s} & Мультимножество для заполнения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на поток. 
+\end{DoxyReturn}
+
+
+\label{class_multiset_doc-variable-members}
+\Hypertarget{class_multiset_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_multiset_a3a1f27eee91f31ea3cfbdb0664af6bd2}\index{Multiset@{Multiset}!Elements@{Elements}}
+\index{Elements@{Elements}!Multiset@{Multiset}}
+\doxysubsubsection{\texorpdfstring{Elements}{Elements}}
+{\footnotesize\ttfamily \label{class_multiset_a3a1f27eee91f31ea3cfbdb0664af6bd2} 
+std::\+vector$<$\doxymbox{\hyperlink{class_multiset_a99b584bf45cac72ba245a2bd2efeacaa}{Element}}$>$ Multiset::\+\+Elements\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Отсортированный вектор элементов (с возможными повторами). 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Multiset/\+include/\doxymbox{\hyperlink{multiset_8hpp}{multiset.\+hpp}}\item 
+Multiset/\+src/\doxymbox{\hyperlink{multiset_8cpp}{multiset.\+cpp}}\end{DoxyCompactItemize}

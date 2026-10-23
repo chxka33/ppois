@@ -1,0 +1,113 @@
+\doxysection{catch\+\_\+generators\+\_\+random.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2generators_2catch__generators__random_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2generators_2catch__generators__random_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/generators/catch\_generators\_random.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/generators/catch\_generators\_random.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2generators_2catch__generators__random_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_GENERATORS\_RANDOM\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_GENERATORS\_RANDOM\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/generators/catch\_generators.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_random\_number\_generator.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_uniform\_integer\_distribution.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_uniform\_floating\_point\_distribution.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_unique\_ptr.hpp>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_generators}{Generators}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ suitable\ seed\ for\ a\ random\ floating\ generator\ based\ off}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ the\ primary\ internal\ rng.\ It\ does\ so\ by\ taking\ current\ value\ from}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ the\ rng\ and\ returning\ it\ as\ the\ seed.}}
+\DoxyCodeLine{00023\ \ \ \ \ std::uint32\_t\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail_a43ff3ca07ca525084cadb89dee13e39e}{getSeed}}();}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Float>}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator}{RandomFloatingGenerator}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator}{IGenerator}}<Float>\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ Catch::SimplePcg32\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a978d0eda65abd3efb3635049af7c30e8}{m\_rng}};}
+\DoxyCodeLine{00029\ \ \ \ \ Catch::uniform\_floating\_point\_distribution<Float>\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a8bb671d1e2b610a6e8784aebc14fbf4f}{m\_dist}};}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680ca22ae0e2b89e5e3d477f988cc36d3272b}{Float}}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a3591690761d8da0f4438623a453e6bc0}{m\_current\_number}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a8f4ad33fd187306244dc644e1547eb2e}{RandomFloatingGenerator}}(\ Float\ a,\ Float\ b,\ std::uint32\_t\ seed\ ):}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a978d0eda65abd3efb3635049af7c30e8}{m\_rng}}(seed),}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a8bb671d1e2b610a6e8784aebc14fbf4f}{m\_dist}}(a,\ b)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}\textcolor{keyword}{>}(\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a6a65e5f16abd884f58c31581b2a0d6db}{next}}());}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ Float\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a307eff56c58d4c6a223f35ac4d4ba710}{get}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a3591690761d8da0f4438623a453e6bc0}{m\_current\_number}};}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a6a65e5f16abd884f58c31581b2a0d6db}{next}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a3591690761d8da0f4438623a453e6bc0}{m\_current\_number}}\ =\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a8bb671d1e2b610a6e8784aebc14fbf4f}{m\_dist}}(\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a978d0eda65abd3efb3635049af7c30e8}{m\_rng}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }RandomFloatingGenerator<long\ double>\ final\ :\ \textcolor{keyword}{public}\ IGenerator<long\ double>\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ We\ still\ rely\ on\ <random>\ for\ this\ specialization,\ but\ we\ don't}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ want\ to\ drag\ it\ into\ the\ header.}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{struct\ }PImpl;}
+\DoxyCodeLine{00052\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Catch::Detail::unique\_ptr<PImpl>}}\ m\_pimpl;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_a3591690761d8da0f4438623a453e6bc0}{m\_current\_number}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_3_01long_01double_01_4_a9ec4bd2969586098e68bc32da282f10b}{RandomFloatingGenerator}}(\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ b,\ std::uint32\_t\ seed\ );}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_3_01long_01double_01_4_a2b4f4b91150bfacba728a8d10a1be7e6}{get}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_3_01long_01double_01_4_ab499b9c3bc2e5fc28b7131973e4d390b}{m\_current\_number}};\ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_3_01long_01double_01_4_a14aa22a73c1ec5887fb116afbb83d7b6}{next}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_floating_generator_3_01long_01double_01_4_a2249eed904a42ee9e6dda7c8c6f584b2}{\string~RandomFloatingGenerator}}()\ \textcolor{keyword}{override};\ \textcolor{comment}{//\ =\ default}}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Integer>}
+\DoxyCodeLine{00065\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator}{RandomIntegerGenerator}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator}{IGenerator}}<Integer>\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{Catch::SimplePcg32}}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_abe35c3a16a7207b05ad4d010292c31e0}{m\_rng}};}
+\DoxyCodeLine{00067\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__integer__distribution}{Catch::uniform\_integer\_distribution<Integer>}}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_a9b577bad4afcaf3900951b83970c357f}{m\_dist}};}
+\DoxyCodeLine{00068\ \ \ \ \ Integer\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_a1b811ebf04416b6b822ce153b040f020}{m\_current\_number}};}
+\DoxyCodeLine{00069\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_a65d4905960116799339d91ab4047250e}{RandomIntegerGenerator}}(\ Integer\ a,\ Integer\ b,\ std::uint32\_t\ seed\ ):}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_abe35c3a16a7207b05ad4d010292c31e0}{m\_rng}}(seed),}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_a9b577bad4afcaf3900951b83970c357f}{m\_dist}}(a,\ b)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}\textcolor{keyword}{>}(\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_aaa3db70fbdfa3e8dcb61fb5592eba81f}{next}}());}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ Integer\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_af160cf856809beca4503491481a4865e}{get}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_a1b811ebf04416b6b822ce153b040f020}{m\_current\_number}};}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_aaa3db70fbdfa3e8dcb61fb5592eba81f}{next}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_a1b811ebf04416b6b822ce153b040f020}{m\_current\_number}}\ =\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_a9b577bad4afcaf3900951b83970c357f}{m\_dist}}(\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_random_integer_generator_abe35c3a16a7207b05ad4d010292c31e0}{m\_rng}});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00086\ std::enable\_if\_t<std::is\_integral<T>::value,\ GeneratorWrapper<T>>}
+\DoxyCodeLine{00087\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_af9b6c581a0c05b70c899c1795a02981e}{random}}(T\ a,\ T\ b)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a60489f55be04e4f4d88359f54ddb03ef}{GeneratorWrapper<T>}}(}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a3175310a581a4d3b7bd12cf543dfa0d9}{Catch::Detail::make\_unique}}<RandomIntegerGenerator<T>>(a,\ b,\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail_a43ff3ca07ca525084cadb89dee13e39e}{Detail::getSeed}}())}
+\DoxyCodeLine{00090\ \ \ \ \ );}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00094\ std::enable\_if\_t<std::is\_floating\_point<T>::value,}
+\DoxyCodeLine{00095\ GeneratorWrapper<T>>}
+\DoxyCodeLine{00096\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_af9b6c581a0c05b70c899c1795a02981e}{random}}(T\ a,\ T\ b)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a60489f55be04e4f4d88359f54ddb03ef}{GeneratorWrapper<T>}}(}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a3175310a581a4d3b7bd12cf543dfa0d9}{Catch::Detail::make\_unique}}<RandomFloatingGenerator<T>>(a,\ b,\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail_a43ff3ca07ca525084cadb89dee13e39e}{Detail::getSeed}}())}
+\DoxyCodeLine{00099\ \ \ \ \ );}
+\DoxyCodeLine{00100\ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \}\ \textcolor{comment}{//\ namespace\ Generators}}
+\DoxyCodeLine{00104\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_GENERATORS\_RANDOM\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

@@ -1,0 +1,108 @@
+\doxysection{Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+tools/\+misc/\+coverage-\/helper.cpp File Reference}
+\hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp}{}\label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp}\index{Set/build/\_deps/catch2-\/src/tools/misc/coverage-\/helper.cpp@{Set/build/\_deps/catch2-\/src/tools/misc/coverage-\/helper.cpp}}
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$array$>$}\newline
+{\ttfamily \+\#include $<$cassert$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$memory$>$}\newline
+{\ttfamily \+\#include $<$numeric$>$}\newline
+{\ttfamily \+\#include $<$regex$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a6ddcf5def188b35811ca4d6b15567ed6}{escape\+\_\+arg}} (const std::\+string \&arg)
+\item 
+void \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a9147e75274cac79757e4f95a13910faa}{create\+\_\+empty\+\_\+file}} (std::\+string const \&path)
+\item 
+bool \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_acf4803e8473417fc0a4ec061a7260106}{starts\+\_\+with}} (std::\+string const \&str, std::\+string const \&pref)
+\item 
+int \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ac7219d6c8bed061556e207e21c0b9a75}{parse\+\_\+log\+\_\+file\+\_\+arg}} (std::\+string const \&arg)
+\item 
+std::\+string \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a52d2aa50aaf085c1f89c4adf04e2178c}{catch\+\_\+path}} (std::\+string path)
+\item 
+std::\+string \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_aeb84b89496214640e0a6ef1d3ecb175b}{windowsify\+\_\+path}} (std::\+string path)
+\item 
+int \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ac4ba659c40d9250b5e8bd904d7ac4677}{exec\+\_\+cmd}} (std::\+string const \&cmd, int log\+\_\+num, std::\+string const \&path)
+\item 
+int \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std::\+string \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_aab06e721d3449b3d6815d538f22520c8}{separator}} = "{}-\/-\/sep-\/-\/"{}
+\item 
+const std::\+string \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ad861555025dda02ff5b77f8e59241028}{logfile\+\_\+prefix}} = "{}-\/-\/log-\/file="{}
+\end{DoxyCompactItemize}
+
+
+\label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_doc-func-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a52d2aa50aaf085c1f89c4adf04e2178c}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!catch\_path@{catch\_path}}
+\index{catch\_path@{catch\_path}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{catch\_path()}{catch\_path()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a52d2aa50aaf085c1f89c4adf04e2178c} 
+std::\+string catch\+\_\+path (\begin{DoxyParamCaption}\item[{std::\+string}]{path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a9147e75274cac79757e4f95a13910faa}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!create\_empty\_file@{create\_empty\_file}}
+\index{create\_empty\_file@{create\_empty\_file}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{create\_empty\_file()}{create\_empty\_file()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a9147e75274cac79757e4f95a13910faa} 
+void create\+\_\+empty\+\_\+file (\begin{DoxyParamCaption}\item[{std::\+string const \&}]{path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a6ddcf5def188b35811ca4d6b15567ed6}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!escape\_arg@{escape\_arg}}
+\index{escape\_arg@{escape\_arg}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{escape\_arg()}{escape\_arg()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a6ddcf5def188b35811ca4d6b15567ed6} 
+std::\+string escape\+\_\+arg (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{arg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ac4ba659c40d9250b5e8bd904d7ac4677}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!exec\_cmd@{exec\_cmd}}
+\index{exec\_cmd@{exec\_cmd}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{exec\_cmd()}{exec\_cmd()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ac4ba659c40d9250b5e8bd904d7ac4677} 
+int exec\+\_\+cmd (\begin{DoxyParamCaption}\item[{std::\+string const \&}]{cmd}{, }\item[{int}]{log\+\_\+num}{, }\item[{std::\+string const \&}]{path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!main@{main}}
+\index{main@{main}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ac7219d6c8bed061556e207e21c0b9a75}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!parse\_log\_file\_arg@{parse\_log\_file\_arg}}
+\index{parse\_log\_file\_arg@{parse\_log\_file\_arg}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_log\_file\_arg()}{parse\_log\_file\_arg()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ac7219d6c8bed061556e207e21c0b9a75} 
+int parse\+\_\+log\+\_\+file\+\_\+arg (\begin{DoxyParamCaption}\item[{std::\+string const \&}]{arg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_acf4803e8473417fc0a4ec061a7260106}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!starts\_with@{starts\_with}}
+\index{starts\_with@{starts\_with}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{starts\_with()}{starts\_with()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_acf4803e8473417fc0a4ec061a7260106} 
+bool starts\+\_\+with (\begin{DoxyParamCaption}\item[{std::\+string const \&}]{str}{, }\item[{std::\+string const \&}]{pref}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_aeb84b89496214640e0a6ef1d3ecb175b}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!windowsify\_path@{windowsify\_path}}
+\index{windowsify\_path@{windowsify\_path}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{windowsify\_path()}{windowsify\_path()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_aeb84b89496214640e0a6ef1d3ecb175b} 
+std::\+string windowsify\+\_\+path (\begin{DoxyParamCaption}\item[{std::\+string}]{path}{}\end{DoxyParamCaption})}
+
+
+
+\label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_doc-var-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ad861555025dda02ff5b77f8e59241028}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!logfile\_prefix@{logfile\_prefix}}
+\index{logfile\_prefix@{logfile\_prefix}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{logfile\_prefix}{logfile\_prefix}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_ad861555025dda02ff5b77f8e59241028} 
+const std::\+string logfile\+\_\+prefix = "{}-\/-\/log-\/file="{}}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_aab06e721d3449b3d6815d538f22520c8}\index{coverage-\/helper.cpp@{coverage-\/helper.cpp}!separator@{separator}}
+\index{separator@{separator}!coverage-\/helper.cpp@{coverage-\/helper.cpp}}
+\doxysubsubsection{\texorpdfstring{separator}{separator}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tools_2misc_2coverage-helper_8cpp_aab06e721d3449b3d6815d538f22520c8} 
+const std::\+string separator = "{}-\/-\/sep-\/-\/"{}}
+

@@ -1,0 +1,67 @@
+\doxysection{catch\+\_\+reporter\+\_\+helpers.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__helpers_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__helpers_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_helpers.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_helpers.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__helpers_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_REPORTER\_HELPERS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_REPORTER\_HELPERS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iosfwd>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_list.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <catch2/interfaces/catch\_interfaces\_config.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <catch2/catch\_totals.hpp>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{TestCaseHandle}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_colour_impl}{ColourImpl}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Returns\ double\ formatted\ as\ \%.3f\ (format\ expected\ on\ output)}}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespace_catch_af65507889895c5c4b04fb831eeab2972}{getFormattedDuration}}(\ \textcolor{keywordtype}{double}\ duration\ );}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_catch_af4e1ece5befeb3ff910c3a54ff44abb0}{shouldShowDuration}}(\ \doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}}\ \textcolor{keyword}{const}\&\ config,\ \textcolor{keywordtype}{double}\ duration\ );}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespace_catch_ae5e405537e8a55293a1b6cad32e2cdb5}{serializeFilters}}(\ std::vector<std::string>\ \textcolor{keyword}{const}\&\ filters\ );}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1line_of_chars}{lineOfChars}}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{struct_catch_1_1line_of_chars_a4fe021a144e1394ac6b1528e880f331b}{c}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{struct_catch_1_1line_of_chars_a222177b3835bdbb39dd29ba9fce0966d}{lineOfChars}}(\ \textcolor{keywordtype}{char}\ c\_\ ):\ \doxymbox{\hyperlink{struct_catch_1_1line_of_chars_a4fe021a144e1394ac6b1528e880f331b}{c}}(\ c\_\ )\ \{\}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{namespace_catch_aa7e8f5954fada348761e0473b3e4c1a2}{operator<<}}(\ std::ostream\&\ out,\ \doxymbox{\hyperlink{struct_catch_1_1line_of_chars}{lineOfChars}}\ value\ );}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_a7fc9276bf852d1625d986c0cbc3eabce}{defaultListReporters}}(\ std::ostream\&\ out,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<ReporterDescription>\ \textcolor{keyword}{const}\&\ descriptions,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Verbosity}}\ verbosity\ );}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_a906d1c90c5a8118e737bd14bef2885ea}{defaultListListeners}}(\ std::ostream\&\ out,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<ListenerDescription>\ \textcolor{keyword}{const}\&\ descriptions\ );}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_a29d53521f0da176f732c3a022dbb04df}{defaultListTags}}(\ std::ostream\&\ out,\ std::vector<TagInfo>\ \textcolor{keyword}{const}\&\ tags,\ \textcolor{keywordtype}{bool}\ isFiltered\ );}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_a6dce9f6d9a416fe7a06e6394d557606a}{defaultListTests}}(\ std::ostream\&\ out,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ColourImpl*\ streamColour,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<TestCaseHandle>\ \textcolor{keyword}{const}\&\ tests,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isFiltered,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Verbosity}}\ verbosity\ );}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_aecf85e8927841af21b8fcd3bab31df2b}{printTestRunTotals}}(\ std::ostream\&\ stream,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ColourImpl\&\ streamColour,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Totals\ \textcolor{keyword}{const}\&\ totals\ );}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_REPORTER\_HELPERS\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

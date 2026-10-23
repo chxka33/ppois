@@ -1,0 +1,126 @@
+\doxysection{clara::Arg Class Reference}
+\hypertarget{classclara_1_1_arg}{}\label{classclara_1_1_arg}\index{clara::Arg@{clara::Arg}}
+
+
+{\ttfamily \+\#include $<$clara.\+hpp$>$}
+
+Inheritance diagram for clara::Arg:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.320755cm]{classclara_1_1_arg}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1_arg_a4d0cb710337bfcbc00b70efe24f61df9}{parse}} (std::\+string const \&, Token\+Stream const \&tokens) const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a960ac5d6a16ef7817251c64ec021aa63}{Internal\+Parse\+Result}} override
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1_arg_a4d0cb710337bfcbc00b70efe24f61df9}{parse}} (std::\+string const \&, Token\+Stream const \&tokens) const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a960ac5d6a16ef7817251c64ec021aa63}{Internal\+Parse\+Result}} override
+\item 
+\doxymbox{\hyperlink{classclara_1_1_arg_a408b0e85da286486a4d395f9a3555487}{Parser\+Ref\+Impl}} (std::\+shared\+\_\+ptr$<$ Bound\+Ref $>$ const \&ref)
+\item 
+{\footnotesize template$<$typename T$>$ }\\\doxymbox{\hyperlink{classclara_1_1_arg_a2e07f37ae57eaff13d33008a5323e2b8}{Parser\+Ref\+Impl}} (T \&ref, std::\+string const \&hint)
+\item 
+{\footnotesize template$<$typename LambdaT$>$ }\\\doxymbox{\hyperlink{classclara_1_1_arg_a89e6a7cb29a5a5f949d45ea5535db746}{Parser\+Ref\+Impl}} (LambdaT const \&ref, std::\+string const \&hint)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl}{clara::\+detail::\+\+Parser\+Ref\+Impl$<$ Arg $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_a1cdd859889609e2ee23ce4b9f2ebb118}{operator()}} (std::\+string const \&description) -\/$>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_arg}{Arg}} \&
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_a343fac63b5db53c7162e1d62e545768d}{optional}} () -\/$>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_arg}{Arg}} \&
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_a67d0217e193658526c8b33ce348c8403}{required}} () -\/$>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_arg}{Arg}} \&
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_afd01f50524e591e80778f37a791f24d4}{is\+Optional}} () const -\/$>$ bool
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_a7825b67113c406cea9d53a75c48f8b14}{cardinality}} () const -\/$>$ size\+\_\+t override
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_aca7a8495e95d3cb8fd2f15f9a6c061b5}{hint}} () const -\/$>$ std::\+string
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classclara_1_1detail_1_1_composable_parser_impl}{clara::\+detail::\+\+Composable\+Parser\+Impl$<$ Arg $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_composable_parser_impl_afcfe655c38d50a6be9065613a5f86784}{operator\texorpdfstring{$\vert$}{|}}} (T const \&other) const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_parser}{Parser}}
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_composable_parser_impl_aee65e2fdf48f36d7343e1728129123a0}{operator+}} (T const \&other) const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_parser}{Parser}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base}{clara::\+detail::\+\+Parser\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base_a34b45461cb31b6026cc34f2cc5fca57e}{\texorpdfstring{$\sim$}{\string~}\+Parser\+Base}} ()=default
+\item 
+virtual auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base_a7bc9d13683524141f7fab43318a448f4}{validate}} () const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a006bddddca4144f9f4a0564c32090086}{Result}}
+\item 
+virtual auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base_a4cdccf0242e2888192292adb900b16c1}{parse}} (std::\+string const \&exe\+Name, \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream}{Token\+Stream}} const \&tokens) const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a960ac5d6a16ef7817251c64ec021aa63}{Internal\+Parse\+Result}}=0
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base_a0d8b760304e7f179b05ed2ee8cadf54c}{parse}} (\doxymbox{\hyperlink{classclara_1_1detail_1_1_args}{Args}} const \&args) const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a960ac5d6a16ef7817251c64ec021aa63}{Internal\+Parse\+Result}}
+\item 
+virtual \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base_a34b45461cb31b6026cc34f2cc5fca57e}{\texorpdfstring{$\sim$}{\string~}\+Parser\+Base}} ()=default
+\item 
+virtual auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base_a7bc9d13683524141f7fab43318a448f4}{validate}} () const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a006bddddca4144f9f4a0564c32090086}{Result}}
+\item 
+virtual auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base_a4cdccf0242e2888192292adb900b16c1}{parse}} (std::\+string const \&exe\+Name, \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream}{Token\+Stream}} const \&tokens) const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a960ac5d6a16ef7817251c64ec021aa63}{Internal\+Parse\+Result}}=0
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_base_a0d8b760304e7f179b05ed2ee8cadf54c}{parse}} (\doxymbox{\hyperlink{classclara_1_1detail_1_1_args}{Args}} const \&args) const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a960ac5d6a16ef7817251c64ec021aa63}{Internal\+Parse\+Result}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl}{clara::\+detail::\+\+Parser\+Ref\+Impl$<$ Arg $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_a408b0e85da286486a4d395f9a3555487}{Parser\+Ref\+Impl}} (std::\+shared\+\_\+ptr$<$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_bound_ref}{Bound\+Ref}} $>$ const \&ref)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl}{clara::\+detail::\+\+Parser\+Ref\+Impl$<$ Arg $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespaceclara_1_1detail_a34c626435fd1e0e4330573e0c467f948}{Optionality}} \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_aca7279692e56417af3aae597f385f917}{m\+\_\+optionality}}
+\item 
+std::\+shared\+\_\+ptr$<$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_bound_ref}{Bound\+Ref}} $>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_a29de364c6a89572928c41212545b3f41}{m\+\_\+ref}}
+\item 
+std::\+string \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_a0c709a1d2c437d1ae47154ea5d71912b}{m\+\_\+hint}}
+\item 
+std::\+string \doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl_a0f16e927cd195e12ad2020286c538378}{m\+\_\+description}}
+\end{DoxyCompactItemize}
+
+
+\label{classclara_1_1_arg_doc-func-members}
+\Hypertarget{classclara_1_1_arg_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classclara_1_1_arg_a4d0cb710337bfcbc00b70efe24f61df9}\index{clara::Arg@{clara::Arg}!parse@{parse}}
+\index{parse@{parse}!clara::Arg@{clara::Arg}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1_arg_a4d0cb710337bfcbc00b70efe24f61df9} 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_arg_a4d0cb710337bfcbc00b70efe24f61df9}{clara::\+detail::\+\+Arg::\+parse}} (\begin{DoxyParamCaption}\item[{std::\+string const \&}]{}{, }\item[{Token\+Stream const \&}]{tokens}{}\end{DoxyParamCaption}) const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a960ac5d6a16ef7817251c64ec021aa63}{Internal\+Parse\+Result}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classclara_1_1_arg_a4d0cb710337bfcbc00b70efe24f61df9}\index{clara::Arg@{clara::Arg}!parse@{parse}}
+\index{parse@{parse}!clara::Arg@{clara::Arg}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1_arg_a4d0cb710337bfcbc00b70efe24f61df9} 
+auto clara::\+detail::\+\+Arg::\+parse (\begin{DoxyParamCaption}\item[{std::\+string const \&}]{}{, }\item[{Token\+Stream const \&}]{tokens}{}\end{DoxyParamCaption}) const -\/$>$ \doxymbox{\hyperlink{namespaceclara_1_1detail_a960ac5d6a16ef7817251c64ec021aa63}{Internal\+Parse\+Result}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{classclara_1_1_arg_a89e6a7cb29a5a5f949d45ea5535db746}\index{clara::Arg@{clara::Arg}!ParserRefImpl@{ParserRefImpl}}
+\index{ParserRefImpl@{ParserRefImpl}!clara::Arg@{clara::Arg}}
+\doxysubsubsection{\texorpdfstring{ParserRefImpl()}{ParserRefImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classclara_1_1_arg_a89e6a7cb29a5a5f949d45ea5535db746} 
+template$<$typename LambdaT$>$ \\
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl}{clara::\+detail::\+\+Parser\+Ref\+Impl}}$<$ DerivedT $>$::\+\+Parser\+Ref\+Impl (\begin{DoxyParamCaption}\item[{LambdaT const \&}]{ref}{, }\item[{std::\+string const \&}]{hint}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1_arg_a408b0e85da286486a4d395f9a3555487}\index{clara::Arg@{clara::Arg}!ParserRefImpl@{ParserRefImpl}}
+\index{ParserRefImpl@{ParserRefImpl}!clara::Arg@{clara::Arg}}
+\doxysubsubsection{\texorpdfstring{ParserRefImpl()}{ParserRefImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classclara_1_1_arg_a408b0e85da286486a4d395f9a3555487} 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl}{clara::\+detail::\+\+Parser\+Ref\+Impl}}$<$ DerivedT $>$::\+\+Parser\+Ref\+Impl (\begin{DoxyParamCaption}\item[{std::\+shared\+\_\+ptr$<$ Bound\+Ref $>$ const \&}]{ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classclara_1_1_arg_a2e07f37ae57eaff13d33008a5323e2b8}\index{clara::Arg@{clara::Arg}!ParserRefImpl@{ParserRefImpl}}
+\index{ParserRefImpl@{ParserRefImpl}!clara::Arg@{clara::Arg}}
+\doxysubsubsection{\texorpdfstring{ParserRefImpl()}{ParserRefImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classclara_1_1_arg_a2e07f37ae57eaff13d33008a5323e2b8} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_parser_ref_impl}{clara::\+detail::\+\+Parser\+Ref\+Impl}}$<$ DerivedT $>$::\+\+Parser\+Ref\+Impl (\begin{DoxyParamCaption}\item[{T \&}]{ref}{, }\item[{std::\+string const \&}]{hint}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+third\+\_\+party/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2third__party_2clara_8hpp}{clara.\+hpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+third\+\_\+party/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2third__party_2clara_8hpp}{clara.\+hpp}}\end{DoxyCompactItemize}

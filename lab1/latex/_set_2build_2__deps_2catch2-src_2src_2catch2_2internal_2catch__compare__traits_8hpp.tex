@@ -1,0 +1,45 @@
+\doxysection{Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+internal/\+catch\+\_\+compare\+\_\+traits.hpp File Reference}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compare__traits_8hpp}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compare__traits_8hpp}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_compare\_traits.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_compare\_traits.hpp}}
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+void\+\_\+type.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$type\+\_\+traits$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_detail}{Catch::\+\+Detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compare__traits_8hpp_a322fbd7e3c1a27a823725d9959b57db5}{CATCH\+\_\+\+DEFINE\+\_\+\+COMPARABLE\+\_\+\+TRAIT}}(id,  op)
+\end{DoxyCompactItemize}
+
+
+\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compare__traits_8hpp_doc-define-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compare__traits_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compare__traits_8hpp_a322fbd7e3c1a27a823725d9959b57db5}\index{catch\_compare\_traits.hpp@{catch\_compare\_traits.hpp}!CATCH\_DEFINE\_COMPARABLE\_TRAIT@{CATCH\_DEFINE\_COMPARABLE\_TRAIT}}
+\index{CATCH\_DEFINE\_COMPARABLE\_TRAIT@{CATCH\_DEFINE\_COMPARABLE\_TRAIT}!catch\_compare\_traits.hpp@{catch\_compare\_traits.hpp}}
+\doxysubsubsection{\texorpdfstring{CATCH\_DEFINE\_COMPARABLE\_TRAIT}{CATCH\_DEFINE\_COMPARABLE\_TRAIT}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compare__traits_8hpp_a322fbd7e3c1a27a823725d9959b57db5} 
+\+\#define CATCH\+\_\+\+DEFINE\+\_\+\+COMPARABLE\+\_\+\+TRAIT(\begin{DoxyParamCaption}\item[{}]{id}{, }\item[{}]{op}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}\ <\textcolor{keyword}{typename},\ \textcolor{keyword}{typename},\ \textcolor{keyword}{typename}\ =\ \textcolor{keywordtype}{void}>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }is\_\#\#id\#\#\_comparable\ :\ std::false\_type\ \{\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }is\_\#\#id\#\#\_comparable<\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ T,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ void\_t<decltype(\ std::declval<T>()\ op\ std::declval<U>()\ )>>\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ :\ std::true\_type\ \{\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{template}\ <\textcolor{keyword}{typename},\ \textcolor{keyword}{typename}\ =\ \textcolor{keywordtype}{void}>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }is\_\#\#id\#\#\_0\_comparable\ :\ std::false\_type\ \{\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }is\_\#\#id\#\#\_0\_comparable<T,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a18f5992ca6894c1e025efb42b8320a4d}{void\_t}}<decltype(\ std::declval<T>()\ op\ 0\ )>>\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ :\ std::true\_type\ \{\};}
+
+\end{DoxyCode}

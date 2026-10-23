@@ -1,0 +1,125 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+tests/\+\+Self\+Test/\+\+Introspective\+Tests/\+\+Random\+Number\+Generation.tests.\+cpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp}{}\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp}\index{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/IntrospectiveTests/RandomNumberGeneration.tests.cpp@{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/IntrospectiveTests/RandomNumberGeneration.tests.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+template\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+floating\+\_\+point\+\_\+helpers.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+random\+\_\+integer\+\_\+helpers.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+random\+\_\+number\+\_\+generator.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+random\+\_\+seed\+\_\+generation.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+uniform\+\_\+floating\+\_\+point\+\_\+distribution.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+uniform\+\_\+integer\+\_\+distribution.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+generators/\+catch\+\_\+generators.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+matchers/\+catch\+\_\+matchers\+\_\+range\+\_\+equals.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$random$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_ad228bb8ae003cce59110c1ba7ee9e2c8}{TEST\+\_\+\+CASE}} ("{}Our PCG implementation provides expected results for known seeds"{}, "{}\+[rng]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a5b2689a0dd0145a683a0a0b9694f9e65}{TEST\+\_\+\+CASE}} ("{}Comparison ops"{}, "{}\+[rng]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0b9047473b2df4cc0727609e03f24d15}{TEST\+\_\+\+CASE}} ("{}Random seed generation reports unknown methods"{}, "{}\+[rng]\+\+[seed]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a73c505839db0b14c40800f578c392981}{TEST\+\_\+\+CASE}} ("{}Random seed generation accepts known methods"{}, "{}\+[rng]\+\+[seed]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a9b09244f05c31faa472bc9f01b0fcfae}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE}} ("{}uniform\+\_\+floating\+\_\+point\+\_\+distribution never returns infs from finite range"{}, "{}\+[rng]\+\+[distribution]\+\+[floating-\/point]\+\+[approvals]\+"{}, float, double)
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a2b0b5687c0427cd9c99556a3b045923a}{TEST\+\_\+\+CASE}} ("{}fill\+Bits\+From -\/ shortening and stretching"{}, "{}\+[rng]\+\+[approvals]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_aaa8220b3d94b74d35a44e0259c9d3531}{TEST\+\_\+\+CASE}} ("{}uniform\+\_\+integer\+\_\+distribution can return the bounds"{}, "{}\+[rng]\+\+[distribution]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a8251c979def96a39fa163ddd4db03e3d}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE}} ("{}uniform\+\_\+integer\+\_\+distribution can handle unit ranges"{}, "{}\+[rng]\+\+[distribution]\+\+[approvals]\+"{}, unsigned char, signed char, char, uint8\+\_\+t, int8\+\_\+t, uint16\+\_\+t, int16\+\_\+t, uint32\+\_\+t, int32\+\_\+t, uint64\+\_\+t, int64\+\_\+t)
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a183642c3f3977ca2a106f9730da7813a}{TEST\+\_\+\+CASE}} ("{}uniform\+\_\+integer\+\_\+distribution can handle boolean unit ranges"{}, "{}\+[rng]\+\+[distribution]\+\+[approvals]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0968806c9d3c2decc0a829f0984840eb}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE}} ("{}uniform\+\_\+integer\+\_\+distribution can handle full width ranges"{}, "{}\+[rng]\+\+[distribution]\+\+[approvals]\+"{}, unsigned char, signed char, char, uint8\+\_\+t, int8\+\_\+t, uint16\+\_\+t, int16\+\_\+t, uint32\+\_\+t, int32\+\_\+t, uint64\+\_\+t, int64\+\_\+t)
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0ec9bf246ff204100fa8b5bab3701c1a}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE}} ("{}uniform\+\_\+integer\+\_\+distribution is reproducible"{}, "{}\+[rng]\+\+[distribution]\+\+[approvals]\+"{}, bool, char, uint8\+\_\+t, int8\+\_\+t, uint16\+\_\+t, int16\+\_\+t, uint32\+\_\+t, int32\+\_\+t, uint64\+\_\+t, int64\+\_\+t)
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a78f937a6a0b70d09c1fa7200cba72844}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE}} ("{}uniform\+\_\+floating\+\_\+point\+\_\+distribution is reproducible"{}, "{}\+[rng]\+\+[distribution]\+\+[floating-\/point]\+\+[approvals]\+"{}, float, double)
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a42117464cd23f48c78ee3fa08f22eb71}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE}} ("{}uniform\+\_\+floating\+\_\+point\+\_\+distribution can handle unitary ranges"{}, "{}\+[rng]\+\+[distribution]\+\+[floating-\/point]\+\+[approvals]\+"{}, float, double)
+\end{DoxyCompactItemize}
+
+
+\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_doc-func-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a42117464cd23f48c78ee3fa08f22eb71}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}}
+\index{TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE()}{TEMPLATE\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a42117464cd23f48c78ee3fa08f22eb71} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform\+\_\+floating\+\_\+point\+\_\+distribution can handle unitary ranges"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[distribution]\+\+[floating-\/point]\+\+[approvals], }\item[{float}]{}{, }\item[{double}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a78f937a6a0b70d09c1fa7200cba72844}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}}
+\index{TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE()}{TEMPLATE\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a78f937a6a0b70d09c1fa7200cba72844} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform\+\_\+floating\+\_\+point\+\_\+distribution is reproducible"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[distribution]\+\+[floating-\/point]\+\+[approvals], }\item[{float}]{}{, }\item[{double}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a9b09244f05c31faa472bc9f01b0fcfae}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}}
+\index{TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE()}{TEMPLATE\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a9b09244f05c31faa472bc9f01b0fcfae} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform\+\_\+floating\+\_\+point\+\_\+distribution never returns infs from finite range"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[distribution]\+\+[floating-\/point]\+\+[approvals], }\item[{float}]{}{, }\item[{double}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0968806c9d3c2decc0a829f0984840eb}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}}
+\index{TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE()}{TEMPLATE\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0968806c9d3c2decc0a829f0984840eb} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform\+\_\+integer\+\_\+distribution can handle full width ranges"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[distribution]\+\+[approvals], }\item[{unsigned char}]{}{, }\item[{signed char}]{}{, }\item[{char}]{}{, }\item[{uint8\+\_\+t}]{}{, }\item[{int8\+\_\+t}]{}{, }\item[{uint16\+\_\+t}]{}{, }\item[{int16\+\_\+t}]{}{, }\item[{uint32\+\_\+t}]{}{, }\item[{int32\+\_\+t}]{}{, }\item[{uint64\+\_\+t}]{}{, }\item[{int64\+\_\+t}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a8251c979def96a39fa163ddd4db03e3d}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}}
+\index{TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE()}{TEMPLATE\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a8251c979def96a39fa163ddd4db03e3d} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform\+\_\+integer\+\_\+distribution can handle unit ranges"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[distribution]\+\+[approvals], }\item[{unsigned char}]{}{, }\item[{signed char}]{}{, }\item[{char}]{}{, }\item[{uint8\+\_\+t}]{}{, }\item[{int8\+\_\+t}]{}{, }\item[{uint16\+\_\+t}]{}{, }\item[{int16\+\_\+t}]{}{, }\item[{uint32\+\_\+t}]{}{, }\item[{int32\+\_\+t}]{}{, }\item[{uint64\+\_\+t}]{}{, }\item[{int64\+\_\+t}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0ec9bf246ff204100fa8b5bab3701c1a}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}}
+\index{TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE()}{TEMPLATE\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0ec9bf246ff204100fa8b5bab3701c1a} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform\+\_\+integer\+\_\+distribution is reproducible"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[distribution]\+\+[approvals], }\item[{bool}]{}{, }\item[{char}]{}{, }\item[{uint8\+\_\+t}]{}{, }\item[{int8\+\_\+t}]{}{, }\item[{uint16\+\_\+t}]{}{, }\item[{int16\+\_\+t}]{}{, }\item[{uint32\+\_\+t}]{}{, }\item[{int32\+\_\+t}]{}{, }\item[{uint64\+\_\+t}]{}{, }\item[{int64\+\_\+t}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a5b2689a0dd0145a683a0a0b9694f9e65}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a5b2689a0dd0145a683a0a0b9694f9e65} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Comparison ops"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a2b0b5687c0427cd9c99556a3b045923a}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a2b0b5687c0427cd9c99556a3b045923a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}fill\+Bits\+From -\/ shortening and stretching"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[approvals]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_ad228bb8ae003cce59110c1ba7ee9e2c8}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_ad228bb8ae003cce59110c1ba7ee9e2c8} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Our PCG implementation provides expected results for known seeds"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a73c505839db0b14c40800f578c392981}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a73c505839db0b14c40800f578c392981} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Random seed generation accepts known methods"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[seed]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0b9047473b2df4cc0727609e03f24d15}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a0b9047473b2df4cc0727609e03f24d15} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Random seed generation reports unknown methods"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[seed]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a183642c3f3977ca2a106f9730da7813a}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_a183642c3f3977ca2a106f9730da7813a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform\+\_\+integer\+\_\+distribution can handle boolean unit ranges"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[distribution]\+\+[approvals]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_aaa8220b3d94b74d35a44e0259c9d3531}\index{RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!RandomNumberGeneration.tests.cpp@{RandomNumberGeneration.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_random_number_generation_8tests_8cpp_aaa8220b3d94b74d35a44e0259c9d3531} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}uniform\+\_\+integer\+\_\+distribution can return the bounds"{}}]{}{, }\item[{"{}"{}}]{}{\+[rng]\+\+[distribution]}\end{DoxyParamCaption})}
+

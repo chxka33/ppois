@@ -1,0 +1,98 @@
+\doxysection{Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+interfaces/\+catch\+\_\+interfaces\+\_\+config.hpp File Reference}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__config_8hpp}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__config_8hpp}\index{Set/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_config.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_config.hpp}}
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+noncopyable.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+stringref.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$iosfwd$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_warn_about}{Catch::\+\+Warn\+About}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress}{Catch::\+\+Wait\+For\+Keypress}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_i_config}{Catch::\+\+IConfig}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Catch::\+\+Verbosity}} \{ \newline
+\doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111}{Catch::\+\+Quiet}} = 0
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0}{Catch::\+\+Normal}}
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35}{Catch::\+\+High}}
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111}{Catch::\+\+Quiet}} = 0
+, \newline
+\doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0}{Catch::\+\+Normal}}
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35}{Catch::\+\+High}}
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111}{Catch::\+\+Quiet}} = 0
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0}{Catch::\+\+Normal}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35}{Catch::\+\+High}}
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111}{Catch::\+\+Quiet}} = 0
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0}{Catch::\+\+Normal}}
+, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35}{Catch::\+\+High}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8}{Catch::\+\+Show\+Durations}} \{ \newline
+\doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e}{Catch::\+\+Default\+For\+Reporter}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c}{Catch::\+\+Always}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c}{Catch::\+\+Never}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e}{Catch::\+\+Default\+For\+Reporter}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c}{Catch::\+\+Always}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c}{Catch::\+\+Never}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e}{Catch::\+\+Default\+For\+Reporter}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c}{Catch::\+\+Always}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c}{Catch::\+\+Never}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e}{Catch::\+\+Default\+For\+Reporter}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c}{Catch::\+\+Always}}
+, \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c}{Catch::\+\+Never}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100}{Catch::\+\+Test\+Run\+Order}} \{ \newline
+\doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229}{Catch::\+\+Declared}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74}{Catch::\+\+Lexicographically\+Sorted}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb}{Catch::\+\+Randomized}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229}{Catch::\+\+Declared}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74}{Catch::\+\+Lexicographically\+Sorted}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb}{Catch::\+\+Randomized}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229}{Catch::\+\+Declared}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74}{Catch::\+\+Lexicographically\+Sorted}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb}{Catch::\+\+Randomized}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229}{Catch::\+\+Declared}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74}{Catch::\+\+Lexicographically\+Sorted}}
+, \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb}{Catch::\+\+Randomized}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Catch::\+\+Colour\+Mode}} : std::\+uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f}{Catch::\+\+Platform\+Default}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270}{Catch::\+\+ANSI}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405}{Catch::\+\+Win32}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754}{Catch::\+\+None}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f}{Catch::\+\+Platform\+Default}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270}{Catch::\+\+ANSI}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405}{Catch::\+\+Win32}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754}{Catch::\+\+None}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f}{Catch::\+\+Platform\+Default}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270}{Catch::\+\+ANSI}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405}{Catch::\+\+Win32}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754}{Catch::\+\+None}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f}{Catch::\+\+Platform\+Default}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270}{Catch::\+\+ANSI}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405}{Catch::\+\+Win32}}
+, \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754}{Catch::\+\+None}}
+ \}
+\end{DoxyCompactItemize}

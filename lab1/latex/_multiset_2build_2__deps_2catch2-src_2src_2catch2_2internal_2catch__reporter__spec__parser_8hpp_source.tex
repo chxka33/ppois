@@ -1,0 +1,72 @@
+\doxysection{catch\+\_\+reporter\+\_\+spec\+\_\+parser.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__reporter__spec__parser_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__reporter__spec__parser_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_reporter\_spec\_parser.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_reporter\_spec\_parser.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__reporter__spec__parser_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_REPORTER\_SPEC\_PARSER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_REPORTER\_SPEC\_PARSER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/interfaces/catch\_interfaces\_config.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_optional.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_stringref.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{ColourMode}}\ :\ std::uint8\_t;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a874fd7848ec5a0ef02d88c6ec37c9a03}{splitReporterSpec}}(\ StringRef\ reporterSpec\ );}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Optional<ColourMode>\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a64ba838a0c2e6767d095a7a01fc07b48}{stringToColourMode}}(\ StringRef\ colourMode\ );}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_reporter_spec}{ReporterSpec}}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_ad80296f4842b1232146c18fced36aaff}{m\_name}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ Optional<std::string>\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a1cf37587c236372d9e4eab34c0624a2b}{m\_outputFileName}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ Optional<ColourMode>\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a5bebf15d544946d32b74a8cf22b57d65}{m\_colourMode}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a4de4086bbbc46280d3406800f8a25947}{m\_customOptions}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a5ed5c5634c667d64dfc4a18a9534404b}{operator==}}(\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_aac26108d5319d5522dc4da69c85ef78f}{ReporterSpec}}\ \textcolor{keyword}{const}\&\ lhs,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_aac26108d5319d5522dc4da69c85ef78f}{ReporterSpec}}\ \textcolor{keyword}{const}\&\ rhs\ );}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a71b0055588d164144557dbdfcc529ed4}{operator!=}}(\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_aac26108d5319d5522dc4da69c85ef78f}{ReporterSpec}}\ \textcolor{keyword}{const}\&\ lhs,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_aac26108d5319d5522dc4da69c85ef78f}{ReporterSpec}}\ \textcolor{keyword}{const}\&\ rhs\ )\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(\ lhs\ ==\ rhs\ );}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_aac26108d5319d5522dc4da69c85ef78f}{ReporterSpec}}(}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a8767d90584b1feaccb75d157045c5e7a}{name}},}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_optional}{Optional<std::string>}}\ outputFileName,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_optional}{Optional<ColourMode>}}\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a0371ae20e7e8589beb12a5e3be964f3d}{colourMode}},}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a6ffea7ca24daf1d8d1b64e434b61dcc0}{customOptions}}\ );}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::string\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a8767d90584b1feaccb75d157045c5e7a}{name}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_ad80296f4842b1232146c18fced36aaff}{m\_name}};\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_optional}{Optional<std::string>}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a80f4deef91e481a8cf33780cac44aa98}{outputFile}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a1cf37587c236372d9e4eab34c0624a2b}{m\_outputFileName}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_optional}{Optional<ColourMode>}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a0371ae20e7e8589beb12a5e3be964f3d}{colourMode}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a5bebf15d544946d32b74a8cf22b57d65}{m\_colourMode}};\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a6ffea7ca24daf1d8d1b64e434b61dcc0}{customOptions}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec_a4de4086bbbc46280d3406800f8a25947}{m\_customOptions}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00081\ \ \ \ \ Optional<ReporterSpec>\ \doxymbox{\hyperlink{namespace_catch_ae987bd04fd59321f5183794daeffd4cf}{parseReporterSpec}}(\ StringRef\ reporterSpec\ );}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_REPORTER\_SPEC\_PARSER\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

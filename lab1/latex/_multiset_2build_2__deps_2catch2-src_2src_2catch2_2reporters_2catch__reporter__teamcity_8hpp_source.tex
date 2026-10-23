@@ -1,0 +1,72 @@
+\doxysection{catch\+\_\+reporter\+\_\+teamcity.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__teamcity_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__teamcity_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_teamcity.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_teamcity.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__teamcity_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_REPORTER\_TEAMCITY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_REPORTER\_TEAMCITY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/reporters/catch\_reporter\_streaming\_base.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/catch\_timer.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifdef\ \_\_clang\_\_}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#\ \ \ pragma\ clang\ diagnostic\ push}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#\ \ \ pragma\ clang\ diagnostic\ ignored\ "{}-\/Wpadded"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_team_city_reporter}{TeamCityReporter}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_streaming_reporter_base}{StreamingReporterBase}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a6615be434bfb0425be9946587ea2d2be}{TeamCityReporter}}(\ \doxymbox{\hyperlink{struct_catch_1_1_reporter_config}{ReporterConfig}}\&\&\ \_config\ )}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ :\ \ \ \doxymbox{\hyperlink{class_catch_1_1_streaming_reporter_base_a345a405dcf39e478933d45a310acc84c}{StreamingReporterBase}}(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(\_config)\ )}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_ae0571282fa76ecc35b061c9f1c718c72}{m\_preferences}}.\doxymbox{\hyperlink{struct_catch_1_1_reporter_preferences_a434511c4080edbbc12e0d1c31ea14769}{shouldRedirectStdOut}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a7bd00b5071587e659bb4c7de14dd5d81}{\string~TeamCityReporter}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a921cf51e7fee24327bec724c4f5361e0}{getDescription}}()\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ namespace\ }std::string\_literals;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Reports\ test\ results\ as\ TeamCity\ service\ messages"{}}s;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a9bca0ba3145a94f3fb38cdc7a4d0fac0}{testRunStarting}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{TestRunInfo}}\ \textcolor{keyword}{const}\&\ groupInfo\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a24b5605a24211cfa676367083a617de2}{testRunEnded}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{TestRunStats}}\ \textcolor{keyword}{const}\&\ testGroupStats\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a29962bc7bae0f48e5d3e24ef2b28d901}{assertionEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{AssertionStats}}\ \textcolor{keyword}{const}\&\ assertionStats)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a659dbf515acee57b7e957edf2b10e2d9}{sectionStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_section_info}{SectionInfo}}\ \textcolor{keyword}{const}\&\ sectionInfo)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_aaa5d656eb9ba2a2950778276e806baeb}{m\_headerPrintedForThisSection}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_streaming_reporter_base_a2138331de72f8dbae4e46cdd741f9656}{StreamingReporterBase::sectionStarting}}(\ sectionInfo\ );}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a512e183512859522d4605fee3ad8e52b}{testCaseStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}}\ \textcolor{keyword}{const}\&\ testInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_ab2a5007071e489a4e4c8ee8e84585ef8}{testCaseEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_test_case_stats}{TestCaseStats}}\ \textcolor{keyword}{const}\&\ testCaseStats)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_ad2dac5a0aeb077a65baa59a2e8d6f997}{printSectionHeader}}(std::ostream\&\ os);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_aaa5d656eb9ba2a2950778276e806baeb}{m\_headerPrintedForThisSection}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_timer}{Timer}}\ \doxymbox{\hyperlink{class_catch_1_1_team_city_reporter_a3ee6176efa895acc95345ef11508a865}{m\_testTimer}};}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#ifdef\ \_\_clang\_\_}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#\ \ \ pragma\ clang\ diagnostic\ pop}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_REPORTER\_TEAMCITY\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

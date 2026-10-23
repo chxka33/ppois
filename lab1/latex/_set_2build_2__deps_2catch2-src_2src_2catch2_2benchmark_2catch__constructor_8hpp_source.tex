@@ -1,0 +1,88 @@
+\doxysection{catch\+\_\+constructor.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__constructor_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__constructor_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_constructor.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_constructor.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__constructor_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Adapted\ from\ donated\ nonius\ code.}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ CATCH\_CONSTRUCTOR\_HPP\_INCLUDED}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CATCH\_CONSTRUCTOR\_HPP\_INCLUDED}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_move\_and\_forward.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark}{Benchmark}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keywordtype}{bool}\ Destruct>}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage}{ObjectStorage}}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a3bdc976ee96d7fcb13b1574e0b3c031d}{ObjectStorage}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a0aa2343f6092b5fa82d6fd827c2cc6a5}{ObjectStorage}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a3bdc976ee96d7fcb13b1574e0b3c031d}{ObjectStorage}}\&\ other)}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(\&\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ae0c96330b69b57d0b4621d47be9603d9}{data}})\ T(other.stored\_object());}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a48cb51bf6c86fe1e475aead069edd6aa}{ObjectStorage}}(\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a3bdc976ee96d7fcb13b1574e0b3c031d}{ObjectStorage}}\&\&\ other)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ae0c96330b69b57d0b4621d47be9603d9}{data}})\ T(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(other.stored\_object()));}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a672f0bc299a46ae24acf83d946d1056c}{\string~ObjectStorage}}()\ \{\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a81ab6a2ec1fb5f3c47f085d08bfb3f4c}{destruct\_on\_exit<T>}}();\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_aefe652a42f4325601e153acbd6d959fd}{construct}}(Args\&\&...\ args)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ (\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ae0c96330b69b57d0b4621d47be9603d9}{data}})\ T(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(args)...);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{bool}\ AllowManualDestruction\ =\ !Destruct>}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::enable\_if\_t<AllowManualDestruction>\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_aa900bef7043eb089ebdf32b2df4a492b}{destruct}}()}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ad685d105bd305e905a2bd9ad4518d908}{stored\_object}}().\string~T();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ this\ is\ a\ constructor\ benchmark,\ destruct\ the\ underlying\ object}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a81ab6a2ec1fb5f3c47f085d08bfb3f4c}{destruct\_on\_exit}}(std::enable\_if\_t<Destruct,\ U>*\ =\ \textcolor{keyword}{nullptr})\ \{\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_aa900bef7043eb089ebdf32b2df4a492b}{destruct<true>}}();\ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Otherwise,\ don't}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_aed0db08b2f82256bdcceb0a125a95a27}{destruct\_on\_exit}}(std::enable\_if\_t<!Destruct,\ U>*\ =\ \textcolor{keyword}{nullptr})\ \{\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#if\ defined(\ \_\_GNUC\_\_\ )\ \&\&\ \_\_GNUC\_\_\ <=\ 6}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ GCC\ diagnostic\ push}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ GCC\ diagnostic\ ignored\ "{}-\/Wstrict-\/aliasing"{}}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T\&\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ad685d105bd305e905a2bd9ad4518d908}{stored\_object}}()\ \{\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{reinterpret\_cast<}T*\textcolor{keyword}{>}(\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ae0c96330b69b57d0b4621d47be9603d9}{data}}\ );\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a70291139df4ff98e7d74b5ac9ba2ff36}{stored\_object}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{reinterpret\_cast<}T\ const*\textcolor{keyword}{>}(\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ae0c96330b69b57d0b4621d47be9603d9}{data}}\ );}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#if\ defined(\ \_\_GNUC\_\_\ )\ \&\&\ \_\_GNUC\_\_\ <=\ 6}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ GCC\ diagnostic\ pop}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{alignas}(\ T\ )\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ae0c96330b69b57d0b4621d47be9603d9}{data}}[\textcolor{keyword}{sizeof}(\ T\ )]\{\};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Detail}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a737e4b9b2571ab17d74621f181a33eff}{storage\_for}}\ =\ Detail::ObjectStorage<T,\ true>;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a49daedbacb4c240e304482a88245fd10}{destructable\_object}}\ =\ Detail::ObjectStorage<T,\ false>;}
+\DoxyCodeLine{00079\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Benchmark}}
+\DoxyCodeLine{00080\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_CONSTRUCTOR\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

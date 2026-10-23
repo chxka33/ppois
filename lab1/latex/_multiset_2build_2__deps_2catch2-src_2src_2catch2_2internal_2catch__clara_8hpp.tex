@@ -1,0 +1,177 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+internal/\+catch\+\_\+clara.hpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__clara_8hpp}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__clara_8hpp}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_clara.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_clara.hpp}}
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+stringref.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+move\+\_\+and\+\_\+forward.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+noncopyable.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+void\+\_\+type.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$cassert$>$}\newline
+{\ttfamily \+\#include $<$memory$>$}\newline
+{\ttfamily \+\#include $<$ostream$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1accept__many__t}{Catch::\+\+Clara::\+accept\+\_\+many\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1fake__arg}{Catch::\+\+Clara::\+\+Detail::\+fake\+\_\+arg}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1is__unary__function}{Catch::\+\+Clara::\+\+Detail::\+is\+\_\+unary\+\_\+function$<$ F, typename $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1is__unary__function_3_01_f_00_01_catch_1_1_detail_1_1void__ceae41f2fd42d0f40903422d3a1f8f01}{Catch::\+\+Clara::\+\+Detail::\+is\+\_\+unary\+\_\+function$<$ F, Catch::\+\+Detail::\+void\+\_\+t$<$ decltype(std::\+declval$<$ F $>$()(fake\+\_\+arg())) $>$ $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_unary_lambda_traits}{Catch::\+\+Clara::\+\+Detail::\+\+Unary\+Lambda\+Traits$<$ L $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_unary_lambda_traits_3_01_return_t_07_class_t_1_1_5_08_07_args_8_8_8_08_01const_01_4}{Catch::\+\+Clara::\+\+Detail::\+\+Unary\+Lambda\+Traits$<$ Return\+T(\+Class\+T::\+\texorpdfstring{$\ast$}{*})(\+Args...) const $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_unary_lambda_traits_3_01_return_t_07_class_t_1_1_5_08_07_arg_t_08_01const_01_4}{Catch::\+\+Clara::\+\+Detail::\+\+Unary\+Lambda\+Traits$<$ Return\+T(\+Class\+T::\+\texorpdfstring{$\ast$}{*})(\+Arg\+T) const $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_token}{Catch::\+\+Clara::\+\+Detail::\+\+Token}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_token_stream}{Catch::\+\+Clara::\+\+Detail::\+\+Token\+Stream}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_result_base}{Catch::\+\+Clara::\+\+Detail::\+\+Result\+Base}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_result_value_base}{Catch::\+\+Clara::\+\+Detail::\+\+Result\+Value\+Base$<$ T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_result_value_base_3_01void_01_4}{Catch::\+\+Clara::\+\+Detail::\+\+Result\+Value\+Base$<$ void $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_basic_result}{Catch::\+\+Clara::\+\+Detail::\+\+Basic\+Result$<$ T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_parse_state}{Catch::\+\+Clara::\+\+Detail::\+\+Parse\+State}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_help_columns}{Catch::\+\+Clara::\+\+Detail::\+\+Help\+Columns}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_ref}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Ref}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_value_ref_base}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Value\+Ref\+Base}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_flag_ref_base}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Flag\+Ref\+Base}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_value_ref}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Value\+Ref$<$ T $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_value_ref_3_01std_1_1vector_3_01_t_01_4_01_4}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Value\+Ref$<$ std::\+vector$<$ T $>$ $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_flag_ref}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Flag\+Ref}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_lambda_invoker}{Catch::\+\+Clara::\+\+Detail::\+\+Lambda\+Invoker$<$ Return\+Type $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_lambda_invoker_3_01void_01_4}{Catch::\+\+Clara::\+\+Detail::\+\+Lambda\+Invoker$<$ void $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_lambda}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Lambda$<$ L $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_many_lambda}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Many\+Lambda$<$ L $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_detail_1_1_bound_flag_lambda}{Catch::\+\+Clara::\+\+Detail::\+\+Bound\+Flag\+Lambda$<$ L $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_parser_base}{Catch::\+\+Clara::\+\+Detail::\+\+Parser\+Base}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_composable_parser_impl}{Catch::\+\+Clara::\+\+Detail::\+\+Composable\+Parser\+Impl$<$ Derived\+T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_detail_1_1_parser_ref_impl}{Catch::\+\+Clara::\+\+Detail::\+\+Parser\+Ref\+Impl$<$ Derived\+T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_arg}{Catch::\+\+Clara::\+\+Arg}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_opt}{Catch::\+\+Clara::\+\+Opt}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_exe_name}{Catch::\+\+Clara::\+\+Exe\+Name}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_parser}{Catch::\+\+Clara::\+\+Parser}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_clara_1_1_args}{Catch::\+\+Clara::\+\+Args}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_clara_1_1_help}{Catch::\+\+Clara::\+\+Help}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_clara}{Catch::\+\+Clara}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail}{Catch::\+\+Clara::\+\+Detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{namespace_catch_1_1_clara_a4b6953d784792f44e742f29d8674d7a6}{Catch::\+\+Clara::\+\+Parser\+Result}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61}{Catch::\+\+Clara::\+\+Parse\+Result\+Type}} \{ \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61ab65b6f388bb1788248938a5cff5bad1d}{Catch::\+\+Clara::\+\+Matched}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61ac8b77721c677e0429241a9250972122d}{Catch::\+\+Clara::\+\+No\+Match}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61aaa79962a9cad5bd52c86305ad0bd9442}{Catch::\+\+Clara::\+\+Short\+Circuit\+All}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61a3b06a989e906666754995bb461cacc4f}{Catch::\+\+Clara::\+\+Short\+Circuit\+Same}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61ab65b6f388bb1788248938a5cff5bad1d}{Catch::\+\+Clara::\+\+Matched}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61ac8b77721c677e0429241a9250972122d}{Catch::\+\+Clara::\+\+No\+Match}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61aaa79962a9cad5bd52c86305ad0bd9442}{Catch::\+\+Clara::\+\+Short\+Circuit\+All}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61a3b06a989e906666754995bb461cacc4f}{Catch::\+\+Clara::\+\+Short\+Circuit\+Same}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61ab65b6f388bb1788248938a5cff5bad1d}{Catch::\+\+Clara::\+\+Matched}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61ac8b77721c677e0429241a9250972122d}{Catch::\+\+Clara::\+\+No\+Match}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61aaa79962a9cad5bd52c86305ad0bd9442}{Catch::\+\+Clara::\+\+Short\+Circuit\+All}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61a3b06a989e906666754995bb461cacc4f}{Catch::\+\+Clara::\+\+Short\+Circuit\+Same}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61ab65b6f388bb1788248938a5cff5bad1d}{Catch::\+\+Clara::\+\+Matched}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61ac8b77721c677e0429241a9250972122d}{Catch::\+\+Clara::\+\+No\+Match}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61aaa79962a9cad5bd52c86305ad0bd9442}{Catch::\+\+Clara::\+\+Short\+Circuit\+All}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_aaef02c0376384b6e869e40b3dcc33f61a3b06a989e906666754995bb461cacc4f}{Catch::\+\+Clara::\+\+Short\+Circuit\+Same}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04}{Catch::\+\+Clara::\+\+Detail::\+\+Token\+Type}} \{ \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04a054b4f3ea543c990f6b125f41af6ebf7}{Catch::\+\+Clara::\+\+Detail::\+\+Option}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04a1853680a6d666b9fea2d789dd00bc7eb}{Catch::\+\+Clara::\+\+Detail::\+\+Argument}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04a054b4f3ea543c990f6b125f41af6ebf7}{Catch::\+\+Clara::\+\+Detail::\+\+Option}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04a1853680a6d666b9fea2d789dd00bc7eb}{Catch::\+\+Clara::\+\+Detail::\+\+Argument}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04a054b4f3ea543c990f6b125f41af6ebf7}{Catch::\+\+Clara::\+\+Detail::\+\+Option}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04a1853680a6d666b9fea2d789dd00bc7eb}{Catch::\+\+Clara::\+\+Detail::\+\+Argument}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04a054b4f3ea543c990f6b125f41af6ebf7}{Catch::\+\+Clara::\+\+Detail::\+\+Option}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a6ead4fe5ce95aee22dc4fb3e38404a04a1853680a6d666b9fea2d789dd00bc7eb}{Catch::\+\+Clara::\+\+Detail::\+\+Argument}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1}{Catch::\+\+Clara::\+\+Detail::\+\+Result\+Type}} \{ \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa60852f204ed8028c1c58808b746d115}{Catch::\+\+Clara::\+\+Detail::\+\+Ok}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa50b3452a2f7b026eb9325c5df52c157}{Catch::\+\+Clara::\+\+Detail::\+\+Logic\+Error}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa334b8fdd25f8fb3e632228494604ee1}{Catch::\+\+Clara::\+\+Detail::\+\+Runtime\+Error}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa60852f204ed8028c1c58808b746d115}{Catch::\+\+Clara::\+\+Detail::\+\+Ok}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa50b3452a2f7b026eb9325c5df52c157}{Catch::\+\+Clara::\+\+Detail::\+\+Logic\+Error}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa334b8fdd25f8fb3e632228494604ee1}{Catch::\+\+Clara::\+\+Detail::\+\+Runtime\+Error}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa60852f204ed8028c1c58808b746d115}{Catch::\+\+Clara::\+\+Detail::\+\+Ok}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa50b3452a2f7b026eb9325c5df52c157}{Catch::\+\+Clara::\+\+Detail::\+\+Logic\+Error}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa334b8fdd25f8fb3e632228494604ee1}{Catch::\+\+Clara::\+\+Detail::\+\+Runtime\+Error}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa60852f204ed8028c1c58808b746d115}{Catch::\+\+Clara::\+\+Detail::\+\+Ok}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa50b3452a2f7b026eb9325c5df52c157}{Catch::\+\+Clara::\+\+Detail::\+\+Logic\+Error}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a58800f68faab69c44d58b2c0038875d1aa334b8fdd25f8fb3e632228494604ee1}{Catch::\+\+Clara::\+\+Detail::\+\+Runtime\+Error}}
+ \}
+\begin{DoxyCompactList}\small\item\em Denotes type of a parsing result. \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6c}{Catch::\+\+Clara::\+\+Detail::\+\+Optionality}} \{ \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6caebb061953c0454b2c8ee7b0ac615ebcd}{Catch::\+\+Clara::\+\+Detail::\+\+Optional}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6cab651efdb98a5d6bd2b3935d0c3f4a5e2}{Catch::\+\+Clara::\+\+Detail::\+\+Required}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6caebb061953c0454b2c8ee7b0ac615ebcd}{Catch::\+\+Clara::\+\+Detail::\+\+Optional}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6cab651efdb98a5d6bd2b3935d0c3f4a5e2}{Catch::\+\+Clara::\+\+Detail::\+\+Required}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6caebb061953c0454b2c8ee7b0ac615ebcd}{Catch::\+\+Clara::\+\+Detail::\+\+Optional}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6cab651efdb98a5d6bd2b3935d0c3f4a5e2}{Catch::\+\+Clara::\+\+Detail::\+\+Required}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6caebb061953c0454b2c8ee7b0ac615ebcd}{Catch::\+\+Clara::\+\+Detail::\+\+Optional}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab58189b0df24d5c251b76bd327164b6cab651efdb98a5d6bd2b3935d0c3f4a5e2}{Catch::\+\+Clara::\+\+Detail::\+\+Required}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a4b6953d784792f44e742f29d8674d7a6}{Parser\+Result}} \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a91a7876e712852feaf1d1d6072216af9}{Catch::\+\+Clara::\+\+Detail::\+convert\+Into}} (std::\+string const \&source, T \&target)
+\item 
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a4b6953d784792f44e742f29d8674d7a6}{Parser\+Result}} \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab5b76a1843c33a4a71aa698a3defc528}{Catch::\+\+Clara::\+\+Detail::\+convert\+Into}} (std::\+string const \&source, std::\+string \&target)
+\item 
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a4b6953d784792f44e742f29d8674d7a6}{Parser\+Result}} \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_aaf5cc67b22b463d47af6e69ee31bf44e}{Catch::\+\+Clara::\+\+Detail::\+convert\+Into}} (std::\+string const \&source, bool \&target)
+\item 
+{\footnotesize template$<$typename Arg\+Type, typename L$>$ }\\auto \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_aa756e2e2404a66852ab7fbd14a2a4647}{Catch::\+\+Clara::\+\+Detail::\+invoke\+Lambda}} (L const \&lambda, std::\+string const \&arg) -\/$>$ \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a4b6953d784792f44e742f29d8674d7a6}{Parser\+Result}}
+\end{DoxyCompactItemize}

@@ -1,0 +1,216 @@
+\doxysection{range\+\_\+test\+\_\+helpers.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2range__test__helpers_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2range__test__helpers_8hpp_source}\index{Set/build/\_deps/catch2-\/src/tests/SelfTest/helpers/range\_test\_helpers.hpp@{Set/build/\_deps/catch2-\/src/tests/SelfTest/helpers/range\_test\_helpers.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2range__test__helpers_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ CATCH\_TEST\_HELPERS\_RANGE\_TEST\_HELPERS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CATCH\_TEST\_HELPERS\_RANGE\_TEST\_HELPERS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/catch\_tostring.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <initializer\_list>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespaceunrelated}{unrelated}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a0dfdf3ad3828de173d1d2ef14cf5be00}{needs\_ADL\_begin}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::vector<T>\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_af8430dee06d67715d9646dd2593267b9}{m\_elements}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a9a211ece05daa4d488ea5b8b56cf643d}{iterator}}\ =\ \textcolor{keyword}{typename}\ std::vector<T>::iterator;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a88a0b694f47d3e5911331873fe0cadea}{const\_iterator}}\ =\ \textcolor{keyword}{typename}\ std::vector<T>::const\_iterator;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a0dfdf3ad3828de173d1d2ef14cf5be00}{needs\_ADL\_begin}}(\ std::initializer\_list<T>\ init\ ):\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_af8430dee06d67715d9646dd2593267b9}{m\_elements}}(\ init\ )\ \{\}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a88a0b694f47d3e5911331873fe0cadea}{const\_iterator}}\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a2dcecd1e0ffe394b1e7c010c76d08384}{Begin}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_af8430dee06d67715d9646dd2593267b9}{m\_elements}}.begin();\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a88a0b694f47d3e5911331873fe0cadea}{const\_iterator}}\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_ad1209eea98143e2b847206db62373253}{End}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_af8430dee06d67715d9646dd2593267b9}{m\_elements}}.end();\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a88a0b694f47d3e5911331873fe0cadea}{const\_iterator}}\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a73817a6e948345d4c18f24b7f662512a}{begin}}(\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a0dfdf3ad3828de173d1d2ef14cf5be00}{needs\_ADL\_begin}}\ \textcolor{keyword}{const}\&\ lhs\ )\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.\doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a2dcecd1e0ffe394b1e7c010c76d08384}{Begin}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a88a0b694f47d3e5911331873fe0cadea}{const\_iterator}}\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a69e4885540b33a3df66ac2829ceb76d5}{end}}(\ \doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_a0dfdf3ad3828de173d1d2ef14cf5be00}{needs\_ADL\_begin}}\ \textcolor{keyword}{const}\&\ rhs\ )\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rhs.\doxymbox{\hyperlink{classunrelated_1_1needs___a_d_l__begin_ad1209eea98143e2b847206db62373253}{End}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structunrelated_1_1_a_d_l__empty}{ADL\_empty}}\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structunrelated_1_1_a_d_l__empty_a3d94a9c2125bcdf23b05f1b342f23838}{Empty}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structunrelated_1_1_a_d_l__empty_a412bde593a99877bed9a98d0e1bff32b}{empty}}(\ \doxymbox{\hyperlink{structunrelated_1_1_a_d_l__empty}{ADL\_empty}}\ e\ )\ \{\ \textcolor{keywordflow}{return}\ e.\doxymbox{\hyperlink{structunrelated_1_1_a_d_l__empty_a3d94a9c2125bcdf23b05f1b342f23838}{Empty}}();\ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structunrelated_1_1_a_d_l__size}{ADL\_size}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structunrelated_1_1_a_d_l__size_af45a6e6eba36334b2259cac4b4cdec36}{sz}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ 12;\ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structunrelated_1_1_a_d_l__size_a46c14c05b0dfdc0e75593519789100d6}{size}}(\ \doxymbox{\hyperlink{structunrelated_1_1_a_d_l__size}{ADL\_size}}\ s\ )\ \{\ \textcolor{keywordflow}{return}\ s.\doxymbox{\hyperlink{structunrelated_1_1_a_d_l__size_af45a6e6eba36334b2259cac4b4cdec36}{sz}}();\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \}\ \textcolor{comment}{//\ namespace\ unrelated}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#if\ defined(\ \_\_clang\_\_\ )}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ clang\ diagnostic\ push}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ clang\ diagnostic\ ignored\ "{}-\/Wunused-\/function"{}}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00060\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classhas__different__begin__end__types_a0e94922e5a2b5b21ced47d8a6a2ceb71}{has\_different\_begin\_end\_types}}\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Using\ std::vector<T>\ leads\ to\ annoying\ issues\ when\ T\ is\ bool}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ so\ we\ just\ use\ list\ because\ the\ perf\ is\ not\ critical\ and\ ugh.}}
+\DoxyCodeLine{00063\ \ \ \ \ std::list<T>\ \doxymbox{\hyperlink{classhas__different__begin__end__types_af216ae50569f71c5bc08e990c14e3e8c}{m\_elements}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ Different\ type\ for\ the\ "{}end"{}\ iterator}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structhas__different__begin__end__types_1_1iterator__end}{iterator\_end}}\ \{\};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Fake-\/ish\ forward\ iterator\ that\ only\ compares\ to\ a\ different\ type}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_af5ac10121e22bf8a74c594c14bbb93f6}{underlying\_iter}}\ =\ \textcolor{keyword}{typename}\ std::list<T>::const\_iterator;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_af5ac10121e22bf8a74c594c14bbb93f6}{underlying\_iter}}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_af5ac10121e22bf8a74c594c14bbb93f6}{underlying\_iter}}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a3e6c8f5f4f6aed99ec15ae23ea5d06ef}{m\_end}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}(\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_af5ac10121e22bf8a74c594c14bbb93f6}{underlying\_iter}}\ start,\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_af5ac10121e22bf8a74c594c14bbb93f6}{underlying\_iter}}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_a0044fc794874996c2762f1f52141ffac}{end}}\ ):}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}}(\ start\ ),\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a3e6c8f5f4f6aed99ec15ae23ea5d06ef}{m\_end}}(\ \doxymbox{\hyperlink{classhas__different__begin__end__types_a0044fc794874996c2762f1f52141ffac}{end}}\ )\ \{\}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_af1f215a3ec762edae4131ae3665e8d4b}{iterator\_category}}\ =\ std::forward\_iterator\_tag;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_abe64c97b784b7929f751e9b8ad055a7c}{difference\_type}}\ =\ std::ptrdiff\_t;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_acb5cacc4daceb2a344764389a55ef15f}{value\_type}}\ =\ T;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aa5b2ad9a25e60f3e32d34c47d332bcd0}{const\_reference}}\ =\ T\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_ac077b30c5717164b2ef869515b195ab9}{pointer}}\ =\ T\ \textcolor{keyword}{const}*;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a13b643325c6814c2612e69ac83d7fb4f}{operator==}}(\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\ iter,\ \doxymbox{\hyperlink{structhas__different__begin__end__types_1_1iterator__end}{iterator\_end}}\ )\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ iter.\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}}\ ==\ iter.\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a3e6c8f5f4f6aed99ec15ae23ea5d06ef}{m\_end}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_ac65252a861ac7e2ecba63da7f800eaa3}{operator==}}(\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\ lhs,\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\ rhs)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}}\ ==\ rhs.\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}}\ \&\&\ lhs.\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a3e6c8f5f4f6aed99ec15ae23ea5d06ef}{m\_end}}\ ==\ rhs.\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a3e6c8f5f4f6aed99ec15ae23ea5d06ef}{m\_end}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a29db330584e335e523a3896206a51600}{operator!=}}(\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\ iter,\ \doxymbox{\hyperlink{structhas__different__begin__end__types_1_1iterator__end}{iterator\_end}}\ )\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ iter.\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}}\ !=\ iter.\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a3e6c8f5f4f6aed99ec15ae23ea5d06ef}{m\_end}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a48b6f6e4dd0bac3f42814d0e616ee1b4}{operator!=}}(\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\ lhs,\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\ rhs\ )\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(\ lhs\ ==\ rhs\ );}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\&\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a93d1cfbcc3318b01402b934ca02ab1e4}{operator++}}()\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ ++\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aabab12e3ce7eb88482376e216b618ed4}{iterator}}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_acb66d4065898f1efae3aae501ab82491}{operator++}}(\ \textcolor{keywordtype}{int}\ )\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ tmp(\ *\textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ ++\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tmp;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_aa5b2ad9a25e60f3e32d34c47d332bcd0}{const\_reference}}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a1ebec2a65060dcabbe32afdb2bc6fae4}{operator*}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *\doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}};\ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_ac077b30c5717164b2ef869515b195ab9}{pointer}}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_ac423f28e04e4ef8a79680f6707d4eeae}{operator-\/>}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator_a40c83cebf75620de3b5e4c88f7f4def3}{m\_start}};\ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_a0e94922e5a2b5b21ced47d8a6a2ceb71}{has\_different\_begin\_end\_types}}(\ std::initializer\_list<T>\ init\ ):}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_af216ae50569f71c5bc08e990c14e3e8c}{m\_elements}}(\ init\ )\ \{\}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \doxymbox{\hyperlink{classhas__different__begin__end__types_1_1iterator}{iterator}}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_a3b0d70d0965bfa9a4a3e15a8aa23662d}{begin}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \{\ \doxymbox{\hyperlink{classhas__different__begin__end__types_af216ae50569f71c5bc08e990c14e3e8c}{m\_elements}}.begin(),\ \doxymbox{\hyperlink{classhas__different__begin__end__types_af216ae50569f71c5bc08e990c14e3e8c}{m\_elements}}.end()\ \};\ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \doxymbox{\hyperlink{structhas__different__begin__end__types_1_1iterator__end}{iterator\_end}}\ \doxymbox{\hyperlink{classhas__different__begin__end__types_a0044fc794874996c2762f1f52141ffac}{end}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \{\};\ \}}
+\DoxyCodeLine{00115\ \};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#if\ defined(\ \_\_clang\_\_\ )}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ clang\ diagnostic\ pop}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00122\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structwith__mocked__iterator__access_a08dec007596a8ba22038c447aa0a9a15}{with\_mocked\_iterator\_access}}\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ std::vector<T>\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a4ec758168b1e2f94e8d058795c2357ac}{m\_elements}};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ use\ plain\ arrays\ to\ have\ nicer\ printouts\ with\ CHECK(...)}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{mutable}\ std::unique\_ptr<bool[]>\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_aec86297ee54b487b2e211071b74ce836}{m\_derefed}};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ We\ want\ to\ check\ which\ elements\ were\ dereferenced\ when\ iterating,\ so}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//\ we\ can\ check\ whether\ iterator-\/using\ code\ traverses\ range\ correctly}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{bool}\ is\_const>}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a17d7e6c448f0cd0f6d820e847a335cf2}{basic\_iterator}}\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a205b9ff6f579d0fabd9e0828ea656e1c}{constify\_t}}\ =\ std::conditional\_t<is\_const,\ std::add\_const\_t<U>,\ U>;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a205b9ff6f579d0fabd9e0828ea656e1c}{constify\_t<with\_mocked\_iterator\_access>}}*\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a421c936fe1d085265227390ad6fde98d}{m\_origin}};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx}};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a64c0bd610cfb04d3b4de4ad1f66bf881}{iterator\_category}}\ =\ std::forward\_iterator\_tag;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a8a8cbcbdd5e96c234e79363ed6663b2e}{difference\_type}}\ =\ std::ptrdiff\_t;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_acd322eb2883d4083ca4554a854c1c132}{value\_type}}\ =\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a205b9ff6f579d0fabd9e0828ea656e1c}{constify\_t<T>}};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a7e24ff8093d616703e069a6a101245e5}{const\_reference}}\ =\ \textcolor{keyword}{typename}\ std::vector<T>::const\_reference;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a6b725dca6b66a664342d5bf1ad1e7be0}{reference}}\ =\ \textcolor{keyword}{typename}\ std::vector<T>::reference;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a0cd5675f59d2cf043eab06dbaf2b1325}{pointer}}\ =\ \textcolor{keyword}{typename}\ std::vector<T>::pointer;}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a17d7e6c448f0cd0f6d820e847a335cf2}{basic\_iterator}}(\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a205b9ff6f579d0fabd9e0828ea656e1c}{constify\_t<with\_mocked\_iterator\_access>}}*\ origin,}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ origin\_idx\ ):}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a421c936fe1d085265227390ad6fde98d}{m\_origin}}\{\ origin\ \},\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx}}\{\ origin\_idx\ \}\ \{\}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a1f614a2e8d4aba071ac5f23d33ac2ca2}{operator==}}(\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a17d7e6c448f0cd0f6d820e847a335cf2}{basic\_iterator}}\ lhs,\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a17d7e6c448f0cd0f6d820e847a335cf2}{basic\_iterator}}\ rhs\ )\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a421c936fe1d085265227390ad6fde98d}{m\_origin}}\ ==\ rhs.\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a421c936fe1d085265227390ad6fde98d}{m\_origin}}\ \&\&}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lhs.\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx}}\ ==\ rhs.\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx}};}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a2ff1c60ead4b7c502ab039c3e6680640}{operator!=}}(\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a17d7e6c448f0cd0f6d820e847a335cf2}{basic\_iterator}}\ lhs,\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a17d7e6c448f0cd0f6d820e847a335cf2}{basic\_iterator}}\ rhs\ )\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(\ lhs\ ==\ rhs\ );}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a17d7e6c448f0cd0f6d820e847a335cf2}{basic\_iterator}}\&\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5b5386bc91b3f74dea89e42b617fa69e}{operator++}}()\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ ++\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx}};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a17d7e6c448f0cd0f6d820e847a335cf2}{basic\_iterator}}\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a21db585416e94f764ece30163c407971}{operator++}}(\ \textcolor{keywordtype}{int}\ )\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ tmp(\ *\textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ ++(\ *this\ );}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tmp;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a7e24ff8093d616703e069a6a101245e5}{const\_reference}}\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a8ea26df99268b8546688515b5e574f39}{operator*}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ assert(\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx\ <\ m\_origin-\/>}}\doxymbox{\hyperlink{structwith__mocked__iterator__access_a4ec758168b1e2f94e8d058795c2357ac}{m\_elements}}.size()\ \&\&}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Attempted\ to\ deref\ invalid\ position"{}}\ );}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a421c936fe1d085265227390ad6fde98d}{m\_origin}}-\/>m\_derefed[\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx}}]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a421c936fe1d085265227390ad6fde98d}{m\_origin}}-\/>m\_elements[\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx}}];}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a0cd5675f59d2cf043eab06dbaf2b1325}{pointer}}\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a62da69036fdc19b9a565b302b3ce6861}{operator-\/>}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ assert(\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx\ <\ m\_origin-\/>}}\doxymbox{\hyperlink{structwith__mocked__iterator__access_a4ec758168b1e2f94e8d058795c2357ac}{m\_elements}}.size()\ \&\&}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Attempted\ to\ deref\ invalid\ position"{}}\ );}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a421c936fe1d085265227390ad6fde98d}{m\_origin}}-\/>m\_elements[\doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator_a5c2fa13ac5a88b395ba255f988744c95}{m\_origin\_idx}}];}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{structwith__mocked__iterator__access_accffceee707917acd1b7110895996d2b}{iterator}}\ =\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator}{basic\_iterator<false>}};}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{structwith__mocked__iterator__access_a383ab7967cc7955189f5fe314a8e2767}{const\_iterator}}\ =\ \doxymbox{\hyperlink{classwith__mocked__iterator__access_1_1basic__iterator}{basic\_iterator<true>}};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a08dec007596a8ba22038c447aa0a9a15}{with\_mocked\_iterator\_access}}(\ std::initializer\_list<T>\ init\ ):}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a4ec758168b1e2f94e8d058795c2357ac}{m\_elements}}(\ init\ ),}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structwith__mocked__iterator__access_aec86297ee54b487b2e211071b74ce836}{m\_derefed}}(\ std::make\_unique<bool[]>(\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a4ec758168b1e2f94e8d058795c2357ac}{m\_elements}}.size()\ )\ )\ \{\}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a383ab7967cc7955189f5fe314a8e2767}{const\_iterator}}\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_aa023cff826b9eb2825b3db53c0278b29}{begin}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \{\ \textcolor{keyword}{this},\ 0\ \};\ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a383ab7967cc7955189f5fe314a8e2767}{const\_iterator}}\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a543062d74993e68c795de17514760b41}{end}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \{\ \textcolor{keyword}{this},\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a4ec758168b1e2f94e8d058795c2357ac}{m\_elements}}.size()\ \};\ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \doxymbox{\hyperlink{structwith__mocked__iterator__access_accffceee707917acd1b7110895996d2b}{iterator}}\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a0e275f174c3f2ef3b50bc405a68c9454}{begin}}()\ \{\ \textcolor{keywordflow}{return}\ \{\ \textcolor{keyword}{this},\ 0\ \};\ \}}
+\DoxyCodeLine{00189\ \ \ \ \ \doxymbox{\hyperlink{structwith__mocked__iterator__access_accffceee707917acd1b7110895996d2b}{iterator}}\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_ac4fa7fb661587527e79f05e09f5fb906}{end}}()\ \{\ \textcolor{keywordflow}{return}\ \{\ \textcolor{keyword}{this},\ \doxymbox{\hyperlink{structwith__mocked__iterator__access_a4ec758168b1e2f94e8d058795c2357ac}{m\_elements}}.size()\ \};\ \}}
+\DoxyCodeLine{00190\ \};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//\ make\ sure\ with\_mocked\_iterator\_access\ is\ not\ considered\ a\ range\ by\ Catch,}}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{comment}{//\ so\ that\ below\ StringMaker\ is\ used\ instead\ of\ the\ default\ one\ for\ ranges}}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1is__range}{is\_range}}<\doxymbox{\hyperlink{structwith__mocked__iterator__access}{with\_mocked\_iterator\_access}}<T>>\ :\ std::false\_type\ \{\};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_string_maker}{StringMaker}}<\doxymbox{\hyperlink{structwith__mocked__iterator__access}{with\_mocked\_iterator\_access}}<T>>\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_string_maker_3_01with__mocked__iterator__access_3_01_t_01_4_01_4_a2105f51310c0c516769ec603568f639f}{convert}}(\ \doxymbox{\hyperlink{structwith__mocked__iterator__access}{with\_mocked\_iterator\_access<T>}}\ \textcolor{keyword}{const}\&\ access\ )\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ have\ to\ avoid\ the\ type's\ iterators,\ because\ we\ check}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ their\ use\ in\ tests}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ return\ ::Catch::Detail::stringify(\ access.\doxymbox{\hyperlink{structwith__mocked__iterator__access_a4ec758168b1e2f94e8d058795c2357ac}{m\_elements}}\ );}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \};}
+\DoxyCodeLine{00208\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_TEST\_HELPERS\_RANGE\_TEST\_HELPERS\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

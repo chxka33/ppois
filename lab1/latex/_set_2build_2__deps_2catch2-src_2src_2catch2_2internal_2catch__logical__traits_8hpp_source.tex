@@ -1,0 +1,50 @@
+\doxysection{catch\+\_\+logical\+\_\+traits.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__logical__traits_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__logical__traits_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_logical\_traits.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_logical\_traits.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__logical__traits_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_LOGICAL\_TRAITS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_LOGICAL\_TRAITS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#if\ defined(\ \_\_cpp\_lib\_logical\_traits\ )\ \&\&\ \_\_cpp\_lib\_logical\_traits\ >=\ 201510}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{using\ }std::conjunction;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }std::disjunction;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{using\ }std::negation;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}...>\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_detail_1_1conjunction}{conjunction}}\ :\ std::true\_type\ \{\};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ B1>\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_detail_1_1conjunction}{conjunction<B1>}}\ :\ B1\ \{\};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class\ }B1,\ \textcolor{keyword}{class}...\ Bn>}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_detail_1_1conjunction}{conjunction}}<B1,\ Bn...>}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ :\ std::conditional\_t<bool(\ B1::value\ ),\ conjunction<Bn...>,\ B1>\ \{\};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}...>\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_detail_1_1disjunction}{disjunction}}\ :\ std::false\_type\ \{\};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ B1>\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_detail_1_1disjunction}{disjunction<B1>}}\ :\ B1\ \{\};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class\ }B1,\ \textcolor{keyword}{class}...\ Bn>}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_detail_1_1disjunction}{disjunction}}<B1,\ Bn...>}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ :\ std::conditional\_t<bool(\ B1::value\ ),\ B1,\ disjunction<Bn...>>\ \{\};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ B>}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_detail_1_1negation}{negation}}\ :\ std::integral\_constant<bool,\ !bool(B::value)>\ \{\};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \}\ \textcolor{comment}{//\ namespace\ Detail}}
+\DoxyCodeLine{00042\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_LOGICAL\_TRAITS\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

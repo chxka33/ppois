@@ -1,0 +1,72 @@
+\doxysection{catch\+\_\+interfaces\+\_\+registry\+\_\+hub.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__registry__hub_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__registry__hub_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_registry\_hub.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_registry\_hub.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__registry__hub_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_INTERFACES\_REGISTRY\_HUB\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_INTERFACES\_REGISTRY\_HUB\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_unique\_ptr.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{TestCaseHandle}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_test_case_registry}{ITestCaseRegistry}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_exception_translator_registry}{IExceptionTranslatorRegistry}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_exception_translator}{IExceptionTranslator}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_reporter_registry}{ReporterRegistry}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_reporter_factory}{IReporterFactory}};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_tag_alias_registry}{ITagAliasRegistry}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_test_invoker}{ITestInvoker}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_mutable_enum_values_registry}{IMutableEnumValuesRegistry}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{SourceLineInfo}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_startup_exception_registry}{StartupExceptionRegistry}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_event_listener_factory}{EventListenerFactory}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_catch_a51fe1a39aaa63dbf724df51cbedf580d}{IReporterFactoryPtr}}\ =\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::unique\_ptr<IReporterFactory>}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_registry_hub}{IRegistryHub}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_i_registry_hub_a050de0f27f96888c8b410992146c9a09}{\string~IRegistryHub}}();\ \textcolor{comment}{//\ =\ default}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_reporter_registry}{ReporterRegistry}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_registry_hub_aecb81b9fcf4fc3348778adc57531f079}{getReporterRegistry}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_i_test_case_registry}{ITestCaseRegistry}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_registry_hub_a3016c8766e42bae7b021f02d1cbd356b}{getTestCaseRegistry}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_i_tag_alias_registry}{ITagAliasRegistry}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_registry_hub_a3fb24564dba3f679dfa58792f1e21708}{getTagAliasRegistry}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_i_exception_translator_registry}{IExceptionTranslatorRegistry}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_registry_hub_aa97defa756fe28dd6249b19c12bbbec1}{getExceptionTranslatorRegistry}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_startup_exception_registry}{StartupExceptionRegistry}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_registry_hub_a6a1810bb78ba99c3be091958bcc12f29}{getStartupExceptionRegistry}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub}{IMutableRegistryHub}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_a759ca1e044e19f905fb4d306f1367193}{\string~IMutableRegistryHub}}();\ \textcolor{comment}{//\ =\ default}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_aa94a804d04ed6ca0dbd0553d6acd6257}{registerReporter}}(\ std::string\ \textcolor{keyword}{const}\&\ name,\ \doxymbox{\hyperlink{namespace_catch_a51fe1a39aaa63dbf724df51cbedf580d}{IReporterFactoryPtr}}\ factory\ )\ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_a8c70c6e8f0d2ac0c83fe4e5c53d193f6}{registerListener}}(\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::unique\_ptr<EventListenerFactory>}}\ factory\ )\ =\ 0;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_a07ecec9d39a4ec17ee6a12c9a5a7c8a6}{registerTest}}(\doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::unique\_ptr<TestCaseInfo>}}\&\&\ testInfo,\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::unique\_ptr<ITestInvoker>}}\&\&\ invoker)\ =\ 0;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_aed579e45f9d9082d8e45f93fa028d11e}{registerTranslator}}(\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::unique\_ptr<IExceptionTranslator>}}\&\&\ translator\ )\ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_abf2e386b6f94f615719ada711adbf822}{registerTagAlias}}(\ std::string\ \textcolor{keyword}{const}\&\ alias,\ std::string\ \textcolor{keyword}{const}\&\ tag,\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{SourceLineInfo}}\ \textcolor{keyword}{const}\&\ lineInfo\ )\ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_a72a7d5386851ac3200f8da794a009c86}{registerStartupException}}()\ noexcept\ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ virtual\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_enum_values_registry}{IMutableEnumValuesRegistry}}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub_ab1f0013630047f8295e5969b624ad632}{getMutableEnumValuesRegistry}}()\ =\ 0;}
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_i_registry_hub}{IRegistryHub}}\ const\&\ \doxymbox{\hyperlink{namespace_catch_a5d328566cb8da87b48f1fac3f319ac7a}{getRegistryHub}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub}{IMutableRegistryHub}}\&\ \doxymbox{\hyperlink{namespace_catch_a585459763f2c7610e57de2dd22dd1ad8}{getMutableRegistryHub}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_a0f78e9afdebc6d4512d18e76fbf54b8c}{cleanUp}}();}
+\DoxyCodeLine{00062\ \ \ \ \ std::\textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{namespace_catch_adafff91485eeeeb9e9333f317cc0e3b1}{translateActiveException}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_INTERFACES\_REGISTRY\_HUB\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

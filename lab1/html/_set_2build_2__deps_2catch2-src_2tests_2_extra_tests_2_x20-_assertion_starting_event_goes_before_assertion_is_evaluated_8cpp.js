@@ -1,0 +1,4 @@
+var _set_2build_2__deps_2catch2_src_2tests_2_extra_tests_2_x20__assertion_starting_event_goes_before_assertion_is_evaluated_8cpp =
+[
+    [ "TEST_CASE", "_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x20-_assertion_starting_event_goes_before_assertion_is_evaluated_8cpp.html#a2fc1b384a37ea5ffd40b278770636424", null ]
+];

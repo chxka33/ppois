@@ -1,0 +1,51 @@
+\doxysection{catch\+\_\+singletons.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__singletons_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__singletons_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_singletons.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_singletons.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__singletons_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_SINGLETONS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_SINGLETONS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_i_singleton}{ISingleton}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{struct_catch_1_1_i_singleton_a39eff5724ac61270a80c0c354b98bf23}{\string~ISingleton}}();\ \textcolor{comment}{//\ =\ default}}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_a788ebefcd83342b7c479222a1eeffaee}{addSingleton}}(\ \doxymbox{\hyperlink{struct_catch_1_1_i_singleton}{ISingleton}}*\ singleton\ );}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_a8bdb92cb53a4e016bc0dee66efd99118}{cleanupSingletons}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ SingletonImplT,\ \textcolor{keyword}{typename}\ InterfaceT\ =\ SingletonImplT,\ \textcolor{keyword}{typename}\ MutableInterfaceT\ =\ InterfaceT>}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_singleton}{Singleton}}\ :\ SingletonImplT,\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_catch_1_1_i_singleton}{ISingleton}}\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{class_catch_1_1_singleton_a84b126e025611a27429e316dd3f7f5c2}{getInternal}}()\ -\/>\ \doxymbox{\hyperlink{class_catch_1_1_singleton}{Singleton}}*\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_catch_1_1_singleton}{Singleton}}*\ s\_instance\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ !s\_instance\ )\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s\_instance\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_catch_1_1_singleton}{Singleton}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_a788ebefcd83342b7c479222a1eeffaee}{addSingleton}}(\ s\_instance\ );}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ s\_instance;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{class_catch_1_1_singleton_aa1b2bb002acd8838489a225dbbaf2865}{get}}()\ -\/>\ InterfaceT\ \textcolor{keyword}{const}\&\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\doxymbox{\hyperlink{class_catch_1_1_singleton_a84b126e025611a27429e316dd3f7f5c2}{getInternal}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{class_catch_1_1_singleton_a8c18286fe40405813c5bab05e20ce4f0}{getMutable}}()\ -\/>\ MutableInterfaceT\&\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\doxymbox{\hyperlink{class_catch_1_1_singleton_a84b126e025611a27429e316dd3f7f5c2}{getInternal}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_SINGLETONS\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

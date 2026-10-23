@@ -1,0 +1,171 @@
+\doxysection{catch\+\_\+matchers\+\_\+quantifiers.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers__quantifiers_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers__quantifiers_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/matchers/catch\_matchers\_quantifiers.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/matchers/catch\_matchers\_quantifiers.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers__quantifiers_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_MATCHERS\_QUANTIFIERS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_MATCHERS\_QUANTIFIERS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/matchers/catch\_matchers\_templated.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_move\_and\_forward.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_matchers}{Matchers}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Matcher\ for\ checking\ that\ all\ elements\ in\ range\ matches\ a\ given\ matcher.}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Matcher>}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_match_matcher}{AllMatchMatcher}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_generic_base}{MatcherGenericBase}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ Matcher\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_match_matcher_a3fc26b1b0c136264e3dd3e3c64b09fca}{m\_matcher}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_match_matcher_aebe8b7b93342eb16c21e82a1f92af364}{AllMatchMatcher}}(Matcher\ matcher):}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_match_matcher_a3fc26b1b0c136264e3dd3e3c64b09fca}{m\_matcher}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(matcher))}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_match_matcher_a35fd832ac4a14a00895981c444fef5d6}{describe}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}all\ match\ "{}}\ +\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_match_matcher_a3fc26b1b0c136264e3dd3e3c64b09fca}{m\_matcher}}.describe();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_match_matcher_a052da2f460e153db35585df1fba056c5}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\&\ elem\ :\ rng)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_match_matcher_a3fc26b1b0c136264e3dd3e3c64b09fca}{m\_matcher}}.match(elem))\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Matcher\ for\ checking\ that\ no\ element\ in\ range\ matches\ a\ given\ matcher.}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Matcher>}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }NoneMatchMatcher\ final\ :\ \textcolor{keyword}{public}\ MatcherGenericBase\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ Matcher\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_match_matcher_a0ca9a188a17a97df2f725709109da655}{m\_matcher}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_match_matcher_a28afedfd56aaf222e1f1bacd9860185b}{NoneMatchMatcher}}(Matcher\ matcher):}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_match_matcher_a0ca9a188a17a97df2f725709109da655}{m\_matcher}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(matcher))}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_match_matcher_aef96f5cfef0331570cd28ac8e678f2ac}{describe}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}none\ match\ "{}}\ +\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_match_matcher_a0ca9a188a17a97df2f725709109da655}{m\_matcher}}.describe();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_match_matcher_add29a40ab8ea93bd8d7ba94c26a35248}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\&\ elem\ :\ rng)\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_match_matcher_a0ca9a188a17a97df2f725709109da655}{m\_matcher}}.match(elem))\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Matcher\ for\ checking\ that\ at\ least\ one\ element\ in\ range\ matches\ a\ given\ matcher.}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Matcher>}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }AnyMatchMatcher\ final\ :\ \textcolor{keyword}{public}\ MatcherGenericBase\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ Matcher\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_match_matcher_a61e64cdb40b947e964375819c517eef7}{m\_matcher}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_match_matcher_acba49f252bddce2ef5e344a55455019d}{AnyMatchMatcher}}(Matcher\ matcher):}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_match_matcher_a61e64cdb40b947e964375819c517eef7}{m\_matcher}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(matcher))}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_match_matcher_adf6636bc8140cba4fa43dac44060215e}{describe}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}any\ match\ "{}}\ +\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_match_matcher_a61e64cdb40b947e964375819c517eef7}{m\_matcher}}.describe();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_match_matcher_a3fa7a80a91097ff31cc4e4792b120b7f}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\&\ elem\ :\ rng)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_match_matcher_a61e64cdb40b947e964375819c517eef7}{m\_matcher}}.match(elem))\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Matcher\ for\ checking\ that\ all\ elements\ in\ range\ are\ true.}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }AllTrueMatcher\ final\ :\ \textcolor{keyword}{public}\ MatcherGenericBase\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_true_matcher_a8b9cd34f2e008192c42112f38b11ff8c}{describe}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_true_matcher_a1701818b273c8afe681f465d848a5ad1}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\&\ elem\ :\ rng)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!elem)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Matcher\ for\ checking\ that\ no\ element\ in\ range\ is\ true.}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }NoneTrueMatcher\ final\ :\ \textcolor{keyword}{public}\ MatcherGenericBase\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_true_matcher_ab18391c20c774d5a1dbba1ed90cc9c95}{describe}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_true_matcher_ac97a97ab7bb3e2e9299b5cac38293cc0}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\&\ elem\ :\ rng)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (elem)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Matcher\ for\ checking\ that\ any\ element\ in\ range\ is\ true.}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }AnyTrueMatcher\ final\ :\ \textcolor{keyword}{public}\ MatcherGenericBase\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_true_matcher_a858794ac5e53ee5d786224de463e2f1a}{describe}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_true_matcher_aaf1ac427455c9c5f617bba521ca37aba}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\&\ elem\ :\ rng)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (elem)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creates\ a\ matcher\ that\ checks\ whether\ all\ elements\ in\ a\ range\ match\ a\ matcher}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Matcher>}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ AllMatchMatcher<Matcher>\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a391dd241134b78718dfccace09c3d767}{AllMatch}}(Matcher\&\&\ matcher)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(matcher)\ \};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creates\ a\ matcher\ that\ checks\ whether\ no\ element\ in\ a\ range\ matches\ a\ matcher.}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Matcher>}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_match_matcher}{NoneMatchMatcher<Matcher>}}\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a382d9c8e8f21a99a64ae65bfb7bfa94a}{NoneMatch}}(Matcher\&\&\ matcher)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(matcher)\ \};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creates\ a\ matcher\ that\ checks\ whether\ any\ element\ in\ a\ range\ matches\ a\ matcher.}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Matcher>}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_match_matcher}{AnyMatchMatcher<Matcher>}}\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a8e1af71b96625c9c7bdd62f3f96464ec}{AnyMatch}}(Matcher\&\&\ matcher)\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(matcher)\ \};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creates\ a\ matcher\ that\ checks\ whether\ all\ elements\ in\ a\ range\ are\ true}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_true_matcher}{AllTrueMatcher}}\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a4f719bca42718f4936668308772732ae}{AllTrue}}();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creates\ a\ matcher\ that\ checks\ whether\ no\ element\ in\ a\ range\ is\ true}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_true_matcher}{NoneTrueMatcher}}\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a072ee44afcb1647b55b6c3437f22af44}{NoneTrue}}();}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creates\ a\ matcher\ that\ checks\ whether\ any\ element\ in\ a\ range\ is\ true}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_true_matcher}{AnyTrueMatcher}}\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a99b3d0b547a4335b786e8fcea6a11cad}{AnyTrue}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_MATCHERS\_QUANTIFIERS\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

@@ -1,0 +1,93 @@
+\doxysection{Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+tests/\+\+Self\+Test/\+\+Usage\+Tests/\+\+Skip.tests.\+cpp File Reference}
+\hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp}{}\label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp}\index{Set/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/Skip.tests.cpp@{Set/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/Skip.tests.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+generators/\+catch\+\_\+generators\+\_\+range.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a938b582044b92b578253acf72ea5b757}{TEST\+\_\+\+CASE}} ("{}tests can be skipped dynamically at runtime"{}, "{}\+[skipping]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a51875281c7325744f6cce17b9af19af5}{TEST\+\_\+\+CASE}} ("{}skipped tests can optionally provide a reason"{}, "{}\+[skipping]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_ac6ff1eb30b291252b049e2094a0e398a}{TEST\+\_\+\+CASE}} ("{}sections can be skipped dynamically at runtime"{}, "{}\+[skipping]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_afcdf7be63d178064f13f71e4f191c1a6}{TEST\+\_\+\+CASE}} ("{}nested sections can be skipped dynamically at runtime"{}, "{}\+[skipping]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_af7457cdb8634c30794ddf4baf7cc7765}{TEST\+\_\+\+CASE}} ("{}dynamic skipping works with generators"{}, "{}\+[skipping]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a84c0aa545708d1b42a90a4002391f777}{TEST\+\_\+\+CASE}} ("{}failed assertions before \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aeb37959bf8e5094ee4547d57094cc2b4}{SKIP}} cause test case to fail"{}, "{}\+[skipping]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a261daf719ab515f6e2378159327f18cc}{TEST\+\_\+\+CASE}} ("{}a succeeding test can still be skipped"{}, "{}\+[skipping]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_afb4afbdc905abd18bebaad138ac5ef01}{TEST\+\_\+\+CASE}} ("{}failing in some unskipped sections causes entire test case to fail"{}, "{}\+[skipping]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_aed51199fe2022f0945873822349bb24b}{TEST\+\_\+\+CASE}} ("{}failing for some generator values causes entire test case to fail"{}, "{}\+[skipping]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a4038ff7bb86346103b7c34aea1d8bd4d}{TEST\+\_\+\+CASE}} ("{}Empty generators can \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aeb37959bf8e5094ee4547d57094cc2b4}{SKIP}} in constructor"{}, "{}\+[skipping]\+"{})
+\end{DoxyCompactItemize}
+
+
+\label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_doc-func-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a261daf719ab515f6e2378159327f18cc}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a261daf719ab515f6e2378159327f18cc} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}a succeeding test can still be skipped"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_af7457cdb8634c30794ddf4baf7cc7765}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_af7457cdb8634c30794ddf4baf7cc7765} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}dynamic skipping works with generators"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a4038ff7bb86346103b7c34aea1d8bd4d}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a4038ff7bb86346103b7c34aea1d8bd4d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Empty generators can \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aeb37959bf8e5094ee4547d57094cc2b4}{SKIP}} in constructor"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a84c0aa545708d1b42a90a4002391f777}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a84c0aa545708d1b42a90a4002391f777} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}failed assertions before \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_aeb37959bf8e5094ee4547d57094cc2b4}{SKIP}} cause test case to fail"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_aed51199fe2022f0945873822349bb24b}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_aed51199fe2022f0945873822349bb24b} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}failing for some generator values causes entire test case to fail"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_afb4afbdc905abd18bebaad138ac5ef01}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_afb4afbdc905abd18bebaad138ac5ef01} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}failing in some unskipped sections causes entire test case to fail"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_afcdf7be63d178064f13f71e4f191c1a6}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_afcdf7be63d178064f13f71e4f191c1a6} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}nested sections can be skipped dynamically at runtime"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_ac6ff1eb30b291252b049e2094a0e398a}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_ac6ff1eb30b291252b049e2094a0e398a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}sections can be skipped dynamically at runtime"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a51875281c7325744f6cce17b9af19af5}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a51875281c7325744f6cce17b9af19af5} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}skipped tests can optionally provide a reason"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a938b582044b92b578253acf72ea5b757}\index{Skip.tests.cpp@{Skip.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Skip.tests.cpp@{Skip.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_skip_8tests_8cpp_a938b582044b92b578253acf72ea5b757} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}tests can be skipped dynamically at runtime"{}}]{}{, }\item[{"{}"{}}]{}{\+[skipping]}\end{DoxyParamCaption})}
+

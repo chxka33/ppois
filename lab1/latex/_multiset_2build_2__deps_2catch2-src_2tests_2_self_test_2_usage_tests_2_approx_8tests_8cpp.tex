@@ -1,0 +1,157 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+tests/\+\+Self\+Test/\+\+Usage\+Tests/\+\+Approx.tests.\+cpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp}{}\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp}\index{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/Approx.tests.cpp@{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/Approx.tests.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+approx.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a324ad998170881039fd0c5f6f3e7297b}{TEST\+\_\+\+CASE}} ("{}A comparison that uses literals instead of the normal constructor"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a322d697cd9bc47190a36deba59d9d385}{TEST\+\_\+\+CASE}} ("{}Some simple comparisons between doubles"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_af196ac9913864740ac30c7bd6671d693}{TEST\+\_\+\+CASE}} ("{}Approximate comparisons with different epsilons"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a9c34902016e8a5abafbe83b8a6b8dbbf}{TEST\+\_\+\+CASE}} ("{}Less-\/than inequalities with different epsilons"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a7deaa9a6b42d0e9f2d9e98b8f4171d28}{TEST\+\_\+\+CASE}} ("{}Greater-\/than inequalities with different epsilons"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a09cba37e4eba4c81fc50b7ca038dc311}{TEST\+\_\+\+CASE}} ("{}Approximate comparisons with floats"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a1f20c2c4a9f0f49cd5eff15c81b6ae28}{TEST\+\_\+\+CASE}} ("{}Approximate comparisons with ints"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a3132a0eff1491bda72ddcb6cb349e5a3}{TEST\+\_\+\+CASE}} ("{}Approximate comparisons with mixed numeric types"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a62bebb0a4d538c0a604374c7c3c023bb}{TEST\+\_\+\+CASE}} ("{}Use a custom approx"{}, "{}\+[Approx]\+\+[custom]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a252774796bd49d4a7f11d821db1cf346}{TEST\+\_\+\+CASE}} ("{}Approximate PI"{}, "{}\+[Approx]\+\+[PI]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a0dc9ef90a51633585d237d257fa30302}{TEST\+\_\+\+CASE}} ("{}Absolute margin"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_ae1e99e1dbe554c1be3b67ae83eb8349f}{TEST\+\_\+\+CASE}} ("{}Approx with exactly-\/representable margin"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_aea12c4a7a14ec46ad024ebc5272e6164}{TEST\+\_\+\+CASE}} ("{}Approx setters validate their arguments"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_ab35cf37b34d6deba2902e5bd7c6346e9}{TEST\+\_\+\+CASE}} ("{}Default scale is invisible to comparison"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a59645438dd95764503a60a1cce46d45c}{TEST\+\_\+\+CASE}} ("{}Epsilon only applies to \doxymbox{\hyperlink{class_approx}{Approx}}\textquotesingle{}s value"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_af0ea9400d13360695e7aaea5f78e978b}{TEST\+\_\+\+CASE}} ("{}Assorted miscellaneous tests"{}, "{}\+[Approx]\+\+[approvals]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a38494f5400b7bbaf41c731ddbcdedf4a}{TEST\+\_\+\+CASE}} ("{}Comparison with explicitly convertible types"{}, "{}\+[Approx]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a783fd60959eb1f473cb1a9b9632c3dbb}{TEST\+\_\+\+CASE}} ("{}Approx::\+operator() is const correct"{}, "{}\+[Approx]\+\+[.approvals]\+"{})
+\end{DoxyCompactItemize}
+
+
+\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_doc-func-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a324ad998170881039fd0c5f6f3e7297b}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a324ad998170881039fd0c5f6f3e7297b} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}A comparison that uses literals instead of the normal constructor"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a0dc9ef90a51633585d237d257fa30302}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a0dc9ef90a51633585d237d257fa30302} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Absolute margin"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_aea12c4a7a14ec46ad024ebc5272e6164}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_aea12c4a7a14ec46ad024ebc5272e6164} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Approx setters validate their arguments"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_ae1e99e1dbe554c1be3b67ae83eb8349f}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_ae1e99e1dbe554c1be3b67ae83eb8349f} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Approx with exactly-\/representable margin"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a783fd60959eb1f473cb1a9b9632c3dbb}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a783fd60959eb1f473cb1a9b9632c3dbb} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Approx::\+operator() is const correct"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]\+\+[.\+approvals]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_af196ac9913864740ac30c7bd6671d693}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_af196ac9913864740ac30c7bd6671d693} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Approximate comparisons with different epsilons"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a09cba37e4eba4c81fc50b7ca038dc311}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a09cba37e4eba4c81fc50b7ca038dc311} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Approximate comparisons with floats"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a1f20c2c4a9f0f49cd5eff15c81b6ae28}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a1f20c2c4a9f0f49cd5eff15c81b6ae28} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Approximate comparisons with ints"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a3132a0eff1491bda72ddcb6cb349e5a3}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a3132a0eff1491bda72ddcb6cb349e5a3} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Approximate comparisons with mixed numeric types"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a252774796bd49d4a7f11d821db1cf346}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a252774796bd49d4a7f11d821db1cf346} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Approximate PI"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]\+\+[\+PI]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_af0ea9400d13360695e7aaea5f78e978b}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_af0ea9400d13360695e7aaea5f78e978b} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Assorted miscellaneous tests"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]\+\+[approvals]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a38494f5400b7bbaf41c731ddbcdedf4a}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a38494f5400b7bbaf41c731ddbcdedf4a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Comparison with explicitly convertible types"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_ab35cf37b34d6deba2902e5bd7c6346e9}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_ab35cf37b34d6deba2902e5bd7c6346e9} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Default scale is invisible to comparison"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a59645438dd95764503a60a1cce46d45c}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a59645438dd95764503a60a1cce46d45c} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Epsilon only applies to \doxymbox{\hyperlink{class_approx}{Approx}}\textquotesingle{}s value"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a7deaa9a6b42d0e9f2d9e98b8f4171d28}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a7deaa9a6b42d0e9f2d9e98b8f4171d28} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Greater-\/than inequalities with different epsilons"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a9c34902016e8a5abafbe83b8a6b8dbbf}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [16/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a9c34902016e8a5abafbe83b8a6b8dbbf} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Less-\/than inequalities with different epsilons"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a322d697cd9bc47190a36deba59d9d385}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [17/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a322d697cd9bc47190a36deba59d9d385} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Some simple comparisons between doubles"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a62bebb0a4d538c0a604374c7c3c023bb}\index{Approx.tests.cpp@{Approx.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Approx.tests.cpp@{Approx.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [18/18]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_approx_8tests_8cpp_a62bebb0a4d538c0a604374c7c3c023bb} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Use a custom approx"{}}]{}{, }\item[{"{}"{}}]{}{\+[\+Approx]\+\+[custom]}\end{DoxyParamCaption})}
+

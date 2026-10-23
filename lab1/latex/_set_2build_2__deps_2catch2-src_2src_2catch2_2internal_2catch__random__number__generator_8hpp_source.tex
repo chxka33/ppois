@@ -1,0 +1,65 @@
+\doxysection{catch\+\_\+random\+\_\+number\+\_\+generator.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__random__number__generator_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__random__number__generator_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_random\_number\_generator.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_random\_number\_generator.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__random__number__generator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_RANDOM\_NUMBER\_GENERATOR\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_RANDOM\_NUMBER\_GENERATOR\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ This\ is\ a\ simple\ implementation\ of\ C++11\ Uniform\ Random\ Number}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Generator.\ It\ does\ not\ provide\ all\ operators,\ because\ Catch2}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ does\ not\ use\ it,\ but\ it\ should\ behave\ as\ expected\ inside\ stdlib's}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ distributions.}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ The\ implementation\ is\ based\ on\ the\ PCG\ family\ (http://pcg-\/random.org)}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{SimplePcg32}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a87e58661dd1fa2994b6b9c38c4efafdb}{state\_type}}\ =\ std::uint64\_t;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a220ca38f6d16804c6e99937a673ec3ff}{result\_type}}\ =\ std::uint32\_t;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a220ca38f6d16804c6e99937a673ec3ff}{result\_type}}\ (\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a3a5dd5385309d3999943697c33f57715}{min}})()\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a220ca38f6d16804c6e99937a673ec3ff}{result\_type}}\ (\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a6eb0691cc730376d80ab49ba6f4e47d6}{max}})()\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a220ca38f6d16804c6e99937a673ec3ff}{result\_type}}\textcolor{keyword}{>}(-\/1);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Provide\ some\ default\ initial\ state\ for\ the\ default\ constructor}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a045c99a96f9b0faf384e22f871576282}{SimplePcg32}}():\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a045c99a96f9b0faf384e22f871576282}{SimplePcg32}}(0xed743cc4U)\ \{\}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a901fc48d250c3d92b1ec067bcc6155c1}{SimplePcg32}}(\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a220ca38f6d16804c6e99937a673ec3ff}{result\_type}}\ seed\_);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a215dac93c384973353a2b4f87f68c8bc}{seed}}(\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a220ca38f6d16804c6e99937a673ec3ff}{result\_type}}\ seed\_);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a877e7a9c14d378af729ad19a0e959178}{discard}}(uint64\_t\ skip);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a220ca38f6d16804c6e99937a673ec3ff}{result\_type}}\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_acda21743a5ac46fdff9a0b4a6d45a91f}{operator()}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a3f1e143181b91f902ce034e2878f87eb}{operator==}}(\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a045c99a96f9b0faf384e22f871576282}{SimplePcg32}}\ \textcolor{keyword}{const}\&\ lhs,\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a045c99a96f9b0faf384e22f871576282}{SimplePcg32}}\ \textcolor{keyword}{const}\&\ rhs);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a4940863fe85f6c5a2fa9b3910bfb7406}{operator!=}}(\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a045c99a96f9b0faf384e22f871576282}{SimplePcg32}}\ \textcolor{keyword}{const}\&\ lhs,\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a045c99a96f9b0faf384e22f871576282}{SimplePcg32}}\ \textcolor{keyword}{const}\&\ rhs);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ theory\ we\ also\ need\ operator<<\ and\ operator>>}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ practice\ we\ do\ not\ use\ them,\ so\ we\ will\ skip\ them\ for\ now}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::uint64\_t\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a830bb20e51776b605910f4a00dde46ad}{m\_state}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ part\ of\ the\ state\ determines\ which\ "{}stream"{}\ of\ the\ numbers}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ is\ chosen\ -\/-\/\ we\ take\ it\ as\ a\ constant\ for\ Catch2,\ so\ we\ only}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ need\ to\ deal\ with\ seeding\ the\ main\ state.}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Picked\ by\ reading\ 8\ bytes\ from\ \`{}/dev/random`\ :-\/)}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::uint64\_t\ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32_a459663ea1512aac210d11fc77b53b2aa}{s\_inc}}\ =\ (0x13ed0cc53f939476ULL\ <<\ 1ULL)\ |\ 1ULL;}
+\DoxyCodeLine{00055\ \ \ \ \ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_RANDOM\_NUMBER\_GENERATOR\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

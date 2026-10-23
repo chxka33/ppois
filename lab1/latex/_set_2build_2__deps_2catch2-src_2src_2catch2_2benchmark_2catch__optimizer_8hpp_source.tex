@@ -1,0 +1,84 @@
+\doxysection{catch\+\_\+optimizer.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__optimizer_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__optimizer_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_optimizer.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_optimizer.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__optimizer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Adapted\ from\ donated\ nonius\ code.}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ CATCH\_OPTIMIZER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CATCH\_OPTIMIZER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#if\ defined(\_MSC\_VER)\ ||\ defined(\_\_IAR\_SYSTEMS\_ICC\_\_)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#\ \ \ include\ <atomic>}\ \textcolor{comment}{//\ atomic\_thread\_fence}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_move\_and\_forward.hpp>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark}{Benchmark}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#if\ defined(\_\_GNUC\_\_)\ ||\ defined(\_\_clang\_\_)}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ keep\_memory(T*\ p)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{asm}\ \textcolor{keyword}{volatile}(\textcolor{stringliteral}{"{}"{}}\ :\ :\ \textcolor{stringliteral}{"{}g"{}}(p)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ keep\_memory()\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{asm}\ \textcolor{keyword}{volatile}(\textcolor{stringliteral}{"{}"{}}\ :\ :\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ optimizer\_barrier()\ \{\ keep\_memory();\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Detail}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)\ ||\ defined(\_\_IAR\_SYSTEMS\_ICC\_\_)}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#if\ defined(\_MSVC\_VER)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#pragma\ optimize("{}"{},\ off)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#elif\ defined(\_\_IAR\_SYSTEMS\_ICC\_\_)}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ For\ IAR\ the\ pragma\ only\ affects\ the\ following\ function}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#pragma\ optimize=disable}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ keep\_memory(T*\ p)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ thanks\ @milleniumbug}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ *\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}\ volatile*\textcolor{keyword}{>}(p)\ =\ *\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}\ \textcolor{keyword}{const\ }volatile*\textcolor{keyword}{>}(p);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ equivalent\ keep\_memory()}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#if\ defined(\_MSVC\_VER)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#pragma\ optimize("{}"{},\ on)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ optimizer\_barrier()\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::atomic\_thread\_fence(std::memory\_order\_seq\_cst);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Detail}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_af5d85780971e55f9337023ad04caa247}{deoptimize\_value}}(T\&\&\ x)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ keep\_memory(\&x);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fn,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a9aa891ce6b44df3561292fc1a44b11fb}{invoke\_deoptimized}}(Fn\&\&\ fn,\ Args\&\&...\ args)\ -\/>\ std::enable\_if\_t<!std::is\_same<void,\ \textcolor{keyword}{decltype}(fn(args...))>::value>\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_af5d85780971e55f9337023ad04caa247}{deoptimize\_value}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(fn)\ (\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(args)...));}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fn,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a9aa891ce6b44df3561292fc1a44b11fb}{invoke\_deoptimized}}(Fn\&\&\ fn,\ Args\&\&...\ args)\ -\/>\ std::enable\_if\_t<std::is\_same<void,\ \textcolor{keyword}{decltype}(fn(args...))>::value>\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}((fn))\ (\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(args)...);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Benchmark}}
+\DoxyCodeLine{00076\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_OPTIMIZER\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

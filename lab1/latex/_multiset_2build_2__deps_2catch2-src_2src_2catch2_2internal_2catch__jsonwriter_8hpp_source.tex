@@ -1,0 +1,126 @@
+\doxysection{catch\+\_\+jsonwriter.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__jsonwriter_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__jsonwriter_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_jsonwriter.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_jsonwriter.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__jsonwriter_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_JSONWRITER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_JSONWRITER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_reusable\_string\_stream.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_stringref.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_json_object_writer}{JsonObjectWriter}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_json_array_writer}{JsonArrayWriter}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_json_utils}{JsonUtils}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_json_utils_a73adc16579ce7a8edf62bec70d6ac7b0}{indent}}(\ std::ostream\&\ os,\ std::uint64\_t\ level\ );}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_json_utils_a74428b075fa0ff722a82e9621eb95cfc}{appendCommaNewline}}(\ std::ostream\&\ os,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\&\ should\_comma,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::uint64\_t\ level\ );}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_json_value_writer}{JsonValueWriter}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a90c31ca045868faf7decb3567b1985f7}{JsonValueWriter}}(\ std::ostream\&\ os\ );}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_adead5e25d419aa006484cff11c54540a}{JsonValueWriter}}(\ std::ostream\&\ os,\ std::uint64\_t\ indent\_level\ );}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer}{JsonObjectWriter}}\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_ae4b5e770f5dd1a50ed4cd91d3b82c520}{writeObject}}()\ \&\&;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer}{JsonArrayWriter}}\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a6b0a406c55f14ca7c9177d8fb02583e5}{writeArray}}()\ \&\&;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a9839d99c5d5b5c6e3f68172d0f21119e}{write}}(\ T\ \textcolor{keyword}{const}\&\ value\ )\ \&\&\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_ad440bf4b721c29e590b4a5c229e55382}{writeImpl}}(\ value,\ !std::is\_arithmetic<T>::value\ );}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_ae1b36616eecf549256c3e2003ef20c0b}{write}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ value\ )\ \&\&;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_afde67123702fe0e62cea6e4861265502}{write}}(\ \textcolor{keywordtype}{bool}\ value\ )\ \&\&;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_ad440bf4b721c29e590b4a5c229e55382}{writeImpl}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ value,\ \textcolor{keywordtype}{bool}\ quote\ );}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Without\ this\ SFINAE,\ this\ overload\ is\ a\ better\ match}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ \`{}std::string`,\ \`{}char\ const*`,\ \`{}char\ const[N]`\ args.}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ While\ it\ would\ still\ work,\ it\ would\ cause\ code\ bloat}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ multiple\ iteration\ over\ the\ strings}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ =\ \textcolor{keyword}{typename}\ std::enable\_if\_t<}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !std::is\_convertible<T,\ StringRef>::value>>}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a39e1f08eaf9c6279f340fb3a53a183a2}{writeImpl}}(\ T\ \textcolor{keyword}{const}\&\ value,\ \textcolor{keywordtype}{bool}\ quote\_value\ )\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a45ab075067e6b9f44ab12dcbd8ecb426}{m\_sstream}}\ <<\ value;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_ad440bf4b721c29e590b4a5c229e55382}{writeImpl}}(\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a45ab075067e6b9f44ab12dcbd8ecb426}{m\_sstream}}.str(),\ quote\_value\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::ostream\&\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a6ddd0aa95bc140d71c24845be9acc603}{m\_os}};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::stringstream\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a45ab075067e6b9f44ab12dcbd8ecb426}{m\_sstream}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::uint64\_t\ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a1d8b9d4b91c5721286db3faec5145368}{m\_indent\_level}};}
+\DoxyCodeLine{00061\ \ \ \ \ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{class\ }JsonObjectWriter\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_ad73e1e546a1d214d49abb6984c231049}{JsonObjectWriter}}(\ std::ostream\&\ os\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_a2e470f1eb8fab688fcf3edbcb42299c3}{JsonObjectWriter}}(\ std::ostream\&\ os,\ std::uint64\_t\ indent\_level\ );}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_ab72ef84ff2a1ff026c5f8a7755ae6f4f}{JsonObjectWriter}}(\ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_ad73e1e546a1d214d49abb6984c231049}{JsonObjectWriter}}\&\&\ source\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_ad73e1e546a1d214d49abb6984c231049}{JsonObjectWriter}}\&\ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_ac6048027bcef39756940f47ea618322f}{operator=}}(\ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_ad73e1e546a1d214d49abb6984c231049}{JsonObjectWriter}}\&\&\ source\ )\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_ad9286cb43cef2ffb40232ca941931ed1}{\string~JsonObjectWriter}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer}{JsonValueWriter}}\ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_a8d01f3ce1de7ee663e033b039484c6e3}{write}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ key\ );}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::ostream\&\ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_acdb1247ce3924305fecf42515b2dcebb}{m\_os}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::uint64\_t\ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_afb1df36e65dc22a53c46ca2e8a8ef870}{m\_indent\_level}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_af4a0ec432b6592f7f57ed0dc2e3cd3d0}{m\_should\_comma}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer_aebd7c6f8766ba945a9f58e7795a6e846}{m\_active}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00080\ \ \ \ \ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_json_array_writer}{JsonArrayWriter}}\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa099b3a40527db49a5947a9a89834c92}{JsonArrayWriter}}(\ std::ostream\&\ os\ );}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aea49a119e2f6022d2398389b7bd0ffde}{JsonArrayWriter}}(\ std::ostream\&\ os,\ std::uint64\_t\ indent\_level\ );}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_ac0653d1e477675bc7e9fd986731cefa6}{JsonArrayWriter}}(\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa099b3a40527db49a5947a9a89834c92}{JsonArrayWriter}}\&\&\ source\ );}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa099b3a40527db49a5947a9a89834c92}{JsonArrayWriter}}\&\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_af832e1fadc78ce2cd6c0c845137afe54}{operator=}}(\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa099b3a40527db49a5947a9a89834c92}{JsonArrayWriter}}\&\&\ source\ )\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_ad5475b62642e180d94657a1d9fd26324}{\string~JsonArrayWriter}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_object_writer}{JsonObjectWriter}}\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a18541b938a5d8886424778ab2ef070dd}{writeObject}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa099b3a40527db49a5947a9a89834c92}{JsonArrayWriter}}\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a1ba9c807ddfef9827c08573f8fb74b0f}{writeArray}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa099b3a40527db49a5947a9a89834c92}{JsonArrayWriter}}\&\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a0e67851d58ebebada32e27fd60ebbee6}{write}}(\ T\ \textcolor{keyword}{const}\&\ value\ )\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa404481a852963c8ff402ba5099f31ae}{writeImpl}}(\ value\ );}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa099b3a40527db49a5947a9a89834c92}{JsonArrayWriter}}\&\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a55e747ab677bc5237e802a99b0318cf4}{write}}(\ \textcolor{keywordtype}{bool}\ value\ );}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa099b3a40527db49a5947a9a89834c92}{JsonArrayWriter}}\&\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aa404481a852963c8ff402ba5099f31ae}{writeImpl}}(\ T\ \textcolor{keyword}{const}\&\ value\ )\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_json_utils_aec704cfeb6b818a2db271a844a2bb267}{JsonUtils::appendCommaNewline}}(}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a0771bb273f6bf7b92e887d66e4cbefe6}{m\_os}},\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a684990e053c417956ceee582f13a872e}{m\_should\_comma}},\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_ac1f6f8782516e3a14de23f8dad2729b7}{m\_indent\_level}}\ +\ 1\ );}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_json_value_writer}{JsonValueWriter}}\{\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a0771bb273f6bf7b92e887d66e4cbefe6}{m\_os}}\ \}.\doxymbox{\hyperlink{class_catch_1_1_json_value_writer_a9839d99c5d5b5c6e3f68172d0f21119e}{write}}(\ value\ );}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ std::ostream\&\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a0771bb273f6bf7b92e887d66e4cbefe6}{m\_os}};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ std::uint64\_t\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_ac1f6f8782516e3a14de23f8dad2729b7}{m\_indent\_level}};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_a684990e053c417956ceee582f13a872e}{m\_should\_comma}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_json_array_writer_aaaa2b7ef114a15a951c4b6da3254e7f1}{m\_active}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00116\ \ \ \ \ \};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_JSONWRITER\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

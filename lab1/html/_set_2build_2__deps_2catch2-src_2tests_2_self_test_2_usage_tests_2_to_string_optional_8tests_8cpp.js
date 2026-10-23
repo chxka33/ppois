@@ -1,0 +1,4 @@
+var _set_2build_2__deps_2catch2_src_2tests_2_self_test_2_usage_tests_2_to_string_optional_8tests_8cpp =
+[
+    [ "CATCH_CONFIG_ENABLE_OPTIONAL_STRINGMAKER", "_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_to_string_optional_8tests_8cpp.html#ad6762415cf3f7adbf0ca21badc695fff", null ]
+];

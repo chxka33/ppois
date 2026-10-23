@@ -1,0 +1,55 @@
+\doxysection{catch\+\_\+string\+\_\+manip.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__string__manip_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__string__manip_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_string\_manip.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_string\_manip.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__string__manip_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_STRING\_MANIP\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_STRING\_MANIP\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_stringref.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iosfwd>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_catch_a695f62327be0676e046291eeaae15110}{startsWith}}(\ std::string\ \textcolor{keyword}{const}\&\ s,\ std::string\ \textcolor{keyword}{const}\&\ prefix\ );}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_catch_a695f62327be0676e046291eeaae15110}{startsWith}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ s,\ \textcolor{keywordtype}{char}\ prefix\ );}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_catch_ada025504f627feaf9ac68ca391515dff}{endsWith}}(\ std::string\ \textcolor{keyword}{const}\&\ s,\ std::string\ \textcolor{keyword}{const}\&\ suffix\ );}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_catch_ada025504f627feaf9ac68ca391515dff}{endsWith}}(\ std::string\ \textcolor{keyword}{const}\&\ s,\ \textcolor{keywordtype}{char}\ suffix\ );}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_catch_aa52974b0e426e7e2fbd725a900e9c36e}{contains}}(\ std::string\ \textcolor{keyword}{const}\&\ s,\ std::string\ \textcolor{keyword}{const}\&\ infix\ );}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_a0760dbe87d090a55a35414db57d272c4}{toLowerInPlace}}(\ std::string\&\ s\ );}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespace_catch_ac036a17412d318598ffda8e1fe7a1177}{toLower}}(\ std::string\ \textcolor{keyword}{const}\&\ s\ );}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{namespace_catch_ac036a17412d318598ffda8e1fe7a1177}{toLower}}(\ \textcolor{keywordtype}{char}\ c\ );}
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespace_catch_aea28035c2fa625ced568c1765e82a3bc}{trim}}(\ std::string\ \textcolor{keyword}{const}\&\ str\ );}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ \doxymbox{\hyperlink{namespace_catch_aea28035c2fa625ced568c1765e82a3bc}{trim}}(\doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ ref);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ !!!\ Be\ aware,\ returns\ refs\ into\ original\ string\ -\/\ make\ sure\ original\ string\ outlives\ them}}
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<StringRef>\ \doxymbox{\hyperlink{namespace_catch_a678e3c779388970bb3ec5802245f93d7}{splitStringRef}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ str,\ \textcolor{keywordtype}{char}\ delimiter\ );}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_catch_afe4e6770da547e43e9e4eeaa05f946ea}{replaceInPlace}}(\ std::string\&\ str,\ std::string\ \textcolor{keyword}{const}\&\ replaceThis,\ std::string\ \textcolor{keyword}{const}\&\ withThis\ );}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1pluralise}{pluralise}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::uint64\_t\ \doxymbox{\hyperlink{class_catch_1_1pluralise_a87f3d61a680aee63c4f05619e33b4246}{m\_count}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ StringRef\ \doxymbox{\hyperlink{class_catch_1_1pluralise_a18bee2891fa00ff414d581aed6c5f935}{m\_label}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{class_catch_1_1pluralise_aaa6721f0dffc28ed4236427b929e4ccd}{pluralise}}(std::uint64\_t\ count,\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ label):}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1pluralise_a87f3d61a680aee63c4f05619e33b4246}{m\_count}}(count),}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1pluralise_a18bee2891fa00ff414d581aed6c5f935}{m\_label}}(label)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{class_catch_1_1pluralise_abe20c2451f99d57be5cc5157949b09ad}{operator\ <<\ }}(\ std::ostream\&\ os,\ \doxymbox{\hyperlink{class_catch_1_1pluralise}{pluralise}}\ \textcolor{keyword}{const}\&\ pluraliser\ );}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_STRING\_MANIP\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

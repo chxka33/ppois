@@ -1,0 +1,65 @@
+\doxysection{catch\+\_\+reporter\+\_\+sonarqube.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__sonarqube_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__sonarqube_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_sonarqube.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_sonarqube.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__sonarqube_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_REPORTER\_SONARQUBE\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_REPORTER\_SONARQUBE\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/reporters/catch\_reporter\_cumulative\_base.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_xmlwriter.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_move\_and\_forward.hpp>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter}{SonarQubeReporter}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base}{CumulativeReporterBase}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a062b0f1e7dd01d6f59d1453438f14f6a}{SonarQubeReporter}}(\doxymbox{\hyperlink{struct_catch_1_1_reporter_config}{ReporterConfig}}\&\&\ config)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_ac541e5df2233fe22de2512336d37a7ed}{CumulativeReporterBase}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(config))}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a91b0ff2a2ad0e04545f132d66306decc}{xml}}(\doxymbox{\hyperlink{class_catch_1_1_reporter_base_afa909285ff07690fd5b7f9290c6836fa}{m\_stream}})\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_ae0571282fa76ecc35b061c9f1c718c72}{m\_preferences}}.\doxymbox{\hyperlink{struct_catch_1_1_reporter_preferences_a434511c4080edbbc12e0d1c31ea14769}{shouldRedirectStdOut}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_i_event_listener_ae0571282fa76ecc35b061c9f1c718c72}{m\_preferences}}.\doxymbox{\hyperlink{struct_catch_1_1_reporter_preferences_a10e13e10dfdc9a97dde0a72c573d7419}{shouldReportAllAssertions}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_adb2a7d7ea4dd571f6308eec59db90dbf}{m\_shouldStoreSuccesfulAssertions}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_adbb724837cf39007349da0a5ebb7573e}{getDescription}}()\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ namespace\ }std::string\_literals;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Reports\ test\ results\ in\ the\ Generic\ Test\ Data\ SonarQube\ XML\ format"{}}s;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a58ed9dede9b58d4857567e5b9daf5837}{testRunStarting}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{TestRunInfo}}\ \textcolor{keyword}{const}\&\ testRunInfo\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a770aaa74035d32ca5b7cebeb64012516}{testRunEndedCumulative}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_add4cd429339226485c97ec0ddf84f4ec}{writeRun}}(\ *\doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_ae92a064f530da92924e78838491d1077}{m\_testRun}}\ );}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a91b0ff2a2ad0e04545f132d66306decc}{xml}}.\doxymbox{\hyperlink{class_catch_1_1_xml_writer_a548009dad62cd446371e0b76775ce657}{endElement}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_add4cd429339226485c97ec0ddf84f4ec}{writeRun}}(\ \doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_a6a16c07c308b268d2d88d95c520ed27c}{TestRunNode}}\ \textcolor{keyword}{const}\&\ groupNode\ );}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_af036e53a767f62bb717be5f44cf71d29}{writeTestFile}}(\doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ filename,\ std::vector<TestCaseNode\ const*>\ \textcolor{keyword}{const}\&\ testCaseNodes);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a28756eaa7e0bb22a8fdb6a66bf655f7a}{writeTestCase}}(\doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_aa9907e56ddf0f8114799f7147677dc1f}{TestCaseNode}}\ \textcolor{keyword}{const}\&\ testCaseNode);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a6c3bf02bc36f29c9f58ac8261d903f53}{writeSection}}(std::string\ \textcolor{keyword}{const}\&\ rootName,\ \doxymbox{\hyperlink{struct_catch_1_1_cumulative_reporter_base_1_1_section_node}{SectionNode}}\ \textcolor{keyword}{const}\&\ sectionNode,\ \textcolor{keywordtype}{bool}\ okToFail);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_ad7d49dcd6e1e753355b1a824b4805d98}{writeAssertions}}(\doxymbox{\hyperlink{struct_catch_1_1_cumulative_reporter_base_1_1_section_node}{SectionNode}}\ \textcolor{keyword}{const}\&\ sectionNode,\ \textcolor{keywordtype}{bool}\ okToFail);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a2e1771b233b45046c64e95fc0ea1ee49}{writeAssertion}}(\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{AssertionStats}}\ \textcolor{keyword}{const}\&\ stats,\ \textcolor{keywordtype}{bool}\ okToFail);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_xml_writer}{XmlWriter}}\ \doxymbox{\hyperlink{class_catch_1_1_sonar_qube_reporter_a91b0ff2a2ad0e04545f132d66306decc}{xml}};}
+\DoxyCodeLine{00054\ \ \ \ \ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_REPORTER\_SONARQUBE\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

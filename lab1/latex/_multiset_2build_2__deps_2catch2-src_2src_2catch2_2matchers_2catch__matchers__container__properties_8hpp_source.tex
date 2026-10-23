@@ -1,0 +1,94 @@
+\doxysection{catch\+\_\+matchers\+\_\+container\+\_\+properties.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers__container__properties_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers__container__properties_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/matchers/catch\_matchers\_container\_properties.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/matchers/catch\_matchers\_container\_properties.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers__container__properties_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_MATCHERS\_CONTAINER\_PROPERTIES\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_MATCHERS\_CONTAINER\_PROPERTIES\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/matchers/catch\_matchers\_templated.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_container\_nonmembers.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_move\_and\_forward.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_matchers}{Matchers}}\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_is_empty_matcher}{IsEmptyMatcher}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_generic_base}{MatcherGenericBase}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_is_empty_matcher_a3170ac06eb4de21390bc23661f8c0e04}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#if\ defined(CATCH\_CONFIG\_POLYFILL\_NONMEMBER\_CONTAINER\_ACCESS)}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_catch_1_1_detail_a714012d32a8bc2ebcc88ec12e0aab80c}{Catch::Detail::empty}};}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }std::empty;}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ empty(rng);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_is_empty_matcher_a522f4364a7a51ff42566a3e049dc2338}{describe}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_has_size_matcher}{HasSizeMatcher}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_generic_base}{MatcherGenericBase}}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_has_size_matcher_a269e6fa8df2682b54fedcfe372167b2e}{m\_target\_size}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_has_size_matcher_a35903af4dca6efce28fed20805dd1167}{HasSizeMatcher}}(std::size\_t\ target\_size):}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_has_size_matcher_a269e6fa8df2682b54fedcfe372167b2e}{m\_target\_size}}(target\_size)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_has_size_matcher_a92ce169d9a1cbb80ef70d4d81535c2d6}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#if\ defined(CATCH\_CONFIG\_POLYFILL\_NONMEMBER\_CONTAINER\_ACCESS)}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_catch_1_1_detail_a55994724b37be409ad8185ee738a0781}{Catch::Detail::size}};}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }std::size;}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size(rng)\ ==\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_has_size_matcher_a269e6fa8df2682b54fedcfe372167b2e}{m\_target\_size}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_has_size_matcher_aed4feff3aaab1132266bd6b15ccbdfc2}{describe}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Matcher>}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_size_matches_matcher}{SizeMatchesMatcher}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_generic_base}{MatcherGenericBase}}\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ Matcher\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_size_matches_matcher_afd31b76d2ebb90af16cc4e8b7b365bad}{m\_matcher}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_size_matches_matcher_ab95faf0ed8b22325af64687ac7350a7e}{SizeMatchesMatcher}}(Matcher\ m):}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_size_matches_matcher_afd31b76d2ebb90af16cc4e8b7b365bad}{m\_matcher}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(m))}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ RangeLike>}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_size_matches_matcher_a00b5f9e3a0c53ff26951a35061342a7e}{match}}(RangeLike\&\&\ rng)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#if\ defined(CATCH\_CONFIG\_POLYFILL\_NONMEMBER\_CONTAINER\_ACCESS)}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_catch_1_1_detail_a55994724b37be409ad8185ee738a0781}{Catch::Detail::size}};}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }std::size;}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_size_matches_matcher_afd31b76d2ebb90af16cc4e8b7b365bad}{m\_matcher}}.match(size(rng));}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_size_matches_matcher_a23a8012bbe9e149c2378e4f312dd3da7}{describe}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}size\ matches\ "{}}\ +\ \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_size_matches_matcher_afd31b76d2ebb90af16cc4e8b7b365bad}{m\_matcher}}.describe();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ IsEmptyMatcher\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_ae345560f84f68d52fc5df4ac77eb4b92}{IsEmpty}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ HasSizeMatcher\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a640c1714c014191cc131b37f955f83ed}{SizeIs}}(std::size\_t\ sz);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Matcher>}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::enable\_if\_t<Detail::is\_matcher<Matcher>::value,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ SizeMatchesMatcher<Matcher>>\ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a640c1714c014191cc131b37f955f83ed}{SizeIs}}(Matcher\&\&\ m)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SizeMatchesMatcher<Matcher>\{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(m)\};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \}\ \textcolor{comment}{//\ end\ namespace\ Matchers}}
+\DoxyCodeLine{00088\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_MATCHERS\_CONTAINER\_PROPERTIES\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

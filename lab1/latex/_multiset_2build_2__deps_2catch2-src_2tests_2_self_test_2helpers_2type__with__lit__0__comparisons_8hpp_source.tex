@@ -1,0 +1,50 @@
+\doxysection{type\+\_\+with\+\_\+lit\+\_\+0\+\_\+comparisons.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/helpers/type\_with\_lit\_0\_comparisons.hpp@{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/helpers/type\_with\_lit\_0\_comparisons.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ CATCH\_TEST\_HELPERS\_TYPE\_WITH\_LIT\_0\_COMPARISONS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CATCH\_TEST\_HELPERS\_TYPE\_WITH\_LIT\_0\_COMPARISONS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Should\ only\ be\ constructible\ from\ literal\ 0.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Used\ by\ \`{}TypeWithLit0Comparisons`\ for\ testing\ comparison}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ ops\ that\ only\ work\ with\ literal\ zero,\ the\ way\ std::*orderings\ do}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_zero_literal_detector}{ZeroLiteralDetector}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{struct_zero_literal_detector_a8be4eaa7532162649c62c1a332fc8c76}{ZeroLiteralDetector}}(\ \doxymbox{\hyperlink{struct_zero_literal_detector_a8be4eaa7532162649c62c1a332fc8c76}{ZeroLiteralDetector}}*\ )\ \textcolor{keyword}{noexcept}\ \{\}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ =\ std::enable\_if\_t<!std::is\_same<T,\ int>::value>>}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{struct_zero_literal_detector_ae340522a9e8b5926b2eab7e73db49db9}{ZeroLiteralDetector}}(\ T\ )\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_type_with_lit0_comparisons}{TypeWithLit0Comparisons}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ DEFINE\_COMP\_OP(\ op\ )\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ friend\ bool\ operator\ op(\ TypeWithLit0Comparisons,\ ZeroLiteralDetector\ )\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ return\ true;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ friend\ bool\ operator\ op(\ ZeroLiteralDetector,\ TypeWithLit0Comparisons\ )\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ return\ false;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp_ab6fa5b88ac92b4dcb8ee9e80a7a95ced}{DEFINE\_COMP\_OP}}(\ <\ )}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp_ab6fa5b88ac92b4dcb8ee9e80a7a95ced}{DEFINE\_COMP\_OP}}(\ <=\ )}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp_ab6fa5b88ac92b4dcb8ee9e80a7a95ced}{DEFINE\_COMP\_OP}}(\ >\ )}
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp_ab6fa5b88ac92b4dcb8ee9e80a7a95ced}{DEFINE\_COMP\_OP}}(\ >=\ )}
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp_ab6fa5b88ac92b4dcb8ee9e80a7a95ced}{DEFINE\_COMP\_OP}}(\ ==\ )}
+\DoxyCodeLine{00039\ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2helpers_2type__with__lit__0__comparisons_8hpp_ab6fa5b88ac92b4dcb8ee9e80a7a95ced}{DEFINE\_COMP\_OP}}(\ !=\ )}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#undef\ DEFINE\_COMP\_OP}}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_TEST\_HELPERS\_TYPE\_WITH\_LIT\_0\_COMPARISONS\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

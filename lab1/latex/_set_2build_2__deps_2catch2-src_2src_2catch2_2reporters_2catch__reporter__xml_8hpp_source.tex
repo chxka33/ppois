@@ -1,0 +1,72 @@
+\doxysection{catch\+\_\+reporter\+\_\+xml.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__xml_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__xml_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_xml.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_xml.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__xml_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_REPORTER\_XML\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_REPORTER\_XML\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/reporters/catch\_reporter\_streaming\_base.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_xmlwriter.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <catch2/catch\_timer.hpp>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_xml_reporter}{XmlReporter}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_streaming_reporter_base}{StreamingReporterBase}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a52569de21b23c6f18812fb4369dc0d36}{XmlReporter}}(\doxymbox{\hyperlink{struct_catch_1_1_reporter_config}{ReporterConfig}}\&\&\ \_config);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a00aa87ce78b6f4ac8ed612446a5eeff3}{\string~XmlReporter}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a921696ab21aa21356aa4c5d7130748a9}{getDescription}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_aaf94ba2a1d9ce251bfe35784d330e70c}{getStylesheetRef}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a190d2ae83de78e06273fa476d3729771}{writeSourceInfo}}(\doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{SourceLineInfo}}\ \textcolor{keyword}{const}\&\ sourceInfo);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ StreamingReporterBase}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_ab5de0b02d5a30612ae5449360d867672}{testRunStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{TestRunInfo}}\ \textcolor{keyword}{const}\&\ testInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a1395b2efb62faaa947a42638a03be32c}{testCaseStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}}\ \textcolor{keyword}{const}\&\ testInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a06befa9cf2b661c5226317bff0f05c64}{sectionStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_section_info}{SectionInfo}}\ \textcolor{keyword}{const}\&\ sectionInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a4f2661042672c0930086700fcd348f04}{assertionStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_assertion_info}{AssertionInfo}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_abb27955d33a41ddb8d425f66664dd10e}{assertionEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{AssertionStats}}\ \textcolor{keyword}{const}\&\ assertionStats)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a73c809f067d58a7a6748cb13643448e5}{sectionEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_section_stats}{SectionStats}}\ \textcolor{keyword}{const}\&\ sectionStats)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_ab641ec7e115cb94efa02f85e9d91de0f}{testCaseEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_test_case_stats}{TestCaseStats}}\ \textcolor{keyword}{const}\&\ testCaseStats)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a2458c9f342a446f0b3a7480b53c93705}{testRunEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_test_run_stats}{TestRunStats}}\ \textcolor{keyword}{const}\&\ testRunStats)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_ac69a3b553943b625dbed4d465152f466}{benchmarkPreparing}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ name\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_aedcd354a33e40ba80fdce75b19f0c393}{benchmarkStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_benchmark_info}{BenchmarkInfo}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a025db47f21efafb00017e962622ff330}{benchmarkEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_benchmark_stats}{BenchmarkStats<>}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_adcc4fccfe8d5935e839b5506404d648f}{benchmarkFailed}}(\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ error\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_af227f44ca796d664b6a7b44b8954c8b4}{listReporters}}(std::vector<ReporterDescription>\ \textcolor{keyword}{const}\&\ descriptions)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a4afe4f0a8a85f5d1c7ab0204d4586c72}{listListeners}}(std::vector<ListenerDescription>\ \textcolor{keyword}{const}\&\ descriptions)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a35ef5f6751d53704f95398bd6cfe18aa}{listTests}}(std::vector<TestCaseHandle>\ \textcolor{keyword}{const}\&\ tests)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a25a83bb25a7b3b5c9d831da9d290a145}{listTags}}(std::vector<TagInfo>\ \textcolor{keyword}{const}\&\ tags)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_timer}{Timer}}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a0866faae266f9d7be8950574c9b1c2d1}{m\_testCaseTimer}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_xml_writer}{XmlWriter}}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a6c08c769b2a692c704a8b2116bb2b017}{m\_xml}};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_catch_1_1_xml_reporter_a7fd3b74e89f95e588f89b6525705c7b8}{m\_sectionDepth}}\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_REPORTER\_XML\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

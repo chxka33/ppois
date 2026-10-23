@@ -1,0 +1,410 @@
+\doxysection{Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+tests/\+\+Self\+Test/\+\+Usage\+Tests/\+\+Misc.tests.\+cpp File Reference}
+\hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp}{}\label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp}\index{Set/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/Misc.tests.cpp@{Set/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/Misc.tests.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+template\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+config\+\_\+wchar.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+windows\+\_\+h\+\_\+proxy.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$cerrno$>$}\newline
+{\ttfamily \+\#include $<$limits$>$}\newline
+{\ttfamily \+\#include $<$array$>$}\newline
+{\ttfamily \+\#include $<$tuple$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_non_default_constructible_type}{Non\+Default\+Constructible\+Type}}
+\item 
+struct \doxymbox{\hyperlink{struct_non_copyable_and_non_movable_type}{Non\+Copyable\+And\+Non\+Movable\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_abca4b47371bb7db205c6d6c5cfdbd2a8}{My\+Types}} = std::\+tuple$<$int, char, float$>$
+\item 
+using \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aa9dbe435bf1aeaf04c07eb20fe9a62d2}{My\+Non\+Default\+Constructible\+Types}} = std::\+tuple$<$\doxymbox{\hyperlink{struct_non_default_constructible_type}{Non\+Default\+Constructible\+Type}}, float$>$
+\item 
+using \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a6798792cccbd04a4f7da5e55e6d80762}{Non\+Copyable\+And\+Non\+Movable\+Types}} = std::\+tuple$<$\doxymbox{\hyperlink{struct_non_copyable_and_non_movable_type}{Non\+Copyable\+And\+Non\+Movable\+Type}}, float$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a2a6ef2fdf86bd2cac46104e9636d8ee7}{TEST\+\_\+\+CASE}} ("{}random \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}, "{}\+[.]\+\+[sections]\+\+[failing]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ab3986dfe4c02eb7db088a37752146a43}{TEST\+\_\+\+CASE}} ("{}nested \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}, "{}\+[.]\+\+[sections]\+\+[failing]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ae03e08c9e619662ec5b8daf7b8ea6943}{TEST\+\_\+\+CASE}} ("{}more nested \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}, "{}\+[sections]\+\+[failing]\+\+[.]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a22c3112bef5ce260442c0724a2a4a1c4}{TEST\+\_\+\+CASE}} ("{}even more nested \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}, "{}\+[sections]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a63f3b43903afd0f1952a9e8f27da4a9a}{TEST\+\_\+\+CASE}} ("{}looped \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}, "{}\+[.]\+\+[failing]\+\+[sections]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aad579e2bb73d8cd7cb5a2a19c73148db}{TEST\+\_\+\+CASE}} ("{}looped tests"{}, "{}\+[.]\+\+[failing]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a14b63ab52ef4aaf857950680c6c8777c}{TEST\+\_\+\+CASE}} ("{}Sends stuff to stdout and stderr"{}, "{}\+[.]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a8f78c144c8589df6c7eb3eb51fe72588}{TEST\+\_\+\+CASE}} ("{}null strings"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a579dd09f1136cb4d77f9c95a40740d95}{TEST\+\_\+\+CASE}} ("{}checked\+If"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a6db6cfb771dd3f1afc1dc6cde9334ae4}{TEST\+\_\+\+CASE}} ("{}checked\+If, failing"{}, "{}\+[failing]\+\+[.]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a136bda1995cb919bdd9d3143781ac179}{TEST\+\_\+\+CASE}} ("{}checked\+Else"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a475fdb87892d2acca62a46de0eed0310}{TEST\+\_\+\+CASE}} ("{}Testing checked-\/if"{}, "{}\+[checked-\/if]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a94b84b2271289698335f3b38993d3b87}{TEST\+\_\+\+CASE}} ("{}Testing checked-\/if 2"{}, "{}\+[checked-\/if]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a4f1655636777b58349bdd6403a094c72}{TEST\+\_\+\+CASE}} ("{}Testing checked-\/if 3"{}, "{}\+[checked-\/if]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a71be6c8dbc1b3da40d82d12941e059a9}{TEST\+\_\+\+CASE}} ("{}Testing checked-\/if 4"{}, "{}\+[checked-\/if]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a2bcb695af914573b38e968ab637b41b2}{TEST\+\_\+\+CASE}} ("{}Testing checked-\/if 5"{}, "{}\+[checked-\/if]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ad78f2799c6fcb18321686765d1e4ce22}{TEST\+\_\+\+CASE}} ("{}xmlentitycheck"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af3d6dd6e05fd65faf8fee75022f1bf45}{TEST\+\_\+\+CASE}} ("{}send a single char to INFO"{}, "{}\+[failing]\+\+[.]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aab83b61870b4c74481e713004e4fe5d3}{TEST\+\_\+\+CASE}} ("{}Factorials are computed"{}, "{}\+[factorial]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac693f3f5ed6d5e9ec4b6592e05d21ac9}{TEST\+\_\+\+CASE}} ("{}An empty test with no assertions"{}, "{}\+[empty]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a0caacc8a3053768b60e2a32f0b49f6fe}{TEST\+\_\+\+CASE}} ("{}Nice descriptive name"{}, "{}\+[tag1]\+\+[tag2]\+\+[tag3]\+\+[.]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a75068539a08a34db6cfa54c8aad11a62}{TEST\+\_\+\+CASE}} ("{}first tag"{}, "{}\+[tag1]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a111f7676af00675d192d29b0573a7d84}{TEST\+\_\+\+CASE}} ("{}second tag"{}, "{}\+[tag2]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_afa80f837266f077f944115b697556117}{TEST\+\_\+\+CASE}} ("{}vectors can be sized and resized"{}, "{}\+[vector]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac86ad7b0e5cca11b0cfd5ad6578f81d0}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE}} ("{}Template\+Test: vectors can be sized and resized"{}, "{}\+[vector]\+\+[template]\+"{}, int, float, std::\+string,(std::\+tuple$<$ int, float $>$))
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a678a425e3e488195230eec2444dbe351}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+SIG}} ("{}Template\+Test\+Sig: vectors can be sized and resized"{}, "{}\+[vector]\+\+[template]\+\+[nttp]\+"{},((typename Test\+Type, int V), Test\+Type, V),(int, 5),(float, 4),(std::\+string, 15),((std::\+tuple$<$ int, float $>$), 6))
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a5945c101e721a209c318ba6155ee7626}{TEMPLATE\+\_\+\+PRODUCT\+\_\+\+TEST\+\_\+\+CASE}} ("{}A Template product test case"{}, "{}\+[template]\+\+[product]\+"{},(std::\+vector, Foo),(int, float))
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_adac4a7f84ad618104f304b9c78cd682a}{TEMPLATE\+\_\+\+PRODUCT\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+SIG}} ("{}A Template product test case with array signature"{}, "{}\+[template]\+\+[product]\+\+[nttp]\+"{},((typename T, size\+\_\+t \doxymbox{\hyperlink{struct_s}{S}}), T, \doxymbox{\hyperlink{struct_s}{S}}),(std::\+array, Bar),((int, 9),(float, 42)))
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_afeafdb4af57422fa2d8db0e0cb2eb196}{TEMPLATE\+\_\+\+PRODUCT\+\_\+\+TEST\+\_\+\+CASE}} ("{}Product with differing arities"{}, "{}\+[template]\+\+[product]\+"{}, std::\+tuple,(int,(int, double),(int, double, float)))
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a3fbea9560f561da001cd7ffc043681f6}{TEMPLATE\+\_\+\+LIST\+\_\+\+TEST\+\_\+\+CASE}} ("{}Template test case with test types specified inside std::\+tuple"{}, "{}\+[template]\+\+[list]\+"{}, My\+Types)
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a642449edf6b9fe90bd401d15e941524c}{TEMPLATE\+\_\+\+LIST\+\_\+\+TEST\+\_\+\+CASE}} ("{}Template test case with test types specified inside non-\/default-\/constructible std::\+tuple"{}, "{}\+[template]\+\+[list]\+"{}, My\+Non\+Default\+Constructible\+Types)
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a5ca0e0473bd6df4e812108b9b6000354}{TEMPLATE\+\_\+\+LIST\+\_\+\+TEST\+\_\+\+CASE}} ("{}Template test case with test types specified inside non-\/copyable and non-\/movable std::\+tuple"{}, "{}\+[template]\+\+[list]\+"{}, Non\+Copyable\+And\+Non\+Movable\+Types)
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af5de1ad5c5d4750dc20b9b4b6c66afb9}{TEST\+\_\+\+CASE}} ("{}A couple of nested sections followed by a failure"{}, "{}\+[failing]\+\+[.]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a8c578c273a0dcc662394994f056cae5b}{TEST\+\_\+\+CASE}} ("{}not allowed"{}, "{}\+[!throws]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a3d43b24f8cfc97534b55abb89822fa2d}{TEST\+\_\+\+CASE}} ("{}Tabs and newlines show in output"{}, "{}\+[.]\+\+[whitespace]\+\+[failing]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aa5726a579835954b8d9559b80dbe7c35}{TEST\+\_\+\+CASE}} ("{}long long"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ab96aba88226a9d0214977a5c99ff371d}{TEST\+\_\+\+CASE}} ("{}This test \textquotesingle{}should\textquotesingle{} fail but doesn\textquotesingle{}t"{}, "{}\+[.]\+\+[failing]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a910c8ff4fa091a88f16495d11942c2f5}{TEST\+\_\+\+CASE}} ("{}\+\# A test name that starts with a \+\#"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ad830e44a75a138ab8095df5afd264d53}{TEST\+\_\+\+CASE}} ("{}\+\#835 -\/-\/ errno should not be touched by Catch2"{}, "{}\+[.]\+\+[failing]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af23723072201526c929cc6ef66c229b7}{TEST\+\_\+\+CASE}} ("{}\+\#961 -\/-\/ Dynamically created sections should all be reported"{}, "{}\+[.]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aae1c0ff8697ca34252b0063b64afd44f}{TEST\+\_\+\+CASE}} ("{}\+\#1175 -\/ Hidden Test"{}, "{}\+[.]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac5234fba729b5aeb9254c372ddf9aefb}{TEMPLATE\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+SIG}} ("{}\+\#1954 -\/ 7 arg template test case sig compiles"{}, "{}\+[regression]\+\+[.compilation]\+"{},((int Tnx, int Tnu, int Tny, int Tph, int Tch, int Tineq, int Teq), Tnx, Tnu, Tny, Tph, Tch, Tineq, Teq),(1, 1, 1, 1, 1, 0, 0),(5, 1, 1, 1, 1, 0, 0),(5, 3, 1, 1, 1, 0, 0))
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aeba006f159ccfe87abb05ae7cb94620f}{TEST\+\_\+\+CASE}} ("{}Same test name but with different tags is fine"{}, "{}\+[.approvals]\+\+[some-\/tag]\+"{})
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a1d03f46127f5325b31d3c7e068760c7a}{TEST\+\_\+\+CASE}} ("{}Same test name but with different tags is fine"{}, "{}\+[.approvals]\+\+[other-\/tag]\+"{})
+\end{DoxyCompactItemize}
+
+
+\label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_doc-typedef-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aa9dbe435bf1aeaf04c07eb20fe9a62d2}\index{Misc.tests.cpp@{Misc.tests.cpp}!MyNonDefaultConstructibleTypes@{MyNonDefaultConstructibleTypes}}
+\index{MyNonDefaultConstructibleTypes@{MyNonDefaultConstructibleTypes}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{MyNonDefaultConstructibleTypes}{MyNonDefaultConstructibleTypes}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aa9dbe435bf1aeaf04c07eb20fe9a62d2} 
+using \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aa9dbe435bf1aeaf04c07eb20fe9a62d2}{My\+Non\+Default\+Constructible\+Types}} = std::\+tuple$<$\doxymbox{\hyperlink{struct_non_default_constructible_type}{Non\+Default\+Constructible\+Type}}, float$>$}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_abca4b47371bb7db205c6d6c5cfdbd2a8}\index{Misc.tests.cpp@{Misc.tests.cpp}!MyTypes@{MyTypes}}
+\index{MyTypes@{MyTypes}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{MyTypes}{MyTypes}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_abca4b47371bb7db205c6d6c5cfdbd2a8} 
+using \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_class_8tests_8cpp_a5f800cb8606d89d140864b09e4f9f6f4}{My\+Types}} = std::\+tuple$<$int, char, float$>$}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a6798792cccbd04a4f7da5e55e6d80762}\index{Misc.tests.cpp@{Misc.tests.cpp}!NonCopyableAndNonMovableTypes@{NonCopyableAndNonMovableTypes}}
+\index{NonCopyableAndNonMovableTypes@{NonCopyableAndNonMovableTypes}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{NonCopyableAndNonMovableTypes}{NonCopyableAndNonMovableTypes}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a6798792cccbd04a4f7da5e55e6d80762} 
+using \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a6798792cccbd04a4f7da5e55e6d80762}{Non\+Copyable\+And\+Non\+Movable\+Types}} = std::\+tuple$<$\doxymbox{\hyperlink{struct_non_copyable_and_non_movable_type}{Non\+Copyable\+And\+Non\+Movable\+Type}}, float$>$}
+
+
+
+\label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_doc-func-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a5ca0e0473bd6df4e812108b9b6000354}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_LIST\_TEST\_CASE@{TEMPLATE\_LIST\_TEST\_CASE}}
+\index{TEMPLATE\_LIST\_TEST\_CASE@{TEMPLATE\_LIST\_TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_LIST\_TEST\_CASE()}{TEMPLATE\_LIST\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a5ca0e0473bd6df4e812108b9b6000354} 
+TEMPLATE\+\_\+\+LIST\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Template test case with test types specified inside non-\/copyable and non-\/movable std::\+tuple"{}}]{}{, }\item[{"{}"{}}]{}{\+[template]\+\+[list], }\item[{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a6798792cccbd04a4f7da5e55e6d80762}{Non\+Copyable\+And\+Non\+Movable\+Types}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a642449edf6b9fe90bd401d15e941524c}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_LIST\_TEST\_CASE@{TEMPLATE\_LIST\_TEST\_CASE}}
+\index{TEMPLATE\_LIST\_TEST\_CASE@{TEMPLATE\_LIST\_TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_LIST\_TEST\_CASE()}{TEMPLATE\_LIST\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a642449edf6b9fe90bd401d15e941524c} 
+TEMPLATE\+\_\+\+LIST\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Template test case with test types specified inside non-\/default-\/constructible std::\+tuple"{}}]{}{, }\item[{"{}"{}}]{}{\+[template]\+\+[list], }\item[{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aa9dbe435bf1aeaf04c07eb20fe9a62d2}{My\+Non\+Default\+Constructible\+Types}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a3fbea9560f561da001cd7ffc043681f6}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_LIST\_TEST\_CASE@{TEMPLATE\_LIST\_TEST\_CASE}}
+\index{TEMPLATE\_LIST\_TEST\_CASE@{TEMPLATE\_LIST\_TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_LIST\_TEST\_CASE()}{TEMPLATE\_LIST\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a3fbea9560f561da001cd7ffc043681f6} 
+TEMPLATE\+\_\+\+LIST\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Template test case with test types specified inside std::\+tuple"{}}]{}{, }\item[{"{}"{}}]{}{\+[template]\+\+[list], }\item[{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_class_8tests_8cpp_a5f800cb8606d89d140864b09e4f9f6f4}{My\+Types}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a5945c101e721a209c318ba6155ee7626}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_PRODUCT\_TEST\_CASE@{TEMPLATE\_PRODUCT\_TEST\_CASE}}
+\index{TEMPLATE\_PRODUCT\_TEST\_CASE@{TEMPLATE\_PRODUCT\_TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_PRODUCT\_TEST\_CASE()}{TEMPLATE\_PRODUCT\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a5945c101e721a209c318ba6155ee7626} 
+TEMPLATE\+\_\+\+PRODUCT\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}A Template product test case"{}}]{}{, }\item[{"{}"{}}]{}{\+[template]\+\+[product], }\item[{(std::\+vector, Foo)}]{}{, }\item[{(int, float)}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_afeafdb4af57422fa2d8db0e0cb2eb196}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_PRODUCT\_TEST\_CASE@{TEMPLATE\_PRODUCT\_TEST\_CASE}}
+\index{TEMPLATE\_PRODUCT\_TEST\_CASE@{TEMPLATE\_PRODUCT\_TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_PRODUCT\_TEST\_CASE()}{TEMPLATE\_PRODUCT\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_afeafdb4af57422fa2d8db0e0cb2eb196} 
+TEMPLATE\+\_\+\+PRODUCT\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Product with differing arities"{}}]{}{, }\item[{"{}"{}}]{}{\+[template]\+\+[product], }\item[{std::\+tuple}]{}{, }\item[{(int,(int, double),(int, double, float))}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_adac4a7f84ad618104f304b9c78cd682a}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_PRODUCT\_TEST\_CASE\_SIG@{TEMPLATE\_PRODUCT\_TEST\_CASE\_SIG}}
+\index{TEMPLATE\_PRODUCT\_TEST\_CASE\_SIG@{TEMPLATE\_PRODUCT\_TEST\_CASE\_SIG}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_PRODUCT\_TEST\_CASE\_SIG()}{TEMPLATE\_PRODUCT\_TEST\_CASE\_SIG()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_adac4a7f84ad618104f304b9c78cd682a} 
+TEMPLATE\+\_\+\+PRODUCT\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+SIG (\begin{DoxyParamCaption}\item[{"{}A Template product test case with array signature"{}}]{}{, }\item[{"{}"{}}]{}{\+[template]\+\+[product]\+\+[nttp], }\item[{((typename T, size\+\_\+t \doxymbox{\hyperlink{struct_s}{S}}), T, \doxymbox{\hyperlink{struct_s}{S}})}]{}{, }\item[{(std::\+array, Bar)}]{}{, }\item[{((int, 9),(float, 42))}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac86ad7b0e5cca11b0cfd5ad6578f81d0}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}}
+\index{TEMPLATE\_TEST\_CASE@{TEMPLATE\_TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE()}{TEMPLATE\_TEST\_CASE()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac86ad7b0e5cca11b0cfd5ad6578f81d0} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Template\+Test: vectors can be sized and resized"{}}]{}{, }\item[{"{}"{}}]{}{\+[vector]\+\+[template], }\item[{int}]{}{, }\item[{float}]{}{, }\item[{std::\+string}]{}{, }\item[{(std::\+tuple$<$ int, float $>$)}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac5234fba729b5aeb9254c372ddf9aefb}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_TEST\_CASE\_SIG@{TEMPLATE\_TEST\_CASE\_SIG}}
+\index{TEMPLATE\_TEST\_CASE\_SIG@{TEMPLATE\_TEST\_CASE\_SIG}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE\_SIG()}{TEMPLATE\_TEST\_CASE\_SIG()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac5234fba729b5aeb9254c372ddf9aefb} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+SIG (\begin{DoxyParamCaption}\item[{"{}\+\#1954 -\/ 7 arg template test case sig compiles"{}}]{}{, }\item[{"{}"{}}]{}{\+[regression]\+\+[.\+compilation], }\item[{((int Tnx, int Tnu, int Tny, int Tph, int Tch, int Tineq, int Teq), Tnx, Tnu, Tny, Tph, Tch, Tineq, Teq)}]{}{, }\item[{(1, 1, 1, 1, 1, 0, 0)}]{}{, }\item[{(5, 1, 1, 1, 1, 0, 0)}]{}{, }\item[{(5, 3, 1, 1, 1, 0, 0)}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a678a425e3e488195230eec2444dbe351}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEMPLATE\_TEST\_CASE\_SIG@{TEMPLATE\_TEST\_CASE\_SIG}}
+\index{TEMPLATE\_TEST\_CASE\_SIG@{TEMPLATE\_TEST\_CASE\_SIG}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEMPLATE\_TEST\_CASE\_SIG()}{TEMPLATE\_TEST\_CASE\_SIG()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a678a425e3e488195230eec2444dbe351} 
+TEMPLATE\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+SIG (\begin{DoxyParamCaption}\item[{"{}Template\+Test\+Sig: vectors can be sized and resized"{}}]{}{, }\item[{"{}"{}}]{}{\+[vector]\+\+[template]\+\+[nttp], }\item[{((typename Test\+Type, int V), Test\+Type, V)}]{}{, }\item[{(int, 5)}]{}{, }\item[{(float, 4)}]{}{, }\item[{(std::\+string, 15)}]{}{, }\item[{((std::\+tuple$<$ int, float $>$), 6)}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a910c8ff4fa091a88f16495d11942c2f5}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a910c8ff4fa091a88f16495d11942c2f5} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}\+\# A test name that starts with a \+\#"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aae1c0ff8697ca34252b0063b64afd44f}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aae1c0ff8697ca34252b0063b64afd44f} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}\+\#1175 -\/ Hidden Test"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ad830e44a75a138ab8095df5afd264d53}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ad830e44a75a138ab8095df5afd264d53} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}\+\#835 -\/-\/ errno should not be touched by Catch2"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[failing]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af23723072201526c929cc6ef66c229b7}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af23723072201526c929cc6ef66c229b7} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}\+\#961 -\/-\/ Dynamically created sections should all be reported"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af5de1ad5c5d4750dc20b9b4b6c66afb9}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af5de1ad5c5d4750dc20b9b4b6c66afb9} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}A couple of nested sections followed by a failure"{}}]{}{, }\item[{"{}"{}}]{}{\+[failing]\+\+[.]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac693f3f5ed6d5e9ec4b6592e05d21ac9}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ac693f3f5ed6d5e9ec4b6592e05d21ac9} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}An empty test with no assertions"{}}]{}{, }\item[{"{}"{}}]{}{\+[empty]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a136bda1995cb919bdd9d3143781ac179}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a136bda1995cb919bdd9d3143781ac179} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}checked\+Else"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a579dd09f1136cb4d77f9c95a40740d95}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a579dd09f1136cb4d77f9c95a40740d95} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}checked\+If"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a6db6cfb771dd3f1afc1dc6cde9334ae4}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a6db6cfb771dd3f1afc1dc6cde9334ae4} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}}]{checked\+If}{, }\item[{failing"{}}]{}{, }\item[{"{}"{}}]{}{\+[failing]\+\+[.]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a22c3112bef5ce260442c0724a2a4a1c4}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a22c3112bef5ce260442c0724a2a4a1c4} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}even more nested \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}}]{}{, }\item[{"{}"{}}]{}{\+[sections]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aab83b61870b4c74481e713004e4fe5d3}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aab83b61870b4c74481e713004e4fe5d3} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Factorials are computed"{}}]{}{, }\item[{"{}"{}}]{}{\+[factorial]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a75068539a08a34db6cfa54c8aad11a62}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a75068539a08a34db6cfa54c8aad11a62} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}first tag"{}}]{}{, }\item[{"{}"{}}]{}{\+[tag1]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aa5726a579835954b8d9559b80dbe7c35}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aa5726a579835954b8d9559b80dbe7c35} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}long long"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a63f3b43903afd0f1952a9e8f27da4a9a}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a63f3b43903afd0f1952a9e8f27da4a9a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}looped \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[failing]\+\+[sections]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aad579e2bb73d8cd7cb5a2a19c73148db}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aad579e2bb73d8cd7cb5a2a19c73148db} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}looped tests"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[failing]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ae03e08c9e619662ec5b8daf7b8ea6943}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [16/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ae03e08c9e619662ec5b8daf7b8ea6943} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}more nested \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}}]{}{, }\item[{"{}"{}}]{}{\+[sections]\+\+[failing]\+\+[.]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ab3986dfe4c02eb7db088a37752146a43}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [17/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ab3986dfe4c02eb7db088a37752146a43} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}nested \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[sections]\+\+[failing]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a0caacc8a3053768b60e2a32f0b49f6fe}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [18/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a0caacc8a3053768b60e2a32f0b49f6fe} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Nice descriptive name"{}}]{}{, }\item[{"{}"{}}]{}{\+[tag1]\+\+[tag2]\+\+[tag3]\+\+[.]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a8c578c273a0dcc662394994f056cae5b}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [19/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a8c578c273a0dcc662394994f056cae5b} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}not allowed"{}}]{}{, }\item[{"{}"{}}]{}{\+[!throws]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a8f78c144c8589df6c7eb3eb51fe72588}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [20/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a8f78c144c8589df6c7eb3eb51fe72588} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}null strings"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a2a6ef2fdf86bd2cac46104e9636d8ee7}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [21/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a2a6ef2fdf86bd2cac46104e9636d8ee7} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}random \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad512fd95a78b95770b9759823f8fbc21}{SECTION}} tests"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[sections]\+\+[failing]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a1d03f46127f5325b31d3c7e068760c7a}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [22/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a1d03f46127f5325b31d3c7e068760c7a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Same test name but with different tags is fine"{}}]{}{, }\item[{"{}"{}}]{}{\+[.\+approvals]\+\+[other-\/tag]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aeba006f159ccfe87abb05ae7cb94620f}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [23/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_aeba006f159ccfe87abb05ae7cb94620f} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Same test name but with different tags is fine"{}}]{}{, }\item[{"{}"{}}]{}{\+[.\+approvals]\+\+[some-\/tag]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a111f7676af00675d192d29b0573a7d84}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [24/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a111f7676af00675d192d29b0573a7d84} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}second tag"{}}]{}{, }\item[{"{}"{}}]{}{\+[tag2]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af3d6dd6e05fd65faf8fee75022f1bf45}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [25/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_af3d6dd6e05fd65faf8fee75022f1bf45} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}send a single char to INFO"{}}]{}{, }\item[{"{}"{}}]{}{\+[failing]\+\+[.]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a14b63ab52ef4aaf857950680c6c8777c}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [26/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a14b63ab52ef4aaf857950680c6c8777c} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Sends stuff to stdout and stderr"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a3d43b24f8cfc97534b55abb89822fa2d}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [27/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a3d43b24f8cfc97534b55abb89822fa2d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Tabs and newlines show in output"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[whitespace]\+\+[failing]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a94b84b2271289698335f3b38993d3b87}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [28/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a94b84b2271289698335f3b38993d3b87} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testing checked-\/if 2"{}}]{}{, }\item[{"{}"{}}]{}{\+[checked-\/if]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a4f1655636777b58349bdd6403a094c72}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [29/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a4f1655636777b58349bdd6403a094c72} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testing checked-\/if 3"{}}]{}{, }\item[{"{}"{}}]{}{\+[checked-\/if]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a71be6c8dbc1b3da40d82d12941e059a9}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [30/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a71be6c8dbc1b3da40d82d12941e059a9} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testing checked-\/if 4"{}}]{}{, }\item[{"{}"{}}]{}{\+[checked-\/if]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a2bcb695af914573b38e968ab637b41b2}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [31/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a2bcb695af914573b38e968ab637b41b2} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testing checked-\/if 5"{}}]{}{, }\item[{"{}"{}}]{}{\+[checked-\/if]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a475fdb87892d2acca62a46de0eed0310}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [32/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_a475fdb87892d2acca62a46de0eed0310} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testing checked-\/if"{}}]{}{, }\item[{"{}"{}}]{}{\+[checked-\/if]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ab96aba88226a9d0214977a5c99ff371d}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [33/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ab96aba88226a9d0214977a5c99ff371d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}This test \textquotesingle{}should\textquotesingle{} fail but doesn\textquotesingle{}t"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[failing]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_afa80f837266f077f944115b697556117}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [34/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_afa80f837266f077f944115b697556117} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}vectors can be sized and resized"{}}]{}{, }\item[{"{}"{}}]{}{\+[vector]}\end{DoxyParamCaption})}
+
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ad78f2799c6fcb18321686765d1e4ce22}\index{Misc.tests.cpp@{Misc.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Misc.tests.cpp@{Misc.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [35/35]}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_misc_8tests_8cpp_ad78f2799c6fcb18321686765d1e4ce22} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}xmlentitycheck"{}}]{}{}\end{DoxyParamCaption})}
+

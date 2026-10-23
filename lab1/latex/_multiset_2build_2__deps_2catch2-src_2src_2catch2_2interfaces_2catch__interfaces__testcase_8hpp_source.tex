@@ -1,0 +1,36 @@
+\doxysection{catch\+\_\+interfaces\+\_\+testcase.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__testcase_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__testcase_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_testcase.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_testcase.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__testcase_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_INTERFACES\_TESTCASE\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_INTERFACES\_TESTCASE\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{TestCaseHandle}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_test_case_registry}{ITestCaseRegistry}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_i_test_case_registry_ae14798f05ac8e2b18cff532849a4da81}{\string~ITestCaseRegistry}}();\ \textcolor{comment}{//\ =\ default}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ this\ exists\ only\ for\ adding\ filenames\ to\ test\ cases\ -\/-\/\ let's\ expose\ this\ in\ a\ saner\ way\ later}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<TestCaseInfo*\ >\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_test_case_registry_a155a1db864c3ef96b05a211861d3a72f}{getAllInfos}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<TestCaseHandle>\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_test_case_registry_ae02711fa7a079392b40924a4f54f3e77}{getAllTests}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<TestCaseHandle>\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_test_case_registry_afe6f46567ddf819dbf24c1b03d36f89c}{getAllTestsSorted}}(\ \doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}}\ \textcolor{keyword}{const}\&\ config\ )\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_INTERFACES\_TESTCASE\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

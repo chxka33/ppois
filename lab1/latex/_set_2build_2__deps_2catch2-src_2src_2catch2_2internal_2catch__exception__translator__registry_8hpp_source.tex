@@ -1,0 +1,36 @@
+\doxysection{catch\+\_\+exception\+\_\+translator\+\_\+registry.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__exception__translator__registry_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__exception__translator__registry_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_exception\_translator\_registry.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_exception\_translator\_registry.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__exception__translator__registry_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_EXCEPTION\_TRANSLATOR\_REGISTRY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_EXCEPTION\_TRANSLATOR\_REGISTRY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/interfaces/catch\_interfaces\_exception.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_unique\_ptr.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_exception_translator_registry}{ExceptionTranslatorRegistry}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_i_exception_translator_registry}{IExceptionTranslatorRegistry}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_exception_translator_registry_a62324e8f3e12c21303073c4e1b7725a6}{\string~ExceptionTranslatorRegistry}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_exception_translator_registry_aaab1e9de4594736d16f911ab10bf9cb6}{registerTranslator}}(\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::unique\_ptr<IExceptionTranslator>}}\&\&\ translator\ );}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_exception_translator_registry_a20708aa96760c083f5fd4ee0c894802e}{translateActiveException}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_acee06b896ed308ae49ab9d8c7769f5ee}{ExceptionTranslators}}\ \doxymbox{\hyperlink{class_catch_1_1_exception_translator_registry_a92044f30902d43a37e468d9c896d9727}{m\_translators}};}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_EXCEPTION\_TRANSLATOR\_REGISTRY\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

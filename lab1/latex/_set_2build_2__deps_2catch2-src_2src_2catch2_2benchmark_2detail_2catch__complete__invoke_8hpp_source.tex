@@ -1,0 +1,64 @@
+\doxysection{catch\+\_\+complete\+\_\+invoke.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2detail_2catch__complete__invoke_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2detail_2catch__complete__invoke_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/benchmark/detail/catch\_complete\_invoke.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/benchmark/detail/catch\_complete\_invoke.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2detail_2catch__complete__invoke_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Adapted\ from\ donated\ nonius\ code.}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ CATCH\_COMPLETE\_INVOKE\_HPP\_INCLUDED}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CATCH\_COMPLETE\_INVOKE\_HPP\_INCLUDED}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_meta.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_move\_and\_forward.hpp>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark}{Benchmark}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_complete_type}{CompleteType}}\ \{\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_complete_type_a7322bfc02af34fdb67f9d0627a380715}{type}}\ =\ T;\ \};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_complete_type}{CompleteType}}<void>\ \{\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_complete_type_a7322bfc02af34fdb67f9d0627a380715}{type}}\ \{\};\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_ac01002836fbe714bcc1bb266c249258c}{CompleteType\_t}}\ =\ \textcolor{keyword}{typename}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_complete_type_a7322bfc02af34fdb67f9d0627a380715}{CompleteType<T>::type}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Result>}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }CompleteInvoker\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fun,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Result\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_complete_invoker_adf04cae13162eb67730f224818dde58b}{invoke}}(Fun\&\&\ fun,\ Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(fun)(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(args)...);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }CompleteInvoker<void>\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fun,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_ac01002836fbe714bcc1bb266c249258c}{CompleteType\_t<void>}}\ \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1_complete_invoker_3_01void_01_4_a89ab8831c06677e841b81bf17bc2ea90}{invoke}}(Fun\&\&\ fun,\ Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(fun)(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(args)...);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ invoke\ and\ not\ return\ void\ :(}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fun,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_ac01002836fbe714bcc1bb266c249258c}{CompleteType\_t}}<\doxymbox{\hyperlink{namespace_catch_a38257f15bf2974c19a11341fe50eedc1}{FunctionReturnType}}<Fun,\ Args...>>\ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_abe0ffc409d126e1e7f4573c16abcbf84}{complete\_invoke}}(Fun\&\&\ fun,\ Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ CompleteInvoker<\doxymbox{\hyperlink{namespace_catch_a38257f15bf2974c19a11341fe50eedc1}{FunctionReturnType}}<Fun,\ Args...>>::invoke(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(fun),\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(args)...);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Detail}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Fun>}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_ac01002836fbe714bcc1bb266c249258c}{Detail::CompleteType\_t<FunctionReturnType<Fun>}}>\ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_ab10cc5a63e65cd55178d7f1473da9f04}{user\_code}}(Fun\&\&\ fun)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_abe0ffc409d126e1e7f4573c16abcbf84}{Detail::complete\_invoke}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(fun));}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ Benchmark}}
+\DoxyCodeLine{00056\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_COMPLETE\_INVOKE\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

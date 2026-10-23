@@ -1,0 +1,36 @@
+\doxysection{Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+tests/\+\+Extra\+Tests/\+\+X27-\/\+Captured\+Stdout\+In\+Test\+Case\+Events.cpp File Reference}
+\hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x27-_captured_stdout_in_test_case_events_8cpp}{}\label{_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x27-_captured_stdout_in_test_case_events_8cpp}\index{Set/build/\_deps/catch2-\/src/tests/ExtraTests/X27-\/CapturedStdoutInTestCaseEvents.cpp@{Set/build/\_deps/catch2-\/src/tests/ExtraTests/X27-\/CapturedStdoutInTestCaseEvents.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+generators/\+catch\+\_\+generators.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+generators/\+catch\+\_\+generators\+\_\+range.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+reporters/\+catch\+\_\+reporter\+\_\+streaming\+\_\+base.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+reporters/\+catch\+\_\+reporter\+\_\+registrars.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$utility$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_test_reporter}{Test\+Reporter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x27-_captured_stdout_in_test_case_events_8cpp_a245fa593f434f780ccd53b75e2b66ae4}{TEST\+\_\+\+CASE}} ("{}repeatedly entered test case"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test that the captured stdout/\+err in (partial) test\+Case\+Ended events is correct (e.\+g. that the partial test case event does not get accumulated output).
+
+This is done by having a single test case that is entered multiple times through generator, and a custom capturing reporter that knows what it should expect captured from the test case. 
+
+\label{_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x27-_captured_stdout_in_test_case_events_8cpp_doc-func-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x27-_captured_stdout_in_test_case_events_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x27-_captured_stdout_in_test_case_events_8cpp_a245fa593f434f780ccd53b75e2b66ae4}\index{X27-\/CapturedStdoutInTestCaseEvents.cpp@{X27-\/CapturedStdoutInTestCaseEvents.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!X27-\/CapturedStdoutInTestCaseEvents.cpp@{X27-\/CapturedStdoutInTestCaseEvents.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x27-_captured_stdout_in_test_case_events_8cpp_a245fa593f434f780ccd53b75e2b66ae4} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}repeatedly entered test case"{}}]{}{}\end{DoxyParamCaption})}
+

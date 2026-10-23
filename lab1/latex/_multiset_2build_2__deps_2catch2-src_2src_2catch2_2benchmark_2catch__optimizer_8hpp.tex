@@ -1,0 +1,20 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+benchmark/\+catch\+\_\+optimizer.hpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__optimizer_8hpp}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2benchmark_2catch__optimizer_8hpp}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_optimizer.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/benchmark/catch\_optimizer.hpp}}
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+move\+\_\+and\+\_\+forward.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$type\+\_\+traits$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_benchmark}{Catch::\+\+Benchmark}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\void \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_af5d85780971e55f9337023ad04caa247}{Catch::\+\+Benchmark::\+deoptimize\+\_\+value}} (T \&\&x)
+\item 
+{\footnotesize template$<$typename Fn, typename... Args$>$ }\\auto \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a9aa891ce6b44df3561292fc1a44b11fb}{Catch::\+\+Benchmark::\+invoke\+\_\+deoptimized}} (Fn \&\&fn, Args \&\&... args) -\/$>$ std::\+enable\+\_\+if\+\_\+t$<$!std::\+is\+\_\+same$<$ void, decltype(fn(args...))$>$::\+value $>$
+\item 
+{\footnotesize template$<$typename Fn, typename... Args$>$ }\\auto \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_aa2ff72f4400668f6fac98b172291ae1d}{Catch::\+\+Benchmark::\+invoke\+\_\+deoptimized}} (Fn \&\&fn, Args \&\&... args) -\/$>$ std::\+enable\+\_\+if\+\_\+t$<$ std::\+is\+\_\+same$<$ void, decltype(fn(args...))$>$::\+value $>$
+\end{DoxyCompactItemize}

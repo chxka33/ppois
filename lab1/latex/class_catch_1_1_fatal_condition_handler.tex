@@ -1,0 +1,249 @@
+\doxysection{Catch::Fatal\+Condition\+Handler Class Reference}
+\hypertarget{class_catch_1_1_fatal_condition_handler}{}\label{class_catch_1_1_fatal_condition_handler}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+
+
+{\ttfamily \+\#include $<$catch\+\_\+amalgamated.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}{Fatal\+Condition\+Handler}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}{\texorpdfstring{$\sim$}{\string~}\+Fatal\+Condition\+Handler}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}{engage}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}{disengage}} () noexcept
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}{Fatal\+Condition\+Handler}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}{\texorpdfstring{$\sim$}{\string~}\+Fatal\+Condition\+Handler}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}{engage}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}{disengage}} () noexcept
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}{Fatal\+Condition\+Handler}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}{\texorpdfstring{$\sim$}{\string~}\+Fatal\+Condition\+Handler}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}{engage}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}{disengage}} () noexcept
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}{Fatal\+Condition\+Handler}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}{\texorpdfstring{$\sim$}{\string~}\+Fatal\+Condition\+Handler}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}{engage}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}{disengage}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151}{engage\+\_\+platform}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e}{disengage\+\_\+platform}} () noexcept
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151}{engage\+\_\+platform}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e}{disengage\+\_\+platform}} () noexcept
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151}{engage\+\_\+platform}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e}{disengage\+\_\+platform}} () noexcept
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151}{engage\+\_\+platform}} ()
+\item 
+void \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e}{disengage\+\_\+platform}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_catch_1_1_fatal_condition_handler_a7517c115fabea273f20720b664d6796a}{m\+\_\+started}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper for platform-\/specific fatal error (signals/\+\+SEH) handlers
+
+Tries to be cooperative with other handlers, and not step over other handlers. This means that unknown structured exceptions are passed on, previous signal handlers are called, and so on.
+
+Can only be instantiated once, and assumes that once a signal is caught, the binary will end up terminating. Thus, there 
+
+\label{class_catch_1_1_fatal_condition_handler_doc-constructors}
+\Hypertarget{class_catch_1_1_fatal_condition_handler_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!FatalConditionHandler@{FatalConditionHandler}}
+\index{FatalConditionHandler@{FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{FatalConditionHandler()}{FatalConditionHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060} 
+Catch::\+\+Fatal\+Condition\+Handler::\+\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!````~FatalConditionHandler@{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler}}
+\index{````~FatalConditionHandler@{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler()}{\string~FatalConditionHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c} 
+Catch::\+\+Fatal\+Condition\+Handler::\+\texorpdfstring{$\sim$}{\string~}\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!FatalConditionHandler@{FatalConditionHandler}}
+\index{FatalConditionHandler@{FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{FatalConditionHandler()}{FatalConditionHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060} 
+Catch::\+\+Fatal\+Condition\+Handler::\+\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!````~FatalConditionHandler@{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler}}
+\index{````~FatalConditionHandler@{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler()}{\string~FatalConditionHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c} 
+Catch::\+\+Fatal\+Condition\+Handler::\+\texorpdfstring{$\sim$}{\string~}\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!FatalConditionHandler@{FatalConditionHandler}}
+\index{FatalConditionHandler@{FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{FatalConditionHandler()}{FatalConditionHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060} 
+Catch::\+\+Fatal\+Condition\+Handler::\+\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!````~FatalConditionHandler@{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler}}
+\index{````~FatalConditionHandler@{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler()}{\string~FatalConditionHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c} 
+Catch::\+\+Fatal\+Condition\+Handler::\+\texorpdfstring{$\sim$}{\string~}\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!FatalConditionHandler@{FatalConditionHandler}}
+\index{FatalConditionHandler@{FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{FatalConditionHandler()}{FatalConditionHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a4c3eaa6d0ebe8eceb36c71a47f7de060} 
+Catch::\+\+Fatal\+Condition\+Handler::\+\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!````~FatalConditionHandler@{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler}}
+\index{````~FatalConditionHandler@{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FatalConditionHandler()}{\string~FatalConditionHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_ad4092a1121a26c3fae5cac9b7ff24d8c} 
+Catch::\+\+Fatal\+Condition\+Handler::\+\texorpdfstring{$\sim$}{\string~}\+Fatal\+Condition\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_catch_1_1_fatal_condition_handler_doc-func-members}
+\Hypertarget{class_catch_1_1_fatal_condition_handler_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage@{disengage}}
+\index{disengage@{disengage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage()}{disengage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+disengage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage@{disengage}}
+\index{disengage@{disengage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage()}{disengage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+disengage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage@{disengage}}
+\index{disengage@{disengage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage()}{disengage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+disengage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage@{disengage}}
+\index{disengage@{disengage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage()}{disengage()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a6e19de699ad72bd50d5bd63b9526f3d8} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+disengage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage\_platform@{disengage\_platform}}
+\index{disengage\_platform@{disengage\_platform}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage\_platform()}{disengage\_platform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+disengage\+\_\+platform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage\_platform@{disengage\_platform}}
+\index{disengage\_platform@{disengage\_platform}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage\_platform()}{disengage\_platform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+disengage\+\_\+platform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage\_platform@{disengage\_platform}}
+\index{disengage\_platform@{disengage\_platform}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage\_platform()}{disengage\_platform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+disengage\+\_\+platform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!disengage\_platform@{disengage\_platform}}
+\index{disengage\_platform@{disengage\_platform}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{disengage\_platform()}{disengage\_platform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a23e20063dbf24ee2749a9ea14f73193e} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+disengage\+\_\+platform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage@{engage}}
+\index{engage@{engage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage()}{engage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+engage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage@{engage}}
+\index{engage@{engage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage()}{engage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+engage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage@{engage}}
+\index{engage@{engage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage()}{engage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+engage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage@{engage}}
+\index{engage@{engage}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage()}{engage()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a223969cc9e7f10f54f45bfd2348bd382} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+engage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage\_platform@{engage\_platform}}
+\index{engage\_platform@{engage\_platform}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage\_platform()}{engage\_platform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+engage\+\_\+platform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage\_platform@{engage\_platform}}
+\index{engage\_platform@{engage\_platform}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage\_platform()}{engage\_platform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+engage\+\_\+platform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage\_platform@{engage\_platform}}
+\index{engage\_platform@{engage\_platform}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage\_platform()}{engage\_platform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+engage\+\_\+platform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!engage\_platform@{engage\_platform}}
+\index{engage\_platform@{engage\_platform}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{engage\_platform()}{engage\_platform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_af4e702a9f06d6211ba4ba2bf6be9b151} 
+void Catch::\+\+Fatal\+Condition\+Handler::\+engage\+\_\+platform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{class_catch_1_1_fatal_condition_handler_doc-variable-members}
+\Hypertarget{class_catch_1_1_fatal_condition_handler_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_catch_1_1_fatal_condition_handler_a7517c115fabea273f20720b664d6796a}\index{Catch::FatalConditionHandler@{Catch::FatalConditionHandler}!m\_started@{m\_started}}
+\index{m\_started@{m\_started}!Catch::FatalConditionHandler@{Catch::FatalConditionHandler}}
+\doxysubsubsection{\texorpdfstring{m\_started}{m\_started}}
+{\footnotesize\ttfamily \label{class_catch_1_1_fatal_condition_handler_a7517c115fabea273f20720b664d6796a} 
+bool Catch::\+\+Fatal\+Condition\+Handler::\+m\+\_\+started = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+internal/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__fatal__condition__handler_8hpp}{catch\+\_\+fatal\+\_\+condition\+\_\+handler.\+hpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+internal/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__fatal__condition__handler_8hpp}{catch\+\_\+fatal\+\_\+condition\+\_\+handler.\+hpp}}\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+internal/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__fatal__condition__handler_8cpp}{catch\+\_\+fatal\+\_\+condition\+\_\+handler.\+cpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+internal/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__fatal__condition__handler_8cpp}{catch\+\_\+fatal\+\_\+condition\+\_\+handler.\+cpp}}\end{DoxyCompactItemize}

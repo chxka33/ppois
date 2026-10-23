@@ -1,0 +1,458 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+extras/\+catch\+\_\+amalgamated.cpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp}{}\label{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp}\index{Multiset/build/\_deps/catch2-\/src/extras/catch\_amalgamated.cpp@{Multiset/build/\_deps/catch2-\/src/extras/catch\_amalgamated.cpp}}
+{\ttfamily \+\#include "{}catch\+\_\+amalgamated.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$exception$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$cassert$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$cstddef$>$}\newline
+{\ttfamily \+\#include $<$numeric$>$}\newline
+{\ttfamily \+\#include $<$random$>$}\newline
+{\ttfamily \+\#include $<$limits$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$stack$>$}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+{\ttfamily \+\#include $<$set$>$}\newline
+{\ttfamily \+\#include $<$cctype$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$ostream$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$utility$>$}\newline
+{\ttfamily \+\#include $<$stdexcept$>$}\newline
+{\ttfamily \+\#include $<$cerrno$>$}\newline
+{\ttfamily \+\#include $<$signal.\+h$>$}\newline
+{\ttfamily \+\#include $<$cstring$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$cstdio$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$ctime$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+{\ttfamily \+\#include $<$iterator$>$}\newline
+{\ttfamily \+\#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \+\#include $<$regex$>$}\newline
+{\ttfamily \+\#include $<$cfloat$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1optimized__away__error}{Catch::\+\+Benchmark::\+\+Detail::\+optimized\+\_\+away\+\_\+error}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_generators_1_1_random_floating_generator_3_01long_01double_01_4_1_1_p_impl}{Catch::\+\+Generators::\+\+Random\+Floating\+Generator$<$ long double $>$::\+\+PImpl}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_signal_defs}{Catch::\+\+Signal\+Defs}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_reporter_registry_1_1_reporter_registry_impl}{Catch::\+\+Reporter\+Registry::\+\+Reporter\+Registry\+Impl}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_string_streams}{Catch::\+\+String\+Streams}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_column_info}{Catch::\+\+Column\+Info}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_table_printer}{Catch::\+\+Table\+Printer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_benchmark}{Catch::\+\+Benchmark}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail}{Catch::\+\+Benchmark::\+\+Detail}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1literals}{Catch::\+literals}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_detail}{Catch::\+\+Detail}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_generators}{Catch::\+\+Generators}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail}{Catch::\+\+Generators::\+\+Detail}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_clara}{Catch::\+\+Clara}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail}{Catch::\+\+Clara::\+\+Detail}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_test_case_tracking}{Catch::\+\+Test\+Case\+Tracking}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_text_flow}{Catch::\+\+Text\+Flow}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_matchers}{Catch::\+\+Matchers}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail}{Catch::\+\+Matchers::\+\+Detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_a690b713c5dcf671212a850c4617d973c}{CATCH\+\_\+\+WINDOWS\+\_\+\+H\+\_\+\+PROXY\+\_\+\+HPP\+\_\+\+INCLUDED}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680c}{Catch::\+\+Matchers::\+\+Detail::\+\+Floating\+Point\+Kind}} : uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680ca22ae0e2b89e5e3d477f988cc36d3272b}{Catch::\+\+Matchers::\+\+Detail::\+\+Float}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680cad909d38d705ce75386dd86e611a82f5b}{Catch::\+\+Matchers::\+\+Detail::\+\+Double}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680ca22ae0e2b89e5e3d477f988cc36d3272b}{Catch::\+\+Matchers::\+\+Detail::\+\+Float}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680cad909d38d705ce75386dd86e611a82f5b}{Catch::\+\+Matchers::\+\+Detail::\+\+Double}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680ca22ae0e2b89e5e3d477f988cc36d3272b}{Catch::\+\+Matchers::\+\+Detail::\+\+Float}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680cad909d38d705ce75386dd86e611a82f5b}{Catch::\+\+Matchers::\+\+Detail::\+\+Double}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680ca22ae0e2b89e5e3d477f988cc36d3272b}{Catch::\+\+Matchers::\+\+Detail::\+\+Float}}
+, \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a65dcb4c6cc6803847848523398ae680cad909d38d705ce75386dd86e611a82f5b}{Catch::\+\+Matchers::\+\+Detail::\+\+Double}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6}{Catch::\+\+Justification}} \{ \newline
+\doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6a945d5e233cf7d6240f6b783b36a374ff}{Catch::\+\+Left}}
+, \doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6a92b09c7c48c520c3c55e497875da437c}{Catch::\+\+Right}}
+, \doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6a945d5e233cf7d6240f6b783b36a374ff}{Catch::\+\+Left}}
+, \doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6a92b09c7c48c520c3c55e497875da437c}{Catch::\+\+Right}}
+, \newline
+\doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6a945d5e233cf7d6240f6b783b36a374ff}{Catch::\+\+Left}}
+, \doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6a92b09c7c48c520c3c55e497875da437c}{Catch::\+\+Right}}
+, \doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6a945d5e233cf7d6240f6b783b36a374ff}{Catch::\+\+Left}}
+, \doxymbox{\hyperlink{namespace_catch_a3ae9998b7d4a81417ea68591451a4fd6a92b09c7c48c520c3c55e497875da437c}{Catch::\+\+Right}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_sample_analysis}{Sample\+Analysis}} \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_a3ae31b1a7b7d447f0d6d46635bbff40c}{Catch::\+\+Benchmark::\+\+Detail::\+analyse}} (const \doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} \&cfg, \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a451279274725a175c182e6f77722f959}{FDuration}} \texorpdfstring{$\ast$}{*}first, \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_a451279274725a175c182e6f77722f959}{FDuration}} \texorpdfstring{$\ast$}{*}last)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_accb97601fac7308aa9c11dcdb439ddb8}{Catch::\+\+Benchmark::\+\+Detail::\+throw\+\_\+optimized\+\_\+away\+\_\+error}} ()
+\item 
+double \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_a571030d8a3068b49d454220cfdea714f}{Catch::\+\+Benchmark::\+\+Detail::\+weighted\+\_\+average\+\_\+quantile}} (int k, int q, double \texorpdfstring{$\ast$}{*}first, double \texorpdfstring{$\ast$}{*}last)
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_outlier_classification}{Outlier\+Classification}} \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_a523468c0e7dbf99ffb1801aad78e352d}{Catch::\+\+Benchmark::\+\+Detail::\+classify\+\_\+outliers}} (double const \texorpdfstring{$\ast$}{*}first, double const \texorpdfstring{$\ast$}{*}last)
+\item 
+double \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_ac5f830d662344dd75387c26aa83e6ac3}{Catch::\+\+Benchmark::\+\+Detail::\+mean}} (double const \texorpdfstring{$\ast$}{*}first, double const \texorpdfstring{$\ast$}{*}last)
+\item 
+double \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_abc5e70b0f758f550b2fdff85512efdb5}{Catch::\+\+Benchmark::\+\+Detail::\+normal\+\_\+cdf}} (double x)
+\item 
+double \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_a62d6c634e2c8901d02ffe8718817f1b4}{Catch::\+\+Benchmark::\+\+Detail::\+erfc\+\_\+inv}} (double x)
+\item 
+double \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_af3527090cdeb0456b1aacbdc29050841}{Catch::\+\+Benchmark::\+\+Detail::\+normal\+\_\+quantile}} (double p)
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_estimate}{Estimate}}$<$ double $>$ \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_a0a635ce60c227f5217d9606e2afe527c}{Catch::\+\+Benchmark::\+\+Detail::\+bootstrap}} (double confidence\+\_\+level, double \texorpdfstring{$\ast$}{*}first, double \texorpdfstring{$\ast$}{*}last, \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_ac4c7d67e56466af3a741abf1573ad849}{sample}} const \&resample, double(\texorpdfstring{$\ast$}{*}estimator)(double const \texorpdfstring{$\ast$}{*}, double const \texorpdfstring{$\ast$}{*}))
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_benchmark_1_1_detail_1_1bootstrap__analysis}{bootstrap\+\_\+analysis}} \doxymbox{\hyperlink{namespace_catch_1_1_benchmark_1_1_detail_a1a4ae7ccc7fa8c996bc6e4ada5a7004b}{Catch::\+\+Benchmark::\+\+Detail::\+analyse\+\_\+samples}} (double confidence\+\_\+level, unsigned int n\+\_\+resamples, double \texorpdfstring{$\ast$}{*}first, double \texorpdfstring{$\ast$}{*}last)
+\item 
+\doxymbox{\hyperlink{class_approx}{Approx}} \doxymbox{\hyperlink{namespace_catch_1_1literals_af610e11bcfe94ebc07788fdcf1b716b7}{Catch::\+literals::\+operator"{}"{}\+\_\+a}} (long double val)
+\item 
+\doxymbox{\hyperlink{class_approx}{Approx}} \doxymbox{\hyperlink{namespace_catch_1_1literals_ad9c310bd2eaacfd7c23f7a5a1fc587bf}{Catch::\+literals::\+operator"{}"{}\+\_\+a}} (unsigned long long val)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a2842e594466b16b9ca13e09077b44406}{Catch::\+operator==}} (\doxymbox{\hyperlink{struct_catch_1_1_processed_reporter_spec}{Processed\+Reporter\+Spec}} const \&lhs, \doxymbox{\hyperlink{struct_catch_1_1_processed_reporter_spec}{Processed\+Reporter\+Spec}} const \&rhs)
+\item 
+std::\+uint32\+\_\+t \doxymbox{\hyperlink{namespace_catch_aba921d5844aa120874480fe71d1c1ae3}{Catch::\+get\+Seed}} ()
+\begin{DoxyCompactList}\small\item\em Returns Catch2\textquotesingle{}s current RNG seed. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_registry_hub}{IRegistry\+Hub}} const \& \doxymbox{\hyperlink{namespace_catch_a5d328566cb8da87b48f1fac3f319ac7a}{Catch::\+get\+Registry\+Hub}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_mutable_registry_hub}{IMutable\+Registry\+Hub}} \& \doxymbox{\hyperlink{namespace_catch_a585459763f2c7610e57de2dd22dd1ad8}{Catch::\+get\+Mutable\+Registry\+Hub}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a0f78e9afdebc6d4512d18e76fbf54b8c}{Catch::\+clean\+Up}} ()
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_adafff91485eeeeb9e9333f317cc0e3b1}{Catch::\+translate\+Active\+Exception}} ()
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_ad31a3e3a246a7ae3b28d62db42ad5837}{Catch::\+operator$<$}} (\doxymbox{\hyperlink{struct_catch_1_1_tag}{Tag}} const \&lhs, \doxymbox{\hyperlink{struct_catch_1_1_tag}{Tag}} const \&rhs)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a757e5758cf4ec14df26ff166f3db43ab}{Catch::\+operator==}} (\doxymbox{\hyperlink{struct_catch_1_1_tag}{Tag}} const \&lhs, \doxymbox{\hyperlink{struct_catch_1_1_tag}{Tag}} const \&rhs)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::\+unique\+\_\+ptr}}$<$ \doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} $>$ \doxymbox{\hyperlink{namespace_catch_ac0bff8ed2ec530c293ad520bf2ce7075}{Catch::\+make\+Test\+Case\+Info}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} \+\_\+class\+Name, \doxymbox{\hyperlink{struct_catch_1_1_name_and_tags}{Name\+And\+Tags}} const \&name\+And\+Tags, \doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&\+\_\+line\+Info)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_ab9aaac3d0fbc3b4b371541fd21ffb8ad}{Catch::\+operator$<$}} (\doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&lhs, \doxymbox{\hyperlink{struct_test_case_info}{Test\+Case\+Info}} const \&rhs)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_1_1_detail_a23bdcac0ef138b222c3747e2af979e9a}{Catch::\+\+Detail::\+convert\+Into\+String}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} string, bool escape\+Invisibles)
+\begin{DoxyCompactList}\small\item\em Encases \`{}string in quotes, and optionally escapes invisibles. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_1_1_detail_a0dc4241ab150d3d8e1d0a3d30c781c39}{Catch::\+\+Detail::\+convert\+Into\+String}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} string)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_1_1_detail_ac5d6c510e565ee5bddcc2236194ce29e}{Catch::\+\+Detail::\+raw\+Memory\+To\+String}} (const void \texorpdfstring{$\ast$}{*}object, std::\+size\+\_\+t size)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_1_1_detail_a60f033a91680546a152f5dfa4427104c}{Catch::\+\+Detail::\+register\+Translator\+Impl}} (\doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::\+unique\+\_\+ptr}}$<$ \doxymbox{\hyperlink{class_catch_1_1_i_exception_translator}{IException\+Translator}} $>$ \&\&translator)
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_aa7e8f5954fada348761e0473b3e4c1a2}{Catch::\+operator$<$$<$}} (std::\+ostream \&os, \doxymbox{\hyperlink{struct_catch_1_1_version}{Version}} const \&version)
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_version}{Version}} const \& \doxymbox{\hyperlink{namespace_catch_a35e54475ed669ef7f7ac00b858e91b2a}{Catch::\+library\+Version}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail_ab6e4736f7a2b0501a13c4dc4adfe5bb6}{Catch::\+\+Generators::\+\+Detail::\+throw\+\_\+generator\+\_\+exception}} (char const \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Throws \doxylink{class_catch_1_1_generator_exception}{Generator\+Exception} with the provided message. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_generator_tracker}{IGenerator\+Tracker}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespace_catch_1_1_generators_ab0ad55177ac1e5f00b123909b191f436}{Catch::\+\+Generators::\+acquire\+Generator\+Tracker}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} generator\+Name, \doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&line\+Info)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_generator_tracker}{IGenerator\+Tracker}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespace_catch_1_1_generators_a24e1bac2be5e078f26c395a96470b706}{Catch::\+\+Generators::\+create\+Generator\+Tracker}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} generator\+Name, \doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} line\+Info, \doxymbox{\hyperlink{namespace_catch_1_1_generators_aa9dc8fef28828fe351480d5be7bb287d}{Generator\+Base\+Ptr}} \&\&generator)
+\item 
+std::\+uint32\+\_\+t \doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail_a43ff3ca07ca525084cadb89dee13e39e}{Catch::\+\+Generators::\+\+Detail::\+get\+Seed}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a26cdeefafe46a4d606b51248eb7bbe7e}{Catch::\+handle\+Exception\+Match\+Expr}} (\doxymbox{\hyperlink{class_catch_1_1_assertion_handler}{Assertion\+Handler}} \&handler, std::\+string const \&str)
+\item 
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a4b6953d784792f44e742f29d8674d7a6}{Parser\+Result}} \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_ab5b76a1843c33a4a71aa698a3defc528}{Catch::\+\+Clara::\+\+Detail::\+convert\+Into}} (std::\+string const \&source, std::\+string \&target)
+\item 
+\doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_a4b6953d784792f44e742f29d8674d7a6}{Parser\+Result}} \doxymbox{\hyperlink{namespace_catch_1_1_clara_1_1_detail_aaf5cc67b22b463d47af6e69ee31bf44e}{Catch::\+\+Clara::\+\+Detail::\+convert\+Into}} (std::\+string const \&source, bool \&target)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_clara_1_1_parser}{Clara::\+\+Parser}} \doxymbox{\hyperlink{namespace_catch_a96d773398ae9697da7845bbf5027e35e}{Catch::\+make\+Command\+Line\+Parser}} (\doxymbox{\hyperlink{struct_catch_1_1_config_data}{Config\+Data}} \&config)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::\+unique\+\_\+ptr}}$<$ \doxymbox{\hyperlink{class_catch_1_1_colour_impl}{Colour\+Impl}} $>$ \doxymbox{\hyperlink{namespace_catch_a66d288723373b192f025a2f4ed2f3f11}{Catch::\+make\+Colour\+Impl}} (\doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} colour\+Selection, \doxymbox{\hyperlink{class_catch_1_1_i_stream}{IStream}} \texorpdfstring{$\ast$}{*}stream)
+\begin{DoxyCompactList}\small\item\em Provides \doxylink{class_catch_1_1_colour_impl}{Colour\+Impl} based on global config and target compilation platform. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{namespace_catch_a76a7aa70b229be45ef1eec1d5ca8d87c}{Catch::\+is\+Colour\+Impl\+Available}} (\doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} colour\+Selection)
+\begin{DoxyCompactList}\small\item\em Checks if specific colour impl has been compiled into the binary. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{namespace_catch_ae50508f10ffc4ed873a31a4db4caea16}{Catch::\+clean\+Up\+Context}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_context}{Context}} \& \doxymbox{\hyperlink{namespace_catch_aeb5fab7ca94d3e959fd7db6167caf5ee}{Catch::\+get\+Current\+Mutable\+Context}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{Simple\+Pcg32}} \& \doxymbox{\hyperlink{namespace_catch_a95e86995bfdce76fca887634094ef2e9}{Catch::\+shared\+Rng}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_catch_aa5dcf4750ce9a854f4b74d3c952d13cc}{Catch::\+write\+To\+Debug\+Console}} (std::\+string const \&text)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_ab079497368fb1df25af39ad494d2a241}{Catch::\+is\+Debugger\+Active}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a520110c31f26cf9892595772ab814fc0}{Catch::\+format\+Reconstructed\+Expression}} (std::\+ostream \&os, std::\+string const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} op, std::\+string const \&rhs)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a3cbceeab9252d1b752f66a2826e92548}{Catch::\+throw\+\_\+exception}} (std::\+exception const \&e)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a707884e681203fef6bf7dbf752532fa5}{Catch::\+throw\+\_\+logic\+\_\+error}} (std::\+string const \&msg)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_ae67297c3e265b0fcd55de371bf408e4e}{Catch::\+throw\+\_\+domain\+\_\+error}} (std::\+string const \&msg)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a48d2c35022dd9d56a1b7ee78ad581eea}{Catch::\+throw\+\_\+runtime\+\_\+error}} (std::\+string const \&msg)
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} $>$ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a4e0e09e87f561af2d3a881b209a9a481}{Catch::\+\+Detail::\+parse\+Enums}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} enums)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Catch::\+\+Detail::\+unique\+\_\+ptr}}$<$ \doxymbox{\hyperlink{struct_catch_1_1_detail_1_1_enum_info}{Enum\+Info}} $>$ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a4f0c01d00fa6af891eb82fcf9baaf95c}{Catch::\+\+Detail::\+make\+Enum\+Info}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} enum\+Name, \doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} all\+Value\+Names, std::\+vector$<$ int $>$ const \&values)
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{namespace_catch_1_1_detail_ade51091dea188100d1c7a8acc55f5ea5}{Catch::\+\+Detail::\+convert\+To\+Bits}} (float f)
+\item 
+uint64\+\_\+t \doxymbox{\hyperlink{namespace_catch_1_1_detail_aa4cbea1ca1087603043d57005bbbec54}{Catch::\+\+Detail::\+convert\+To\+Bits}} (double d)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_1_1_detail_a18fef8312d01399bbf5722432f099216}{Catch::\+\+Detail::\+direct\+Compare}} (float lhs, float rhs)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_1_1_detail_a4e6b189b0908b0866a4f79b5ba5f9b7d}{Catch::\+\+Detail::\+direct\+Compare}} (double lhs, double rhs)
+\item 
+char const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespace_catch_1_1_detail_ac2c4729f86da1f577c1d269cede249d0}{Catch::\+\+Detail::\+get\+Env}} (char const  \texorpdfstring{$\ast$}{*}var\+Name)
+\begin{DoxyCompactList}\small\item\em Wrapper over {\ttfamily std::\+getenv} that compiles on UWP (and always returns nullptr there). \end{DoxyCompactList}\item 
+auto \doxymbox{\hyperlink{namespace_catch_a375b927ff7cc5356ff4a71626d54c83f}{Catch::\+make\+Stream}} (std::\+string const \&filename) -\/$>$ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::\+unique\+\_\+ptr}}$<$ \doxymbox{\hyperlink{class_catch_1_1_i_stream}{IStream}} $>$
+\item 
+auto \doxymbox{\hyperlink{namespace_catch_abf821d46e662c8d93d80a98d79a10314}{Catch::\+operator$<$$<$}} (std::\+ostream \&os, \doxymbox{\hyperlink{class_catch_1_1_lazy_expression}{Lazy\+Expression}} const \&lazy\+Expr) -\/$>$ std::\+ostream \&
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a11c40de0d3593160a350d9e4323311b2}{Catch::\+list}} (\doxymbox{\hyperlink{class_catch_1_1_i_event_listener}{IEvent\+Listener}} \&reporter, \doxymbox{\hyperlink{class_catch_1_1_config}{Config}} const \&config)
+\item 
+int \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ unsigned int $>$ \doxymbox{\hyperlink{namespace_catch_a369d3d53347e3c8da1d23ef64fa39daf}{Catch::\+parse\+UInt}} (std::\+string const \&input, int base)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_aff37796f0f578c2816f74267e641c5f7}{Catch::\+isnan}} (float f)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a37d450336c237ac77721f0a3f9fb048d}{Catch::\+isnan}} (double d)
+\item 
+float \doxymbox{\hyperlink{namespace_catch_ae65d074e6c60320640a500d302b83bb2}{Catch::\+nextafter}} (float x, float y)
+\item 
+double \doxymbox{\hyperlink{namespace_catch_add39a699bce7f13c95616fcaa62ab7ca}{Catch::\+nextafter}} (double x, double y)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a6d5126d3ec2d72a47fa404b704d99010}{Catch::\+operator==}} (\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{Simple\+Pcg32}} const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{Simple\+Pcg32}} const \&rhs)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_ab5a7a360e947e33298ee18f652749230}{Catch::\+operator!=}} (\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{Simple\+Pcg32}} const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{Simple\+Pcg32}} const \&rhs)
+\item 
+std::\+uint32\+\_\+t \doxymbox{\hyperlink{namespace_catch_a170bbe5db76570c4820b5e2eb260f82b}{Catch::\+generate\+Random\+Seed}} (\doxymbox{\hyperlink{namespace_catch_a0e8d3a1107ecbaa1943e0a462db99a3d}{Generate\+From}} from)
+\item 
+std::\+vector$<$ std::\+string $>$ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a874fd7848ec5a0ef02d88c6ec37c9a03}{Catch::\+\+Detail::\+split\+Reporter\+Spec}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} reporter\+Spec)
+\begin{DoxyCompactList}\small\item\em Splits the reporter spec into reporter name and kv-\/pair options. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{Colour\+Mode}} $>$ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a64ba838a0c2e6767d095a7a01fc07b48}{Catch::\+\+Detail::\+string\+To\+Colour\+Mode}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} colour\+Mode)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a408299b05a1363c7cd99fb5b6c7f1e3d}{Catch::\+operator==}} (\doxymbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} const \&rhs)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_optional}{Optional}}$<$ \doxymbox{\hyperlink{class_catch_1_1_reporter_spec}{Reporter\+Spec}} $>$ \doxymbox{\hyperlink{namespace_catch_ae987bd04fd59321f5183794daeffd4cf}{Catch::\+parse\+Reporter\+Spec}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} reporter\+Spec)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a5205869c81c06d3460759cb86676ae68}{Catch::\+is\+Ok}} (\doxymbox{\hyperlink{struct_catch_1_1_result_was_a624e1ee3661fcf6094ceef1f654601ef}{Result\+Was::\+\+Of\+Type}} result\+Type)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a54b01af61673a3e1f21f31713639b180}{Catch::\+is\+Just\+Info}} (int flags)
+\item 
+\doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition::\+\+Flags}} \doxymbox{\hyperlink{namespace_catch_ab32a083e442cc09f736327d2e2865999}{Catch::\+operator\texorpdfstring{$\vert$}{|}}} (\doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition::\+\+Flags}} lhs, \doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition::\+\+Flags}} rhs)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a7f7480b15d74965459c844f0d393ed87}{Catch::\+should\+Continue\+On\+Failure}} (int flags)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_ab91eb13081203d634fe48d3d2ab386d7}{Catch::\+should\+Suppress\+Failure}} (int flags)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_i_result_capture}{IResult\+Capture}} \& \doxymbox{\hyperlink{namespace_catch_af718eeab870712f292ed8dc6ee3f6488}{Catch::\+get\+Result\+Capture}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a161400810eb0995394d6d8d3cae821ad}{Catch::\+seed\+Rng}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \&config)
+\item 
+unsigned int \doxymbox{\hyperlink{namespace_catch_acf5ea05e942d2d7fe79111e12754ed76}{Catch::\+rng\+Seed}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a788ebefcd83342b7c479222a1eeffaee}{Catch::\+add\+Singleton}} (\doxymbox{\hyperlink{struct_catch_1_1_i_singleton}{ISingleton}} \texorpdfstring{$\ast$}{*}singleton)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a8bdb92cb53a4e016bc0dee66efd99118}{Catch::\+cleanup\+Singletons}} ()
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_a8c8ea1f66bc1cdc3e1254ed7fa57c06d}{Catch::\+operator$<$$<$}} (std::\+ostream \&os, \doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&info)
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_a0179d453617ba2296f2baa99a49e7264}{Catch::\+cout}} ()
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_a54c1ce08041448d684ae8edc14162cd2}{Catch::\+cerr}} ()
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_a1b2213f54e4d31a659db49827e81856b}{Catch::\+clog}} ()
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a695f62327be0676e046291eeaae15110}{Catch::\+starts\+With}} (std::\+string const \&s, std::\+string const \&prefix)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_aa77a782fac38c4f6417a7af909e8b29c}{Catch::\+starts\+With}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} s, char prefix)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_ada025504f627feaf9ac68ca391515dff}{Catch::\+ends\+With}} (std::\+string const \&s, std::\+string const \&suffix)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_afd801a3e33fd7a8b91ded0d02747a93f}{Catch::\+ends\+With}} (std::\+string const \&s, char suffix)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_aa52974b0e426e7e2fbd725a900e9c36e}{Catch::\+contains}} (std::\+string const \&s, std::\+string const \&infix)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a0760dbe87d090a55a35414db57d272c4}{Catch::\+to\+Lower\+In\+Place}} (std::\+string \&s)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_ac036a17412d318598ffda8e1fe7a1177}{Catch::\+to\+Lower}} (std::\+string const \&s)
+\item 
+char \doxymbox{\hyperlink{namespace_catch_ad2b13ec5c5220e066b6fe7ba7a82db9d}{Catch::\+to\+Lower}} (char c)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_aea28035c2fa625ced568c1765e82a3bc}{Catch::\+trim}} (std::\+string const  \&str)
+\begin{DoxyCompactList}\small\item\em Returns a new string without whitespace at the start/\+end. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} \doxymbox{\hyperlink{namespace_catch_a6f6d8ef0349688290bd242b50a702c28}{Catch::\+trim}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} ref)
+\begin{DoxyCompactList}\small\item\em Returns a substring of the original ref without whitespace. Beware lifetimes! \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{namespace_catch_afe4e6770da547e43e9e4eeaa05f946ea}{Catch::\+replace\+In\+Place}} (std::\+string \&str, std::\+string const \&replace\+This, std::\+string const \&with\+This)
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} $>$ \doxymbox{\hyperlink{namespace_catch_a678e3c779388970bb3ec5802245f93d7}{Catch::\+split\+String\+Ref}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} str, char delimiter)
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_a27d46b1ac4a1956660e4e9361c4835b8}{Catch::\+operator$<$$<$}} (std::\+ostream \&os, \doxymbox{\hyperlink{class_catch_1_1pluralise}{pluralise}} const \&pluraliser)
+\item 
+auto \doxymbox{\hyperlink{namespace_catch_acabbdedb64bd66b7e0233969f6cdfb58}{Catch::\+operator$<$$<$}} (std::\+ostream \&os, \doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} str) -\/$>$ std::\+ostream \&
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_ae053e7e198e60bf45f2b8bc51050f5f4}{Catch::\+operator+}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} lhs, \doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} rhs)
+\item 
+auto \doxymbox{\hyperlink{namespace_catch_a1c519834d917d9c6d2df64f26abcf059}{Catch::\+operator+=}} (std::\+string \&lhs, \doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} rhs) -\/$>$ std::\+string \&
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ \doxymbox{\hyperlink{namespace_catch_ad9dc14789e42b18c6dc26590a49a6eaa}{Catch::\+sort\+Tests}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \&config, std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&unsorted\+Test\+Cases)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a12f76a88f2882e9d1d221979dec0324d}{Catch::\+is\+Throw\+Safe}} (\doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} const \&test\+Case, \doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \&config)
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ \doxymbox{\hyperlink{namespace_catch_af1944a358b260e03c6695aa7ae259c9a}{Catch::\+filter\+Tests}} (std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&test\+Cases, \doxymbox{\hyperlink{class_catch_1_1_test_spec}{Test\+Spec}} const \&test\+Spec, \doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \&config)
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \& \doxymbox{\hyperlink{namespace_catch_aae7d61b3abc9c8d3c82407b380e6a414}{Catch::\+get\+All\+Test\+Cases\+Sorted}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const \&config)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a2236988eae84fb6bcc456bbf8ddfd2bf}{Catch::\+throw\+\_\+test\+\_\+failure\+\_\+exception}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a7c6db2bf035e2e570d0b6703f6f5a3d8}{Catch::\+throw\+\_\+test\+\_\+skip\+\_\+exception}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::\+unique\+\_\+ptr}}$<$ \doxymbox{\hyperlink{class_catch_1_1_i_test_invoker}{ITest\+Invoker}} $>$ \doxymbox{\hyperlink{namespace_catch_a4036958fd61b3ba0b3d2467e7f4f6fd7}{Catch::\+make\+Test\+Invoker}} (void(\texorpdfstring{$\ast$}{*}test\+As\+Function)())
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_a512213886b4304e4573b57fe42b66d4e}{Catch::\+\+Text\+Flow::\+operator$<$$<$}} (std::\+ostream \&os, \doxymbox{\hyperlink{class_column}{Column}} const \&col)
+\item 
+\doxymbox{\hyperlink{class_column}{Column}} \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_a24f631f4606e5664e764e6a6b9df5c04}{Catch::\+\+Text\+Flow::\+\+Spacer}} (size\+\_\+t space\+Width)
+\begin{DoxyCompactList}\small\item\em Creates a column that serves as an empty space of specific width. \end{DoxyCompactList}\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_a2627582ff1b81131b3deac691e847156}{Catch::\+\+Text\+Flow::\+operator$<$$<$}} (std::\+ostream \&os, \doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} const \&cols)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_a3027b08d3fce163c060fbeb52520d28a}{Catch::\+\+Text\+Flow::\+operator+}} (\doxymbox{\hyperlink{class_column}{Column}} const \&lhs, \doxymbox{\hyperlink{class_column}{Column}} const \&rhs)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_a3fe83f06ebecb334bd138dae8568ad29}{Catch::\+\+Text\+Flow::\+operator+}} (\doxymbox{\hyperlink{class_column}{Column}} \&\&lhs, \doxymbox{\hyperlink{class_column}{Column}} \&\&rhs)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \& \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_a12526387d93de04a83f5842cefb83d92}{Catch::\+\+Text\+Flow::\+operator+=}} (\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \&lhs, \doxymbox{\hyperlink{class_column}{Column}} const \&rhs)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \& \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_ae7ff2aeae98d2bb38fd08399bb7da352}{Catch::\+\+Text\+Flow::\+operator+=}} (\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \&lhs, \doxymbox{\hyperlink{class_column}{Column}} \&\&rhs)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_addb58348d617cfd289663fe52c185e68}{Catch::\+\+Text\+Flow::\+operator+}} (\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} const \&lhs, \doxymbox{\hyperlink{class_column}{Column}} const \&rhs)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \doxymbox{\hyperlink{namespace_catch_1_1_text_flow_aa8b32803ded290301e4ec200e138c541}{Catch::\+\+Text\+Flow::\+operator+}} (\doxymbox{\hyperlink{class_catch_1_1_text_flow_1_1_columns}{Columns}} \&\&lhs, \doxymbox{\hyperlink{class_column}{Column}} \&\&rhs)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_a4b5a2b34a00e65b753185bbc6a4962be}{Catch::\+uncaught\+\_\+exceptions}} ()
+\item 
+\doxymbox{\hyperlink{namespace_catch_a4a4c603a4da257a6f3f8597041c63921}{Xml\+Formatting}} \doxymbox{\hyperlink{namespace_catch_ae7c1b9d4303677f5326cc121c83703df}{Catch::\+operator\texorpdfstring{$\vert$}{|}}} (\doxymbox{\hyperlink{namespace_catch_a4a4c603a4da257a6f3f8597041c63921}{Xml\+Formatting}} lhs, \doxymbox{\hyperlink{namespace_catch_a4a4c603a4da257a6f3f8597041c63921}{Xml\+Formatting}} rhs)
+\item 
+\doxymbox{\hyperlink{namespace_catch_a4a4c603a4da257a6f3f8597041c63921}{Xml\+Formatting}} \doxymbox{\hyperlink{namespace_catch_a5fe56089298472584786c12b6ba9910c}{Catch::\+operator\&}} (\doxymbox{\hyperlink{namespace_catch_a4a4c603a4da257a6f3f8597041c63921}{Xml\+Formatting}} lhs, \doxymbox{\hyperlink{namespace_catch_a4a4c603a4da257a6f3f8597041c63921}{Xml\+Formatting}} rhs)
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_a64142d8bbd7638d9af0e6b6829821e86}{Catch::\+operator$<$$<$}} (std::\+ostream \&os, \doxymbox{\hyperlink{class_catch_1_1_xml_encode}{Xml\+Encode}} const \&xml\+Encode)
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_is_empty_matcher}{Is\+Empty\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_ae345560f84f68d52fc5df4ac77eb4b92}{Catch::\+\+Matchers::\+\+Is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts empty ranges/\+containers. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_has_size_matcher}{Has\+Size\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a640c1714c014191cc131b37f955f83ed}{Catch::\+\+Matchers::\+\+Size\+Is}} (std::\+size\+\_\+t sz)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts ranges/\+containers with specific size. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_exception_message_matcher}{Exception\+Message\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_af11fe22b71a449fc411d47ea91cabd13}{Catch::\+\+Matchers::\+\+Message}} (std::\+string const  \&message)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that checks whether a std derived exception has the provided message. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_within_ulps_matcher}{Within\+Ulps\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a88361ad809aab09ff75c87bf6cdd7fad}{Catch::\+\+Matchers::\+\+Within\+ULP}} (double target, uint64\+\_\+t max\+Ulp\+Diff)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts doubles within certain ULP range of target. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_within_ulps_matcher}{Within\+Ulps\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_af0eb912b197be0f79e60fd1884e9ac29}{Catch::\+\+Matchers::\+\+Within\+ULP}} (float target, uint64\+\_\+t max\+Ulp\+Diff)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts floats within certain ULP range of target. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_within_abs_matcher}{Within\+Abs\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a13a915665906ab3efb39e118c649285f}{Catch::\+\+Matchers::\+\+Within\+Abs}} (double target, double margin)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts numbers within certain range of target. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_within_rel_matcher}{Within\+Rel\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a78dba3ba1112c48a6376a38b48ea70e2}{Catch::\+\+Matchers::\+\+Within\+Rel}} (double target, double eps)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts doubles within certain relative range of target. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_within_rel_matcher}{Within\+Rel\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a01c32f9483573cfb0d703f5f34b9848d}{Catch::\+\+Matchers::\+\+Within\+Rel}} (double target)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts doubles within 100\texorpdfstring{$\ast$}{*}\+DBL\+\_\+\+EPS relative range of target. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_within_rel_matcher}{Within\+Rel\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a65b303b8eb9ba612cc5c149488aa7753}{Catch::\+\+Matchers::\+\+Within\+Rel}} (float target, float eps)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts doubles within certain relative range of target. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_within_rel_matcher}{Within\+Rel\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a735b5278dad4189adbc79098c2360b03}{Catch::\+\+Matchers::\+\+Within\+Rel}} (float target)
+\begin{DoxyCompactList}\small\item\em Creates a matcher that accepts floats within 100\texorpdfstring{$\ast$}{*}\+FLT\+\_\+\+EPS relative range of target. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_is_na_n_matcher}{Is\+Na\+NMatcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a0d170fa146d9a4ec0d908acce010128e}{Catch::\+\+Matchers::\+\+Is\+NaN}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_all_true_matcher}{All\+True\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a4f719bca42718f4936668308772732ae}{Catch::\+\+Matchers::\+\+All\+True}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_none_true_matcher}{None\+True\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a072ee44afcb1647b55b6c3437f22af44}{Catch::\+\+Matchers::\+\+None\+True}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_any_true_matcher}{Any\+True\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a99b3d0b547a4335b786e8fcea6a11cad}{Catch::\+\+Matchers::\+\+Any\+True}} ()
+\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_string_equals_matcher}{String\+Equals\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a7fbc0afd3969ad9c57045839c79e205b}{Catch::\+\+Matchers::\+\+Equals}} (std::\+string const  \&str, \doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36}{Case\+Sensitive}} case\+Sensitivity=\doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36a93cba07454f06a4a960172bbd6e2a435}{Case\+Sensitive::\+\+Yes}})
+\begin{DoxyCompactList}\small\item\em Creates matcher that accepts strings that are exactly equal to {\ttfamily str}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_string_contains_matcher}{String\+Contains\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a4d2b025a4c734b1f22ea3db83e9d6c92}{Catch::\+\+Matchers::\+\+Contains\+Substring}} (std::\+string const  \&str, \doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36}{Case\+Sensitive}} case\+Sensitivity=\doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36a93cba07454f06a4a960172bbd6e2a435}{Case\+Sensitive::\+\+Yes}})
+\begin{DoxyCompactList}\small\item\em Creates matcher that accepts strings that contain {\ttfamily str}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_ends_with_matcher}{Ends\+With\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_aee26f4e3f2ca725a42d7b1db56654fa4}{Catch::\+\+Matchers::\+\+Ends\+With}} (std::\+string const  \&str, \doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36}{Case\+Sensitive}} case\+Sensitivity=\doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36a93cba07454f06a4a960172bbd6e2a435}{Case\+Sensitive::\+\+Yes}})
+\begin{DoxyCompactList}\small\item\em Creates matcher that accepts strings that {\itshape end} with {\ttfamily str}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_starts_with_matcher}{Starts\+With\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_aa830bf8902f231a7df15c13f81d0e268}{Catch::\+\+Matchers::\+\+Starts\+With}} (std::\+string const  \&str, \doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36}{Case\+Sensitive}} case\+Sensitivity=\doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36a93cba07454f06a4a960172bbd6e2a435}{Case\+Sensitive::\+\+Yes}})
+\begin{DoxyCompactList}\small\item\em Creates matcher that accepts strings that {\itshape start} with {\ttfamily str}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_regex_matcher}{Regex\+Matcher}} \doxymbox{\hyperlink{namespace_catch_1_1_matchers_aec071beeac93ba5671b7ab5f0990d38e}{Catch::\+\+Matchers::\+\+Matches}} (std::\+string const  \&regex, \doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36}{Case\+Sensitive}} case\+Sensitivity=\doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36a93cba07454f06a4a960172bbd6e2a435}{Case\+Sensitive::\+\+Yes}})
+\begin{DoxyCompactList}\small\item\em Creates matcher that accepts strings matching {\ttfamily regex}. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a228a8fff5aa311bd0e3592b8cb711392}{Catch::\+\+Matchers::\+\+Detail::\+describe\+\_\+multi\+\_\+matcher}} (\doxymbox{\hyperlink{class_catch_1_1_string_ref}{String\+Ref}} combine, std::\+string const \texorpdfstring{$\ast$}{*}descriptions\+\_\+begin, std::\+string const \texorpdfstring{$\ast$}{*}descriptions\+\_\+end)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a4c77e898254807f1a2d7195ca324c19e}{Catch::\+handle\+Exception\+Match\+Expr}} (\doxymbox{\hyperlink{class_catch_1_1_assertion_handler}{Assertion\+Handler}} \&handler, \doxymbox{\hyperlink{namespace_catch_a0173bd879f1c06afdff2dc80bd6388dd}{String\+Matcher}} const \&matcher)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_af65507889895c5c4b04fb831eeab2972}{Catch::\+get\+Formatted\+Duration}} (double duration)
+\item 
+bool \doxymbox{\hyperlink{namespace_catch_af4e1ece5befeb3ff910c3a54ff44abb0}{Catch::\+should\+Show\+Duration}} (\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}} const  \&config, double duration)
+\begin{DoxyCompactList}\small\item\em Should the reporter show duration of test given current configuration? \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{namespace_catch_ae5e405537e8a55293a1b6cad32e2cdb5}{Catch::\+serialize\+Filters}} (std::\+vector$<$ std::\+string $>$ const \&filters)
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespace_catch_a78a94236ca5f49ef11f36cf02483cb1d}{Catch::\+operator$<$$<$}} (std::\+ostream \&out, \doxymbox{\hyperlink{struct_catch_1_1line_of_chars}{line\+Of\+Chars}} value)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a7fc9276bf852d1625d986c0cbc3eabce}{Catch::\+default\+List\+Reporters}} (std::\+ostream \&out, std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&descriptions, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Verbosity}} verbosity)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a906d1c90c5a8118e737bd14bef2885ea}{Catch::\+default\+List\+Listeners}} (std::\+ostream \&out, std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_listener_description}{Listener\+Description}} $>$ const \&descriptions)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a29d53521f0da176f732c3a022dbb04df}{Catch::\+default\+List\+Tags}} (std::\+ostream \&out, std::\+vector$<$ \doxymbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&tags, bool is\+Filtered)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_a6dce9f6d9a416fe7a06e6394d557606a}{Catch::\+default\+List\+Tests}} (std::\+ostream \&out, \doxymbox{\hyperlink{class_catch_1_1_colour_impl}{Colour\+Impl}} \texorpdfstring{$\ast$}{*}stream\+Colour, std::\+vector$<$ \doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&tests, bool is\+Filtered, \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Verbosity}} verbosity)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_aecf85e8927841af21b8fcd3bab31df2b}{Catch::\+print\+Test\+Run\+Totals}} (std::\+ostream \&stream, \doxymbox{\hyperlink{class_catch_1_1_colour_impl}{Colour\+Impl}} \&stream\+Colour, \doxymbox{\hyperlink{struct_catch_1_1_totals}{Totals}} const \&totals)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_1_1_detail_af8703a4eaf12133aa02a50dee831f2bc}{Catch::\+\+Detail::\+register\+Reporter\+Impl}} (std::\+string const \&name, \doxymbox{\hyperlink{namespace_catch_a51fe1a39aaa63dbf724df51cbedf580d}{IReporter\+Factory\+Ptr}} reporter\+Ptr)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_1_1_detail_aae9b0608769b42ff7bbd07687348c7e5}{Catch::\+\+Detail::\+register\+Listener\+Impl}} (\doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::\+unique\+\_\+ptr}}$<$ \doxymbox{\hyperlink{class_catch_1_1_event_listener_factory}{Event\+Listener\+Factory}} $>$ listener\+Factory)
+\begin{DoxyCompactList}\small\item\em Actually registers the factory, independent on listener\textquotesingle{}s concrete type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides platform specific implementations of Fatal\+Condition\+Handler
+
+This means that there is a lot of conditional compilation, and platform specific code. Currently, Catch2 supports a dummy handler (if no handler is desired), and 2 platform specific handlers:
+\begin{DoxyItemize}
+\item Windows\textquotesingle{} SEH
+\item POSIX signals
+\end{DoxyItemize}
+
+Consequently, various pieces of code below are compiled if either of the platform specific handlers is enabled, or if none of them are enabled. It is assumed that both cannot be enabled at the same time, and doing so should cause a compilation error.
+
+If another platform specific handler is added, the compile guards below will need to be updated taking these assumptions into account. 
+
+\label{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_doc-define-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_a690b713c5dcf671212a850c4617d973c}\index{catch\_amalgamated.cpp@{catch\_amalgamated.cpp}!CATCH\_WINDOWS\_H\_PROXY\_HPP\_INCLUDED@{CATCH\_WINDOWS\_H\_PROXY\_HPP\_INCLUDED}}
+\index{CATCH\_WINDOWS\_H\_PROXY\_HPP\_INCLUDED@{CATCH\_WINDOWS\_H\_PROXY\_HPP\_INCLUDED}!catch\_amalgamated.cpp@{catch\_amalgamated.cpp}}
+\doxysubsubsection{\texorpdfstring{CATCH\_WINDOWS\_H\_PROXY\_HPP\_INCLUDED}{CATCH\_WINDOWS\_H\_PROXY\_HPP\_INCLUDED}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_a690b713c5dcf671212a850c4617d973c} 
+\+\#define CATCH\+\_\+\+WINDOWS\+\_\+\+H\+\_\+\+PROXY\+\_\+\+HPP\+\_\+\+INCLUDED}
+
+
+
+\label{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_doc-func-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{catch\_amalgamated.cpp@{catch\_amalgamated.cpp}!main@{main}}
+\index{main@{main}!catch\_amalgamated.cpp@{catch\_amalgamated.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]}\end{DoxyParamCaption})}
+

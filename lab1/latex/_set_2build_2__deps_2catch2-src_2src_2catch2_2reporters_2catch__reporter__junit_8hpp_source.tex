@@ -1,0 +1,62 @@
+\doxysection{catch\+\_\+reporter\+\_\+junit.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__junit_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__junit_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_junit.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_junit.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__junit_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_REPORTER\_JUNIT\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_REPORTER\_JUNIT\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/reporters/catch\_reporter\_cumulative\_base.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_xmlwriter.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <catch2/catch\_timer.hpp>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_junit_reporter}{JunitReporter}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base}{CumulativeReporterBase}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_ad367918f93081de6215d6382f4888c62}{JunitReporter}}(\doxymbox{\hyperlink{struct_catch_1_1_reporter_config}{ReporterConfig}}\&\&\ \_config);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a61d7ddf2ca6eb67daf756ab47b0a2c53}{getDescription}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a416da4586bd135749eea5adc8aa41280}{testRunStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_test_run_info}{TestRunInfo}}\ \textcolor{keyword}{const}\&\ runInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a1e099029f5c138d5bcda0fdd184ef3ee}{testCaseStarting}}(\doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}}\ \textcolor{keyword}{const}\&\ testCaseInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a8d063eed4b88fe55d13e022605a07944}{assertionEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{AssertionStats}}\ \textcolor{keyword}{const}\&\ assertionStats)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_ad04704cfa67f64ca6bf540e9cbe108f4}{testCaseEnded}}(\doxymbox{\hyperlink{struct_catch_1_1_test_case_stats}{TestCaseStats}}\ \textcolor{keyword}{const}\&\ testCaseStats)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a529ba203e91db27821519f8c41ac7905}{testRunEndedCumulative}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a796b0fa125b7c69fb75dcfc6087a26a7}{writeRun}}(\doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_a6a16c07c308b268d2d88d95c520ed27c}{TestRunNode}}\ \textcolor{keyword}{const}\&\ testRunNode,\ \textcolor{keywordtype}{double}\ suiteTime);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_ae0b70c4ea05bd99d8be6727e27b8dd71}{writeTestCase}}(\doxymbox{\hyperlink{class_catch_1_1_cumulative_reporter_base_aa9907e56ddf0f8114799f7147677dc1f}{TestCaseNode}}\ \textcolor{keyword}{const}\&\ testCaseNode);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a38e349527bd049bbabd268c6faad1719}{writeSection}}(\ std::string\ \textcolor{keyword}{const}\&\ className,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keyword}{const}\&\ rootName,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_cumulative_reporter_base_1_1_section_node}{SectionNode}}\ \textcolor{keyword}{const}\&\ sectionNode,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ testOkToFail\ );}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_ace9a2e3a52dee4591e8dc9ed7b82b5ff}{writeAssertions}}(\doxymbox{\hyperlink{struct_catch_1_1_cumulative_reporter_base_1_1_section_node}{SectionNode}}\ \textcolor{keyword}{const}\&\ sectionNode);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a5f357b138781615261724e3271600aaa}{writeAssertion}}(\doxymbox{\hyperlink{struct_catch_1_1_assertion_stats}{AssertionStats}}\ \textcolor{keyword}{const}\&\ stats);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_xml_writer}{XmlWriter}}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_af231b6bde7a01a85ff595ee7036c1ba3}{xml}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_timer}{Timer}}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a20417e9762efdad95d1a5c68d08f74c1}{suiteTimer}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a25402dec57e499d4c87738b392415b64}{stdOutForSuite}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a1efe5ba1ad030a9c7b79e40d1ad1eda0}{stdErrForSuite}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_ae8028373148d6190b8c3cdf4a62e8565}{unexpectedExceptions}}\ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_junit_reporter_a85294c341a998b2488ea1951baa8b4a6}{m\_okToFail}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_REPORTER\_JUNIT\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

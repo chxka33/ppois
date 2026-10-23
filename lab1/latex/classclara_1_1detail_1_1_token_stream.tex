@@ -1,0 +1,212 @@
+\doxysection{clara::detail::Token\+Stream Class Reference}
+\hypertarget{classclara_1_1detail_1_1_token_stream}{}\label{classclara_1_1detail_1_1_token_stream}\index{clara::detail::TokenStream@{clara::detail::TokenStream}}
+
+
+{\ttfamily \+\#include $<$clara.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096}{Token\+Stream}} (\doxymbox{\hyperlink{classclara_1_1detail_1_1_args}{Args}} const \&args)
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a3ce077d62218e1ddcbe1a98e268140c2}{Token\+Stream}} (\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} it, \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} it\+End)
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a69daf3e1c98fa254f39d8fd9afaee55a}{operator bool}} () const
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_ac311b4a49be3553cdabb53ba9e879ce8}{count}} () const -\/$>$ size\+\_\+t
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_ab551747bc65e0eaf8efdc84f056286c8}{operator\texorpdfstring{$\ast$}{*}}} () const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}}
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_af8acbce6e797fec4e9fa02f9ac56ce1c}{operator-\/$>$}} () const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}} const \texorpdfstring{$\ast$}{*}
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a3acfc1d5b78cb03b23ac18fca21b844e}{operator++}} () -\/$>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096}{Token\+Stream}} \&
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096}{Token\+Stream}} (\doxymbox{\hyperlink{classclara_1_1detail_1_1_args}{Args}} const \&args)
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a3ce077d62218e1ddcbe1a98e268140c2}{Token\+Stream}} (\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} it, \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} it\+End)
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a69daf3e1c98fa254f39d8fd9afaee55a}{operator bool}} () const
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_ac311b4a49be3553cdabb53ba9e879ce8}{count}} () const -\/$>$ size\+\_\+t
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_ab551747bc65e0eaf8efdc84f056286c8}{operator\texorpdfstring{$\ast$}{*}}} () const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}}
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_af8acbce6e797fec4e9fa02f9ac56ce1c}{operator-\/$>$}} () const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}} const \texorpdfstring{$\ast$}{*}
+\item 
+auto \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a3acfc1d5b78cb03b23ac18fca21b844e}{operator++}} () -\/$>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096}{Token\+Stream}} \&
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} = std::\+vector$<$std::\+string$>$::\+const\+\_\+iterator
+\item 
+using \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} = std::\+vector$<$std::\+string$>$::\+const\+\_\+iterator
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_abb39e2bf39c6f0eafa4a13874177e553}{load\+Buffer}} ()
+\item 
+void \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_abb39e2bf39c6f0eafa4a13874177e553}{load\+Buffer}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a9c35890a6bda11a962756332dd8c7bdb}{it}}
+\item 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a9c9851a1f40e647fb33d3a40708ca042}{it\+End}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}} $>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4c19ad1f0451ae57604278dd954ddea1}{m\+\_\+token\+Buffer}}
+\end{DoxyCompactItemize}
+
+
+\label{classclara_1_1detail_1_1_token_stream_doc-typedef-members}
+\Hypertarget{classclara_1_1detail_1_1_token_stream_doc-typedef-members}
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6} 
+using \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{clara::\+detail::\+\+Token\+Stream::\+\+Iterator}} = std::\+vector$<$std::\+string$>$::\+const\+\_\+iterator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6} 
+using \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{clara::\+detail::\+\+Token\+Stream::\+\+Iterator}} = std::\+vector$<$std::\+string$>$::\+const\+\_\+iterator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{classclara_1_1detail_1_1_token_stream_doc-constructors}
+\Hypertarget{classclara_1_1detail_1_1_token_stream_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!TokenStream@{TokenStream}}
+\index{TokenStream@{TokenStream}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{TokenStream()}{TokenStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096} 
+clara::\+detail::\+\+Token\+Stream::\+\+Token\+Stream (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classclara_1_1detail_1_1_args}{Args}} const \&}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a3ce077d62218e1ddcbe1a98e268140c2}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!TokenStream@{TokenStream}}
+\index{TokenStream@{TokenStream}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{TokenStream()}{TokenStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a3ce077d62218e1ddcbe1a98e268140c2} 
+clara::\+detail::\+\+Token\+Stream::\+\+Token\+Stream (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}}}]{it}{, }\item[{\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}}}]{it\+End}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!TokenStream@{TokenStream}}
+\index{TokenStream@{TokenStream}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{TokenStream()}{TokenStream()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096} 
+clara::\+detail::\+\+Token\+Stream::\+\+Token\+Stream (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classclara_1_1detail_1_1_args}{Args}} const \&}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a3ce077d62218e1ddcbe1a98e268140c2}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!TokenStream@{TokenStream}}
+\index{TokenStream@{TokenStream}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{TokenStream()}{TokenStream()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a3ce077d62218e1ddcbe1a98e268140c2} 
+clara::\+detail::\+\+Token\+Stream::\+\+Token\+Stream (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}}}]{it}{, }\item[{\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}}}]{it\+End}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{classclara_1_1detail_1_1_token_stream_doc-func-members}
+\Hypertarget{classclara_1_1detail_1_1_token_stream_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classclara_1_1detail_1_1_token_stream_ac311b4a49be3553cdabb53ba9e879ce8}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!count@{count}}
+\index{count@{count}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_ac311b4a49be3553cdabb53ba9e879ce8} 
+auto clara::\+detail::\+\+Token\+Stream::\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const -\/$>$ size\+\_\+t\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_ac311b4a49be3553cdabb53ba9e879ce8}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!count@{count}}
+\index{count@{count}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_ac311b4a49be3553cdabb53ba9e879ce8} 
+auto clara::\+detail::\+\+Token\+Stream::\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const -\/$>$ size\+\_\+t\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_abb39e2bf39c6f0eafa4a13874177e553}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!loadBuffer@{loadBuffer}}
+\index{loadBuffer@{loadBuffer}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{loadBuffer()}{loadBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_abb39e2bf39c6f0eafa4a13874177e553} 
+void clara::\+detail::\+\+Token\+Stream::\+load\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_abb39e2bf39c6f0eafa4a13874177e553}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!loadBuffer@{loadBuffer}}
+\index{loadBuffer@{loadBuffer}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{loadBuffer()}{loadBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_abb39e2bf39c6f0eafa4a13874177e553} 
+void clara::\+detail::\+\+Token\+Stream::\+load\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a69daf3e1c98fa254f39d8fd9afaee55a}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a69daf3e1c98fa254f39d8fd9afaee55a} 
+clara::\+detail::\+\+Token\+Stream::\+operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a69daf3e1c98fa254f39d8fd9afaee55a}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a69daf3e1c98fa254f39d8fd9afaee55a} 
+clara::\+detail::\+\+Token\+Stream::\+operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_ab551747bc65e0eaf8efdc84f056286c8}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_ab551747bc65e0eaf8efdc84f056286c8} 
+auto clara::\+detail::\+\+Token\+Stream::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_ab551747bc65e0eaf8efdc84f056286c8}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_ab551747bc65e0eaf8efdc84f056286c8} 
+auto clara::\+detail::\+\+Token\+Stream::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a3acfc1d5b78cb03b23ac18fca21b844e}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!operator++@{operator++}}
+\index{operator++@{operator++}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a3acfc1d5b78cb03b23ac18fca21b844e} 
+auto clara::\+detail::\+\+Token\+Stream::\+operator++ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) -\/$>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096}{Token\+Stream}} \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a3acfc1d5b78cb03b23ac18fca21b844e}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!operator++@{operator++}}
+\index{operator++@{operator++}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a3acfc1d5b78cb03b23ac18fca21b844e} 
+auto clara::\+detail::\+\+Token\+Stream::\+operator++ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) -\/$>$ \doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a54839548ce236223020a13f583325096}{Token\+Stream}} \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_af8acbce6e797fec4e9fa02f9ac56ce1c}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_af8acbce6e797fec4e9fa02f9ac56ce1c} 
+auto clara::\+detail::\+\+Token\+Stream::\+operator-\/$>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}} const \texorpdfstring{$\ast$}{*}\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_af8acbce6e797fec4e9fa02f9ac56ce1c}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_af8acbce6e797fec4e9fa02f9ac56ce1c} 
+auto clara::\+detail::\+\+Token\+Stream::\+operator-\/$>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const -\/$>$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}} const \texorpdfstring{$\ast$}{*}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{classclara_1_1detail_1_1_token_stream_doc-variable-members}
+\Hypertarget{classclara_1_1detail_1_1_token_stream_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a9c35890a6bda11a962756332dd8c7bdb}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!it@{it}}
+\index{it@{it}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{it}{it}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a9c35890a6bda11a962756332dd8c7bdb} 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} clara::\+detail::\+\+Token\+Stream::\+it\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a9c9851a1f40e647fb33d3a40708ca042}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!itEnd@{itEnd}}
+\index{itEnd@{itEnd}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{itEnd}{itEnd}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a9c9851a1f40e647fb33d3a40708ca042} 
+\doxymbox{\hyperlink{classclara_1_1detail_1_1_token_stream_a4e9d800cefd20a7832cb0373d8538df6}{Iterator}} clara::\+detail::\+\+Token\+Stream::\+it\+End\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classclara_1_1detail_1_1_token_stream_a4c19ad1f0451ae57604278dd954ddea1}\index{clara::detail::TokenStream@{clara::detail::TokenStream}!m\_tokenBuffer@{m\_tokenBuffer}}
+\index{m\_tokenBuffer@{m\_tokenBuffer}!clara::detail::TokenStream@{clara::detail::TokenStream}}
+\doxysubsubsection{\texorpdfstring{m\_tokenBuffer}{m\_tokenBuffer}}
+{\footnotesize\ttfamily \label{classclara_1_1detail_1_1_token_stream_a4c19ad1f0451ae57604278dd954ddea1} 
+std::\+vector$<$ \doxymbox{\hyperlink{structclara_1_1detail_1_1_token}{Token}} $>$ clara::\+detail::\+\+Token\+Stream::\+m\+\_\+token\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+third\+\_\+party/\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2third__party_2clara_8hpp}{clara.\+hpp}}\item 
+Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+third\+\_\+party/\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2third__party_2clara_8hpp}{clara.\+hpp}}\end{DoxyCompactItemize}

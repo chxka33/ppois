@@ -1,0 +1,47 @@
+\doxysection{catch\+\_\+sharding.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__sharding_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__sharding_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_sharding.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_sharding.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__sharding_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_SHARDING\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_SHARDING\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Container>}
+\DoxyCodeLine{00018\ \ \ \ \ Container\ \doxymbox{\hyperlink{namespace_catch_aebfc5d07d975dea3a55658a2a5b0380f}{createShard}}(Container\ \textcolor{keyword}{const}\&\ container,\ std::size\_t\ \textcolor{keyword}{const}\ shardCount,\ std::size\_t\ \textcolor{keyword}{const}\ shardIndex)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ assert(shardCount\ >\ shardIndex);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (shardCount\ ==\ 1)\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ container;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::size\_t\ totalTestCount\ =\ container.size();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::size\_t\ shardSize\ =\ totalTestCount\ /\ shardCount;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::size\_t\ leftoverTests\ =\ totalTestCount\ \%\ shardCount;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::size\_t\ startIndex\ =\ shardIndex\ *\ shardSize\ +\ (std::min)(shardIndex,\ leftoverTests);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::size\_t\ endIndex\ =\ (shardIndex\ +\ 1)\ *\ shardSize\ +\ (std::min)(shardIndex\ +\ 1,\ leftoverTests);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ startIterator\ =\ std::next(container.begin(),\ \textcolor{keyword}{static\_cast<}std::ptrdiff\_t\textcolor{keyword}{>}(startIndex));}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ endIterator\ =\ std::next(container.begin(),\ \textcolor{keyword}{static\_cast<}std::ptrdiff\_t\textcolor{keyword}{>}(endIndex));}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Container(startIterator,\ endIterator);}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_SHARDING\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

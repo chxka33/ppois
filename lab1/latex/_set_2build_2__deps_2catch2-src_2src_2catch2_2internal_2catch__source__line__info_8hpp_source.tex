@@ -1,0 +1,43 @@
+\doxysection{catch\+\_\+source\+\_\+line\+\_\+info.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__source__line__info_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__source__line__info_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_source\_line\_info.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_source\_line\_info.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__source__line__info_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_SOURCE\_LINE\_INFO\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_SOURCE\_LINE\_INFO\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iosfwd>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{SourceLineInfo}}\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a2d80932bb4129b1606d1924a5c44be2f}{SourceLineInfo}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a264a34b14ba8d2bbf1889426494f0e45}{SourceLineInfo}}(\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \_file,\ std::size\_t\ \_line\ )\ \textcolor{keyword}{noexcept}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a24185f1fe039d08a5e0399297c4f1f7e}{file}}(\ \_file\ ),}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a841e5d696c7b9cde24e45e61dd979c77}{line}}(\ \_line\ )}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_af07e4fdeddf8409b91e4f842f6264cf8}{operator\ ==\ }}(\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a2d80932bb4129b1606d1924a5c44be2f}{SourceLineInfo}}\ \textcolor{keyword}{const}\&\ other\ )\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_af77415416919d2d6030b4be085b92f7a}{operator\ <\ }}(\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a2d80932bb4129b1606d1924a5c44be2f}{SourceLineInfo}}\ \textcolor{keyword}{const}\&\ other\ )\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a24185f1fe039d08a5e0399297c4f1f7e}{file}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::size\_t\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a841e5d696c7b9cde24e45e61dd979c77}{line}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a179dd69b090dd3391a122be88c46e8d0}{operator\ <<\ }}(std::ostream\&\ os,\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info_a2d80932bb4129b1606d1924a5c44be2f}{SourceLineInfo}}\ \textcolor{keyword}{const}\&\ info);}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ CATCH\_INTERNAL\_LINEINFO\ \(\backslash\)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ ::Catch::SourceLineInfo(\ \_\_FILE\_\_,\ static\_cast<std::size\_t>(\ \_\_LINE\_\_\ )\ )}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_SOURCE\_LINE\_INFO\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

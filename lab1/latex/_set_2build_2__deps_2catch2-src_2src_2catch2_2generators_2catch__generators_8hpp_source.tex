@@ -1,0 +1,248 @@
+\doxysection{catch\+\_\+generators.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2generators_2catch__generators_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2generators_2catch__generators_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/generators/catch\_generators.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/generators/catch\_generators.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2generators_2catch__generators_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_GENERATORS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_GENERATORS\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/catch\_tostring.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/interfaces/catch\_interfaces\_generatortracker.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_source\_line\_info.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_stringref.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_move\_and\_forward.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_unique\_name.hpp>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_generators}{Generators}}\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ [[noreturn]]}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_1_1_detail_ab6e4736f7a2b0501a13c4dc4adfe5bb6}{throw\_generator\_exception}}(\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\ *\ msg);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \}\ \textcolor{comment}{//\ end\ namespace\ detail}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator}{IGenerator}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_untyped_base}{GeneratorUntypedBase}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator_a543d9e13656eef6f4ab7924ac0ee2a0d}{stringifyImpl}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ return\ ::Catch::Detail::stringify(\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator_a0fb6da789cda5b4e90f036737db82485}{get}}()\ );}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ the\ current\ element\ of\ the\ generator}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \(\backslash\)Precondition\ The\ generator\ is\ either\ freshly\ constructed,}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ or\ the\ last\ call\ to\ \`{}next()`\ returned\ true}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ T\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator_a0fb6da789cda5b4e90f036737db82485}{get}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator_a1f8677875fe0ff31f39c60d45504b9a5}{type}}\ =\ T;}
+\DoxyCodeLine{00046\ \ \ \ \ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_catch_1_1_generators_ab33907d04439196536cc56f05b3537aa}{GeneratorPtr}}\ =\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Catch::Detail::unique\_ptr<IGenerator<T>}}>;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper}{GeneratorWrapper}}\ final\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_generators_ab33907d04439196536cc56f05b3537aa}{GeneratorPtr<T>}}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a6f861c7aa762805fcce1bd3d0eedb58f}{m\_generator}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a60489f55be04e4f4d88359f54ddb03ef}{GeneratorWrapper}}(\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator}{IGenerator<T>}}*\ generator):}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a6f861c7aa762805fcce1bd3d0eedb58f}{m\_generator}}(generator)\ \{\}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a5147ec694b792135c55b421ea7c7080f}{GeneratorWrapper}}(\doxymbox{\hyperlink{namespace_catch_1_1_generators_ab33907d04439196536cc56f05b3537aa}{GeneratorPtr<T>}}\ generator):}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a6f861c7aa762805fcce1bd3d0eedb58f}{m\_generator}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(generator))\ \{\}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ T\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a4a461a591d0bd5360a2745cb2b5011cc}{get}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a6f861c7aa762805fcce1bd3d0eedb58f}{m\_generator}}-\/>get();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_acbfdca94811ae02461bd2cf5f60b666e}{next}}()\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a6f861c7aa762805fcce1bd3d0eedb58f}{m\_generator}}-\/>countedNext();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{class\ }SingleValueGenerator\ final\ :\ \textcolor{keyword}{public}\ IGenerator<T>\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ T\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_single_value_generator_a93402a3203dad8ae7edcd681b1ed5938}{m\_value}};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_single_value_generator_a4bed2ad14ffe04102d8135e2c82b3ace}{SingleValueGenerator}}(T\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}})\ :}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_single_value_generator_a93402a3203dad8ae7edcd681b1ed5938}{m\_value}}(\doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}})}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_single_value_generator_a532140dd2d1a673692271bb76a661ebe}{SingleValueGenerator}}(T\&\&\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}):}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_single_value_generator_a93402a3203dad8ae7edcd681b1ed5938}{m\_value}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(\doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}))}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ T\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_single_value_generator_af1ed1913c9c73687fd74378fe5394382}{get}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_single_value_generator_a93402a3203dad8ae7edcd681b1ed5938}{m\_value}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_single_value_generator_a10833b34e3ccbc484624185712eb8b6e}{next}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{class\ }FixedValuesGenerator\ final\ :\ \textcolor{keyword}{public}\ IGenerator<T>\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(!std::is\_same<T,\ bool>::value,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}FixedValuesGenerator\ does\ not\ support\ bools\ because\ of\ std::vector<bool>"{}}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}specialization,\ use\ SingleValue\ Generator\ instead."{}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ std::vector<T>\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a09ecf30d7d203b33fa5a61008e98e9de}{m\_values}};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a14c3c77deb624c09065e5ccaf8646f33}{m\_idx}}\ =\ 0;}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a6e9f473655413c1cb15f079890f06b86}{FixedValuesGenerator}}(\ std::initializer\_list<T>\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_aff55717239311a0e8352a4de5d29967f}{values}}\ )\ :\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a09ecf30d7d203b33fa5a61008e98e9de}{m\_values}}(\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_aff55717239311a0e8352a4de5d29967f}{values}}\ )\ \{\}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ T\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a8d64d3d943f3029d1669ae3cf91cc493}{get}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a09ecf30d7d203b33fa5a61008e98e9de}{m\_values}}[\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a14c3c77deb624c09065e5ccaf8646f33}{m\_idx}}];}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a6ce9e3ed045239c7b82873f24bd9cd3b}{next}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ ++\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a14c3c77deb624c09065e5ccaf8646f33}{m\_idx}};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a14c3c77deb624c09065e5ccaf8646f33}{m\_idx}}\ <\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_fixed_values_generator_a09ecf30d7d203b33fa5a61008e98e9de}{m\_values}}.size();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ DecayedT\ =\ std::decay\_t<T>>}
+\DoxyCodeLine{00109\ \ \ \ \ GeneratorWrapper<DecayedT>\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}(\ T\&\&\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}\ )\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a60489f55be04e4f4d88359f54ddb03ef}{GeneratorWrapper<DecayedT>}}(}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a3175310a581a4d3b7bd12cf543dfa0d9}{Catch::Detail::make\_unique}}<SingleValueGenerator<DecayedT>>(}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}\ )\ )\ );}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00115\ \ \ \ \ GeneratorWrapper<T>\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_aff55717239311a0e8352a4de5d29967f}{values}}(std::initializer\_list<T>\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_aff55717239311a0e8352a4de5d29967f}{values}})\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper_a60489f55be04e4f4d88359f54ddb03ef}{GeneratorWrapper<T>}}(\doxymbox{\hyperlink{namespace_catch_1_1_detail_a3175310a581a4d3b7bd12cf543dfa0d9}{Catch::Detail::make\_unique}}<FixedValuesGenerator<T>>(\doxymbox{\hyperlink{namespace_catch_1_1_generators_aff55717239311a0e8352a4de5d29967f}{values}}));}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators}{Generators}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator}{IGenerator}}<T>\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ std::vector<GeneratorWrapper<T>>\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a8f5cd6b2479cfadbd45033c4ad17ff0c}{m\_current}}\ =\ 0;}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a587e6d850eecaee91a64fd5df043bf9b}{add\_generator}}(\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper}{GeneratorWrapper<T>}}\&\&\ generator\ )\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}}.emplace\_back(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(\ generator\ )\ );}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_aafe58f12805e3f9e54a0c0ec233d17aa}{add\_generator}}(\ T\ \textcolor{keyword}{const}\&\ val\ )\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}}.emplace\_back(\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}(\ val\ )\ );}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_adf8cc578226ac198a3efa08f742e1b09}{add\_generator}}(\ T\&\&\ val\ )\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}}.emplace\_back(\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(\ val\ )\ )\ );}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ std::enable\_if\_t<!std::is\_same<std::decay\_t<U>,\ T>\doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{::value}}>}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_adeef65a4c2a9d1926567c2e7409f7f19}{add\_generator}}(\ U\&\&\ val\ )\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a587e6d850eecaee91a64fd5df043bf9b}{add\_generator}}(\ T(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ val\ )\ )\ );}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ U>\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_aac3b0e4ab4488979af0ffcfa70d9af0c}{add\_generators}}(\ U\&\&\ valueOrGenerator\ )\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a587e6d850eecaee91a64fd5df043bf9b}{add\_generator}}(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ valueOrGenerator\ )\ );}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ U,\ \textcolor{keyword}{typename}...\ Gs>}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_ae41374dc7e65437321c54d979e8df45a}{add\_generators}}(\ U\&\&\ valueOrGenerator,\ Gs\&\&...\ moreGenerators\ )\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a587e6d850eecaee91a64fd5df043bf9b}{add\_generator}}(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ valueOrGenerator\ )\ );}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_aac3b0e4ab4488979af0ffcfa70d9af0c}{add\_generators}}(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ moreGenerators\ )...\ );}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Gs>}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a2bcb50c42a8729cbac079b3b61699a61}{Generators}}(Gs\ \&\&...\ moreGenerators)\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}}.reserve(\textcolor{keyword}{sizeof}...(Gs));}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_aac3b0e4ab4488979af0ffcfa70d9af0c}{add\_generators}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(moreGenerators)...);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ T\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_ad86b343eac34f6771358507dd8ea98c4}{get}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}}[\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a8f5cd6b2479cfadbd45033c4ad17ff0c}{m\_current}}].get();}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_ad127fd2a07347b527f79ab3b78bd40fb}{next}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a8f5cd6b2479cfadbd45033c4ad17ff0c}{m\_current}}\ >=\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}}.size())\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ current\_status\ =\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}}[\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a8f5cd6b2479cfadbd45033c4ad17ff0c}{m\_current}}].next();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!current\_status)\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a8f5cd6b2479cfadbd45033c4ad17ff0c}{m\_current}};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a8f5cd6b2479cfadbd45033c4ad17ff0c}{m\_current}}\ <\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_abb4eb18550a846542bb3757c120fb958}{m\_generators}}.size();}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00170\ \ \ \ \ \};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Ts>}
+\DoxyCodeLine{00174\ \ \ \ \ GeneratorWrapper<std::tuple<std::decay\_t<Ts>...>>}
+\DoxyCodeLine{00175\ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a2fa425101893564ec8e95b0813077257}{table}}(\ std::initializer\_list<std::tuple<std::decay\_t<Ts>...>>\ tuples\ )\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_aff55717239311a0e8352a4de5d29967f}{values}}<std::tuple<Ts...>>(\ tuples\ );}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//\ Tag\ type\ to\ signal\ that\ a\ generator\ sequence\ should\ convert\ arguments\ to\ a\ specific\ type}}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{struct\ }as\ \{\};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Gs>}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a7cc95d72b060e2819b2edbbdbf8c646b}{makeGenerators}}(\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper}{GeneratorWrapper<T>}}\&\&\ generator,\ Gs\ \&\&...\ moreGenerators\ )\ -\/>\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators}{Generators<T>}}\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a2bcb50c42a8729cbac079b3b61699a61}{Generators<T>}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(generator),\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(moreGenerators)...);}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a7cc95d72b060e2819b2edbbdbf8c646b}{makeGenerators}}(\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper}{GeneratorWrapper<T>}}\&\&\ generator\ )\ -\/>\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators}{Generators<T>}}\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators_a2bcb50c42a8729cbac079b3b61699a61}{Generators<T>}}(\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\_MOVE}}(generator));}
+\DoxyCodeLine{00190\ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Gs>}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a7cc95d72b060e2819b2edbbdbf8c646b}{makeGenerators}}(\ T\&\&\ val,\ Gs\ \&\&...\ moreGenerators\ )\ -\/>\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators}{Generators<std::decay\_t<T>}}>\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a7cc95d72b060e2819b2edbbdbf8c646b}{makeGenerators}}(\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ val\ )\ ),\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ moreGenerators\ )...\ );}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U,\ \textcolor{keyword}{typename}...\ Gs>}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a7cc95d72b060e2819b2edbbdbf8c646b}{makeGenerators}}(\ \doxymbox{\hyperlink{struct_catch_1_1_generators_1_1as}{as<T>}},\ U\&\&\ val,\ Gs\ \&\&...\ moreGenerators\ )\ -\/>\ \doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators}{Generators<T>}}\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a7cc95d72b060e2819b2edbbdbf8c646b}{makeGenerators}}(\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a01aec1a3265d83bfd89f32782521c96b}{value}}(\ T(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ val\ )\ )\ ),\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\_FORWARD}}(\ moreGenerators\ )...\ );}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ IGeneratorTracker*\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_ab0ad55177ac1e5f00b123909b191f436}{acquireGeneratorTracker}}(\ StringRef\ generatorName,}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SourceLineInfo\ \textcolor{keyword}{const}\&\ lineInfo\ );}
+\DoxyCodeLine{00202\ \ \ \ \ IGeneratorTracker*\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a24e1bac2be5e078f26c395a96470b706}{createGeneratorTracker}}(\ StringRef\ generatorName,}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SourceLineInfo\ lineInfo,}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_generators_aa9dc8fef28828fe351480d5be7bb287d}{GeneratorBasePtr}}\&\&\ generator\ );}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ L>}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a118b852de3ec020b428ad43245dda9c8}{generate}}(\ StringRef\ generatorName,\ SourceLineInfo\ \textcolor{keyword}{const}\&\ lineInfo,\ L\ \textcolor{keyword}{const}\&\ generatorExpression\ )\ -\/>\ \textcolor{keyword}{typename}\ \textcolor{keyword}{decltype}(generatorExpression())::type\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }UnderlyingType\ =\ \textcolor{keyword}{typename}\ \textcolor{keyword}{decltype}(generatorExpression())::type;}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ IGeneratorTracker*\ tracker\ =\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_ab0ad55177ac1e5f00b123909b191f436}{acquireGeneratorTracker}}(\ generatorName,\ lineInfo\ );}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creation\ of\ tracker\ is\ delayed\ after\ generator\ creation,\ so}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ that\ constructing\ generator\ can\ fail\ without\ breaking\ everything.}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!tracker)\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ tracker\ =\ \doxymbox{\hyperlink{namespace_catch_1_1_generators_a24e1bac2be5e078f26c395a96470b706}{createGeneratorTracker}}(}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generatorName,}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lineInfo,}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a3175310a581a4d3b7bd12cf543dfa0d9}{Catch::Detail::make\_unique}}<\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_generators}{Generators<UnderlyingType>}}>(}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generatorExpression()\ )\ );}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keyword}{const}\&\ generator\ =\ \textcolor{keyword}{static\_cast<}\doxymbox{\hyperlink{class_catch_1_1_generators_1_1_i_generator}{IGenerator<UnderlyingType>}}\ const\&\textcolor{keyword}{>}(\ *tracker-\/>getGenerator()\ );}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ generator.get();}
+\DoxyCodeLine{00223\ \ \ \ \ \}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \}\ \textcolor{comment}{//\ namespace\ Generators}}
+\DoxyCodeLine{00226\ \}\ \textcolor{comment}{//\ namespace\ Catch}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ CATCH\_INTERNAL\_GENERATOR\_STRINGIZE\_IMPL(\ ...\ )\ \#\_\_VA\_ARGS\_\_\#\#\_catch\_sr}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#define\ CATCH\_INTERNAL\_GENERATOR\_STRINGIZE(...)\ CATCH\_INTERNAL\_GENERATOR\_STRINGIZE\_IMPL(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\#define\ GENERATE(\ ...\ )\ \(\backslash\)}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\ \ \ \ Catch::Generators::generate(\ CATCH\_INTERNAL\_GENERATOR\_STRINGIZE(INTERNAL\_CATCH\_UNIQUE\_NAME(generator)),\ \(\backslash\)}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CATCH\_INTERNAL\_LINEINFO,\ \(\backslash\)}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\ ]\{\ using\ namespace\ Catch::Generators;\ return\ makeGenerators(\ \_\_VA\_ARGS\_\_\ );\ \}\ )\ }\textcolor{comment}{//NOLINT(google-\/build-\/using-\/namespace)}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#define\ GENERATE\_COPY(\ ...\ )\ \(\backslash\)}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\ \ \ \ Catch::Generators::generate(\ CATCH\_INTERNAL\_GENERATOR\_STRINGIZE(INTERNAL\_CATCH\_UNIQUE\_NAME(generator)),\ \(\backslash\)}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CATCH\_INTERNAL\_LINEINFO,\ \(\backslash\)}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [=]\{\ using\ namespace\ Catch::Generators;\ return\ makeGenerators(\ \_\_VA\_ARGS\_\_\ );\ \}\ )\ }\textcolor{comment}{//NOLINT(google-\/build-\/using-\/namespace)}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#define\ GENERATE\_REF(\ ...\ )\ \(\backslash\)}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\ \ \ \ Catch::Generators::generate(\ CATCH\_INTERNAL\_GENERATOR\_STRINGIZE(INTERNAL\_CATCH\_UNIQUE\_NAME(generator)),\ \(\backslash\)}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CATCH\_INTERNAL\_LINEINFO,\ \(\backslash\)}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\&]\{\ using\ namespace\ Catch::Generators;\ return\ makeGenerators(\ \_\_VA\_ARGS\_\_\ );\ \}\ )\ }\textcolor{comment}{//NOLINT(google-\/build-\/using-\/namespace)}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_GENERATORS\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

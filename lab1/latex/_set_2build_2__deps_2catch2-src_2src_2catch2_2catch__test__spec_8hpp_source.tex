@@ -1,0 +1,121 @@
+\doxysection{catch\+\_\+test\+\_\+spec.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2catch__test__spec_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2catch__test__spec_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/catch\_test\_spec.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/catch\_test\_spec.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2catch__test__spec_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_TEST\_SPEC\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_TEST\_SPEC\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ \_\_clang\_\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#pragma\ clang\ diagnostic\ push}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ clang\ diagnostic\ ignored\ "{}-\/Wpadded"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_unique\_ptr.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_wildcard\_pattern.hpp>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <iosfwd>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_case_handle}{TestCaseHandle}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_spec}{TestSpec}}\ \{}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern}{Pattern}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_a93ef584ef74b7631e2569cee8626d2cf}{Pattern}}(\ std::string\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_aab90aeef486cbb5993d13a09b0ea2046}{name}}\ );}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_a7116ef0f52543b6975acad9b88a75dad}{\string~Pattern}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_a97a0c28ce8d6f55bad15eed4dd07896c}{matches}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}}\ \textcolor{keyword}{const}\&\ testCase\ )\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_aab90aeef486cbb5993d13a09b0ea2046}{name}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_ae342a06a2d8e91b08e0381f5f744c98c}{serializeTo}}(\ std::ostream\&\ out\ )\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Writes\ string\ that\ would\ be\ reparsed\ into\ the\ pattern}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_a367d54387c5ec6714a290fed6fff2f8d}{operator<<}}(std::ostream\&\ out,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_a93ef584ef74b7631e2569cee8626d2cf}{Pattern}}\ \textcolor{keyword}{const}\&\ pattern)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pattern.serializeTo(\ out\ );}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_afed21c2b4042fadb0f4ab50d69ec928b}{m\_name}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }NamePattern\ :\ \textcolor{keyword}{public}\ Pattern\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_name_pattern_a105f14dc1a786334d589cfe211663199}{NamePattern}}(\ std::string\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern_aab90aeef486cbb5993d13a09b0ea2046}{name}},\ std::string\ \textcolor{keyword}{const}\&\ filterString\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_name_pattern_aa48f2bb185ea2fd8c777da0b925d28f7}{matches}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}}\ \textcolor{keyword}{const}\&\ testCase\ )\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_name_pattern_ae856d54dea1edfe2adacf4f717250aef}{serializeTo}}(\ std::ostream\&\ out\ )\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern}{WildcardPattern}}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_name_pattern_a2906467f63b2239f4a8cf6211a4bd0e1}{m\_wildcardPattern}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_tag_pattern}{TagPattern}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_pattern}{Pattern}}\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_tag_pattern_aa721206ef2031155619bfb7e6d561347}{TagPattern}}(\ std::string\ \textcolor{keyword}{const}\&\ tag,\ std::string\ \textcolor{keyword}{const}\&\ filterString\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_tag_pattern_a5a393a3ce431dc0b74ab6e7650a72b1b}{matches}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}}\ \textcolor{keyword}{const}\&\ testCase\ )\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_tag_pattern_a706569dc93f0f5c59c9d5b24e60f4ab4}{serializeTo}}(\ std::ostream\&\ out\ )\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_1_1_tag_pattern_a0f869df564b2f9682899f7e177d88a90}{m\_tag}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter}{Filter}}\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Detail::unique\_ptr<Pattern>>\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter_a0d6c5d737cda761492ec5ab2a6630d55}{m\_required}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Detail::unique\_ptr<Pattern>>\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter_a770ec275997dac815e65282458be89bd}{m\_forbidden}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter_aa6f50a5d8e92feba7cf52c43a720c2f8}{serializeTo}}(\ std::ostream\&\ out\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter_a9ee701c1a51a7621410ce68aaeaed7a4}{operator<<}}(std::ostream\&\ out,\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter}{Filter}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_compilation_8tests_8cpp_a3dfafc21b572eebeecf2de0c3775f76d}{f}})\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_compilation_8tests_8cpp_a3dfafc21b572eebeecf2de0c3775f76d}{f}}.serializeTo(\ out\ );}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter_a2c32ffddbce761ca492f6c4cb96e7df2}{matches}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}}\ \textcolor{keyword}{const}\&\ testCase\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_a2a632aa36883456cd4356b70756b4ad8}{extractFilterName}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter}{Filter}}\ \textcolor{keyword}{const}\&\ filter\ );}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter_match}{FilterMatch}}\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter_match_a507d5b197875537d48f900909c617965}{name}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<TestCaseHandle\ const*>\ \doxymbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter_match_a323afaa3332216eb24652611e10cc810}{tests}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_catch_1_1_test_spec_a06b08ac127c37d48a4353f34bf20c0e3}{Matches}}\ =\ std::vector<FilterMatch>;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_catch_1_1_test_spec_a8fca1c29ab3a21ea943f724ab0ecce08}{vectorStrings}}\ =\ std::vector<std::string>;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_ac6d69b4a19677d95e46af0467fc72ecd}{hasFilters}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_a2342df9eff2c7db0d26432c1ddef796f}{matches}}(\ \doxymbox{\hyperlink{struct_catch_1_1_test_case_info}{TestCaseInfo}}\ \textcolor{keyword}{const}\&\ testCase\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_test_spec_a06b08ac127c37d48a4353f34bf20c0e3}{Matches}}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_adc61e0344bfaaf8459935fa5093f3a6f}{matchesByFilter}}(\ std::vector<TestCaseHandle>\ \textcolor{keyword}{const}\&\ testCases,\ \doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}}\ \textcolor{keyword}{const}\&\ config\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_a8fca1c29ab3a21ea943f724ab0ecce08}{vectorStrings}}\ \&\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_acc84c5d1688c8dcc8e0f1c62bbb67f15}{getInvalidSpecs}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ std::vector<Filter>\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_a0bea39b7369711409ba91ffbfa48a8be}{m\_filters}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_aa3e9926b9f9e5d900f1949264a26e11b}{m\_invalidSpecs}};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_spec_a99b47cebd6b746da77a41e7c15437f78}{TestSpecParser}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_afc031d95269ce917dde9ff113c597caf}{serializeTo}}(\ std::ostream\&\ out\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{class_catch_1_1_test_spec_a2e48bf00322a3a2f9a4a9f207d6da096}{operator<<}}(std::ostream\&\ out,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_test_spec}{TestSpec}}\ \textcolor{keyword}{const}\&\ spec)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ spec.serializeTo(\ out\ );}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \};}
+\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#ifdef\ \_\_clang\_\_}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#pragma\ clang\ diagnostic\ pop}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_TEST\_SPEC\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

@@ -1,0 +1,87 @@
+\doxysection{Set/\+tests/\+test\+\_\+set.cpp File Reference}
+\hypertarget{test__set_8cpp}{}\label{test__set_8cpp}\index{Set/tests/test\_set.cpp@{Set/tests/test\_set.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include "{}set.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_a477044f65d3dfbf6d9b34449808de4e3}{TEST\+\_\+\+CASE}} ("{}Element: конструкторы и доступ к данным"{}, "{}\+[set]\+\+[element]\+"{})
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_af05e3b1271e2a3220b38ba6c3b4bd724}{TEST\+\_\+\+CASE}} ("{}Element: сравнение и строковое представление"{}, "{}\+[set]\+\+[element]\+"{})
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_adee422b69627ab2992d6d17644fb94bd}{TEST\+\_\+\+CASE}} ("{}Set: создание и нормализация"{}, "{}\+[set]\+"{})
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_afa91e04284032e524a1a510983423108}{TEST\+\_\+\+CASE}} ("{}Set: add, remove, contains, clear"{}, "{}\+[set]\+"{})
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_ad64ae56ddf1317e834198b2254ccfae1}{TEST\+\_\+\+CASE}} ("{}Set: операторы с элементами"{}, "{}\+[set]\+\+[operators]\+"{})
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_a74234d5d9e46d48307109600d871b5fa}{TEST\+\_\+\+CASE}} ("{}Set: теоретико-\/множественные операции"{}, "{}\+[set]\+\+[operators]\+"{})
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_a9ad9f5f4a093f76801f7a73e7319b81d}{TEST\+\_\+\+CASE}} ("{}Set: булеан"{}, "{}\+[set]\+\+[power\+\_\+set]\+"{})
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_ad14a4599bc19074e75ff12abd1fa6861}{TEST\+\_\+\+CASE}} ("{}Set: разбор строки"{}, "{}\+[set]\+\+[parse]\+"{})
+\item 
+\doxymbox{\hyperlink{test__set_8cpp_ac23daff79c7cdb692a34574904ee4250}{TEST\+\_\+\+CASE}} ("{}Set: потоковый ввод-\/вывод"{}, "{}\+[set]\+\+[io]\+"{})
+\end{DoxyCompactItemize}
+
+
+\label{test__set_8cpp_doc-func-members}
+\Hypertarget{test__set_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{test__set_8cpp_a477044f65d3dfbf6d9b34449808de4e3}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_a477044f65d3dfbf6d9b34449808de4e3} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Element: конструкторы и доступ к данным"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]\+\+[element]}\end{DoxyParamCaption})}
+
+\Hypertarget{test__set_8cpp_af05e3b1271e2a3220b38ba6c3b4bd724}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_af05e3b1271e2a3220b38ba6c3b4bd724} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Element: сравнение и строковое представление"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]\+\+[element]}\end{DoxyParamCaption})}
+
+\Hypertarget{test__set_8cpp_a9ad9f5f4a093f76801f7a73e7319b81d}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_a9ad9f5f4a093f76801f7a73e7319b81d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Set: булеан"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]\+\+[power\+\_\+set]}\end{DoxyParamCaption})}
+
+\Hypertarget{test__set_8cpp_ad64ae56ddf1317e834198b2254ccfae1}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_ad64ae56ddf1317e834198b2254ccfae1} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Set: операторы с элементами"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]\+\+[operators]}\end{DoxyParamCaption})}
+
+\Hypertarget{test__set_8cpp_ac23daff79c7cdb692a34574904ee4250}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_ac23daff79c7cdb692a34574904ee4250} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Set: потоковый ввод-\/вывод"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]\+\+[io]}\end{DoxyParamCaption})}
+
+\Hypertarget{test__set_8cpp_ad14a4599bc19074e75ff12abd1fa6861}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_ad14a4599bc19074e75ff12abd1fa6861} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Set: разбор строки"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]\+\+[parse]}\end{DoxyParamCaption})}
+
+\Hypertarget{test__set_8cpp_adee422b69627ab2992d6d17644fb94bd}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_adee422b69627ab2992d6d17644fb94bd} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Set: создание и нормализация"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]}\end{DoxyParamCaption})}
+
+\Hypertarget{test__set_8cpp_a74234d5d9e46d48307109600d871b5fa}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_a74234d5d9e46d48307109600d871b5fa} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Set: теоретико-\/множественные операции"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]\+\+[operators]}\end{DoxyParamCaption})}
+
+\Hypertarget{test__set_8cpp_afa91e04284032e524a1a510983423108}\index{test\_set.cpp@{test\_set.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test\_set.cpp@{test\_set.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily \label{test__set_8cpp_afa91e04284032e524a1a510983423108} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Set:}]{add}{, }\item[{remove}]{}{, }\item[{contains}]{}{, }\item[{clear"{}}]{}{, }\item[{"{}"{}}]{}{\+[set]}\end{DoxyParamCaption})}
+

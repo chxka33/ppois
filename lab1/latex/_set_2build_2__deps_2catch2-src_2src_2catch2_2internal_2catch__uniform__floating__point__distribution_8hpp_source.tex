@@ -1,0 +1,111 @@
+\doxysection{catch\+\_\+uniform\+\_\+floating\+\_\+point\+\_\+distribution.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__uniform__floating__point__distribution_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__uniform__floating__point__distribution_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_uniform\_floating\_point\_distribution.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_uniform\_floating\_point\_distribution.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__uniform__floating__point__distribution_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ CATCH\_UNIFORM\_FLOATING\_POINT\_DISTRIBUTION\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CATCH\_UNIFORM\_FLOATING\_POINT\_DISTRIBUTION\_HPP\_INCLUDED}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_random\_floating\_point\_helpers.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_uniform\_integer\_distribution.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch_1_1_detail}{Detail}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#if\ defined(\ \_\_GNUC\_\_\ )\ ||\ defined(\ \_\_clang\_\_\ )}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ GCC\ diagnostic\ push}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ GCC\ diagnostic\ ignored\ "{}-\/Wfloat-\/equal"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ issue\ with\ overflow\ only\ happens\ with\ maximal\ ULP\ and\ HUGE}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ distance,\ e.g.\ when\ generating\ numbers\ in\ [-\/inf,\ inf]\ for\ given}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ type.\ So\ we\ only\ check\ for\ the\ largest\ possible\ ULP\ in\ the}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ type,\ and\ return\ something\ that\ does\ not\ overflow\ to\ inf\ in\ 1\ mult.}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint64\_t\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_ae9bb68ba331f0cedfd116aa27ce0c3da}{calculate\_max\_steps\_in\_one\_go}}(\textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_af908d7b7d7ea3850dba1f946209d3ec5}{gamma}})\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_af908d7b7d7ea3850dba1f946209d3ec5}{gamma}}\ ==\ 1.99584030953472e+292\ )\ \{\ \textcolor{keywordflow}{return}\ 9007199254740991;\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}std::uint64\_t\textcolor{keyword}{>}(\ -\/1\ );}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_ae9bb68ba331f0cedfd116aa27ce0c3da}{calculate\_max\_steps\_in\_one\_go}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_af908d7b7d7ea3850dba1f946209d3ec5}{gamma}})\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_af908d7b7d7ea3850dba1f946209d3ec5}{gamma}}\ ==\ 2.028241e+31f\ )\ \{\ \textcolor{keywordflow}{return}\ 16777215;\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(\ -\/1\ );}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#if\ defined(\ \_\_GNUC\_\_\ )\ ||\ defined(\ \_\_clang\_\_\ )}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#\ \ \ \ pragma\ GCC\ diagnostic\ pop}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FloatType>}
+\DoxyCodeLine{00069\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution}{uniform\_floating\_point\_distribution}}\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static\_assert}(std::is\_floating\_point<FloatType>::value,\ \textcolor{stringliteral}{"{}..."{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static\_assert}(!std::is\_same<FloatType,\ long\ double>::value,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}We\ do\ not\ support\ long\ double\ due\ to\ inconsistent\ behaviour\ between\ platforms"{}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ab2ecd8dc046b98dc623e0139158542de}{WidthType}}\ =\ \doxymbox{\hyperlink{namespace_catch_1_1_detail_a8d9b9c85c37b04757bb44d69a6362060}{Detail::DistanceType<FloatType>}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ FloatType\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9d7da725e9b657c536588fa0a720b6dc}{m\_a}},\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a0a69e991a8ed4ab9b2c59e916e060b02}{m\_b}};}
+\DoxyCodeLine{00077\ \ \ \ \ FloatType\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ad079f0d4c8a59e77e50b691309fc06ea}{m\_ulp\_magnitude}};}
+\DoxyCodeLine{00078\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ab2ecd8dc046b98dc623e0139158542de}{WidthType}}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5da894a43495578be3ab8fd20c8457c7}{m\_floats\_in\_range}};}
+\DoxyCodeLine{00079\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__integer__distribution}{uniform\_integer\_distribution<WidthType>}}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ac45ea22900b1ee04c8d041faad617cd4}{m\_int\_dist}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ In\ specific\ cases,\ we\ can\ overflow\ into\ \`{}inf`\ when\ computing\ the}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ \`{}steps\ *\ g`\ offset.\ To\ avoid\ this,\ we\ don't\ offset\ by\ more\ than\ this}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ in\ one\ multiply\ +\ addition.}}
+\DoxyCodeLine{00084\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ab2ecd8dc046b98dc623e0139158542de}{WidthType}}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a4a0cf9889033a187b8850ba81b81e840}{m\_max\_steps\_in\_one\_go}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ We\ don't\ want\ to\ do\ the\ magnitude\ check\ every\ call\ to\ \`{}operator()`}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9c5294d7741af443b7ae680b1faf409b}{m\_a\_has\_leq\_magnitude}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9a4000220b978914a335f1e7fd23a012}{result\_type}}\ =\ FloatType;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_aa56d7f890b098fee778ca652ca1a2a9d}{uniform\_floating\_point\_distribution}}(\ FloatType\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5fcfcdb244e18b39623e8fba67762e0c}{a}},\ FloatType\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_acdde30b1bfdbe5f41baf191e2ea772c8}{b}}\ ):}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9d7da725e9b657c536588fa0a720b6dc}{m\_a}}(\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5fcfcdb244e18b39623e8fba67762e0c}{a}}\ ),}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a0a69e991a8ed4ab9b2c59e916e060b02}{m\_b}}(\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_acdde30b1bfdbe5f41baf191e2ea772c8}{b}}\ ),}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ad079f0d4c8a59e77e50b691309fc06ea}{m\_ulp\_magnitude}}(\ \doxymbox{\hyperlink{namespace_catch_1_1_detail}{Detail}}::gamma(\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9d7da725e9b657c536588fa0a720b6dc}{m\_a}},\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a0a69e991a8ed4ab9b2c59e916e060b02}{m\_b}}\ )\ ),}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5da894a43495578be3ab8fd20c8457c7}{m\_floats\_in\_range}}(\ \doxymbox{\hyperlink{namespace_catch_1_1_detail}{Detail}}::count\_equidistant\_floats(\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9d7da725e9b657c536588fa0a720b6dc}{m\_a}},\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a0a69e991a8ed4ab9b2c59e916e060b02}{m\_b}},\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ad079f0d4c8a59e77e50b691309fc06ea}{m\_ulp\_magnitude}}\ )\ ),}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ac45ea22900b1ee04c8d041faad617cd4}{m\_int\_dist}}(0,\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5da894a43495578be3ab8fd20c8457c7}{m\_floats\_in\_range}}),}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a4a0cf9889033a187b8850ba81b81e840}{m\_max\_steps\_in\_one\_go}}(\ \doxymbox{\hyperlink{namespace_catch_1_1_detail}{Detail}}::calculate\_max\_steps\_in\_one\_go(\doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ad079f0d4c8a59e77e50b691309fc06ea}{m\_ulp\_magnitude}})),}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9c5294d7741af443b7ae680b1faf409b}{m\_a\_has\_leq\_magnitude}}(std::fabs(\doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9d7da725e9b657c536588fa0a720b6dc}{m\_a}})\ <=\ std::fabs(\doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a0a69e991a8ed4ab9b2c59e916e060b02}{m\_b}}))}
+\DoxyCodeLine{00099\ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ assert(\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5fcfcdb244e18b39623e8fba67762e0c}{a}}\ <=\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_acdde30b1bfdbe5f41baf191e2ea772c8}{b}}\ );}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Generator>}
+\DoxyCodeLine{00104\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9a4000220b978914a335f1e7fd23a012}{result\_type}}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5503ff4e75c828bea6170a151e57dddc}{operator()}}(\ Generator\&\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_compilation_8tests_8cpp_a8f67baeaa88f8b5351bcf50d3a8831e1}{g}}\ )\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ab2ecd8dc046b98dc623e0139158542de}{WidthType}}\ steps\ =\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ac45ea22900b1ee04c8d041faad617cd4}{m\_int\_dist}}(\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_compilation_8tests_8cpp_a8f67baeaa88f8b5351bcf50d3a8831e1}{g}}\ );}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9c5294d7741af443b7ae680b1faf409b}{m\_a\_has\_leq\_magnitude}}\ )\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ steps\ ==\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5da894a43495578be3ab8fd20c8457c7}{m\_floats\_in\_range}}\ )\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9d7da725e9b657c536588fa0a720b6dc}{m\_a}};\ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_acdde30b1bfdbe5f41baf191e2ea772c8}{b}}\ =\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a0a69e991a8ed4ab9b2c59e916e060b02}{m\_b}};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (steps\ >\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a4a0cf9889033a187b8850ba81b81e840}{m\_max\_steps\_in\_one\_go}})\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_acdde30b1bfdbe5f41baf191e2ea772c8}{b}}\ -\/=\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a4a0cf9889033a187b8850ba81b81e840}{m\_max\_steps\_in\_one\_go}}\ *\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ad079f0d4c8a59e77e50b691309fc06ea}{m\_ulp\_magnitude}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ steps\ -\/=\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a4a0cf9889033a187b8850ba81b81e840}{m\_max\_steps\_in\_one\_go}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_acdde30b1bfdbe5f41baf191e2ea772c8}{b}}\ -\/\ steps\ *\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ad079f0d4c8a59e77e50b691309fc06ea}{m\_ulp\_magnitude}};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ steps\ ==\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5da894a43495578be3ab8fd20c8457c7}{m\_floats\_in\_range}}\ )\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a0a69e991a8ed4ab9b2c59e916e060b02}{m\_b}};\ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5fcfcdb244e18b39623e8fba67762e0c}{a}}\ =\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9d7da725e9b657c536588fa0a720b6dc}{m\_a}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (steps\ >\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a4a0cf9889033a187b8850ba81b81e840}{m\_max\_steps\_in\_one\_go}})\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5fcfcdb244e18b39623e8fba67762e0c}{a}}\ +=\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a4a0cf9889033a187b8850ba81b81e840}{m\_max\_steps\_in\_one\_go}}\ *\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ad079f0d4c8a59e77e50b691309fc06ea}{m\_ulp\_magnitude}};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ steps\ -\/=\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a4a0cf9889033a187b8850ba81b81e840}{m\_max\_steps\_in\_one\_go}};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5fcfcdb244e18b39623e8fba67762e0c}{a}}\ +\ steps\ *\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_ad079f0d4c8a59e77e50b691309fc06ea}{m\_ulp\_magnitude}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9a4000220b978914a335f1e7fd23a012}{result\_type}}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a5fcfcdb244e18b39623e8fba67762e0c}{a}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9d7da725e9b657c536588fa0a720b6dc}{m\_a}};\ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a9a4000220b978914a335f1e7fd23a012}{result\_type}}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_acdde30b1bfdbe5f41baf191e2ea772c8}{b}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1uniform__floating__point__distribution_a0a69e991a8ed4ab9b2c59e916e060b02}{m\_b}};\ \}}
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_UNIFORM\_FLOATING\_POINT\_DISTRIBUTION\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

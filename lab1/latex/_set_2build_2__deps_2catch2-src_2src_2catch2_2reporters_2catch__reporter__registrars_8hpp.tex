@@ -1,0 +1,84 @@
+\doxysection{Set/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+reporters/\+catch\+\_\+reporter\+\_\+registrars.hpp File Reference}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp}\index{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_registrars.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/reporters/catch\_reporter\_registrars.hpp}}
+{\ttfamily \+\#include $<$catch2/\+interfaces/\+catch\+\_\+interfaces\+\_\+reporter\+\_\+factory.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+compiler\+\_\+capabilities.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+unique\+\_\+name.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+unique\+\_\+ptr.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+move\+\_\+and\+\_\+forward.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+void\+\_\+type.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$type\+\_\+traits$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_detail_1_1has__description}{Catch::\+\+Detail::\+has\+\_\+description$<$ T, typename $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_detail_1_1has__description_3_01_t_00_01void__t_3_01decltype_07_t_1_1get_description_07_08_08_4_01_4}{Catch::\+\+Detail::\+has\+\_\+description$<$ T, void\+\_\+t$<$ decltype(\+T::\+get\+Description())$>$ $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_reporter_factory}{Catch::\+\+Reporter\+Factory$<$ T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_reporter_registrar}{Catch::\+\+Reporter\+Registrar$<$ T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_listener_registrar}{Catch::\+\+Listener\+Registrar$<$ T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_listener_registrar_1_1_typed_listener_factory}{Catch::\+\+Listener\+Registrar$<$ T $>$::\+\+Typed\+Listener\+Factory}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_detail}{Catch::\+\+Detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp_aef63cef4e58656a109cfe1df5d59e54b}{CATCH\+\_\+\+REGISTER\+\_\+\+REPORTER}}(name,  reporter\+Type)
+\item 
+\+\#define \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp_ad57e50d59b9dd4f10afa62824062758b}{CATCH\+\_\+\+REGISTER\+\_\+\+LISTENER}}(listener\+Type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{namespace_catch_1_1_detail_af8703a4eaf12133aa02a50dee831f2bc}{Catch::\+\+Detail::\+register\+Reporter\+Impl}} (std::\+string const \&name, \doxymbox{\hyperlink{namespace_catch_a51fe1a39aaa63dbf724df51cbedf580d}{IReporter\+Factory\+Ptr}} reporter\+Ptr)
+\item 
+void \doxymbox{\hyperlink{namespace_catch_1_1_detail_aae9b0608769b42ff7bbd07687348c7e5}{Catch::\+\+Detail::\+register\+Listener\+Impl}} (\doxymbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail::\+unique\+\_\+ptr}}$<$ \doxymbox{\hyperlink{class_catch_1_1_event_listener_factory}{Event\+Listener\+Factory}} $>$ listener\+Factory)
+\begin{DoxyCompactList}\small\item\em Actually registers the factory, independent on listener\textquotesingle{}s concrete type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp_doc-define-members}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp_ad57e50d59b9dd4f10afa62824062758b}\index{catch\_reporter\_registrars.hpp@{catch\_reporter\_registrars.hpp}!CATCH\_REGISTER\_LISTENER@{CATCH\_REGISTER\_LISTENER}}
+\index{CATCH\_REGISTER\_LISTENER@{CATCH\_REGISTER\_LISTENER}!catch\_reporter\_registrars.hpp@{catch\_reporter\_registrars.hpp}}
+\doxysubsubsection{\texorpdfstring{CATCH\_REGISTER\_LISTENER}{CATCH\_REGISTER\_LISTENER}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp_ad57e50d59b9dd4f10afa62824062758b} 
+\+\#define CATCH\+\_\+\+REGISTER\+\_\+\+LISTENER(\begin{DoxyParamCaption}\item[{}]{listener\+Type}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CATCH\_INTERNAL\_START\_WARNINGS\_SUPPRESSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{CATCH\_INTERNAL\_SUPPRESS\_GLOBALS\_WARNINGS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{namespace\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_listener_registrar}{Catch::ListenerRegistrar<listenerType>}}\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}}(\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ catch\_internal\_RegistrarFor\ )(\ \#listenerType\#\#\_catch\_sr\ );\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad9594e9891b032f0dd0279960dc861a5}{CATCH\_INTERNAL\_STOP\_WARNINGS\_SUPPRESSION}}}
+
+\end{DoxyCode}
+\Hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp_aef63cef4e58656a109cfe1df5d59e54b}\index{catch\_reporter\_registrars.hpp@{catch\_reporter\_registrars.hpp}!CATCH\_REGISTER\_REPORTER@{CATCH\_REGISTER\_REPORTER}}
+\index{CATCH\_REGISTER\_REPORTER@{CATCH\_REGISTER\_REPORTER}!catch\_reporter\_registrars.hpp@{catch\_reporter\_registrars.hpp}}
+\doxysubsubsection{\texorpdfstring{CATCH\_REGISTER\_REPORTER}{CATCH\_REGISTER\_REPORTER}}
+{\footnotesize\ttfamily \label{_set_2build_2__deps_2catch2-src_2src_2catch2_2reporters_2catch__reporter__registrars_8hpp_aef63cef4e58656a109cfe1df5d59e54b} 
+\+\#define CATCH\+\_\+\+REGISTER\+\_\+\+REPORTER(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{reporter\+Type}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CATCH\_INTERNAL\_START\_WARNINGS\_SUPPRESSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{CATCH\_INTERNAL\_SUPPRESS\_GLOBALS\_WARNINGS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{namespace\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_reporter_registrar}{Catch::ReporterRegistrar<reporterType>}}\ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}}(\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ catch\_internal\_RegistrarFor\ )(\ name\ );\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ad9594e9891b032f0dd0279960dc861a5}{CATCH\_INTERNAL\_STOP\_WARNINGS\_SUPPRESSION}}}
+
+\end{DoxyCode}

@@ -1,0 +1,35 @@
+\doxysection{catch\+\_\+tag\+\_\+alias\+\_\+autoregistrar.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2catch__tag__alias__autoregistrar_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2catch__tag__alias__autoregistrar_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/catch\_tag\_alias\_autoregistrar.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/catch\_tag\_alias\_autoregistrar.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2catch__tag__alias__autoregistrar_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_TAG\_ALIAS\_AUTOREGISTRAR\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_TAG\_ALIAS\_AUTOREGISTRAR\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_compiler\_capabilities.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_unique\_name.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_source\_line\_info.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_registrar_for_tag_aliases}{RegistrarForTagAliases}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_registrar_for_tag_aliases_ae4e45830e4763bcd65d55d8db9167b69}{RegistrarForTagAliases}}(\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ alias,\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ tag,\ \doxymbox{\hyperlink{struct_catch_1_1_source_line_info}{SourceLineInfo}}\ \textcolor{keyword}{const}\&\ lineInfo\ );}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ CATCH\_REGISTER\_TAG\_ALIAS(\ alias,\ spec\ )\ \(\backslash\)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ CATCH\_INTERNAL\_START\_WARNINGS\_SUPPRESSION\ \(\backslash\)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ CATCH\_INTERNAL\_SUPPRESS\_GLOBALS\_WARNINGS\ \(\backslash\)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ namespace\{\ Catch::RegistrarForTagAliases\ INTERNAL\_CATCH\_UNIQUE\_NAME(\ AutoRegisterTagAlias\ )(\ alias,\ spec,\ CATCH\_INTERNAL\_LINEINFO\ );\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ CATCH\_INTERNAL\_STOP\_WARNINGS\_SUPPRESSION}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_TAG\_ALIAS\_AUTOREGISTRAR\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

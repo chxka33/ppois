@@ -1,0 +1,35 @@
+\doxysection{catch\+\_\+startup\+\_\+exception\+\_\+registry.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__startup__exception__registry_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__startup__exception__registry_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_startup\_exception\_registry.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_startup\_exception\_registry.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__startup__exception__registry_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_STARTUP\_EXCEPTION\_REGISTRY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_STARTUP\_EXCEPTION\_REGISTRY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_startup_exception_registry}{StartupExceptionRegistry}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#if\ !defined(CATCH\_CONFIG\_DISABLE\_EXCEPTIONS)}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_startup_exception_registry_afafe7382002cd04e42a07068480683e7}{add}}(std::exception\_ptr\ \textcolor{keyword}{const}\&\ exception)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::vector<std::exception\_ptr>\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_startup_exception_registry_a5d4829d60703104982205616e930b3e6}{getExceptions}}()\ const\ noexcept;}
+\DoxyCodeLine{00022\ \ \ \ \ private:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<std::exception\_ptr>\ \doxymbox{\hyperlink{class_catch_1_1_startup_exception_registry_a5112e03c9e2673300e6ec59355b1a8cb}{m\_exceptions}};}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_STARTUP\_EXCEPTION\_REGISTRY\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+internal/\+catch\+\_\+move\+\_\+and\+\_\+forward.hpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_move\_and\_forward.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_move\_and\_forward.hpp}}
+{\ttfamily \+\#include $<$type\+\_\+traits$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp_a62516a9b52be8207f277f4adc2999207}{CATCH\+\_\+\+MOVE}}(...)
+\begin{DoxyCompactList}\small\item\em Replacement for std::\+move with better compile time performance. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}{CATCH\+\_\+\+FORWARD}}(...)
+\begin{DoxyCompactList}\small\item\em Replacement for std::\+forward with better compile time performance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp_doc-define-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a}\index{catch\_move\_and\_forward.hpp@{catch\_move\_and\_forward.hpp}!CATCH\_FORWARD@{CATCH\_FORWARD}}
+\index{CATCH\_FORWARD@{CATCH\_FORWARD}!catch\_move\_and\_forward.hpp@{catch\_move\_and\_forward.hpp}}
+\doxysubsubsection{\texorpdfstring{CATCH\_FORWARD}{CATCH\_FORWARD}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp_acedf14a4dca7fdf78bd48b59bc4d954a} 
+\+\#define CATCH\+\_\+\+FORWARD(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static\_cast<}decltype(\_\_VA\_ARGS\_\_)\&\&\textcolor{keyword}{>}(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Replacement for std::\+forward with better compile time performance. 
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp_a62516a9b52be8207f277f4adc2999207}\index{catch\_move\_and\_forward.hpp@{catch\_move\_and\_forward.hpp}!CATCH\_MOVE@{CATCH\_MOVE}}
+\index{CATCH\_MOVE@{CATCH\_MOVE}!catch\_move\_and\_forward.hpp@{catch\_move\_and\_forward.hpp}}
+\doxysubsubsection{\texorpdfstring{CATCH\_MOVE}{CATCH\_MOVE}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__move__and__forward_8hpp_a62516a9b52be8207f277f4adc2999207} 
+\+\#define CATCH\+\_\+\+MOVE(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static\_cast<}std::remove\_reference\_t<decltype(\_\_VA\_ARGS\_\_)\textcolor{keyword}{>}\&\&>(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Replacement for std::\+move with better compile time performance. 
+

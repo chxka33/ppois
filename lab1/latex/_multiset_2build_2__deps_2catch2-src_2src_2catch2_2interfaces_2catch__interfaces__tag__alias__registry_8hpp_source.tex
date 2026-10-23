@@ -1,0 +1,35 @@
+\doxysection{catch\+\_\+interfaces\+\_\+tag\+\_\+alias\+\_\+registry.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__tag__alias__registry_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__tag__alias__registry_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_tag\_alias\_registry.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_tag\_alias\_registry.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__tag__alias__registry_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_INTERFACES\_TAG\_ALIAS\_REGISTRY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_INTERFACES\_TAG\_ALIAS\_REGISTRY\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_tag_alias}{TagAlias}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_tag_alias_registry}{ITagAliasRegistry}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_i_tag_alias_registry_a8967db4dd40b68e22697eff0f4928239}{\string~ITagAliasRegistry}}();\ \textcolor{comment}{//\ =\ default}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Nullptr\ if\ not\ present}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{struct_catch_1_1_tag_alias}{TagAlias}}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{class_catch_1_1_i_tag_alias_registry_ab926b57c257d04f584bf7e4fa35a1884}{find}}(\ std::string\ \textcolor{keyword}{const}\&\ alias\ )\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_catch_1_1_i_tag_alias_registry_ae729a7532faf7466db1a157ce0395170}{expandAliases}}(\ std::string\ \textcolor{keyword}{const}\&\ unexpandedTestSpec\ )\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_catch_1_1_i_tag_alias_registry}{ITagAliasRegistry}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_tag_alias_registry_a231e5625ddc290c05482bb884d9a98e3}{get}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \}\ \textcolor{comment}{//\ end\ namespace\ Catch}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_INTERFACES\_TAG\_ALIAS\_REGISTRY\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

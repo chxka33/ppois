@@ -1,0 +1,73 @@
+\doxysection{catch\+\_\+debugger.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__debugger_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__debugger_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_debugger.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_debugger.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__debugger_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_DEBUGGER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_DEBUGGER\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_platform.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_catch_ab079497368fb1df25af39ad494d2a241}{isDebuggerActive}}();}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifdef\ CATCH\_PLATFORM\_MAC}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ \#if\ defined(\_\_i386\_\_)\ ||\ defined(\_\_x86\_64\_\_)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ \_\_asm\_\_("{}int\ \$3\(\backslash\)n"{}\ :\ :\ )\ }\textcolor{comment}{/*\ NOLINT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \#elif\ defined(\_\_aarch64\_\_)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ \_\_asm\_\_("{}.inst\ 0xd43e0000"{})}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \#elif\ defined(\_\_POWERPC\_\_)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ \_\_asm\_\_("{}li\ r0,\ 20\(\backslash\)nsc\(\backslash\)nnop\(\backslash\)nli\ r0,\ 37\(\backslash\)nli\ r4,\ 2\(\backslash\)nsc\(\backslash\)nnop\(\backslash\)n"{}\ \(\backslash\)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ :\ :\ :\ "{}memory"{},"{}r0"{},"{}r3"{},"{}r4"{}\ )\ }\textcolor{comment}{/*\ NOLINT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#elif\ defined(CATCH\_PLATFORM\_IPHONE)}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ use\ inline\ assembler}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ \#if\ defined(\_\_i386\_\_)\ ||\ defined(\_\_x86\_64\_\_)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ \ \_\_asm\_\_("{}int\ \$3"{})}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ \#elif\ defined(\_\_aarch64\_\_)}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ \ \_\_asm\_\_("{}.inst\ 0xd4200000"{})}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ \#elif\ defined(\_\_arm\_\_)\ \&\&\ !defined(\_\_thumb\_\_)}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ \ \_\_asm\_\_("{}.inst\ 0xe7f001f0"{})}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ \#elif\ defined(\_\_arm\_\_)\ \&\&\ \ defined(\_\_thumb\_\_)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ \ \_\_asm\_\_("{}.inst\ 0xde01"{})}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#elif\ defined(CATCH\_PLATFORM\_LINUX)}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ If\ we\ can\ use\ inline\ assembler,\ do\ it\ because\ this\ allows\ us\ to\ break}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ directly\ at\ the\ location\ of\ the\ failing\ check\ instead\ of\ breaking\ inside}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ raise()\ called\ from\ it,\ i.e.\ one\ stack\ frame\ below.}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ \#if\ defined(\_\_GNUC\_\_)\ \&\&\ (defined(\_\_i386)\ ||\ defined(\_\_x86\_64))}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ asm\ volatile\ ("{}int\ \$3"{})\ }\textcolor{comment}{/*\ NOLINT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ \#else\ }\textcolor{comment}{//\ Fall\ back\ to\ the\ generic\ way.}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#include\ <signal.h>}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_TRAP()\ raise(SIGTRAP)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \ \ \#define\ CATCH\_TRAP()\ \_\_debugbreak()}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#elif\ defined(\_\_MINGW32\_\_)}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \_\_declspec(dllimport)\ \textcolor{keywordtype}{void}\ \_\_stdcall\ DebugBreak();}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \#define\ CATCH\_TRAP()\ DebugBreak()}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#ifndef\ CATCH\_BREAK\_INTO\_DEBUGGER}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ CATCH\_TRAP}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_BREAK\_INTO\_DEBUGGER()\ []\{\ if(\ Catch::isDebuggerActive()\ )\ \{\ CATCH\_TRAP();\ \}\ \}()}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ CATCH\_BREAK\_INTO\_DEBUGGER()\ []\{\}()}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_DEBUGGER\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

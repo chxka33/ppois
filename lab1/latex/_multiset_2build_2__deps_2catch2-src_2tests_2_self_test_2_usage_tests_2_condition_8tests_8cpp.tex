@@ -1,0 +1,135 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+tests/\+\+Self\+Test/\+\+Usage\+Tests/\+\+Condition.tests.\+cpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp}{}\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp}\index{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/Condition.tests.cpp@{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/Condition.tests.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+approx.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$limits$>$}\newline
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a7502553967a62de9a73f71cccefb0383}{TEST\+\_\+\+CASE}} ("{}Equality checks that should succeed"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a42470d3509e73e0b0d96650653e9afd6}{TEST\+\_\+\+CASE}} ("{}Equality checks that should fail"{}, "{}\+[.]\+\+[failing]\+\+[!mayfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_ac673e8fc7c2cca9a5b269e3b29705be7}{TEST\+\_\+\+CASE}} ("{}Mayfail test case with nested sections"{}, "{}\+[!mayfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a1e333b39ed70ca0987d6385aba48d3ce}{TEST\+\_\+\+CASE}} ("{}Inequality checks that should succeed"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_abd36ab247683a26b0651ff696c0a2a90}{TEST\+\_\+\+CASE}} ("{}Inequality checks that should fail"{}, "{}\+[.]\+\+[failing]\+\+[!shouldfail]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a6e4ea0784d36d35c8c9b26b76438e64d}{TEST\+\_\+\+CASE}} ("{}Ordering comparison checks that should succeed"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a47fc803358fb879682305952c60880e9}{TEST\+\_\+\+CASE}} ("{}Ordering comparison checks that should fail"{}, "{}\+[.]\+\+[failing]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a449b22850af5eba111f2a22dc181e27e}{TEST\+\_\+\+CASE}} ("{}Comparisons with int literals don\textquotesingle{}t warn when mixing signed/\+ unsigned"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a3ffca78b49edca714fad318fc574a86d}{TEST\+\_\+\+CASE}} ("{}comparisons between int variables"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a693614c6e4dd11bd48c817a62f9c141e}{TEST\+\_\+\+CASE}} ("{}comparisons between const int variables"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a461701f6d5083a3da7f811c615b438af}{TEST\+\_\+\+CASE}} ("{}Comparisons between unsigned ints and negative signed ints match c++ standard behaviour"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a1534c6b8760853947f34a6cc48ea63f0}{TEST\+\_\+\+CASE}} ("{}Comparisons between ints where one side is computed"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a606396a10837339616ea2a712d0d7ee7}{TEST\+\_\+\+CASE}} ("{}Pointers can be compared to null"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a98e51183b6d8ecd4ea6dd462e3d4ef09}{TEST\+\_\+\+CASE}} ("{}\textquotesingle{}Not\textquotesingle{} checks that should succeed"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_af0738b8ec6b97c1d296640f1f31f058c}{TEST\+\_\+\+CASE}} ("{}\textquotesingle{}Not\textquotesingle{} checks that should fail"{}, "{}\+[.]\+\+[failing]\+"{})
+\end{DoxyCompactItemize}
+
+
+\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_doc-func-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_af0738b8ec6b97c1d296640f1f31f058c}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_af0738b8ec6b97c1d296640f1f31f058c} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}\textquotesingle{}Not\textquotesingle{} checks that should fail"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[failing]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a98e51183b6d8ecd4ea6dd462e3d4ef09}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a98e51183b6d8ecd4ea6dd462e3d4ef09} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}\textquotesingle{}Not\textquotesingle{} checks that should succeed"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a693614c6e4dd11bd48c817a62f9c141e}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a693614c6e4dd11bd48c817a62f9c141e} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}comparisons between const int variables"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a3ffca78b49edca714fad318fc574a86d}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a3ffca78b49edca714fad318fc574a86d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}comparisons between int variables"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a1534c6b8760853947f34a6cc48ea63f0}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a1534c6b8760853947f34a6cc48ea63f0} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Comparisons between ints where one side is computed"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a461701f6d5083a3da7f811c615b438af}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a461701f6d5083a3da7f811c615b438af} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Comparisons between unsigned ints and negative signed ints match c++ standard behaviour"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a449b22850af5eba111f2a22dc181e27e}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a449b22850af5eba111f2a22dc181e27e} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Comparisons with int literals don\textquotesingle{}t warn when mixing signed/\+ unsigned"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a42470d3509e73e0b0d96650653e9afd6}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a42470d3509e73e0b0d96650653e9afd6} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Equality checks that should fail"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[failing]\+\+[!mayfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a7502553967a62de9a73f71cccefb0383}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a7502553967a62de9a73f71cccefb0383} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Equality checks that should succeed"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_abd36ab247683a26b0651ff696c0a2a90}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_abd36ab247683a26b0651ff696c0a2a90} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Inequality checks that should fail"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[failing]\+\+[!shouldfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a1e333b39ed70ca0987d6385aba48d3ce}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a1e333b39ed70ca0987d6385aba48d3ce} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Inequality checks that should succeed"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_ac673e8fc7c2cca9a5b269e3b29705be7}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_ac673e8fc7c2cca9a5b269e3b29705be7} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Mayfail test case with nested sections"{}}]{}{, }\item[{"{}"{}}]{}{\+[!mayfail]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a47fc803358fb879682305952c60880e9}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a47fc803358fb879682305952c60880e9} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Ordering comparison checks that should fail"{}}]{}{, }\item[{"{}"{}}]{}{\+[.]\+\+[failing]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a6e4ea0784d36d35c8c9b26b76438e64d}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a6e4ea0784d36d35c8c9b26b76438e64d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Ordering comparison checks that should succeed"{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a606396a10837339616ea2a712d0d7ee7}\index{Condition.tests.cpp@{Condition.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!Condition.tests.cpp@{Condition.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/15]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_condition_8tests_8cpp_a606396a10837339616ea2a712d0d7ee7} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Pointers can be compared to null"{}}]{}{}\end{DoxyParamCaption})}
+

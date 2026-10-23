@@ -1,0 +1,131 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+src/\+catch2/\+matchers/\+catch\+\_\+matchers.hpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/matchers/catch\_matchers.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/matchers/catch\_matchers.hpp}}
+{\ttfamily \+\#include $<$catch2/\+matchers/\+internal/\+catch\+\_\+matchers\+\_\+impl.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+internal/\+catch\+\_\+move\+\_\+and\+\_\+forward.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_untyped_base}{Catch::\+\+Matchers::\+\+Matcher\+Untyped\+Base}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Catch::\+\+Matchers::\+\+Matcher\+Base$<$ T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_all_of}{Catch::\+\+Matchers::\+\+Detail::\+\+Match\+All\+Of$<$ Arg\+T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_any_of}{Catch::\+\+Matchers::\+\+Detail::\+\+Match\+Any\+Of$<$ Arg\+T $>$}}
+\item 
+class \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_not_of}{Catch::\+\+Matchers::\+\+Detail::\+\+Match\+Not\+Of$<$ Arg\+T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_matchers}{Catch::\+\+Matchers}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail}{Catch::\+\+Matchers::\+\+Detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_aa39a017db507132071d2819f087b2f28}{REQUIRE\+\_\+\+THROWS\+\_\+\+WITH}}(expr,  matcher)
+\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a54473a48ac2ac55bfe1165b69e1b8010}{REQUIRE\+\_\+\+THROWS\+\_\+\+MATCHES}}(expr,  exception\+Type,  matcher)
+\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a4903733490f526b58053836575e99066}{CHECK\+\_\+\+THROWS\+\_\+\+WITH}}(expr,  matcher)
+\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a74fcc14d39e8cc35ff39f69c5b60e375}{CHECK\+\_\+\+THROWS\+\_\+\+MATCHES}}(expr,  exception\+Type,  matcher)
+\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a5b8c33c63e0804d4458e2c761370b75d}{CHECK\+\_\+\+THAT}}(arg,  matcher)
+\item 
+\+\#define \doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_ac1354db6f3e9c1e0a8eda0eea7ff1f0a}{REQUIRE\+\_\+\+THAT}}(arg,  matcher)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ArgT$>$ }\\\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_all_of}{Match\+All\+Of}}$<$ ArgT $>$ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_ac418993df83e01e488034f4a1ebbb73d}{Catch::\+\+Matchers::\+\+Detail::\+operator\&\&}} (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_all_of}{Match\+All\+Of}}$<$ ArgT $>$ const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ ArgT $>$ const \&rhs)=delete
+\item 
+{\footnotesize template$<$typename ArgT$>$ }\\\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_all_of}{Match\+All\+Of}}$<$ ArgT $>$ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a2222cfbf8fbad7592b1a10a814a3fe8f}{Catch::\+\+Matchers::\+\+Detail::\+operator\&\&}} (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ ArgT $>$ const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_all_of}{Match\+All\+Of}}$<$ ArgT $>$ const \&rhs)=delete
+\item 
+{\footnotesize template$<$typename ArgT$>$ }\\\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_any_of}{Match\+Any\+Of}}$<$ ArgT $>$ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a7838f4aa71ef3cf414c29632ac3ec3fb}{Catch::\+\+Matchers::\+\+Detail::\+operator\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}}} (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_any_of}{Match\+Any\+Of}}$<$ ArgT $>$ const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ ArgT $>$ const \&rhs)=delete
+\item 
+{\footnotesize template$<$typename ArgT$>$ }\\\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_any_of}{Match\+Any\+Of}}$<$ ArgT $>$ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_1_1_detail_a80dcde9728dd7bc1ad5f8c75171f2045}{Catch::\+\+Matchers::\+\+Detail::\+operator\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}}} (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ ArgT $>$ const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_any_of}{Match\+Any\+Of}}$<$ ArgT $>$ const \&rhs)=delete
+\item 
+{\footnotesize template$<$typename T$>$ }\\\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_all_of}{Detail::\+\+Match\+All\+Of}}$<$ T $>$ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_abe63e3fd95938594aa151829494c8652}{Catch::\+\+Matchers::\+operator\&\&}} (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ T $>$ const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ T $>$ const \&rhs)
+\item 
+{\footnotesize template$<$typename T$>$ }\\\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_any_of}{Detail::\+\+Match\+Any\+Of}}$<$ T $>$ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a603d1c08a923661f0580ad7d9cc0c331}{Catch::\+\+Matchers::\+operator\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}}} (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ T $>$ const \&lhs, \doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ T $>$ const \&rhs)
+\item 
+{\footnotesize template$<$typename T$>$ }\\\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_detail_1_1_match_not_of}{Detail::\+\+Match\+Not\+Of}}$<$ T $>$ \doxymbox{\hyperlink{namespace_catch_1_1_matchers_a943e1e05a2d547687b9de85ef33fd07b}{Catch::\+\+Matchers::\+operator!}} (\doxymbox{\hyperlink{class_catch_1_1_matchers_1_1_matcher_base}{Matcher\+Base}}$<$ T $>$ const \&matcher)
+\end{DoxyCompactItemize}
+
+
+\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_doc-define-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a5b8c33c63e0804d4458e2c761370b75d}\index{catch\_matchers.hpp@{catch\_matchers.hpp}!CHECK\_THAT@{CHECK\_THAT}}
+\index{CHECK\_THAT@{CHECK\_THAT}!catch\_matchers.hpp@{catch\_matchers.hpp}}
+\doxysubsubsection{\texorpdfstring{CHECK\_THAT}{CHECK\_THAT}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a5b8c33c63e0804d4458e2c761370b75d} 
+\+\#define CHECK\+\_\+\+THAT(\begin{DoxyParamCaption}\item[{}]{arg}{, }\item[{}]{matcher}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a877690adc04f1fbfe944df6bebe6f8b5}{INTERNAL\_CHECK\_THAT}}(\ \textcolor{stringliteral}{"{}CHECK\_THAT"{}},\ matcher,\ \doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8a5adbb8bdfe4bf14bf37cb297d8b18b64}{Catch::ResultDisposition::ContinueOnFailure}},\ arg\ )}
+
+\end{DoxyCode}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a74fcc14d39e8cc35ff39f69c5b60e375}\index{catch\_matchers.hpp@{catch\_matchers.hpp}!CHECK\_THROWS\_MATCHES@{CHECK\_THROWS\_MATCHES}}
+\index{CHECK\_THROWS\_MATCHES@{CHECK\_THROWS\_MATCHES}!catch\_matchers.hpp@{catch\_matchers.hpp}}
+\doxysubsubsection{\texorpdfstring{CHECK\_THROWS\_MATCHES}{CHECK\_THROWS\_MATCHES}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a74fcc14d39e8cc35ff39f69c5b60e375} 
+\+\#define CHECK\+\_\+\+THROWS\+\_\+\+MATCHES(\begin{DoxyParamCaption}\item[{}]{expr}{, }\item[{}]{exception\+Type}{, }\item[{}]{matcher}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ace8fc7b74db8a1b2916554ad64e5b036}{INTERNAL\_CATCH\_THROWS\_MATCHES}}(\ \textcolor{stringliteral}{"{}CHECK\_THROWS\_MATCHES"{}},\ exceptionType,\ \doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8a5adbb8bdfe4bf14bf37cb297d8b18b64}{Catch::ResultDisposition::ContinueOnFailure}},\ matcher,\ expr\ )}
+
+\end{DoxyCode}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a4903733490f526b58053836575e99066}\index{catch\_matchers.hpp@{catch\_matchers.hpp}!CHECK\_THROWS\_WITH@{CHECK\_THROWS\_WITH}}
+\index{CHECK\_THROWS\_WITH@{CHECK\_THROWS\_WITH}!catch\_matchers.hpp@{catch\_matchers.hpp}}
+\doxysubsubsection{\texorpdfstring{CHECK\_THROWS\_WITH}{CHECK\_THROWS\_WITH}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a4903733490f526b58053836575e99066} 
+\+\#define CHECK\+\_\+\+THROWS\+\_\+\+WITH(\begin{DoxyParamCaption}\item[{}]{expr}{, }\item[{}]{matcher}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a4296ab989dbc1f6c52c24d60012144d6}{INTERNAL\_CATCH\_THROWS\_STR\_MATCHES}}(\ \textcolor{stringliteral}{"{}CHECK\_THROWS\_WITH"{}},\ \doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8a5adbb8bdfe4bf14bf37cb297d8b18b64}{Catch::ResultDisposition::ContinueOnFailure}},\ matcher,\ expr\ )}
+
+\end{DoxyCode}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_ac1354db6f3e9c1e0a8eda0eea7ff1f0a}\index{catch\_matchers.hpp@{catch\_matchers.hpp}!REQUIRE\_THAT@{REQUIRE\_THAT}}
+\index{REQUIRE\_THAT@{REQUIRE\_THAT}!catch\_matchers.hpp@{catch\_matchers.hpp}}
+\doxysubsubsection{\texorpdfstring{REQUIRE\_THAT}{REQUIRE\_THAT}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_ac1354db6f3e9c1e0a8eda0eea7ff1f0a} 
+\+\#define REQUIRE\+\_\+\+THAT(\begin{DoxyParamCaption}\item[{}]{arg}{, }\item[{}]{matcher}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a877690adc04f1fbfe944df6bebe6f8b5}{INTERNAL\_CHECK\_THAT}}(\ \textcolor{stringliteral}{"{}REQUIRE\_THAT"{}},\ matcher,\ \doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8a3758aaf4ec26097b5fdfcc3fbfc76e46}{Catch::ResultDisposition::Normal}},\ arg\ )}
+
+\end{DoxyCode}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a54473a48ac2ac55bfe1165b69e1b8010}\index{catch\_matchers.hpp@{catch\_matchers.hpp}!REQUIRE\_THROWS\_MATCHES@{REQUIRE\_THROWS\_MATCHES}}
+\index{REQUIRE\_THROWS\_MATCHES@{REQUIRE\_THROWS\_MATCHES}!catch\_matchers.hpp@{catch\_matchers.hpp}}
+\doxysubsubsection{\texorpdfstring{REQUIRE\_THROWS\_MATCHES}{REQUIRE\_THROWS\_MATCHES}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_a54473a48ac2ac55bfe1165b69e1b8010} 
+\+\#define REQUIRE\+\_\+\+THROWS\+\_\+\+MATCHES(\begin{DoxyParamCaption}\item[{}]{expr}{, }\item[{}]{exception\+Type}{, }\item[{}]{matcher}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_ace8fc7b74db8a1b2916554ad64e5b036}{INTERNAL\_CATCH\_THROWS\_MATCHES}}(\ \textcolor{stringliteral}{"{}REQUIRE\_THROWS\_MATCHES"{}},\ exceptionType,\ \doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8a3758aaf4ec26097b5fdfcc3fbfc76e46}{Catch::ResultDisposition::Normal}},\ matcher,\ expr\ )}
+
+\end{DoxyCode}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_aa39a017db507132071d2819f087b2f28}\index{catch\_matchers.hpp@{catch\_matchers.hpp}!REQUIRE\_THROWS\_WITH@{REQUIRE\_THROWS\_WITH}}
+\index{REQUIRE\_THROWS\_WITH@{REQUIRE\_THROWS\_WITH}!catch\_matchers.hpp@{catch\_matchers.hpp}}
+\doxysubsubsection{\texorpdfstring{REQUIRE\_THROWS\_WITH}{REQUIRE\_THROWS\_WITH}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2matchers_2catch__matchers_8hpp_aa39a017db507132071d2819f087b2f28} 
+\+\#define REQUIRE\+\_\+\+THROWS\+\_\+\+WITH(\begin{DoxyParamCaption}\item[{}]{expr}{, }\item[{}]{matcher}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a4296ab989dbc1f6c52c24d60012144d6}{INTERNAL\_CATCH\_THROWS\_STR\_MATCHES}}(\ \textcolor{stringliteral}{"{}REQUIRE\_THROWS\_WITH"{}},\ \doxymbox{\hyperlink{struct_catch_1_1_result_disposition_a3396cad6e2259af326b3aae93e23e9d8a3758aaf4ec26097b5fdfcc3fbfc76e46}{Catch::ResultDisposition::Normal}},\ matcher,\ expr\ )}
+
+\end{DoxyCode}

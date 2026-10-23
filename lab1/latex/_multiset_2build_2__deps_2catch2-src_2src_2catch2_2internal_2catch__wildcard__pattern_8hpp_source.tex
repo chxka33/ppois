@@ -1,0 +1,44 @@
+\doxysection{catch\+\_\+wildcard\+\_\+pattern.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__wildcard__pattern_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__wildcard__pattern_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_wildcard\_pattern.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/internal/catch\_wildcard\_pattern.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__wildcard__pattern_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_WILDCARD\_PATTERN\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_WILDCARD\_PATTERN\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_case\_sensitive.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern}{WildcardPattern}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadb}{WildcardPosition}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadba2de538564aac38c198a2cdb3f70a1382}{NoWildcard}}\ =\ 0,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadba07ca874bcc7913c707e86adf9e57376f}{WildcardAtStart}}\ =\ 1,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadba7563fa62b8379495397fc2391aa675a9}{WildcardAtEnd}}\ =\ 2,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadba8a6ff9b44d82a39e7793bfc57559a0fd}{WildcardAtBothEnds}}\ =\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadba07ca874bcc7913c707e86adf9e57376f}{WildcardAtStart}}\ |\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadba7563fa62b8379495397fc2391aa675a9}{WildcardAtEnd}}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_aeb90dae9b701d90cbed1e43904c86af2}{WildcardPattern}}(\ std::string\ \textcolor{keyword}{const}\&\ pattern,\ \doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36}{CaseSensitive}}\ caseSensitivity\ );}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_ae88acde37f50f7cbec8605acf434fe85}{matches}}(\ std::string\ \textcolor{keyword}{const}\&\ str\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_a65a46178aaa0e13b641438b71659bae0}{normaliseString}}(\ std::string\ \textcolor{keyword}{const}\&\ str\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_ac881e5ba54c09673c50349dbea7fff36}{CaseSensitive}}\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_aef561aafa0f021653bc6b5806b6d57b0}{m\_caseSensitivity}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadb}{WildcardPosition}}\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af74da965b1257c4e958d95da15f30c69}{m\_wildcard}}\ =\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadba2de538564aac38c198a2cdb3f70a1382}{NoWildcard}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_catch_1_1_wildcard_pattern_a8b96a014f1194387ce441f8f0c0e8a2e}{m\_pattern}};}
+\DoxyCodeLine{00035\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_WILDCARD\_PATTERN\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

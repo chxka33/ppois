@@ -1,0 +1,141 @@
+\doxysection{Multiset/\+build/\+\+\_\+deps/\+catch2-\/src/\+tests/\+\+Self\+Test/\+\+Usage\+Tests/\+\+Matchers\+Ranges.tests.\+cpp File Reference}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp}{}\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp}\index{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/MatchersRanges.tests.cpp@{Multiset/build/\_deps/catch2-\/src/tests/SelfTest/UsageTests/MatchersRanges.tests.cpp}}
+{\ttfamily \+\#include $<$catch2/\+catch\+\_\+test\+\_\+macros.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+matchers/\+catch\+\_\+matchers\+\_\+container\+\_\+properties.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+matchers/\+catch\+\_\+matchers\+\_\+contains.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+matchers/\+catch\+\_\+matchers\+\_\+range\+\_\+equals.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+matchers/\+catch\+\_\+matchers\+\_\+floating\+\_\+point.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+matchers/\+catch\+\_\+matchers\+\_\+quantifiers.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+matchers/\+catch\+\_\+matchers\+\_\+predicate.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$catch2/\+matchers/\+catch\+\_\+matchers\+\_\+string.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$helpers/\+range\+\_\+test\+\_\+helpers.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$list$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+{\ttfamily \+\#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$memory$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_move_only_test_element}{Move\+Only\+Test\+Element}}
+\item 
+struct \doxymbox{\hyperlink{struct_catch_1_1_string_maker_3_01_convertible_to_bool_01_4}{Catch::\+\+String\+Maker$<$ Convertible\+To\+Bool $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_catch}{Catch}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a319cec30f9dd390ae311d051f8b610c8}{TEST\+\_\+\+CASE}} ("{}Basic use of the Contains range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[contains]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a77cb131ce05cbb69ec7f3270b0e7735c}{TEST\+\_\+\+CASE}} ("{}Basic use of the Empty range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[empty]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a029636898f814ae8439e229728fa1c8d}{TEST\+\_\+\+CASE}} ("{}Usage of the Size\+Is range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[size]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a506dc9d4127de4378be911f784465820}{TEST\+\_\+\+CASE}} ("{}Usage of All\+Match range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a279727eda3c1abd0de5c09602e6143e2}{TEST\+\_\+\+CASE}} ("{}Usage of Any\+Match range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_ac4eb729c7265fe53d0c2cd3de4ba43a9}{TEST\+\_\+\+CASE}} ("{}Usage of None\+Match range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a382fa5a9adadf44bb9d7481fb0f314b5}{TEST\+\_\+\+CASE}} ("{}Usage of All\+True range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a0300649c119a63d536896ccc2de6f174}{TEST\+\_\+\+CASE}} ("{}Usage of None\+True range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a05b6a7d167872f6135ebb7f7fe68277a}{TEST\+\_\+\+CASE}} ("{}Usage of Any\+True range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a6857c0a40acde18d2ef6bd3b433b93c0}{TEST\+\_\+\+CASE}} ("{}All/Any/None True matchers support types with ADL begin"{}, "{}\+[approvals]\+\+[matchers]\+\+[quantifiers]\+\+[templated]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a508960d4c69f0aba6f11c07550c02eb5}{TEST\+\_\+\+CASE}} ("{}Usage of Range\+Equals range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a01ae7ff98a8af20aecc938a1bc9e8083}{TEST\+\_\+\+CASE}} ("{}Usage of Unordered\+Range\+Equals range matcher"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\item 
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_ae5171f5d75f76a1cb3148f4cf581d432}{TEST\+\_\+\+CASE}} ("{}Type conversions of Range\+Equals and similar"{}, "{}\+[matchers]\+\+[templated]\+\+[quantifiers]\+"{})
+\end{DoxyCompactItemize}
+
+
+\label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_doc-func-members}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a6857c0a40acde18d2ef6bd3b433b93c0}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a6857c0a40acde18d2ef6bd3b433b93c0} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}All/Any/None True matchers support types with ADL begin"{}}]{}{, }\item[{"{}"{}}]{}{\+[approvals]\+\+[matchers]\+\+[quantifiers]\+\+[templated]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a319cec30f9dd390ae311d051f8b610c8}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a319cec30f9dd390ae311d051f8b610c8} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Basic use of the Contains range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[contains]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a77cb131ce05cbb69ec7f3270b0e7735c}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a77cb131ce05cbb69ec7f3270b0e7735c} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Basic use of the Empty range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[empty]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_ae5171f5d75f76a1cb3148f4cf581d432}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_ae5171f5d75f76a1cb3148f4cf581d432} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Type conversions of Range\+Equals and similar"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a506dc9d4127de4378be911f784465820}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a506dc9d4127de4378be911f784465820} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of All\+Match range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a382fa5a9adadf44bb9d7481fb0f314b5}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a382fa5a9adadf44bb9d7481fb0f314b5} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of All\+True range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a279727eda3c1abd0de5c09602e6143e2}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a279727eda3c1abd0de5c09602e6143e2} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of Any\+Match range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a05b6a7d167872f6135ebb7f7fe68277a}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a05b6a7d167872f6135ebb7f7fe68277a} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of Any\+True range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_ac4eb729c7265fe53d0c2cd3de4ba43a9}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_ac4eb729c7265fe53d0c2cd3de4ba43a9} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of None\+Match range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a0300649c119a63d536896ccc2de6f174}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a0300649c119a63d536896ccc2de6f174} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of None\+True range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a508960d4c69f0aba6f11c07550c02eb5}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a508960d4c69f0aba6f11c07550c02eb5} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of Range\+Equals range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a029636898f814ae8439e229728fa1c8d}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a029636898f814ae8439e229728fa1c8d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of the Size\+Is range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[size]}\end{DoxyParamCaption})}
+
+\Hypertarget{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a01ae7ff98a8af20aecc938a1bc9e8083}\index{MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!MatchersRanges.tests.cpp@{MatchersRanges.tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/13]}}
+{\footnotesize\ttfamily \label{_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_usage_tests_2_matchers_ranges_8tests_8cpp_a01ae7ff98a8af20aecc938a1bc9e8083} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Usage of Unordered\+Range\+Equals range matcher"{}}]{}{, }\item[{"{}"{}}]{}{\+[matchers]\+\+[templated]\+\+[quantifiers]}\end{DoxyParamCaption})}
+

@@ -1,0 +1,100 @@
+\doxysection{catch\+\_\+interfaces\+\_\+config.\+hpp}
+\hypertarget{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__config_8hpp_source}{}\label{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__config_8hpp_source}\index{Multiset/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_config.hpp@{Multiset/build/\_deps/catch2-\/src/src/catch2/interfaces/catch\_interfaces\_config.hpp}}
+\doxymbox{\hyperlink{_multiset_2build_2__deps_2catch2-src_2src_2catch2_2interfaces_2catch__interfaces__config_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_INTERFACES\_CONFIG\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_INTERFACES\_CONFIG\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_noncopyable.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_stringref.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iosfwd>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Verbosity}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111}{Quiet}}\ =\ 0,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35}{High}}}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_warn_about}{WarnAbout}}\ \{\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{struct_catch_1_1_warn_about_ae3dde70ef78d700ea896eb29314e0fa3}{What}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_warn_about_ae3dde70ef78d700ea896eb29314e0fa3a19bca4df5e1b0f209a3292f3aa44b81e}{Nothing}}\ =\ 0x00,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_warn_about_ae3dde70ef78d700ea896eb29314e0fa3a04bcb5104bbb5aeb7f74ee59868289da}{NoAssertions}}\ =\ 0x01,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_warn_about_ae3dde70ef78d700ea896eb29314e0fa3aa85b87c228721c5ffbe5c2f126d1b34e}{UnmatchedTestSpec}}\ =\ 0x02,}
+\DoxyCodeLine{00033\ \ \ \ \ \};\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8}{ShowDurations}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e}{DefaultForReporter}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c}{Always}},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c}{Never}}}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100}{TestRunOrder}}\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229}{Declared}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74}{LexicographicallySorted}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb}{Randomized}}}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{ColourMode}}\ :\ std::uint8\_t\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f}{PlatformDefault}},}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270}{ANSI}},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405}{Win32}},}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754}{None}}}
+\DoxyCodeLine{00054\ \ \ \ \ \};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress}{WaitForKeypress}}\ \{\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress_a2e8c4369d0a605d64e3e83b5af3399ba}{When}}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress_a2e8c4369d0a605d64e3e83b5af3399baade2e4a722e5c78bb0d1d3871c4a491ee}{Never}},}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress_a2e8c4369d0a605d64e3e83b5af3399baa0a77a81962c38c4f32792d7af4cd6493}{BeforeStart}}\ =\ 1,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress_a2e8c4369d0a605d64e3e83b5af3399baacbbeaab666e49112d304173e4461d350}{BeforeExit}}\ =\ 2,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress_a2e8c4369d0a605d64e3e83b5af3399baa12d703bdb53cebdb1d1c142ab1748bf0}{BeforeStartAndExit}}\ =\ \doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress_a2e8c4369d0a605d64e3e83b5af3399baa0a77a81962c38c4f32792d7af4cd6493}{BeforeStart}}\ |\ \doxymbox{\hyperlink{struct_catch_1_1_wait_for_keypress_a2e8c4369d0a605d64e3e83b5af3399baacbbeaab666e49112d304173e4461d350}{BeforeExit}}}
+\DoxyCodeLine{00060\ \ \ \ \ \};\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_test_spec}{TestSpec}};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_stream}{IStream}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_catch_1_1_detail_1_1_non_copyable}{Detail::NonCopyable}}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_adadf7c57478e4b0c83bea5b38d2dbc87}{\string~IConfig}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_aadb95f849359de1e6eb915aab063e542}{allowThrows}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_string_ref}{StringRef}}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_ad67bb593486213c6918732f73177b7a5}{name}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a2f1b0391019b9ce69921527a684eab23}{includeSuccessfulResults}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a5b886c5aad9001e90f63a7cf0726af63}{shouldDebugBreak}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a75d970c495a28e46b8e9b04a1d32149f}{warnAboutMissingAssertions}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a62498b40b04b87b721537f8e0e7d333e}{warnAboutUnmatchedTestSpecs}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a6ff06a3e00a2002992d3139d9c21718d}{zeroTestsCountAsSuccess}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a363f3388a439d02217f37198eff96744}{abortAfter}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_aa288bf92ccd0aafd85409d8aefdf738c}{showInvisibles}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_catch_afcb41c3350d3488c0efb02816a8867c8}{ShowDurations}}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a5a9e2fbbb8150bd197d8abd9af18da14}{showDurations}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a160c6f6e19ed6ae946f7a9e737099189}{minDuration}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_catch_1_1_test_spec}{TestSpec}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a6c021a1bf5cae58cb6c4b754af6cd4b5}{testSpec}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a49a475bbeb3180c06799d6d958914649}{hasTestFilters}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<std::string>\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a439d37638d37248d8a7f3f39ad5dc6f2}{getTestsOrTags}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_catch_aa820408cff40873fdf5c6662b6327100}{TestRunOrder}}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_afef98a620d17d1ef1cba91550146ca28}{runOrder}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a71994ea53eb66e353e5e195088f9bad7}{rngSeed}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_ad286c00a41278a94e89791be29b920a1}{shardCount}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a7d7b5de3ff81f08e343b3b6266efbeba}{shardIndex}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_catch_a91308e87521e370e591065a22b010025}{ColourMode}}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a1e50ac75407e1e7d808eae26a4e353dd}{defaultColourMode}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<std::string>\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_i_config_aeb282b2b74d01c0d95ef1a4dbd2d12df}{getSectionsToRun}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_catch_af85c0d46dfe687d923a157362fd07737}{Verbosity}}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a55aff5924bdbb3f558775821b1eb4b3d}{verbosity}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_acd7e1cb74682279ba1e460510d6b5859}{skipBenchmarks}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_aa9aa1eafdbe510e27bf319233969ee2c}{benchmarkNoAnalysis}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a1634aa220fc1c822d1f4d54614443d47}{benchmarkSamples}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_ae1ec73d460a2b58c7c9b022a430a34dd}{benchmarkConfidenceInterval}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a3b8e5581be01f4773593f8b85eb7db98}{benchmarkResamples}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::chrono::milliseconds\ \doxymbox{\hyperlink{class_catch_1_1_i_config_a516879e39f2e46f69bb4ef1f1fe7023c}{benchmarkWarmupTime}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00097\ \ \ \ \ \};}
+\DoxyCodeLine{00098\ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_INTERFACES\_CONFIG\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

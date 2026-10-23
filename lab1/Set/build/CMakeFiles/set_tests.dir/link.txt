@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names --coverage CMakeFiles/set_tests.dir/tests/test_set.cpp.o CMakeFiles/set_tests.dir/src/set.cpp.o -o set_tests  _deps/catch2-build/src/libCatch2Main.a _deps/catch2-build/src/libCatch2.a
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/set_tests.dir/tests/test_set.cpp.o CMakeFiles/set_tests.dir/src/set.cpp.o -o set_tests  _deps/catch2-build/src/libCatch2Main.a _deps/catch2-build/src/libCatch2.a

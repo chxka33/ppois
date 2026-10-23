@@ -1,0 +1,57 @@
+\doxysection{catch\+\_\+context.\+hpp}
+\hypertarget{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__context_8hpp_source}{}\label{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__context_8hpp_source}\index{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_context.hpp@{Set/build/\_deps/catch2-\/src/src/catch2/internal/catch\_context.hpp}}
+\doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__context_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Copyright\ Catch2\ Authors}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Distributed\ under\ the\ Boost\ Software\ License,\ Version\ 1.0.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ (See\ accompanying\ file\ LICENSE.txt\ or\ copy\ at}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ https://www.boost.org/LICENSE\_1\_0.txt)}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ BSL-\/1.0}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CATCH\_CONTEXT\_HPP\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CATCH\_CONTEXT\_HPP\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <catch2/internal/catch\_compiler\_capabilities.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_catch}{Catch}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_result_capture}{IResultCapture}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_context}{Context}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ IConfig\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{class_catch_1_1_context_a2e69d1b30da1b993b8d64988bef5d90c}{m\_config}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ IResultCapture*\ \doxymbox{\hyperlink{class_catch_1_1_context_ac85097e7c9276937ba165039e780f53a}{m\_resultCapture}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_set_2build_2__deps_2catch2-src_2extras_2catch__amalgamated_8hpp_a7a076eb1c404d5e057d159c9b271cc6f}{CATCH\_EXPORT}}\ \textcolor{keyword}{static}\ Context*\ \doxymbox{\hyperlink{class_catch_1_1_context_a2dfa7f1aaee250ab4a748324b55303d2}{currentContext}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ Context\&\ \doxymbox{\hyperlink{class_catch_1_1_context_abaf57ad1081788ced532da4609578b21}{getCurrentMutableContext}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ Context\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{class_catch_1_1_context_af881f79b2f58b449f1d55ce2a46fefab}{getCurrentContext}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_context_adaa366815eea6e14b4de714041bfa287}{createContext}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_context_ac07cdb7d744cc8f09672d924324b55fd}{cleanUpContext}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_i_result_capture}{IResultCapture}}*\ \doxymbox{\hyperlink{class_catch_1_1_context_a3e379d5e1674688f6bb9a57a381994bb}{getResultCapture}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_context_ac85097e7c9276937ba165039e780f53a}{m\_resultCapture}};\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{class_catch_1_1_context_ac6307a5b1fb851ea3c17bb114f9ceabf}{getConfig}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_catch_1_1_context_a2e69d1b30da1b993b8d64988bef5d90c}{m\_config}};\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_context_aad0f7368830ec56ab7c6e7e5d6be9e42}{setResultCapture}}(\ \doxymbox{\hyperlink{class_catch_1_1_i_result_capture}{IResultCapture}}*\ resultCapture\ );}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catch_1_1_context_aeed955070ae2af802af7e2c1c480e4c0}{setConfig}}(\ \doxymbox{\hyperlink{class_catch_1_1_i_config}{IConfig}}\ \textcolor{keyword}{const}*\ config\ );}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_context}{Context}}\&\ \doxymbox{\hyperlink{namespace_catch_aeb5fab7ca94d3e959fd7db6167caf5ee}{getCurrentMutableContext}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{class_catch_1_1_context}{Context}}\ \textcolor{keyword}{const}\&\ \doxymbox{\hyperlink{namespace_catch_a8b23533de8c7d123687ac2c8d36b653a}{getCurrentContext}}()\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ duplicate\ the\ logic\ from\ \`{}getCurrentMutableContext`\ here,}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ avoid\ paying\ the\ call\ overhead\ in\ debug\ mode.}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ !\doxymbox{\hyperlink{class_catch_1_1_context_a2dfa7f1aaee250ab4a748324b55303d2}{Context::currentContext}}\ )\ \{\ \doxymbox{\hyperlink{class_catch_1_1_context_a8791e458c00734bcbaa403d02a731c48}{Context::createContext}}();\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOLINTNEXTLINE(clang-\/analyzer-\/core.uninitialized.UndefReturn)}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\doxymbox{\hyperlink{class_catch_1_1_context_a2dfa7f1aaee250ab4a748324b55303d2}{Context::currentContext}};}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_catch_ae50508f10ffc4ed873a31a4db4caea16}{cleanUpContext}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{SimplePcg32}};}
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{class_catch_1_1_simple_pcg32}{SimplePcg32}}\&\ \doxymbox{\hyperlink{namespace_catch_a95e86995bfdce76fca887634094ef2e9}{sharedRng}}();}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CATCH\_CONTEXT\_HPP\_INCLUDED}}
+
+\end{DoxyCode}
