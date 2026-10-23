@@ -444,7 +444,7 @@ Catch2_IS_TOP_LEVEL:STATIC=OFF
 Catch2_SOURCE_DIR:STATIC=/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps/catch2-src
 
 //Build with coverage instrumentation
-ENABLE_COVERAGE:BOOL=OFF
+ENABLE_COVERAGE:BOOL=ON
 
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/Users/chxkq/Desktop/pois/ppois/lab1/Set/build/_deps
