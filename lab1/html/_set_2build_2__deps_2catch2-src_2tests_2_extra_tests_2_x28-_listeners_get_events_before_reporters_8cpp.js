@@ -1,4 +1,0 @@
-var _set_2build_2__deps_2catch2_src_2tests_2_extra_tests_2_x28__listeners_get_events_before_reporters_8cpp =
-[
-    [ "TEST_CASE", "_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x28-_listeners_get_events_before_reporters_8cpp.html#a00f97f2cee7b4b9c9c6b14d97063f897", null ]
-];

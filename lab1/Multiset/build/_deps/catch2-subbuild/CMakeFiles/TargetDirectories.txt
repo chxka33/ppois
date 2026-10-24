@@ -1,3 +1,0 @@
-/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir
-/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/_deps/catch2-subbuild/CMakeFiles/edit_cache.dir
-/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/_deps/catch2-subbuild/CMakeFiles/rebuild_cache.dir

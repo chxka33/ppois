@@ -1,4 +1,0 @@
-var _multiset_2build_2__deps_2catch2_src_2tests_2_self_test_2_introspective_tests_2_colour_impl_8tests_8cpp =
-[
-    [ "TEST_CASE", "_multiset_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_colour_impl_8tests_8cpp.html#ab92eb8b04b3e6472a5827f4729183be0", null ]
-];

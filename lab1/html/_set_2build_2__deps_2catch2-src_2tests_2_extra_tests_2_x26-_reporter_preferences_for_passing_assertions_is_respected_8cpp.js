@@ -1,4 +1,0 @@
-var _set_2build_2__deps_2catch2_src_2tests_2_extra_tests_2_x26__reporter_preferences_for_passing_assertions_is_respected_8cpp =
-[
-    [ "TEST_CASE", "_set_2build_2__deps_2catch2-src_2tests_2_extra_tests_2_x26-_reporter_preferences_for_passing_assertions_is_respected_8cpp.html#a6aec8b65c4eceab16445e458d667bca3", null ]
-];

@@ -1,5 +1,0 @@
-if(EXISTS "/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests-b12d07c_tests.cmake")
-  include("/Users/chxkq/Desktop/pois/ppois/lab1/Multiset/build/multiset_tests-b12d07c_tests.cmake")
-else()
-  add_test(multiset_tests_NOT_BUILT-b12d07c multiset_tests_NOT_BUILT-b12d07c)
-endif()
