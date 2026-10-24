@@ -1,4 +1,0 @@
-var _set_2build_2__deps_2catch2_src_2tests_2_self_test_2_introspective_tests_2_assertion_handler_8tests_8cpp =
-[
-    [ "TEST_CASE", "_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_assertion_handler_8tests_8cpp.html#a77aa661ea950be94f7e679f9c33d8c43", null ]
-];
