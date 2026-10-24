@@ -23,7 +23,6 @@ _deps/
 coverage.xml
 coverage.html
 coverage*.css
-/html/
 /latex/
 /xml/
 Doxyfile.bak

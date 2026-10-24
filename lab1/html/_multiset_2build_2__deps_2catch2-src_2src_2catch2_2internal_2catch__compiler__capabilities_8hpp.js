@@ -1,0 +1,27 @@
+var _multiset_2build_2__deps_2catch2_src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp =
+[
+    [ "CATCH_CATCH_ALL", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#afa0ae14e70806dca4f8bf06d06645fa9", null ],
+    [ "CATCH_CATCH_ANON", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a3caecf3cbc55848423d744df50d84d5b", null ],
+    [ "CATCH_CONFIG_CPP11_TO_STRING", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a5e8669f07e3db1e9e1604508689bc28a", null ],
+    [ "CATCH_CONFIG_DISABLE_EXCEPTIONS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a893712b2ba6e7400136a0a023b12e9db", null ],
+    [ "CATCH_CONFIG_GETENV", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a031d6a2aef5109e070f77e0d87a32b17", null ],
+    [ "CATCH_CONFIG_GLOBAL_NEXTAFTER", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a3271a306c531fd4a2c6c6180e4903fd9", null ],
+    [ "CATCH_CONFIG_POSIX_SIGNALS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#ac5eee4f90512985d2043f971c6f08707", null ],
+    [ "CATCH_EXPORT", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a7a076eb1c404d5e057d159c9b271cc6f", null ],
+    [ "CATCH_INTERNAL_CONFIG_GETENV", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#af1d39364eef8e638ff7d96d0a47bed92", null ],
+    [ "CATCH_INTERNAL_CONFIG_GLOBAL_NEXTAFTER", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a48ae5ed6ff9168c5ad3d5058527fbfae", null ],
+    [ "CATCH_INTERNAL_CONFIG_POSIX_SIGNALS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a3c8d4b828da004fc3ad2511c1900ec19", null ],
+    [ "CATCH_INTERNAL_IGNORE_BUT_WARN", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#aa7ffc39ff2307d382e766a867d49b67a", null ],
+    [ "CATCH_INTERNAL_START_WARNINGS_SUPPRESSION", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a1500dca9a578a0bd2f85771cfa3fd35d", null ],
+    [ "CATCH_INTERNAL_STOP_WARNINGS_SUPPRESSION", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#ad9594e9891b032f0dd0279960dc861a5", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_COMMA_WARNINGS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a7bc5b3c9171a2b0d9d2e23459c25d4b0", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_GLOBALS_WARNINGS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#aa0200c23b35ba2bd8ebed69a8f3c1c66", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_PARENTHESES_WARNINGS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a89c1608a68775aca1bb7c265f7ba923a", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_SHADOW_WARNINGS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#adcf1ca30d92d27477df5490f6568ea34", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_UNUSED_RESULT", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a4928300ab3058e4b594e93bf73a9a3c2", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_UNUSED_TEMPLATE_WARNINGS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a10a275cf93b99d6f1246d9d9df09d1d8", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_UNUSED_VARIABLE_WARNINGS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#afd86e877ae53a18ac74078959b8af053", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_USELESS_CAST_WARNINGS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#a4ccd8a84431fe6636f9e9ab492941491", null ],
+    [ "CATCH_INTERNAL_SUPPRESS_ZERO_VARIADIC_WARNINGS", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#af9c2d6807f17109481b536551c0c10bf", null ],
+    [ "CATCH_TRY", "_multiset_2build_2__deps_2catch2-src_2src_2catch2_2internal_2catch__compiler__capabilities_8hpp.html#ab76c2d22e571ab1a828f5c60d2f485a6", null ]
+];

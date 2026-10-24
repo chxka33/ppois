@@ -1,0 +1,66 @@
+var _multiset_2build_2__deps_2catch2_src_2src_2catch2_2interfaces_2catch__interfaces__config_8hpp =
+[
+    [ "Catch::WarnAbout", "struct_catch_1_1_warn_about.html", "struct_catch_1_1_warn_about" ],
+    [ "Catch::WaitForKeypress", "struct_catch_1_1_wait_for_keypress.html", "struct_catch_1_1_wait_for_keypress" ],
+    [ "Catch::IConfig", "class_catch_1_1_i_config.html", "class_catch_1_1_i_config" ],
+    [ "Catch::ColourMode", "namespace_catch.html#a91308e87521e370e591065a22b010025", [
+      [ "Catch::ColourMode::PlatformDefault", "namespace_catch.html#a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f", null ],
+      [ "Catch::ColourMode::ANSI", "namespace_catch.html#a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270", null ],
+      [ "Catch::ColourMode::Win32", "namespace_catch.html#a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405", null ],
+      [ "Catch::ColourMode::None", "namespace_catch.html#a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Catch::ColourMode::PlatformDefault", "namespace_catch.html#a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f", null ],
+      [ "Catch::ColourMode::ANSI", "namespace_catch.html#a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270", null ],
+      [ "Catch::ColourMode::Win32", "namespace_catch.html#a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405", null ],
+      [ "Catch::ColourMode::None", "namespace_catch.html#a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Catch::ColourMode::PlatformDefault", "namespace_catch.html#a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f", null ],
+      [ "Catch::ColourMode::ANSI", "namespace_catch.html#a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270", null ],
+      [ "Catch::ColourMode::Win32", "namespace_catch.html#a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405", null ],
+      [ "Catch::ColourMode::None", "namespace_catch.html#a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Catch::ColourMode::PlatformDefault", "namespace_catch.html#a91308e87521e370e591065a22b010025a896ac0b4a6597d34fee67269b1d50a7f", null ],
+      [ "Catch::ColourMode::ANSI", "namespace_catch.html#a91308e87521e370e591065a22b010025ad403321c965e6b83c88e6d3b1eca5270", null ],
+      [ "Catch::ColourMode::Win32", "namespace_catch.html#a91308e87521e370e591065a22b010025aa99913111481b4f0bcb70e08e3e99405", null ],
+      [ "Catch::ColourMode::None", "namespace_catch.html#a91308e87521e370e591065a22b010025a6adf97f83acf6453d4a6a4b1070f3754", null ]
+    ] ],
+    [ "Catch::ShowDurations", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8", [
+      [ "Catch::ShowDurations::DefaultForReporter", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e", null ],
+      [ "Catch::ShowDurations::Always", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c", null ],
+      [ "Catch::ShowDurations::Never", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c", null ],
+      [ "Catch::ShowDurations::DefaultForReporter", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e", null ],
+      [ "Catch::ShowDurations::Always", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c", null ],
+      [ "Catch::ShowDurations::Never", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c", null ],
+      [ "Catch::ShowDurations::DefaultForReporter", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e", null ],
+      [ "Catch::ShowDurations::Always", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c", null ],
+      [ "Catch::ShowDurations::Never", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c", null ],
+      [ "Catch::ShowDurations::DefaultForReporter", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a03cdfbdf8eac6fa7716a480c492f386e", null ],
+      [ "Catch::ShowDurations::Always", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a68eec46437c384d8dad18d5464ebc35c", null ],
+      [ "Catch::ShowDurations::Never", "namespace_catch.html#afcb41c3350d3488c0efb02816a8867c8a6e7b34fa59e1bd229b207892956dc41c", null ]
+    ] ],
+    [ "Catch::TestRunOrder", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100", [
+      [ "Catch::TestRunOrder::Declared", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229", null ],
+      [ "Catch::TestRunOrder::LexicographicallySorted", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74", null ],
+      [ "Catch::TestRunOrder::Randomized", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb", null ],
+      [ "Catch::TestRunOrder::Declared", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229", null ],
+      [ "Catch::TestRunOrder::LexicographicallySorted", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74", null ],
+      [ "Catch::TestRunOrder::Randomized", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb", null ],
+      [ "Catch::TestRunOrder::Declared", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229", null ],
+      [ "Catch::TestRunOrder::LexicographicallySorted", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74", null ],
+      [ "Catch::TestRunOrder::Randomized", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb", null ],
+      [ "Catch::TestRunOrder::Declared", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100a8fe1ef91d6420c0e64838512106ec229", null ],
+      [ "Catch::TestRunOrder::LexicographicallySorted", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100a925be02b7396cbc3eb07c0de96126a74", null ],
+      [ "Catch::TestRunOrder::Randomized", "namespace_catch.html#aa820408cff40873fdf5c6662b6327100ad0bcdd909ab6eff96996ccd91f90d2bb", null ]
+    ] ],
+    [ "Catch::Verbosity", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737", [
+      [ "Catch::Verbosity::Quiet", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111", null ],
+      [ "Catch::Verbosity::Normal", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0", null ],
+      [ "Catch::Verbosity::High", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35", null ],
+      [ "Catch::Verbosity::Quiet", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111", null ],
+      [ "Catch::Verbosity::Normal", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0", null ],
+      [ "Catch::Verbosity::High", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35", null ],
+      [ "Catch::Verbosity::Quiet", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111", null ],
+      [ "Catch::Verbosity::Normal", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0", null ],
+      [ "Catch::Verbosity::High", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35", null ],
+      [ "Catch::Verbosity::Quiet", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a098753f8980036f4b936e3d4b6997111", null ],
+      [ "Catch::Verbosity::Normal", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a960b44c579bc2f6818d2daaf9e4c16f0", null ],
+      [ "Catch::Verbosity::High", "namespace_catch.html#af85c0d46dfe687d923a157362fd07737a655d20c1ca69519ca647684edbb2db35", null ]
+    ] ]
+];

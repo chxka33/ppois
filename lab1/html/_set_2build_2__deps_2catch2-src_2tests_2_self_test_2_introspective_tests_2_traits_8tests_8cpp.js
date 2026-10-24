@@ -1,0 +1,4 @@
+var _set_2build_2__deps_2catch2_src_2tests_2_self_test_2_introspective_tests_2_traits_8tests_8cpp =
+[
+    [ "ADD_TRAIT_TEST_CASE", "_set_2build_2__deps_2catch2-src_2tests_2_self_test_2_introspective_tests_2_traits_8tests_8cpp.html#a638386750103280e2ac22706b21a2bc6", null ]
+];
