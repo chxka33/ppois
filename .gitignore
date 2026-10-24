@@ -16,3 +16,6 @@ __MACOSX/
 .vscode/
 .vs/
 *.swp
+release-build/
+release/
+*.tar.gz
