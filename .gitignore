@@ -5,7 +5,6 @@ out/
 *.gcda
 *.gcov
 coverage.xml
-html/
 latex/
 xml/
 Doxyfile.bak
