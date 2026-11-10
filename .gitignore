@@ -18,3 +18,5 @@ __MACOSX/
 release-build/
 release/
 *.tar.gz
+lab2.md
+common_requirements.md
