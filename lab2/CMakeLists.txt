@@ -18,10 +18,10 @@ include(Catch)
 
 file(GLOB_RECURSE CORE_SOURCES CONFIGURE_DEPENDS "src/*.cpp")
 add_library(sports_club ${CORE_SOURCES})
-target_include_directories()(sports_club PUBLIC include)
+target_include_directories(sports_club PUBLIC include)
 
 add_executable(sports_club_cli main.cpp)
-target_link_libraries()(sports_club_cli PRIVATE sports_club)
+target_link_libraries(sports_club_cli PRIVATE sports_club)
 
 file(GLOB_RECURSE TEST_SOURCES CONFIGURE_DEPENDS "tests/*.cpp")
 add_executable(sports_club_test ${TEST_SOURCES})
