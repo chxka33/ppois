@@ -1,0 +1,110 @@
+name: Lab 2 CI/CD
+
+on:
+  push:
+    paths:
+      - "lab2/**"
+      - ".github/workflows/lab2.yml"
+  pull_request:
+    paths:
+      - "lab2/**"
+      - ".github/workflows/lab2.yml"
+
+permissions:
+    contents: write
+
+jobs:
+  test:
+    name: Build, test, coverage and lint (macOS)
+    runs-on: macos-latest
+
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Install dependencies
+          run: brew install gcovr llvm
+
+        - name: Configure
+          run: |
+           cmake \
+             -S lab2 \
+             -B lab2/build \
+             -DCMAKE_BUILD_TYPE=Debug \
+             -DENABLE_COVERAGE=ON \
+             -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+        - name: Lint
+          working-directory: lab2
+          run: |
+            "$(brew --prefix llvm)/bin/clang-tidy" -p build \
+              --checks='-*,clang-analyzer-*' \
+              --warnings-as-errors='clang-analyzer-*' \
+              src/*/*.cpp main.cpp
+
+        - name: Build
+          run: cmake --build lab2/build --parallel
+
+        - name: Test
+          run: ctest --test-dir lab2/build --output-on-failure
+
+        - name: Coverage
+          working-directory: lab2
+          run: |
+            gcovr -r . \
+              --gcov-executable "xcrun llvm-cov gcov" \
+              --filter 'src/' \
+              --print-summary \
+              --fail-under-line 90 \
+              build
+
+        - name: Build Release binaries
+          run: |
+            cmake \
+              -S lab2 \
+              -B lab2/build-release \
+              -DCMAKE_BUILD_TYPE=Release
+            cmake --build lab2/build-release --parallel \
+              --target sports_club_cli
+
+        - name: Prepare release files
+          run: |
+            mkdir -p release
+            cp lab2/build-release/sports_club_cli release/sports_club_cli
+
+        - name: Create archive
+          run: tar -czf lab2.tar.gz -C release .
+
+        - name: Upload build artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: lab2
+            path: lab2.tar.gz
+
+            
+
+
+  release:
+    name: Create GitHub Release
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: macos-latest
+
+    steps:
+        - name: Download artifact
+          uses: actions/download-artifact@v4
+          with:
+            name: lab2
+            path: release
+
+        - name: Create Release
+          uses: softprops/action-gh-release@v2
+          with: 
+            tag_name: lab2-${{ github.run_number }}
+            name: Lab 2 ${{ github.run_number }}
+            generate_release_notes: true
+            files: release/lab2.tar.gz
+
+
+
+

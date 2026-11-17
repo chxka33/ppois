@@ -16,6 +16,12 @@ list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 enable_testing()
 include(Catch)
 
+option(ENABLE_COVERAGE "Build with coverage instrumentation" OFF)
+    if(ENABLE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+        add_compile_options(--coverage -g -O0)
+        add_link_options(--coverage)
+    endif()
+
 file(GLOB_RECURSE CORE_SOURCES CONFIGURE_DEPENDS "src/*.cpp")
 add_library(sports_club ${CORE_SOURCES})
 target_include_directories(sports_club PUBLIC include)
